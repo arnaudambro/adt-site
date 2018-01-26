@@ -56,16 +56,16 @@ export default class Projets extends React.Component {
             .sort((a, b) => data_projets[a].delivery > data_projets[b].delivery ? -1 : 1)
             .map((key, index) => 
               <div key={index} className="material main__content">
-                <Link className="material__container" to={`projets/${data_projets[key].name}`} style={{ gridRowEnd: `${data_projets[key].materialPicHeight}` }}>
+                <div className="material__container" style={{ gridRowEnd: `${data_projets[key].materialPicHeight}` }}>
                   <img 
                     src={data_projets[key].img}
                     alt={data_projets[key][lang].material}
                     style={{ objectFit: 'cover'}}>
                   </img>
-                </Link>
-                <div className="material__container--overlay" style={{ gridRowEnd: `${data_projets[key].materialPicHeight}` }}>
-                  {data_projets[key][lang].material}
                 </div>
+                <Link to={`projets/${data_projets[key].name}`} className="material__container--overlay" style={{ gridRowEnd: `${data_projets[key].materialPicHeight}` }}>
+                  {data_projets[key][lang].material}
+                </Link>
                 <div className="material__projet--container column3--container">
                   <div className="material__projet--content">
                     <Link to={`projets/${data_projets[key].name}`} className="material__projet--headline">{data_projets[key].name} {data_projets[key].winDate.getFullYear()}</Link>

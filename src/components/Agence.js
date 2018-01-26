@@ -179,6 +179,7 @@ export default class Agence extends React.Component {
                 </div> 
               )}
             </Transition>
+            <div className="agence__divider agence__divider3"></div>
           </div>
         )
       

@@ -1,8 +1,9 @@
 GENERAL
-retirer la barre de scroll
+// retirer la barre de scroll
 // aligner toutes les largeurs de contenu
 // décaler le contenu par rapport au logo
 // barre plus épaisse (1.5px)
+// scroller presque jusqu'en bas
 rajouter petite flèche pour remonter tout en haut ? pas sûr
 
 PROJETS
@@ -11,15 +12,12 @@ PROJETS
 // rajouter le materiau
 // retirer le nom au milieu
 // rajouter horizon passagers
-// scroller jusqu'à la dernière matière
 
 TS_PROJETS
 // changer le nom en base de donnée
 // click sur tout le cadre
 // police plus grasse pour les titres + noms de projets
 // plus d'espace au-dessus des titres (2-3 carreaux)
-hauteur fixe
-// scroller jusqu'au 3/4 de la dernière row
 // triage automatique
 
 NEWS
@@ -38,7 +36,7 @@ AGENCE
 // adresse
 // divider
 // rapprocher les photos (column: 5px row: 8px)
-// le texte saute en haut !
+// corriger le texte saute en haut !
 
 PRESSE
 // ajouter les liens sur les icônes

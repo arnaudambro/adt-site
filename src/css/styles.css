@@ -70,6 +70,12 @@ a {
     opacity: 1;
     transform: translateX(0); }
 
+.landing {
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+  overflow: hidden; }
+
 body {
   margin: 0;
   padding: 0;
@@ -174,7 +180,7 @@ body {
       align-items: center;
       transition: all var(--transition); }
   .projets .material__projet--container {
-    width: 140%; }
+    width: 130%; }
   .projets .material__projet--content {
     display: flex;
     flex-direction: column;
@@ -325,6 +331,9 @@ body {
     grid-row: 14; }
   .agence .agence__divider2 {
     grid-row: 26; }
+  .agence .agence__divider3 {
+    grid-row: 37;
+    border-color: transparent; }
 
 .agence .agence__picture4 {
   grid-column: 1 / 3;

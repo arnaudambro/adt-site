@@ -32,7 +32,6 @@ export default class Content extends React.Component {
             <Route exact path='/news' render={() => <News language={language} area={this.area} />} />
             <Route exact path='/agence' render={() => <Agence language={language} area={this.area} />} />
             <Route exact path='/presse' render={() => <Presse language={language} area={this.area} />} />
-            {/*<Route path='/projets/:id' render={() => <Projet language={language} area={this.area} />} />*/}
             <Route path='/projets/:id' render={(match) => <Projet match={match} language={language} area={this.area} />} />
           </Switch>
           </div>

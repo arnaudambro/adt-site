@@ -58,6 +58,10 @@
       &2 {
         grid-row: 26;
       }
+      &3 {
+        grid-row: 37;
+        border-color: transparent;
+      }
       grid-column: 1;
       height: 20px;
       width: calc(var(--middleColumn));
