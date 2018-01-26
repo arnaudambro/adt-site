@@ -1,0 +1,97 @@
+.ts_projets {
+  --patternColor: rgba(178,178,178,0.30);
+  --patternSize: 7.5px;
+  text-transform: uppercase;
+
+  table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+  }
+
+  td, th {
+
+    padding: 0.5rem;
+
+    &:not(:first-child):not(:last-child) {
+      border-left: none;
+      border-right: none;
+    }
+
+    &:first-child {
+      border-right: none;
+    }
+
+    &:last-child {
+      border-left: none;
+    }
+  }
+
+  td:not(:first-child) {
+    font-style: italic;
+  }
+
+  td {
+    border: 1px solid var(--black);
+    max-width: 80px;
+  }
+
+  th {
+    border: 2px solid var(--black);
+    font-size: 0.7rem;
+    font-weight: 400;
+    vertical-align: bottom;
+      // height: auto;
+      // white-space:nowrap;
+    > div {
+      text-align:left;
+      // transform-origin:50% 50%;
+      transform: rotate(-90deg);
+
+      &:before {
+        content:'';
+        // padding-bottom:110%;/* takes width as reference, + 10% for faking some extra padding */
+        display:inline-block;
+        vertical-align: top;
+      }
+    }
+  }
+  thead {
+
+  }
+  td:first-child {
+    font-size: 0.7rem;
+    font-weight: 400;
+    text-decoration: underline;
+  }
+
+  .td {
+    &__surface {
+      text-transform: initial;
+    }
+  }
+
+  .tr__empty {
+    height: 25vh;
+  }
+
+
+
+  tr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 0.55rem;
+    font-weight: 400;
+    background-size: var(--patternSize) var(--patternSize);
+    background-color: var(--white);
+    background-image:   -webkit-linear-gradient(transparent 90%, var(--patternColor) 10%, var(--patternColor)),
+                        -webkit-linear-gradient(0deg, transparent 90%, var(--patternColor) 10%, var(--patternColor));
+    background-image:   -moz-linear-gradient(transparent 90%, var(--patternColor) 10%, var(--patternColor)),
+                        -moz-linear-gradient(0deg, transparent 90%, var(--patternColor) 10%, var(--patternColor));
+    background-image:   linear-gradient(transparent 90%, var(--patternColor) 10%, var(--patternColor)),
+                        linear-gradient(90deg, transparent 90%, var(--patternColor) 10%, var(--patternColor));
+    -pie-background:    linear-gradient(transparent 90%, var(--patternColor) 10%, var(--patternColor)) 0 0 / var(--patternSize) var(--patternSize),
+                        linear-gradient(90deg, transparent 90%, var(--patternColor) 10%, var(--patternColor)) 0 0 / var(--patternSize) var(--patternSize) var(--white);
+    behavior: url(/pie/PIE.htc);
+  }
+
+}

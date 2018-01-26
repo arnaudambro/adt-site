@@ -1,0 +1,125 @@
+.ts_projets {
+  --patternColor: rgba(178,178,178,0.30);
+  --patternSize: 7.5px;
+  text-transform: uppercase;
+
+  .td, .th {
+    padding: 0.5rem;
+  }
+
+  .td:not(:first-child) {
+    font-style: italic;
+  }
+
+  .td {
+    padding-top: 1rem;
+    min-height: 50px;
+  }
+
+  .th {
+
+    &__container {
+      font-size: 0.7rem;
+      line-height: 1em;
+      font-weight: 500;
+
+      display: flex;
+
+      writing-mode: vertical-lr;
+      transform: rotate(-180deg);
+
+      &--container {
+        display: grid;
+        grid-template-columns: 8px 8px 1fr;
+        justify-content: center;
+        align-items: flex-end;
+
+        .column__header {
+          margin-top: 3px;
+        }
+
+      }
+    }
+  }
+
+  .arrow {
+    margin-right: 1px;
+    font-size: 0.5rem;
+    cursor: pointer;
+    transform: rotate(90deg);
+    writing-mode: horizontal-tb;
+  }
+
+  .td:first-child {
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+
+  .td {
+    &__surface {
+      text-transform: initial;
+    }
+  }
+
+  .tr__empty {
+    height: 25vh;
+    margin-top: 20px;
+    & > .tr__contour {
+      height: 100%;
+    }
+  }
+
+
+
+  .tr {
+    border: 1px solid transparent;
+    max-width: calc(50px + 50px + 70px + 90px + 80px + 50px + 50px + 70px);
+    margin-bottom: 8px;
+    font-size: 0.55rem;
+    font-weight: 400;
+
+    &__clickable:hover{
+      border: 1px solid var(--black);
+    }
+
+    &__contour {
+      display: grid;
+      grid-row-gap: 10px;
+      grid-column-gap: 0;
+      grid-template-columns: 50px 50px 70px 90px 80px 50px 50px 70px;
+      border: 1px solid var(--black);
+      background-size: var(--patternSize) var(--patternSize);
+      background-color: var(--white);
+      background-image:   -webkit-linear-gradient(transparent 90%, var(--patternColor) 10%, var(--patternColor)),
+                          -webkit-linear-gradient(0deg, transparent 90%, var(--patternColor) 10%, var(--patternColor));
+      background-image:   -moz-linear-gradient(transparent 90%, var(--patternColor) 10%, var(--patternColor)),
+                          -moz-linear-gradient(0deg, transparent 90%, var(--patternColor) 10%, var(--patternColor));
+      background-image:   linear-gradient(transparent 90%, var(--patternColor) 10%, var(--patternColor)),
+                          linear-gradient(90deg, transparent 90%, var(--patternColor) 10%, var(--patternColor));
+      -pie-background:    linear-gradient(transparent 90%, var(--patternColor) 10%, var(--patternColor)) 0 0 / var(--patternSize) var(--patternSize),
+                          linear-gradient(90deg, transparent 90%, var(--patternColor) 10%, var(--patternColor)) 0 0 / var(--patternSize) var(--patternSize) var(--white);
+      behavior: url(/pie/PIE.htc);
+
+      &--head {
+        padding-top: 20px;
+        // padding-bottom: 10px;
+      }
+    }
+  }
+
+  .thead {
+    margin-bottom: 13px;
+    background-color: var(--darkWhite);
+    border: 2px solid var(--black);
+  }
+
+  .noborder {
+    border: none;
+  }
+
+  .tr0 > * {
+    padding-top: 55px;
+  }
+
+}

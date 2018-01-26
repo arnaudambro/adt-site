@@ -1,0 +1,43 @@
+.contentGrid {
+  // border: 1px solid #000;
+  // > * {
+  //   border: 1px solid #000;
+  // }
+  display: grid;
+  grid-template-columns: var(--contentLeftMargin) var(--middleColumn) var(--rightColumn); 
+  grid-gap: var(--gridGap);
+  max-width: var(--fullMaxWidth);
+  margin-top: var(--appTopMargin);
+  margin-right: auto;
+  margin-left: auto;
+  grid-template-areas: 
+    "empty content content";
+}
+
+.contentArea {
+  width: 100%;
+  grid-area: content;
+  height: var(--contentHeight);
+  overflow: hidden;
+  > div {
+    padding-top: var(--contentTopPadding);
+    /* FOR HIDING SCROLLBAR */
+    width: calc(100% + 20px);
+    height: 100%;
+    overflow: auto;
+    /* FOR FADE OUT ON SCROLL UP */
+    // &:before {
+    //   border: 1px solid #F00;
+    //   content:'';
+    //   width:100%;
+    //   position: fixed;
+    //   top: 0;
+    //   left: var(--contentLeftMargin);
+    //   height: calc(var(--appTopMargin) + 100px);    
+    //   background:linear-gradient(to top, transparent , white var(--appTopMargin));
+    // }
+  }
+  > div > :last-child {
+    margin-bottom: var(--contentBottomMargin) !important;
+  }
+}

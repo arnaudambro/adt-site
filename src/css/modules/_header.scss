@@ -1,0 +1,54 @@
+.header {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--headerWidth);
+  margin: var(--appTopMargin) var(--headerSideMargins);
+  pointer-events: none;
+
+  &__companyName {
+    margin-bottom: -14px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    text-transform: uppercase;
+    -webkit-text-stroke: 2.5px var(--black);
+    -webkit-text-fill-color: transparent;
+    font-size: 3.4rem;
+    font-weight: 700;
+    line-height: 4rem;
+
+  }
+
+  &__divider {
+    z-index: 1000;
+    height: 0;
+    border: 1.5px solid #000;
+    margin-top: var(--distanceToHeaderDivider);
+    margin-bottom: var(--distanceToHeaderDivider);
+    width: calc(var(--middleColumn) + var(--leftColumn) + var(--gridGap) * 4);
+  }
+
+  &__menu {    
+    margin-top: -10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    list-style: none;
+
+    > * {
+      pointer-events: initial;
+    }
+
+    & .active {
+      font-weight: 700;
+    }
+  }
+}
