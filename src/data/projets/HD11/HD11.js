@@ -1,23 +1,25 @@
 import React from 'react';
 import data_projets from '../../data_projets';
-import './HD11.css';
-// import salon from './atelierdelalandetabourin-hotel-morbihan-pierre-HD11-salon.jpg'
-import ref from './atelierdelalandetabourin-hotel-morbihan-pierre-HD11-ref.jpg'
-// import plan from './atelierdelalandetabourin-hotel-morbihan-pierre-HD11-plan.jpg'
-// import parking from './atelierdelalandetabourin-hotel-morbihan-pierre-HD11-parking.jpg'
-// import matiere from './atelierdelalandetabourin-hotel-morbihan-pierre-HD11-matiere.jpg'
-// import coupe3 from './atelierdelalandetabourin-hotel-morbihan-pierre-HD11-coupe3.jpg'
-// import coupe2 from './atelierdelalandetabourin-hotel-morbihan-pierre-HD11-coupe2.jpg'
-// import coupe1 from './atelierdelalandetabourin-hotel-morbihan-pierre-HD11-coupe1.jpg'
-// import coupe from './atelierdelalandetabourin-hotel-morbihan-pierre-HD11-coupe.jpg'
-// import chambre from './atelierdelalandetabourin-hotel-morbihan-pierre-HD11-chambre.jpg'
-// import bronzo from './atelierdelalandetabourin-hotel-morbihan-pierre-HD11-bronzo.jpg'
-// import auray from './atelierdelalandetabourin-hotel-morbihan-pierre-HD11-auray.jpg'
+import salon from './img/atelierdelalandetabourin-hotel-morbihan-pierre-HD11-salon.jpg'
+import ref from './img/atelierdelalandetabourin-hotel-morbihan-pierre-HD11-ref.jpg'
+import plan from './img/atelierdelalandetabourin-hotel-morbihan-pierre-HD11-plan.jpg'
+import coupe3 from './img/atelierdelalandetabourin-hotel-morbihan-pierre-HD11-coupe3.jpg'
+import coupe2 from './img/atelierdelalandetabourin-hotel-morbihan-pierre-HD11-coupe2.jpg'
+import coupe1 from './img/atelierdelalandetabourin-hotel-morbihan-pierre-HD11-coupe1.jpg'
+import piscine from './img/atelierdelalandetabourin-hotel-morbihan-pierre-HD11-piscine.jpg'
+import bronzo from './img/atelierdelalandetabourin-hotel-morbihan-pierre-HD11-bronzo.jpg'
+import auray from './img/atelierdelalandetabourin-hotel-morbihan-pierre-HD11-auray.jpg'
 
+
+
+
+import './HD11.css';
 export default class HD11 extends React.Component {
 
 
   render() {
+
+  
 
     const lang = this.props.language;
     const pageName = this.props.name;
@@ -26,10 +28,10 @@ export default class HD11 extends React.Component {
       title: `${data_projets[`${pageName}`].name}.`,
       surface: {
         en: {
-          __html: `Floor area: ${data_projets.hd11.surface} m<sup>2<sup>`,
+          __html: `Floor area: ${data_projets[`${pageName}`].surface} m<sup>2<sup>`,
         },
         fr: {
-          __html: `Surface: ${data_projets.hd11.surface} m<sup>2<sup>`,
+          __html: `Surface: ${data_projets[`${pageName}`].surface} m<sup>2<sup>`,
         }
       },
       cost: {
@@ -42,16 +44,51 @@ export default class HD11 extends React.Component {
       }
     }
 
+
     return(
 
-      <div className="projet projet__HD11 main__content">
+      <div className="projet projet__HD11 main__content projet__content">
         <div className="projet__title">{content.title}</div>
         <div className="projet__subtitle projet__subtitle--surface" dangerouslySetInnerHTML={content.surface[lang]}></div>
         <div className="projet__subtitle projet__subtitle--cost" dangerouslySetInnerHTML={content.cost[lang]}></div>
         <div className="projet__image--fullWidth">
           <img src={ref} alt='dolmens et menhirs' />
         </div>
+        <div className="projet__divider projet__divider--thick"></div>
+        <p>
+          HD11 s’inscrit à l’entrée de la ville de Locmariaquer. Forte de son port et de ses sites mégalithiques. C’est autour de ce patrimoine architectural que l’agence a souhaité développer ce projet. A l’image du grand menhir brisé d’Er Grah, l’extension de l’hôtel s’impose au sein de la parcelle dans une radicale dynamique de chute.
+        </p>
+        <p>Le monolithe éclaté le long du mur mitoyen est essentiellement composé de chambres aux ambiances lumineuses et minérales. Une stratégie qui permet de libérer de très généreuses pièces de vie au rez de chaussé. Et un vaste jardin paysagé ou les bassins et ruissellement d’eau rappellent la proximité de la mer.
+        </p>
+        <p>Un geste architectural qui permet à l’hôtel de passer de 600 à 900m2 de surface plancher. Et ainsi de passer en catégorie 4*.  Le projet se veut donc comme signal d’accueil d’un patrimoine local pour les visiteurs.
+        </p>
+        <div className="projet__divider projet__divider--thin"></div>
+        <div className="projet__image--fullWidth">
+          <img src={plan} alt='plan' />
+        </div>
+        <div className="projet__image--fullWidth">
+          <img src={coupe1} alt='coupe1' />
+        </div>
+        <div className="projet__image--fullWidth">
+          <img src={coupe2} alt='coupe2' />
+        </div>
+        <div className="projet__image--fullWidth">
+          <img src={coupe3} alt='coupe3' />
+        </div>
+        <div className="projet__image--fullWidth">
+          <img src={auray} alt='auray' />
+        </div>
+        <div className="projet__image--fullWidth">
+          <img src={bronzo} alt='bronzo' />
+        </div>
+        <div className="projet__image--fullWidth">
+          <img src={salon} alt='salon' />
+        </div>
+        <div className="projet__image--fullWidth">
+          <img src={piscine} alt='piscine' />
+        </div>
       </div>
+
 
       )
   }

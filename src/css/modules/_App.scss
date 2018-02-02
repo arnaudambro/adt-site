@@ -1,4 +1,63 @@
+/******** MEDIA QUERY ********/
 
+@media all and (min-width: 1100px) {
+  .App {
+    grid-template-rows: 
+      1fr 
+      minmax(var(--minAppTopMarginPX), var(--appTopMarginVH))
+      var(--gridRowLogoHeight)
+      var(--dividerToLogo) 
+      0 
+      var(--dividerToMenu)
+      calc(5 * var(--menuItemHeight))
+      1fr;
+
+    grid-template-areas: 
+    "landing    landing   landing   landing   landing"
+    "leftmargin topmargin topmargin topmargin rightmargin"
+    "leftmargin logo      content   content   rightmargin"
+    "leftmargin divtologo content   content   rightmargin"
+    "leftmargin divider   content   content   rightmargin"
+    "leftmargin divtomenu content   content   rightmargin"
+    "leftmargin menu      content   content   rightmargin"
+    "leftmargin spare   content   content   rightmargin";
+  }
+}
+@media all and (max-width: 1100px) {
+  .App {
+    grid-template-rows: 
+      1fr 
+      minmax(var(--minAppTopMarginPX), var(--appTopMarginVH))
+      var(--gridRowLogoHeight)
+      var(--dividerToLogo) 
+      0 
+      0
+      calc(5 * var(--menuItemHeight))
+      1fr;
+
+    grid-template-areas: 
+    "landing    landing   landing   landing   landing"
+    "leftmargin topmargin topmargin topmargin rightmargin"
+    "leftmargin logo      spare     menu      rightmargin"
+    "leftmargin divtologo divtologo divtologo rightmargin"
+    "leftmargin divider   divider   divider   rightmargin"
+    "leftmargin divtomenu divtomenu divtomenu   rightmargin"
+    "leftmargin content   content   content   rightmargin"
+    "leftmargin content   content   content   rightmargin";
+  }
+}
+
+/******** STYLING **********/
 .App {
+  &.inPosition {
+    transform: translateY(calc(var(--landingHeight) * -1));
+  }
+  transition: transform 0.75s;
+  position: relative;
+  height: calc(100vh + var(--landingHeight));
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: minmax(var(--minMargin), 1fr) var(--leftColumn) var(--middleColumn) var(--rightColumn) minmax(var(--minMargin), 1fr);
 
 }

@@ -16,26 +16,24 @@
 \*------------------------------------*/
 
 /********** COLUMN 1 ********/
-
 .news__20171224--pic1 {
-  grid-column: 1 / 3; 
-  grid-row: 1 / 5;
   overflow:  hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-row: 1 / 7;
 }
 
-.news__20171224--pic1 img {
-  width: 100%;
+@media all and (min-width: 1100px) {
+  .news__20171224--pic1 {
+    grid-column: 1 / 3; 
+  }
 }
 
-.news__20171224--pic2 {
-  grid-column: 1 / 3; 
-  grid-row: 5 / 7;
-  overflow:  hidden;
-}
-
-.news__20171224--pic2 img {
-  width: 100%;
-  bottom:  0;
+@media all and (max-width: 1100px) {
+  .news__20171224--pic1 {
+    grid-column: 1; 
+  }
 }
 
 
@@ -76,5 +74,6 @@
 .news__20171224--date--description {
   font-size: 0.70rem;
   font-weight: 300;
-  color:  var(--grey);
+  color: var(--black);
+opacity: 0.8;
 }

@@ -1,10 +1,17 @@
 import React from 'react';
 import data_news from '../data/data_news';
+import {Helmet} from "react-helmet";
+
 
 export default class News extends React.Component {
 
-  componentDidMount() {
-    this.props.area && this.props.area.scrollTo(0,0);
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(e) {
+    this.props.onarrowclick(this.contentArea);
   }
 
   render() {
@@ -13,13 +20,17 @@ export default class News extends React.Component {
     return(
 
 
-      <div className="news__container main__container">
-      {Object
-        .keys(data_news)
-        .sort((a, b) => data_news[a].date > data_news[b].date ? -1 : 1)
-        .map((key, index) => {
-        return data_news[key].component(this.props.language, index)
-      })}
+      <div className="news__container main__container" ref={(contentArea) => { this.contentArea = contentArea }}>
+        <Helmet>
+          <title>ATD | News</title>
+        </Helmet>
+        {Object
+          .keys(data_news)
+          .sort((a, b) => data_news[a].date > data_news[b].date ? -1 : 1)
+          .map((key, index) => {
+          return data_news[key].component(this.props.language, index)
+        })}
+        <div className="main__container--marginbottom news" onClick={this.handleClick}></div>
       </div>
       )
   }

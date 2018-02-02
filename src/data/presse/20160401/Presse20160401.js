@@ -38,13 +38,15 @@ export default class Presse20160401 extends React.Component {
     return(
       <div className="presse__20160401--content  presse__content main__content">
       <div className="presse__20160401--title">{content.title[this.props.language]}</div>
-        <div className="presse__20160401--pic1">
-          <img src={le_courrier_de_l_architecte} alt="hiver 2018"/>
+        <div 
+          className="presse__20160401--pic1"
+          style={{ backgroundImage: `url(${le_courrier_de_l_architecte})`}}
+          title="hiver 2018"> 
         </div>
         {/*<div className="presse__20160401--pic2">
           <img src={picture3} alt="plan architectural"/>
         </div>*/}
-        <div className="presse__20160401--column3--container column3--container">
+        <div className="presse__20160401--column3--container column3--container active">
           <div className="presse__20160401--column3">
             <div className="presse__20160401--date">{content.date[this.props.language]()}</div>
             {/*<div className="presse__20160401--date--datesubtitle" dangerouslySetInnerHTML={content.dateSubtitle[this.props.language]}></div>

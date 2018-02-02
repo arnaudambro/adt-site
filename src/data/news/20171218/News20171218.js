@@ -34,13 +34,17 @@ export default class News20171218 extends React.Component {
 
     return (
       <div className="news__20171218--content news__content main__content">
-        <div className="news__20171218--pic1">
-          <img src={pic1} alt="port de bretagne"/>
+        <div 
+          className="news__20171218--pic1"
+          style={{ backgroundImage: `url(${pic1}) `}}
+          title="port de bretagne">
         </div>
-        <div className="news__20171218--pic2">
-          <img src={pic2} alt="cave sous un hotel"/>
+        <div 
+          className="news__20171218--pic2"
+          style={{ backgroundImage: `url(${pic2}) `}}
+          title="cave sous un hotel">
         </div>
-        <div className="news__20171218--column3--container column3--container">
+        <div className="news__20171218--column3--container column3--container active">
           <div className="news__20171218--column3">
             <div className="news__20171218--date">{content.date[this.props.language]()}</div>
             <div className="news__20171218--date--datesubtitle" dangerouslySetInnerHTML={content.dateSubtitle[this.props.language]}></div>

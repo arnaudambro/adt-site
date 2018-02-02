@@ -1,3 +1,55 @@
+/******** MEDIA QUERY ********/
+
+@media all and (min-width: 1100px) {
+  :root {
+    --leftColumn: 380px;
+    --rightColumn: 300px;
+    --middleColumn: 380px;
+    --gridGap: 5px;
+    --minAppTopMarginPX: $minAppTopMarginPX;
+    --appTopMarginVH: 10vh;
+    --logoRowHeight: $logoRowHeight; //=== 4 * 16px === 64px;
+    --gridRowLogoHeight: calc(3 * var(--logoRowHeight));
+    --menuItemHeight: $menuItemHeight; //=== 28.8px;
+    --dividerToLogo: $dividerToLogo;
+    --dividerToMenu: $dividerToMenu;
+
+
+    --contentTopPadding: calc(var(--gridRowLogoHeight) + var(--dividerToLogo) + var(--dividerToMenu));
+    --allColumns: calc(var(--leftColumn) + var(--rightColumn) + var(--middleColumn));
+    --leftColumnsMargin: calc((100vw - var(--allColumns)) / 2);
+    --leftContentMargin: calc(var(--leftColumnsMargin) + var(--leftColumn));
+    --contentHeight: calc(100vh - var(--appTopMarginVH));
+    --contentBottomMargin: calc(var(--contentHeight) - var(--contentTopPadding));
+
+  }
+}
+@media all and (max-width: 1100px) {
+  :root {
+    --leftColumn: minmax(calc((var(--minMobileWidth) - 2 * var(--minMargin) - var(--gridGap)) / 2), $halfColumnMaxWidth);
+    --rightColumn: minmax(calc((var(--minMobileWidth) - 2 * var(--minMargin) - var(--gridGap)) / 2), $halfColumnMaxWidth);
+    --middleColumn: 0;
+    --gridGap: 5px;
+    --minAppTopMarginPX: $minAppTopMarginPX;
+    --appTopMarginVH: 15px;
+    --logoRowHeight: 50px; //=== 4 * 16px === 64px;
+    --gridRowLogoHeight: calc(2.3 * var(--logoRowHeight));
+    --menuItemHeight: $menuItemHeight; //=== 28.8px;
+    --dividerToLogo: 25px;
+    --dividerToMenu: $dividerToMenu;
+    --contentTopPadding: var(--dividerToMenu);
+
+    --allColumns: calc(var(--leftColumn) + var(--rightColumn) + var(--middleColumn));
+    --leftColumnsMargin: calc((100vw - var(--allColumns)) / 2);
+    --leftContentMargin: calc(var(--leftColumnsMargin) + var(--leftColumn));
+    --contentHeight: calc(100vh - var(--appTopMarginVH) - var(--dividerToLogo) - var(--gridRowLogoHeight));
+    --contentBottomMargin: 95%;
+
+  }
+}
+
+/******** STYLING **********/
+
 * {
   // border: 1px solid #000;
   margin: 0;
@@ -5,7 +57,18 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   color: var(--black);
+  transition: all var(--transition);
+}
 
+body {
+  background-color: var(--white);
+}
+
+html,
+body {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
 }
 
 :root {
@@ -16,30 +79,19 @@
   --grey: rgba(92,112,126,1.00);
   --silver: rgba(191,191,191,1.00);
 
-  --leftColumn: 380px;
-  --rightColumn: 300px;
-  --middleColumn: 380px;
-  --gridGap: 5px;
-  --appTopMargin: 10vh;
-  --headerWidth: calc(var(--middleColumn) + var(--leftColumn) + var(--gridGap) * 2 + var(--rightColumn));
-  --headerSideMargins: calc((100vw - var(--headerWidth)) /2);
-  --contentLeftMargin: calc(var(--headerSideMargins) + var(--leftColumn));
-  --distanceToHeaderDivider: 35px;
-  --logoHeight: 210px;
-  --contentTopPadding: calc(var(--logoHeight) + var(--distanceToHeaderDivider));
-  --remainingAfterTotalScroll: var(--distanceToHeaderDivider);
-  --contentHeight: calc(100vh - var(--appTopMargin));
-  --contentBottomMargin: calc(var(--contentHeight) - var(--contentTopPadding));
+  --dividerHeight: 2px;
+  --minMargin: $minMargin;
+  --minMobileWidth: 320px;
+  --landingHeight: calc(100vh);
+  --remainingHeight: calc(var(--appTopMargin) + var(--contentTopPadding));
+  --databaseMaxWidth: $databaseMaxWidth;
+  --databaseTemplateColumn: $databaseTemplateColumn;
 
-  --zindexHeader: 10;
-  --zindexHeaderDivider: 30;
+  --zindexHeader: -1;
+  --zindexHeaderElements: 30;
   --zindexContent: 20;
 
   --transition: 0.2s;
-}
-
-body {
-  overflow-y: hidden;
 }
 
 
@@ -49,54 +101,7 @@ a {
 }
 
 
-.column3--container {
-  grid-column: 3;
-  margin-left: 15px;
-  margin-top: -3px;
-  display: flex;
-  align-items: flex-start;
-  opacity: 0;
-  transform: translateX(30px);
-  transition: all var(--transition);
-}
 
 
-.column3--container:before {
-  content: '';
-  display: inline-block;
-  width: 28px;
-  height: 0;
-  border-top: 1px solid var(--silver);
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-top: 3px;
-  flex-shrink: 0;
-  flex-grow: 0;
-}
 
-
-.main {
-  &__container {
-  }
-
-  &__content {
-    display: grid;
-    grid-template-columns: repeat(3, calc(var(--middleColumn) / 2));
-    grid-auto-rows: 40px;
-    grid-row-gap: calc(var(--gridGap) * 1.5);
-    grid-column-gap: var(--gridGap);
-
-    &:hover .column3--container {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-}
-
-.landing {
-  width: 100vw;
-  height: 100vh;
-  z-index: 10000;
-  overflow: hidden;
-}
 

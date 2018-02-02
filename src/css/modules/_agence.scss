@@ -1,4 +1,238 @@
+/******** MEDIA QUERY ********/
+
+/*------------------------------------*\
+    MIN-WIDTH: 1100PX
+\*------------------------------------*/
+
+@media all and (min-width: 1100px) {
+  .agence {
+
+    //ATELIER
+    .atelier {
+      &__description {
+        width: 120%;
+        font-size: 0.9rem;
+        padding-left: 20px;
+        :first-child {
+          margin-bottom: 20px;
+        }
+      }
+      &__picture {
+        &1 {
+        }
+        &2 {
+          grid-column: 1 / 3;
+        }
+        &3 {
+          grid-column: 1 / 3;
+        }
+      }
+    }
+    .contact {
+      &__top {  
+      }
+
+      &__bottom {
+        grid-column: 2;
+
+        justify-content: end;    
+        justify-items: end;    
+      }
+
+      &__content {
+
+      }
+
+      &__adresse {
+
+      }
+
+      &__title {
+
+      }
+    }
+
+    .agence {
+      &__divider {
+        &1 {
+        }
+        &2 {
+        }
+        &3 {
+        }
+      }
+
+      &__picture {
+        &4 {
+          grid-column: 1 / 3;
+        }
+      }
+    }
+
+
+    //EQUIPE
+    .equipe {
+
+      //PICTURES
+      &__picture {
+        &5, &5--overlay {
+          &--description {
+            grid-row: 28;
+          }
+          grid-column: 1;
+          grid-row: 28 / span var(--imgCells);
+        }   
+        &6, &6--overlay {
+          &--description {
+            grid-row: 28;
+          }
+          grid-column: 2;
+          grid-row: 28 / span var(--imgCells);
+        }  
+        &7, &7--overlay {
+          &--description {
+            grid-row: 33;
+          }
+          grid-column: 1;
+          grid-row: 33 / span var(--imgCells);
+        }   
+        &8, &8--overlay {
+          &--description {
+            grid-row: 33;
+          }
+          grid-column: 2;
+          grid-row: 33 / span var(--imgCells);
+        }
+      }
+    }
+  }
+}
+
+/*------------------------------------*\
+    MAX-WIDTH: 1100PX
+\*------------------------------------*/
+
+@media all and (max-width: 1100px) {
+  .agence {
+    &.main__content {
+      grid-template-columns: repeat(2, 142.5px) !important; //1 column only
+    }
+
+    //ATELIER
+    .atelier {
+      &__description {
+        width: 100%;
+        font-size: 0.75rem;
+        :first-child {
+          margin-bottom: 10px;
+        }
+      }
+      &__picture {
+        &1 {
+        }
+        &2 {
+          grid-column: 1;
+        }
+        &3 {
+          grid-column: 1;
+        }
+      }
+    }
+
+    //CONTACT
+    .contact__adresse--line1 {
+      width: 150%;
+      // text-align: right;
+    }
+    .contact {
+      &__top {  
+      }
+
+      &__bottom {
+        grid-column: 1;
+
+        justify-content: start;    
+        justify-items: start;    
+      }
+
+      &__content {
+
+      }
+
+      &__adresse {
+
+      }
+
+      &__title {
+
+      }
+    }
+
+    .agence {
+      &__divider {
+        &1 {
+        }
+        &2 {
+        }
+        &3 {
+        }
+      }
+
+      &__picture {
+        &4 {
+          grid-column: 1;
+        }
+      }
+    }
+
+    //EQUIPE
+    .equipe {
+
+      &__picture {
+        grid-column: 1;
+        &--overlay {
+          display: none;
+        }
+        &5, &5--overlay {
+          &--description {
+            grid-row: 28;
+          }
+          grid-row: 28 / span var(--imgCells);
+          background-position: right;
+        }   
+        &6, &6--overlay {
+          &--description {
+            grid-row: 33;
+          }
+          justify-content: flex-start;
+          grid-row: 33 / span var(--imgCells);
+        }  
+        &7, &7--overlay {
+          &--description {
+            grid-row: 38;
+          }
+          background-position: right;
+          grid-row: 38 / span var(--imgCells);
+        }   
+        &8, &8--overlay {
+          &--description {
+            grid-row: 43;
+          }
+          background-position: right;
+          grid-row: 43 / span var(--imgCells);
+        }
+      }
+    }
+  }
+}
+
+/*------------------------------------*\
+    ALL
+\*------------------------------------*/
+
 .agence {
+
+  grid-template-rows: repeat(15, 40px) 10px repeat(7, 40px) 10px;
 
   .title {
     text-transform: uppercase;
@@ -11,69 +245,88 @@
 
   .atelier {
     &__description {
-      grid-row: 1 / 8;
-      font-size: 0.9rem;
       line-height: 1em;
-      padding-left: 20px;
-      width: 120%;
       overflow: visible;
-      :first-child {
-        margin-bottom: 20px;
+      grid-row: 1 / 8;
+      font-weight: 300;
+    }
+    &__picture {
+      display: grid;
+      grid-template-columns: 1fr;
+      --rowHeight: 40px; 
+      --rowGap: calc(var(--gridGap) * 1.5);
+      grid-auto-rows: var(--rowHeight);
+      grid-row-gap: var(--rowGap);
+      background-size: cover;
+      // > img {
+      //   grid-row: 1 / var(--imgCells);
+      //   min-width: 100%;
+      //   width: auto;
+      //   height: calc(var(--imgCells) * (var(--rowHeight) + var(--rowGap)) - var(--rowGap) );
+      // }
+      &1 {
+        --imgCells: 6;
+        grid-column: 1;
+        grid-row: 2 / span var(--imgCells);
+        overflow: hidden;
+      }
+      &2 {
+        --imgCells: 4;
+        grid-row: 8 / span var(--imgCells);
+        overflow: hidden;
+        background-position: center;
+      }
+      &3 {
+        --imgCells: 2;
+        grid-row: 12 / span var(--imgCells);
+        overflow: hidden;
+        background-position: center;      
       }
     }
 
-    &__picture {
-      &1 {
-        grid-column: 1;
-        grid-row: 2 / span 6;
-        overflow: hidden;
-        > img {
-          height: 100%;
-        }
-      }
-      &2 {
-        grid-column: 1 / 3;
-        grid-row: 8 / span 4;
-        overflow: hidden;
-        > img {
-          height: 100%;
-        }       
-      }
-      &3 {
-        grid-column: 1 / 3;
-        grid-row: 12 / span 2;
-        overflow: hidden;
-        > img {
-          height: 100%;
-        }       
-      }
-    }
+
   }
+
 
   .agence {
     &__divider {
       &1 {
         grid-row: 14;
+        height: 30px;
       }
       &2 {
         grid-row: 26;
+        height: 10px;
       }
       &3 {
         grid-row: 37;
         border-color: transparent;
       }
-      grid-column: 1;
+      grid-column: 1 / 3;
       height: 20px;
-      width: calc(var(--middleColumn));
+      width: 100%;
       border-bottom: 1px solid var(--grey);
     }
 
-    &__picture4 {
-      grid-column: 1 / 3;
-      grid-row: 17 / span 7;
-      overflow: hidden;
-      > img {
-        height: 100%;
+    &__picture {
+      display: grid;
+      grid-template-columns: 1fr;
+      --rowHeight: 40px; 
+      --rowGap: calc(var(--gridGap) * 1.5);
+      grid-auto-rows: var(--rowHeight);
+      grid-row-gap: var(--rowGap);
+      &4 {
+        --imgCells: 7;
+        grid-row: 17 / span var(--imgCells);
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+
+        // > img {
+        //   grid-row: 1 / var(--imgCells);
+        //   width: auto;
+        //   height: calc(var(--imgCells) * (var(--rowHeight) + var(--rowGap)) - var(--rowGap) );
+        // }
       }
     }
   }
@@ -88,17 +341,14 @@
     }
 
     &__bottom {
-      grid-column: 2;
       grid-row: 25;
       display: grid;
-      
-      justify-content: end;    
-      justify-items: end;    
+  
     }
 
     &__content {
       font-size: 0.7rem;
-      color: var(--grey);
+      opacity: 0.8;
     }
 
     &__adresse {
@@ -106,9 +356,11 @@
       font-weight: 700;
       text-transform: uppercase;
       color: var(--black);
+      font-size: 0.8rem;
     }
 
     &__title {
+      opacity: 0.8;
       font-size: 0.8rem;
       text-transform: uppercase;
       text-decoration: underline;
@@ -123,64 +375,51 @@
       justify-self: end;
     }
 
+    //PICTURES
     &__picture {
-      &5 {
-        &--description {
-          grid-row: 28;
-        }
-        grid-column: 1;
-        grid-row: 28 / span 5;
+      z-index: 1;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr;
+      --rowHeight: 40px; 
+      --rowGap: calc(var(--gridGap) * 1.5);
+      grid-auto-rows: var(--rowHeight);
+      grid-row-gap: var(--rowGap);
+      --imgCells: 5;
+      background-size: cover;
+
+      &--overlay {
+        --imgCells: 5;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        z-index: 2;
         overflow: hidden;
-        > img {
-          height: 100%;
-        }
-      }   
-      &6 {
-        &--description {
-          grid-row: 28;
-        }
-        grid-column: 2;
-        grid-row: 28 / span 5;
-        overflow: hidden;
-        > img {
-          height: 100%;
-        }
-      }  
-      &7 {
-        &--description {
-          grid-row: 33;
-        }
-        grid-column: 1;
-        grid-row: 33 / span 5;
-        overflow: hidden;
-        > img {
-          height: 100%;
-        }
-      }   
-      &8 {
-        &--description {
-          grid-row: 33;
-        }
-        grid-column: 2;
-        grid-row: 33 / span 5;
-        overflow: hidden;
-        > img {
-          width: 100%;
-        }
       }
+
+      // &--img {
+      //   grid-row: 1 / var(--imgCells);
+      //   width: auto;
+      //   height: calc(var(--imgCells) * (var(--rowHeight) + var(--rowGap)) - var(--rowGap) );
+      // }
+
     }
 
+
     &__description {
+
+      &--container {
+        width: 100%;
+      }
 
       &--content {
         font-size: 0.7rem;
         font-weight: 300;
-        width: 100%;
         > * {
           margin-bottom: 15px;
           b {
             font-weight: 400;
-            color: var(--grey);
+            opacity: 0.8;
           }
         }
         .function {
@@ -196,7 +435,7 @@
           margin-bottom: 15px;
         }
         .prices, .summary, .experiences {
-          color: var(--grey)
+          opacity: 0.8;
         }
         
       }

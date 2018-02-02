@@ -1,5 +1,7 @@
 import React from 'react';
-import { Transition } from 'react-transition-group'
+import { Transition } from 'react-transition-group';
+import {Helmet} from "react-helmet";
+
 
 import picture1 from '../img/agence/picture1.jpg';
 import picture2 from '../img/agence/picture2.jpg';
@@ -9,6 +11,8 @@ import picture5 from '../img/agence/picture5.jpg';
 import picture6 from '../img/agence/picture6.jpg';
 import picture7 from '../img/agence/picture7.jpg';
 import picture8 from '../img/agence/picture8.jpg';
+
+// import _ from 'lodash';
 
 
 const duration = 200;
@@ -39,37 +43,98 @@ export default class Agence extends React.Component {
       this.renderFrench = this.renderFrench.bind(this);
       this.renderEnglish = this.renderEnglish.bind(this);
       this.handleOver = this.handleOver.bind(this);
-
+      this.handleClick = this.handleClick.bind(this);
+      this.handleResponsiveClick = this.handleResponsiveClick.bind(this);
+      // this.handleAutomaticScroll = this.handleAutomaticScroll.bind(this);
+      
       this.state = {
-        showAssociate5: false,
+        automaticOvering: true,
+        showAssociate5: true,
         showAssociate6: false,
         showAssociate7: false,
         showAssociate8: false,
+        mouseIsEntered: false,
       }
     }
 
-    componentDidMount() {
-      this.props.area && this.props.area.scrollTo(0,0);
+    handleClick(e) {
+      this.props.onarrowclick(this.contentArea);
+    }
+
+    handleResponsiveClick(e) {
+      this.setState({ automaticOvering: false });
+      if (e.target.classList.contains('equipe__picture5')) {
+        this.setState({ showAssociate5: !this.state.showAssociate5 });
+        this.setState({ showAssociate6: false });
+        this.setState({ showAssociate7: false });
+        this.setState({ showAssociate8: false });
+      } else if (e.target.classList.contains('equipe__picture6')) {
+        this.setState({ showAssociate5: false });
+        this.setState({ showAssociate6: !this.state.showAssociate6 });
+        this.setState({ showAssociate7: false });
+        this.setState({ showAssociate8: false });
+      } else if (e.target.classList.contains('equipe__picture7')) {
+        this.setState({ showAssociate5: false });
+        this.setState({ showAssociate6: false });
+        this.setState({ showAssociate7: !this.state.showAssociate7 });
+        this.setState({ showAssociate8: false });
+      } else if (e.target.classList.contains('equipe__picture8')) {
+        this.setState({ showAssociate5: false });
+        this.setState({ showAssociate6: false });
+        this.setState({ showAssociate7: false });
+        this.setState({ showAssociate8: !this.state.showAssociate8 });
+      } else {
+        return;
+      }
     }
 
     handleOver(e) {
+      this.setState({ mouseIsEntered: e.type === 'mouseenter' ? true : false })
       switch (e.target.id) {
         case 'picture5' :
-          this.setState({ showAssociate5: !this.state.showAssociate5 });
+          if (e.type === "mouseleave") {
+            this.setState({ showAssociate5: false });
+          } else {
+            this.setState({ showAssociate5: true });
+          }
           break;
         case 'picture6' :
-          this.setState({ showAssociate6: !this.state.showAssociate6 });
+          if (e.type === "mouseleave") {
+            this.setState({ showAssociate6: false });
+          } else {
+            this.setState({ showAssociate6: true });
+          }
           break;
         case 'picture7' :
-          this.setState({ showAssociate7: !this.state.showAssociate7 });
+          if (e.type === "mouseleave") {
+            this.setState({ showAssociate7: false });
+          } else {
+            this.setState({ showAssociate7: true });
+          }
           break;
         case 'picture8' :
-          this.setState({ showAssociate8: !this.state.showAssociate8 });
+          if (e.type === "mouseleave") {
+            this.setState({ showAssociate8: false });
+          } else {
+            this.setState({ showAssociate8: true });
+          }
           break;
         default :
           break;
       }
     }
+
+    // handleAutomaticScroll(e) {
+    //   if (this.state.automaticOvering) {
+    //     console.log('ça scroll');
+    //     console.log(e);
+    //   } else {
+    //     console.log('déjà cliqué');
+    //     return
+    //   }
+    // }
+
+
 
     renderEnglish() {
       return(
@@ -82,22 +147,32 @@ export default class Agence extends React.Component {
 
     renderFrench() {
       return(
+        <div className="main__container" ref={(contentArea) => { this.contentArea = contentArea }}>
           <div className="agence main__content">
+            <Helmet>
+              <title>ATD | Agence</title>
+            </Helmet>
             <div className="title atelier__title">
               <span>l'atelier</span>
             </div>
             <div className="atelier__description">
               <p>Fondé en 2016, l’atelier se positionne sur une réflexion contemporaine de l’architecture qui s’articule principalement autour d’un travail innovant et subtil de la matière. Tous nos projets naissent d’une volonté de révéler la matière qui doit être, là où il faut. Créer sans transgresser.</p>
-              <p>Diplômés de l’ESA, passés par les agences Wilmotte & Associés.SA, Frédéric Borel, et Carl Fredrik Svenstedt, Nicolas Delalande et Sébastien Tabourin s’appuient sur leurs connaissances et leurs compétences transversales afin de vous proposer leur vision de l’architecture, de l’arcitecture d’intérieur et du design.</p>
+              <p>Diplômés de l’ESA, passés par les agences Wilmotte & Associés.SA, Frédéric Borel, et Carl Fredrik Svenstedt, Nicolas Delalande et Sébastien Tabourin s’appuient sur leurs connaissances et leurs compétences transversales afin de vous proposer leur vision de l’architecture, de l’architecture d’intérieur et du design.</p>
             </div>
-            <div className="atelier__picture1">
-              <img src={picture1} alt="sillon dans un rocher de granit" className="picture1"/>
+            <div 
+              className="atelier__picture1 atelier__picture" 
+              style={{ backgroundImage: `url(${picture1})`}} 
+              title="sillon dans un rocher de granit">
             </div>
-            <div className="atelier__picture2">
-              <img src={picture2} alt="vue sur la mer escala" className="picture2"/>
+            <div 
+              className="atelier__picture2 atelier__picture" 
+              style={{ backgroundImage: `url(${picture2})`}} 
+              title="vue sur la mer escala">
             </div>
-            <div className="atelier__picture3">
-              <img src={picture3} alt="dessin architectural" className="picture3"/>
+            <div 
+              className="atelier__picture3 atelier__picture" 
+              style={{ backgroundImage: `url(${picture3})`, marginBottom: `8px`}} 
+              title="dessin architectural">
             </div>
             <div className="agence__divider agence__divider1"></div>
             <div className="contact__top">
@@ -105,8 +180,10 @@ export default class Agence extends React.Component {
               <span className="contact__telephone contact__content">09.82.54.23.40</span>
               <span className="contact__email contact__content">contact@atelierdelalandetabourin.com</span>
             </div>
-            <div className="agence__picture4">
-              <img src={picture4} alt="agence" className="picture4"/>
+            <div 
+              className="agence__picture4 agence__picture"
+              style={{ backgroundImage: `url(${picture4})`}} 
+              title="agence">
             </div>
             <div className="contact__bottom">
               <span className="contact__adresse contact__content">adresse:</span>
@@ -117,28 +194,36 @@ export default class Agence extends React.Component {
             <div className="title equipe__title">
               <span>l'équipe</span>
             </div>
-            <div className="equipe__picture5">
-              <img onMouseEnter={this.handleOver} onMouseLeave={this.handleOver} src={picture5} alt="dessin architectural" className={`picture5`} id="picture5"/>
+            <div 
+              className="equipe__picture5 equipe__picture" 
+              onClick={this.handleResponsiveClick}
+              style={{ backgroundImage: `url(${picture5})`}}
+              title="nicolas delalande">
             </div>
-            <Transition in={this.state.showAssociate5} timeout={timeout}>
-              {((transitionState) => 
-                <div style={{...defaultStyle, ...transitionStyles[transitionState]}} className='equipe__description--container column3--container equipe__picture5--description'>
-                  <div className={` equipe__description--content`}>
-                    <span className="function">architecte associé</span>
-                    <span className="name">nicolas delalande</span>
-                    <p className="summary">Né en 1990<br />Architecte Diplômé d’Etat<br />Ecole Spéciale d’Architecture, 2014<br />Mention du Meilleur Diplôme, 2015</p>
-                    <p className="prices"><b>Lauréat du Trophée Béton</b><br />2ème prix – 2016<br /><b>Lauréat du Grand Prix d’Architecture des Beaux-Arts</b> – 2016</p>
-                    <p className="experiences"><b>Expériences:</b><br />M-Cube architectures, F.Borel architecture, ALC architectes, AWP – Agence de reconfiguration territoriale.</p>
-                  </div>
-                </div> 
-              )}
-            </Transition>
-            <div className="equipe__picture6">
-              <img onMouseEnter={this.handleOver} onMouseLeave={this.handleOver}  src={picture6} alt="dessin architectural" className={`picture6`} id="picture6"/>
+            <div onMouseEnter={this.handleOver} onMouseLeave={this.handleOver} className="equipe__picture--overlay equipe__picture5--overlay" id="picture5"></div>
+              <Transition in={this.state.showAssociate5} timeout={timeout}>
+                {((transitionState) => 
+                  <div style={{...defaultStyle, ...transitionStyles[transitionState]}} className={`equipe__description--container column3--container equipe__picture5--description`}>
+                    <div className={` equipe__description--content`}>
+                      <span className="function">architecte associé</span>
+                      <span className="name">nicolas delalande</span>
+                      <p className="summary">Né en 1990<br />Architecte Diplômé d’Etat<br />Ecole Spéciale d’Architecture, 2014<br />Mention du Meilleur Diplôme, 2015</p>
+                      <p className="prices"><b>Lauréat du Trophée Béton</b><br />2ème prix – 2016<br /><b>Lauréat du Grand Prix d’Architecture des Beaux-Arts</b> – 2016</p>
+                      <p className="experiences"><b>Expériences:</b><br />M-Cube architectures, F.Borel architecture, ALC architectes, AWP – Agence de reconfiguration territoriale.</p>
+                    </div>
+                  </div> 
+                )}
+              </Transition>
+            <div 
+              className="equipe__picture6 equipe__picture" 
+              onClick={this.handleResponsiveClick}
+              style={{ backgroundImage: `url(${picture6})`}}
+              title="sébastien tabourin">
             </div>
+            <div onMouseEnter={this.handleOver} onMouseLeave={this.handleOver} className="equipe__picture--overlay equipe__picture6--overlay" id="picture6"></div>
             <Transition in={this.state.showAssociate6} timeout={timeout}>
               {((transitionState) => 
-                <div style={{...defaultStyle, ...transitionStyles[transitionState]}} className='equipe__description--container column3--container equipe__picture6--description'>
+                <div style={{...defaultStyle, ...transitionStyles[transitionState]}} className={`equipe__description--container column3--container equipe__picture6--description`}>
                   <div className={` equipe__description--content`}>
                     <span className="function">architecte associé</span>
                     <span className="name">sébastien tabourin</span>
@@ -149,12 +234,16 @@ export default class Agence extends React.Component {
                 </div> 
               )}
             </Transition>
-            <div className="equipe__picture7">
-              <img onMouseEnter={this.handleOver} onMouseLeave={this.handleOver}  src={picture7} alt="dessin architectural" className={`picture7`} id="picture7"/>
+            <div 
+              className="equipe__picture7 equipe__picture" 
+              onClick={this.handleResponsiveClick}
+              style={{ backgroundImage: `url(${picture7})`}}
+              title="mathilde lizoret">
             </div>
+            <div onMouseEnter={this.handleOver} onMouseLeave={this.handleOver} className="equipe__picture--overlay equipe__picture7--overlay" id="picture7"></div>
             <Transition in={this.state.showAssociate7} timeout={timeout}>
               {((transitionState) => 
-                <div style={{...defaultStyle, ...transitionStyles[transitionState]}} className='equipe__description--container column3--container equipe__picture7--description'>
+                <div style={{...defaultStyle, ...transitionStyles[transitionState]}} className={`equipe__description--container column3--container equipe__picture7--description`}>
                   <div className={` equipe__description--content`}>
                     <span className="function">architecte chargée de projet</span>
                     <span className="name">mathilde lizoret</span>
@@ -164,16 +253,20 @@ export default class Agence extends React.Component {
                 </div> 
               )}
             </Transition>
-            <div className="equipe__picture8">
-              <img onMouseEnter={this.handleOver} onMouseLeave={this.handleOver}  src={picture8} alt="dessin architectural" className={`picture8`} id="picture8"/>
+            <div 
+              className="equipe__picture8 equipe__picture" 
+              onClick={this.handleResponsiveClick}
+              style={{ backgroundImage: `url(${picture8})`}}
+              title="pauline taupin">
             </div>
+            <div onMouseEnter={this.handleOver} onMouseLeave={this.handleOver} className="equipe__picture--overlay equipe__picture8--overlay" id="picture8"></div>
             <Transition in={this.state.showAssociate8} timeout={timeout}>
               {((transitionState) => 
-                <div style={{...defaultStyle, ...transitionStyles[transitionState]}} className='equipe__description--container column3--container equipe__picture8--description'>
+                <div style={{...defaultStyle, ...transitionStyles[transitionState]}} className={`equipe__description--container column3--container equipe__picture8--description`}>
                   <div className={` equipe__description--content`}>
                     <span className="function">dessinatrice</span>
                     <span className="name">pauline taupin</span>
-                    <p className="summary"><b>Née en 1995<br />ENSA Paris LA Vilette, Master 2</b></p>
+                    <p className="summary"><b>Née en 1995<br />ENSA Paris La Villette, Master 2</b></p>
                     <p className="experiences"><b>Expériences:</b><br />KOZ architectes, Paris</p>
                   </div>
                 </div> 
@@ -181,6 +274,8 @@ export default class Agence extends React.Component {
             </Transition>
             <div className="agence__divider agence__divider3"></div>
           </div>
+          <div className="main__container--marginbottom agence" onClick={this.handleClick}></div>
+        </div>
         )
       
     }

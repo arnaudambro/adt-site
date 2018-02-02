@@ -1,0 +1,89 @@
+/******** MEDIA QUERY ********/
+
+@media all and (min-width: 1100px) {
+  .landing {
+    --logoWidth: 250px;
+    .logo {
+      left: 14vw;
+      bottom: 15vh;
+      width: var(--logoWidth);
+      height: calc(var(--logoWidth) * 60 / 96);
+    }
+  }
+}
+@media all and (max-width: 1100px) {
+  .landing {
+
+    --logoWidth: 170px;
+    .logo {
+      left: 12.5vw;
+      bottom: 20vh;
+      width: var(--logoWidth);
+      height: calc(var(--logoWidth) * 60 / 96);
+    }
+  }
+}
+
+
+
+
+/******** STYLING **********/
+
+
+.landing {
+  grid-area: landing;
+  z-index: 1000;
+  overflow: hidden;
+  height: var(--landingHeight);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+
+
+  position: relative;
+
+  
+  justify-content: center;
+  align-items: flex-end;
+
+  .logo {
+    position: absolute;
+
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .calltoscroll-div {
+    margin-bottom: 2.5vh;
+  }
+
+  .scroll-icon {
+    color: var(--white);
+    fill: var(--white);
+    animation: clignote;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    // animation-direction: alternate;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+  }
+}
+
+
+@keyframes clignote {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(2.5vh);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(5vh);
+  }
+}
+

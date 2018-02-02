@@ -47,17 +47,20 @@ export default class News20180115 extends React.Component {
       <div className="news__20180115--content news__content main__content">
         <div className="news__20180115--column1">
           <div className="news__20180115--title">{content.title[this.props.language]}</div>
-          <div className="news__20180115--subtitle">{content.newsSubtitle[this.props.language]}</div>
-          <div className="news__20180115--description">{content.newsDescription[this.props.language]}</div>
-          <div className="news__20180115--blague">{content.blague[this.props.language]}</div>
+          <div className="news__20180115--subtitle column1">{content.newsSubtitle[this.props.language]}</div>
+          <div className="news__20180115--description column1">{content.newsDescription[this.props.language]}</div>
+          <div className="news__20180115--blague column1">{content.blague[this.props.language]}</div>
         </div>
         <div className="news__20180115--column2" style={{ backgroundImage: `url(${mathilde}) `}} >
         </div>
-        <div className="news__20180115--column3--container column3--container">
+        <div className="news__20180115--column3--container column3--container active">
           <div className="news__20180115--column3">
             <div className="news__20180115--date">{content.date[this.props.language]()}</div>
             <div className="news__20180115--date--datesubtitle"></div>
             <div className="news__20180115--date--description"></div>
+            <div className="news__20180115--subtitle column3">{content.newsSubtitle[this.props.language]}</div>
+            <div className="news__20180115--description column3">{content.newsDescription[this.props.language]}</div>
+            <div className="news__20180115--blague column3">{content.blague[this.props.language]}</div>
           </div>
         </div>
       </div>

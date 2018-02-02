@@ -15,6 +15,7 @@
     TO THIS PARTICULAR NEWS
 \*------------------------------------*/
 
+/**** MEDIA QUERIES ****/
 /********** COLUMN 1 ********/
 
 .news__20180115--column1 {
@@ -24,16 +25,70 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  
 }
+
+
+/********** COLUMN 2 ********/
+
+@media all and (min-width: 1100px) {
+  .news__20180115--column2 {
+      grid-column:  2;
+      grid-row: 1 / 6;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .news__20180115--title {
+      letter-spacing: 1px;
+      font-size: 1.6rem;
+    }
+    .news__20180115--subtitle.column3,
+    .news__20180115--description.column3,
+    .news__20180115--blague.column3
+     {
+      display:  none;
+    }
+
+}
+@media all and (max-width: 1100px) {
+  .news__20180115--content {
+    grid-template-rows: repeat(5, 40px) 20px;
+  }
+  .news__20180115--column2 {
+    grid-column: 1;
+    grid-row: 3 / 7;
+    margin-top:  -20px;
+    width:  100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .news__20180115--title {
+    font-size: 1.5rem;
+  }
+  .news__20180115--subtitle.column1,
+  .news__20180115--description.column1,
+  .news__20180115--blague.column1
+   {
+    display:  none;
+  }
+  .news__20180115--subtitle.column3,
+  .news__20180115--description.column3,
+  .news__20180115--blague.column3
+   {
+    margin-top:  15px;
+  }
+}
+
+
+/**** STYLE *****/
+/********** COLUMN 1 ********/
 
 .news__20180115--title {
   text-transform: uppercase;
   -webkit-text-stroke: 1.5px var(--black);
   -webkit-text-fill-color: transparent;
-  font-size: 1.6rem;
   font-weight: 700;
-  letter-spacing: 1px;
 }
 
 .news__20180115--subtitle {
@@ -53,42 +108,19 @@
 }
 
 
+
 /********** COLUMN 2 ********/
 
-.news__20180115--column2 {
-  grid-column:  2;
-  grid-row: 1 / 6;
-
-  background-size: 100% auto;
-}
 
 
 
 
 /********** COLUMN 3 ********/
 
-
-/* .news__20180115--column3--container {
-  display: flex;
-  align-items: flex-start;
-  grid-column: 3;
-  margin-top: -3px;
-}
-
-
-.news__20180115--column3--container:before {
-  content: '';
-  display: inline-block;
-  width: 28px;
-  height: 0;
-  border-top: 1pt solid var(--silver);
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-top: 3px;
-} */
-
 .news__20180115--date {
   font-size: 0.75rem;
   /* line-height:  1em; */
   font-weight: 400;
 }
+
+

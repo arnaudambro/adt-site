@@ -1,0 +1,117 @@
+$dividerToLogo: 10px;
+$dividerToMenu: 34px;
+$menuItemHeight: 28.8px; // === 1.8rem
+$logoRowHeight: 64px; // === 4rem
+$minAppTopMarginPX: 15px;
+$minHeightForBigScreen: $minAppTopMarginPX + 3 * $logoRowHeight + 5 * $menuItemHeight + $dividerToMenu + $dividerToLogo;
+
+$halfColumnMinWidth: 150px;
+$columnMinWidth: 2 * $halfColumnMinWidth;
+$halfColumnMaxWidth: 300px;
+$columnMaxWidth: 2 * $halfColumnMaxWidth;
+
+$minMargin: 15px;
+
+$dbName: 45px;
+$dbYear: 34px;
+$dbMadeFor: 64px;
+$dbLocation: 79px;
+$dbFunction: 74px;
+$dbFloorArea: 55px;
+$dbStatus: 59px;
+$dbMaterial: 75px;
+
+$databaseMaxWidth: ($dbName + $dbYear + $dbMadeFor + $dbLocation + $dbFunction + $dbFloorArea + $dbStatus + $dbMaterial);
+$databaseTemplateColumn: $dbName $dbYear $dbMadeFor $dbLocation $dbFunction $dbFloorArea $dbStatus $dbMaterial;
+
+$dbMedia1: $databaseMaxWidth + 2 * $minMargin;
+$dbMedia2: $databaseMaxWidth + 2 * $minMargin - $dbLocation;
+$dbMedia3: $databaseMaxWidth + 2 * $minMargin - $dbLocation - $dbMadeFor;
+$dbMedia4: $databaseMaxWidth + 2 * $minMargin - $dbLocation - $dbMadeFor - $dbStatus;
+
+
+/***PRIORITÉ 1 ***/
+@media all and (min-width: $dbMedia1) {
+
+  .ts_projets {
+    .tr {
+      max-width: ($dbName + $dbYear + $dbMadeFor + $dbLocation + $dbFunction + $dbFloorArea + $dbStatus + $dbMaterial);
+    }
+    .tr__contour {
+      grid-template-columns: $dbName $dbYear $dbMadeFor $dbLocation $dbFunction $dbFloorArea $dbStatus $dbMaterial;
+    }
+  }
+  .projet__content {
+    max-width: ($dbName + $dbYear + $dbMadeFor + $dbLocation + $dbFunction + $dbFloorArea + $dbStatus + $dbMaterial);
+  }
+}
+
+@media all and (max-width: $dbMedia1) {
+
+  .ts_projets {
+    .location {
+      display: none !important;
+    }
+    .tr {
+      max-width: ($dbName + $dbYear + $dbMadeFor + /* $dbLocation + */ $dbFunction + $dbFloorArea + $dbStatus + $dbMaterial);
+    }
+    .tr__contour {
+      grid-template-columns: $dbName $dbYear $dbMadeFor /* $dbLocation */ $dbFunction $dbFloorArea $dbStatus $dbMaterial;
+    }
+  }
+  .database {
+    width: ($dbName + $dbYear + $dbMadeFor + /* $dbLocation + */ $dbFunction + $dbFloorArea + $dbStatus + $dbMaterial);
+  }
+}
+
+@media all and (max-width: $dbMedia2) {
+  .ts_projets {
+    .madefor {
+      display: none !important;
+    }
+    .tr {
+      max-width: ($dbName + $dbYear +/*  $dbMadeFor + */ /* $dbLocation + */ $dbFunction + $dbFloorArea + $dbStatus + $dbMaterial);
+    }
+    .tr__contour {
+      grid-template-columns: $dbName $dbYear /* $dbMadeFor */ /* $dbLocation */ $dbFunction $dbFloorArea $dbStatus $dbMaterial;
+    }
+  }
+  .database {
+    width: ($dbName + $dbYear +/*  $dbMadeFor + */ /* $dbLocation + */ $dbFunction + $dbFloorArea + $dbStatus + $dbMaterial);
+  }
+
+}
+
+@media all and (max-width: $dbMedia3) {
+  .ts_projets {
+    .status {
+      display: none !important;
+    }
+    .tr {
+      max-width: ($dbName + $dbYear +/*  $dbMadeFor + */ /* $dbLocation + */ $dbFunction + $dbFloorArea + /* $dbStatus + */ $dbMaterial);
+    }
+    .tr__contour {
+      grid-template-columns: $dbName $dbYear /* $dbMadeFor */ /* $dbLocation */ $dbFunction $dbFloorArea /* $dbStatus */ $dbMaterial;
+    }
+  }
+  .database {
+    width: ($dbName + $dbYear +/*  $dbMadeFor + */ /* $dbLocation + */ $dbFunction + $dbFloorArea + /* $dbStatus + */ $dbMaterial);
+  }
+
+}
+
+@media all and (max-width: $dbMedia4) {
+  .ts_projets {
+    .floorarea {
+      display: none !important;
+    }
+    .tr {
+      // max-width: ($dbName + $dbYear +/*  $dbMadeFor + */ /* $dbLocation + */ $dbFunction + /* $dbFloorArea + */ /* $dbStatus + */ $dbMaterial);
+    }
+    .tr__contour {
+      grid-template-columns: $dbName $dbYear /* $dbMadeFor */ /* $dbLocation */ $dbFunction /* $dbFloorArea  *//* $dbStatus */ $dbMaterial;
+    }
+  }
+}
+
+

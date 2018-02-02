@@ -4,7 +4,6 @@ GENERAL
 // décaler le contenu par rapport au logo
 // barre plus épaisse (1.5px)
 // scroller presque jusqu'en bas
-rajouter petite flèche pour remonter tout en haut ? pas sûr
 
 PROJETS
 // aligner le haut du content avec le menu
@@ -42,3 +41,138 @@ PRESSE
 // ajouter les liens sur les icônes
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+V2
+
+GENERAL
+// scroll partout
+// garder la barre au dessus même quand on hover
+// lier le logo à la page projets
+// rajouter petite flèche pour remonter tout en haut ?
+
+PROJETS
+// retirer la matière du hover, la mettre à droite sous la livraison
+// remplacer l'image du béton
+// autoriser le click sur toute la colonne de droite
+// augmenter la dernière image P00 (intermédiaire)
+
+
+DATABASE
+// rallonger la barre juste pour la base de donnée
+// changer le tableau: rajouter année et état, supprimer fait par et phases
+supprimer le tri pour: 
+// resserrer le tout
+// changer les icônes de tri
+
+NEWS
+les rajouter
+// revoir les écarts entre tous
+
+
+
+V3
+
+LANDING
+// logo 1.7x plus gros + carotte moins large + espace plus fin
+// laisser un petit espace blanc en bas de la landing (autant que l'épaisseur du béton)
+// retirer le scroll + interdire de revenir dessus après
+// réduire l'image pour mobile
+
+PROJETS
+// remettre le click sur l'overlay
+
+PROJET
+largeur: comme la database
+// trier par ordre comme sur indesign
+
+DATABASE
+// tri d'entrée: par année, décroissant
+// centrer les header de colonne
+// EB12: année 2017
+// HD11 > PM19 > EB12
+// retirer la date de livraison de VB229
+// client privé sur 2 lignes
+// matières sur 2 lignes
+// revoir les hauteurs de lignes en accordance avec les hauteurs de la page projets
+// plus de marge entre flèches et bordure de la ligne
+
+
+GENERAL
+// divider principal un tout petit peu plus long (comme base de donnée)
+// flèche de scroll en bas: plus grosse et plus haute, calée à droite
+// rectifier le logo (faire une image)
+
+
+
+Version mobile:
+GENERAL
+// menu plus petit (14px)
+// augmenter le padding du content de 2-3px
+// scroll pas jusqu'au divider
+
+PROJETS
+// rectifier les column3 qui disparaissent
+// les mettre toujours présentes
+
+DATABASE
+// retirer les flèches sur le téléphone
+// fixer le tout
+
+TOUS
+faire la même chose que pour projets : une colonne + colonne3
+
+
+
+
+
+
+
+
+
+// revoir la taille du logo
+// retirer la bande blanche en bas du landing
+// titres plus petits
+// flèche axe de news dans version mobile
+// revoir la page d'accueil version mobile
+// changer black opacity 0.8 en grey
+
+
+
+
+
+// autoriser le click sur toute la landing
+// fade out quand on scroll au même niveau que le haut de atelier
+changer la petite flèche avec le modèle qu'ils vont envoyer
+
+NEWS
+// corriger la largeur des images + largeur des dividers
+
+AGENCE
+// corriger la largeur des images + largeur des dividers
+// remettre le texte à la bonne taille, ou en light
+// mettre contact comme adresse niveau couleur, et l'inverse niveau font-weight
+// revoir les écarts
+// changer l'image de pauline
+
+PRESSE

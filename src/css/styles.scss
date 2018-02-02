@@ -1,7 +1,8 @@
+@import "modules/scss-variables";
 @import "modules/base";
 @import "modules/App";
-@import "modules/index";
 @import "modules/header";
+@import "modules/landing";
 @import "modules/content";
 @import "modules/projets";
 @import "modules/database";
@@ -9,3 +10,4 @@
 @import "modules/news";
 @import "modules/presse";
 @import "modules/single_projet";
+@import "modules/column3";

@@ -1,10 +1,46 @@
+/******** MEDIA QUERY ********/
+@media all and (min-width: 1100px) {
+  .ts_projets {
+    .th {
+      &__container {
+        &--content {
+          grid-template-columns: 8px 8px 1fr;
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 1100px) {
+  .ts_projets {
+    .th {
+      &__container {
+        &--content {
+          grid-template-columns: 0 0 1fr;
+        }
+      }
+    }
+    .arrow {
+      opacity: 0;
+      max-width: 0;
+      max-height: 0;
+    }
+  }
+}
+
+
+
+
+/******** STYLING **********/
+
+
 .ts_projets {
   --patternColor: rgba(178,178,178,0.30);
   --patternSize: 7.5px;
   text-transform: uppercase;
 
   .td, .th {
-    padding: 0.5rem;
+    padding: 0.2rem;
+    padding-left: 0.5rem;
   }
 
   .td:not(:first-child) {
@@ -14,41 +50,86 @@
   .td {
     padding-top: 1rem;
     min-height: 50px;
+    display: flex;
+    
+    //justify-content: center;
+    //align-items: center;
+    //align-content: center;
+    
   }
 
   .th {
 
     &__container {
+      // border: 1px solid #00F;
       font-size: 0.7rem;
-      line-height: 1em;
+      // line-height: 1em;
       font-weight: 500;
-
+      height: 130px;
       display: flex;
+      // flex-direction: column;
+      // writing-mode: vertical-lr;
+      // transform: rotate(-90deg);
+      // justify-content: flex-end;
+      // align-items: flex-end;
+      // align-content: flex-end;
 
-      writing-mode: vertical-lr;
-      transform: rotate(-180deg);
+      &--content {
+        // border: 2px solid #F00;
+        display: flex;
+        flex-direction: column-reverse;
+        height: 100%;
+        width: 100%;
+        //justify-content: center;
+        //align-items: center;
+        //align-content: center;
+        
 
-      &--container {
-        display: grid;
-        grid-template-columns: 8px 8px 1fr;
-        justify-content: center;
-        align-items: flex-end;
 
-        .column__header {
-          margin-top: 3px;
+        // display: grid;
+        // justify-content: center;
+        // align-items: center;
+
+        .arrow {
+          // border: 1px solid #000;
+          margin-right: 1px;
+          cursor: pointer;
+          // transform: rotate(180deg);
+          width: 8px;
+          height: 8px;
+          margin-bottom: 2px;
+
+          // transform: rotate(90deg)
+        }
+
+        div {
+          // flex-grow: 1;
+          // border: 1px solid #000;
+          display: flex;
+          
+          justify-content: flex-start;
+          align-items: flex-end;
+          margin-left: -1px;
+          margin-bottom: 3px;
+          //align-content: center;
+          
+          .column__header {
+            height: 1em;
+            // border: 1px solid #0F0;
+            display: block;
+            white-space: nowrap;
+            // color: blue;
+            transform: rotate(-90deg) translateX(-1em);
+            transform-origin: 0 0;
+          }
         }
 
       }
     }
   }
 
-  .arrow {
-    margin-right: 1px;
-    font-size: 0.5rem;
-    cursor: pointer;
-    transform: rotate(90deg);
-    writing-mode: horizontal-tb;
-  }
+
+
 
   .td:first-child {
     font-size: 0.7rem;
@@ -65,6 +146,7 @@
   .tr__empty {
     height: 25vh;
     margin-top: 20px;
+    margin-bottom: -1px !important;
     & > .tr__contour {
       height: 100%;
     }
@@ -74,20 +156,24 @@
 
   .tr {
     border: 1px solid transparent;
-    max-width: calc(50px + 50px + 70px + 90px + 80px + 50px + 50px + 70px);
     margin-bottom: 8px;
     font-size: 0.55rem;
     font-weight: 400;
+
 
     &__clickable:hover{
       border: 1px solid var(--black);
     }
 
     &__contour {
+      > * {
+        // border: 2px solid #F00
+      }
+      height: 100%;
       display: grid;
+      align-content: center;
       grid-row-gap: 10px;
       grid-column-gap: 0;
-      grid-template-columns: 50px 50px 70px 90px 80px 50px 50px 70px;
       border: 1px solid var(--black);
       background-size: var(--patternSize) var(--patternSize);
       background-color: var(--white);
@@ -103,6 +189,7 @@
 
       &--head {
         padding-top: 20px;
+        padding-bottom: 5px;
         // padding-bottom: 10px;
       }
     }
@@ -119,7 +206,11 @@
   }
 
   .tr0 > * {
-    padding-top: 55px;
+    // padding-top: 55px;
+  }
+
+  .floorarea {
+    width: $dbFloorArea;
   }
 
 }

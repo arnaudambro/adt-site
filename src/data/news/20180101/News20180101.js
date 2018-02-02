@@ -1,4 +1,4 @@
-import React from 'react';
+  import React from 'react';
 import './News20180101.css';
 import bonne_annee_2018 from './bonne_annee_2018.jpg';
 
@@ -41,16 +41,18 @@ export default class News20180101 extends React.Component {
 
     return(
       <div className="news__20180101--content news__content main__content">
-      <div className="news__20180101--title">{content.title[this.props.language]}</div>
-      <div className="news__20180101--subtitle">{content.newsSubtitle[this.props.language]}</div>
-        <div className="news__20180101--pic1">
-          <img src={bonne_annee_2018} alt="decorations"/>
+      <div className="news__20180101--title column1">{content.title[this.props.language]}</div>
+      <div className="news__20180101--subtitle column1">{content.newsSubtitle[this.props.language]}</div>
+        <div 
+          className="news__20180101--pic1" 
+          style={{ backgroundImage: `url(${bonne_annee_2018}) `}}
+          title="bonne annee 2018">
         </div>
-        <div className="news__20180101--column3--container column3--container">
+        <div className="news__20180101--column3--container column3--container active">
           <div className="news__20180101--column3">
             <div className="news__20180101--date">{content.date[this.props.language]()}</div>
-{/*            <div className="news__20180101--date--datesubtitle" dangerouslySetInnerHTML={content.dateSubtitle[this.props.language]}></div>
-            <div className="news__20180101--date--description">{content.description[this.props.language]}</div>*/}
+            <div className="news__20180101--title column3">{content.title[this.props.language]}</div>
+            <div className="news__20180101--subtitle column3">{content.newsSubtitle[this.props.language]}</div>
           </div>
         </div>
       </div>

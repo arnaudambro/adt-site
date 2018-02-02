@@ -11,8 +11,8 @@ const menu = {
     active: false,
     component: Projets
   },
-  ts_projets: {
-    en: 'databse',
+  database: {
+    en: 'database',
     fr: 'base de données',
     active: false,
     component: Database
