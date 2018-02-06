@@ -3,8 +3,6 @@ import eb12_material from './eb12_material.jpg';
 
 import EB12 from './EB12';
 
-
-
 const eb12 = {
   eb12: {
     name: 'eb12',
@@ -12,15 +10,18 @@ const eb12 = {
     winDate: new Date(2017, 6, 1),
     surface: 720,
     materialPicHeight: 29,
+    cost: 'NC',
     img: eb12_material,
-    component(language, name, index: 0) {return <EB12 language={language} name={name} key={index}/> },
+    component(language, name, index: 0) {
+      return <EB12 language={language} name={name} key={index} />;
+    },
     en: {
       title: {
         __html: 'extension et réhabilitation du siège de l’entreprise barillet'
       },
       madeBy: 'ADT',
       madeFor: {
-        __html: 'barillet<br />company',
+        __html: 'barillet<br />company'
       },
       city: 'chateauneuf-sur-loire',
       departmentName: 'loiret',
@@ -30,7 +31,7 @@ const eb12 = {
       phasesWorked: 'PRO',
       status: 'PRO',
       material: {
-        __html: 'accoya',
+        __html: 'accoya'
       }
     },
     fr: {
@@ -39,7 +40,7 @@ const eb12 = {
       },
       madeBy: 'ADT',
       madeFor: {
-        __html: 'entreprise barillet',
+        __html: 'entreprise barillet'
       },
       city: 'chateauneuf-sur-loire',
       departmentName: 'loiret',
@@ -49,10 +50,10 @@ const eb12 = {
       phasesWorked: 'PRO',
       status: 'PRO',
       material: {
-        __html: 'accoya',
+        __html: 'Accoya'
       }
     }
   }
-}
+};
 
 export default eb12;

@@ -331,6 +331,20 @@
     }
   }
 
+  .social-medias {
+    grid-column: 2;
+    grid-row: 15;
+    color: var(--black);
+    opacity: 0.6;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: row;
+    > .facebook {
+      margin-right: 5px;
+    }
+  }
+
   .contact {
     &__top {
       grid-column: 1;

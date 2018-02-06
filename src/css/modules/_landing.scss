@@ -13,13 +13,15 @@
 }
 @media all and (max-width: 1100px) {
   .landing {
-
     --logoWidth: 170px;
     .logo {
       left: 12.5vw;
-      bottom: 20vh;
+      bottom: 30vh;
       width: var(--logoWidth);
       height: calc(var(--logoWidth) * 60 / 96);
+    }
+    .scroll-icon {
+      margin-bottom: 15vh;
     }
   }
 }

@@ -3,7 +3,6 @@ import hd11_material from './hd11_material.jpg';
 
 import HD11 from './HD11';
 
-
 const hd11 = {
   hd11: {
     name: 'hd11',
@@ -11,15 +10,18 @@ const hd11 = {
     winDate: new Date(2017, 9, 1),
     surface: 1020,
     materialPicHeight: 33,
+    cost: 'NC',
     img: hd11_material,
-    component(language, name, index: 0) {return <HD11 language={language} name={name} key={index}/> },
+    component(language, name, index: 0) {
+      return <HD11 language={language} name={name} key={index} />;
+    },
     en: {
       title: {
         __html: 'rehabilitation of a 4*&nbsphotel'
       },
       madeBy: 'ADT',
       madeFor: {
-        __html: 'sadim<br /> company',
+        __html: 'sadim<br /> company'
       },
       city: 'locmariaquer',
       departmentName: 'morbihan',
@@ -29,7 +31,7 @@ const hd11 = {
       phasesWorked: 'PRO',
       status: 'PRO',
       material: {
-        __html: 'granite',
+        __html: 'Granite'
       }
     },
     fr: {
@@ -38,7 +40,7 @@ const hd11 = {
       },
       madeBy: 'ADT',
       madeFor: {
-        __html: 'société<br />sadim',
+        __html: 'société<br />sadim'
       },
       city: 'locmariaquer',
       departmentName: 'morbihan',
@@ -48,10 +50,10 @@ const hd11 = {
       phasesWorked: 'PRO',
       status: 'PRO',
       material: {
-        __html: 'granit',
+        __html: 'Granit'
       }
     }
   }
-}
+};
 
 export default hd11;

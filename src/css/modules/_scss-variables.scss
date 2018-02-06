@@ -12,7 +12,7 @@ $columnMaxWidth: 2 * $halfColumnMaxWidth;
 
 $minMargin: 15px;
 
-$dbName: 45px;
+$dbName: 50px;
 $dbYear: 34px;
 $dbMadeFor: 64px;
 $dbLocation: 79px;
@@ -41,7 +41,7 @@ $dbMedia4: $databaseMaxWidth + 2 * $minMargin - $dbLocation - $dbMadeFor - $dbSt
       grid-template-columns: $dbName $dbYear $dbMadeFor $dbLocation $dbFunction $dbFloorArea $dbStatus $dbMaterial;
     }
   }
-  .projet__content {
+  .projet__content, .projet__header {
     max-width: ($dbName + $dbYear + $dbMadeFor + $dbLocation + $dbFunction + $dbFloorArea + $dbStatus + $dbMaterial);
   }
 }
@@ -59,7 +59,7 @@ $dbMedia4: $databaseMaxWidth + 2 * $minMargin - $dbLocation - $dbMadeFor - $dbSt
       grid-template-columns: $dbName $dbYear $dbMadeFor /* $dbLocation */ $dbFunction $dbFloorArea $dbStatus $dbMaterial;
     }
   }
-  .database {
+  .database, .projet__header {
     width: ($dbName + $dbYear + $dbMadeFor + /* $dbLocation + */ $dbFunction + $dbFloorArea + $dbStatus + $dbMaterial);
   }
 }
@@ -76,7 +76,7 @@ $dbMedia4: $databaseMaxWidth + 2 * $minMargin - $dbLocation - $dbMadeFor - $dbSt
       grid-template-columns: $dbName $dbYear /* $dbMadeFor */ /* $dbLocation */ $dbFunction $dbFloorArea $dbStatus $dbMaterial;
     }
   }
-  .database {
+  .database, .projet__header {
     width: ($dbName + $dbYear +/*  $dbMadeFor + */ /* $dbLocation + */ $dbFunction + $dbFloorArea + $dbStatus + $dbMaterial);
   }
 
@@ -94,8 +94,8 @@ $dbMedia4: $databaseMaxWidth + 2 * $minMargin - $dbLocation - $dbMadeFor - $dbSt
       grid-template-columns: $dbName $dbYear /* $dbMadeFor */ /* $dbLocation */ $dbFunction $dbFloorArea /* $dbStatus */ $dbMaterial;
     }
   }
-  .database {
-    width: ($dbName + $dbYear +/*  $dbMadeFor + */ /* $dbLocation + */ $dbFunction + $dbFloorArea + /* $dbStatus + */ $dbMaterial);
+  .database,  .projet__header {
+    width: ($dbName + $dbYear + $dbFunction + $dbFloorArea + $dbMaterial);
   }
 
 }

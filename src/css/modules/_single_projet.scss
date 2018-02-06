@@ -27,19 +27,34 @@
     font-size: 1.6rem;
     font-weight: 700;
     letter-spacing: 1px;
+    @media all and (max-width: 1100px) {
+      justify-self: start;
+      align-self: center;
+    }
+  }
+
+  &__subtitle, &__subtitle > * {
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: var(--black);
+    opacity: 0.8;
+
+    > sup {
+      font-size: 0.6rem;
+    }
   }
 
   &__subtitle {
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: var(--grey);
-
-    > * {
-      font-size: 1.2rem;
-      font-weight: 300;
-      color: var(--grey);
-
+    &--headline {
+      text-transform: uppercase;        
+      font-weight: 400;
+      // margin-top: 15px;
     }
+    &--location {
+      text-transform: capitalize;
+      font-weight: 300;
+    }
+
   }
 
   &__divider {
@@ -68,12 +83,80 @@
     margin-bottom:  15px;
     margin-top:  15px;
 
+    &.marginbottom {
+      margin-bottom: 90px !important;
+    }
+
     > img {
       max-width:100%;
       max-height:100%;
       height:  auto;
       width:  100%;
     }
+  }
+
+  &__arrows {
+    --arrowsHeight: 1.4rem;
+    --arrowsWidth: calc(var(--arrowsHeight) * 25 / 10);
+
+    height: var(--arrowsHeight);
+    width: var(--arrowsWidth);
+
+    grid-column: 2;
+    justify-self: end;
+    align-self: center;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+
+    > * {
+      height: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    &--left, &--right {
+      width: calc(var(--arrowsWidth) * 6 / 25);
+      cursor: pointer;
+      flex-grow: 1;
+    }
+    &--left {
+      background-position: center left;
+      // border-right: 1px solid var(--black); 
+    }
+    &--right {
+      background-position: center right;
+      // border-left: 1px solid black; 
+    }
+
+    &--divider {
+      height: 70%;
+      width: 1px;
+      background-color: var(--black);
+      opacity: 0.8;
+    }
+  }
+
+  &__header {
+    
+      @media all and (min-width: 1100px) {
+        margin-left: var(--leftContentMargin);
+      } 
+      
+      display: grid !important;
+      grid-template-rows: 3rem repeat(2, 1rem) 1.4rem repeat(3, 1rem) 0.75rem;
+    &--title {
+      display: flex; 
+      justify-content: space-between !important;
+      align-items: center;
+      flex-direction: row !important;
+      align-self: start !important;
+    }
+    > * {
+      align-self: end;
+    }
+
   }
 
 }

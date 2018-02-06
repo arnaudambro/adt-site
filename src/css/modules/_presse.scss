@@ -21,6 +21,22 @@
     margin-bottom:  30px;
   }
 
+  &__overlay {
+    background-color: var(--whiteTransparent);
+    opacity: 0;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    transition: opacity var(--transition);
+    &:hover {
+      opacity: 1;
+    }
+  }
+
   &.main__container--marginbottom {
     margin-top: -30px;
   }

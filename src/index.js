@@ -1,20 +1,27 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+// import { hydrate, render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
 import './css/styles.css';
 import App from './App';
-// import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from './registerServiceWorker';
 
 const Root = () => {
   return (
-    <BrowserRouter basename="/atd/">
+    <BrowserRouter basename="/">
       <App />
     </BrowserRouter>
-  )
-}
+  );
+};
 
-ReactDOM.render(<Root />, document.getElementById('root'));
-// registerServiceWorker();
+// render(<Root />, document.getElementById('root'));
+render(<Root />, document.getElementById('root'));
+registerServiceWorker();
 
-
+// const rootElement = document.getElementById('root');
+// if (rootElement.hasChildNodes()) {
+//   hydrate(<Root />, rootElement);
+// } else {
+//   render(<Root />, rootElement);
+// }

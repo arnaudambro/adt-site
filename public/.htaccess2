@@ -1,6 +1,5 @@
-RewriteBase /atd/
+RewriteBase /atd
 RewriteRule ^index\.html$ -[L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteOptions Inherit
 RewriteRule . /index.html [L]

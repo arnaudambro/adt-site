@@ -1,7 +1,7 @@
 import React from 'react';
-import data_projets from '../../data_projets';
+// import data_projets from '../../data_projets';
 
-import './AD38.css';
+// import './AD38.css';
 
 // import chambre from './img/atelierdelalandetabourin-appartements-AD38-chambre.jpg';
 import matiere from './img/atelierdelalandetabourin-appartements-AD38-matiere.jpg';
@@ -17,21 +17,12 @@ import couloirchambre from './img/atelierdelalandetabourin-appartements-AD38-cou
 import couloir2 from './img/atelierdelalandetabourin-appartements-AD38-couloir2.jpg';
 import sdb from './img/atelierdelalandetabourin-appartements-AD38-sdb.jpg';
 
-
-
-
-
 export default class AD38 extends React.Component {
-
-
   render() {
+    // const lang = this.props.language;
+    // const pageName = this.props.name;
 
-  
-
-    const lang = this.props.language;
-    const pageName = this.props.name;
-
-    const content = {
+    /*    const content = {
       title: `${data_projets[`${pageName}`].name}.`,
       surface: {
         en: {
@@ -49,67 +40,75 @@ export default class AD38 extends React.Component {
           __html: 'Coût: NC',
         }
       }
-    }
+    }*/
 
-
-    return(
-
+    return (
       <div className="projet projet__AD38 main__content projet__content">
-        <div className="projet__title">{content.title}</div>
-        <div className="projet__subtitle projet__subtitle--surface" dangerouslySetInnerHTML={content.surface[lang]}></div>
-        <div className="projet__subtitle projet__subtitle--cost" dangerouslySetInnerHTML={content.cost[lang]}></div>
+        {/*<div className="projet__title">{content.title}</div>*/}
+        {/*<div className="projet__subtitle projet__subtitle--surface" dangerouslySetInnerHTML={content.surface[lang]}></div>
+        <div className="projet__subtitle projet__subtitle--cost" dangerouslySetInnerHTML={content.cost[lang]}></div>*/}
         <div className="projet__image--fullWidth">
-          <img src={matiere} alt='eglise et matière' />
+          <img src={matiere} alt="eglise et matière" />
         </div>
-        <div className="projet__divider projet__divider--thick"></div>
+        <div className="projet__divider projet__divider--thick" />
         <p>
-          Il fallait ensuite repenser l’appartement en fonction de la trame structurelle et des réseaux existants. S’est ensuive l’étude d’une nouvelle organisation de l’espace qui viendrait s’articuler autour d’un bloc fonctionnel centralisé, habillé de pierre. Composé de rangements et de pièces d’eau, il nous révèle une multitude de petits espaces aux couleurs et aux univers variés.
+          L’appartement est situé dans un immeuble qui surplombe Paris depuis la
+          colline de Meudon. Les façades en pierre de l’immeuble et de l’église
+          contiguë ont fait naître en nous la volonté de réutiliser ce matériau
+          noble au sein du projet.
         </p>
-        <p>Il fallait ensuite repenser l’appartement en fonction de la trame structurelle et des réseaux existants. S’est ensuive l’étude d’une nouvelle organisation de l’espace qui viendrait s’articuler autour d’un bloc fonctionnel centralisé, habillé de pierre. Composé de rangements et de pièces d’eau, il nous révèle une multitude de petits espaces aux couleurs et aux univers variés.
+        <p>
+          Il fallait ensuite repenser l’appartement en fonction de la trame
+          structurelle et des réseaux existants. S’est ensuive l’étude d’une
+          nouvelle organisation de l’espace qui viendrait s’articuler autour
+          d’un bloc fonctionnel centralisé, habillé de pierre. Composé de
+          rangements et de pièces d’eau, il nous révèle une multitude de petits
+          espaces aux couleurs et aux univers variés.
         </p>
-        <p>Un monolithe de pierre autour duquel la vie de l’appartement va prendre corps.<br />Il devient une zone tampon entre un espace jour (séjour, cuisine) et un espace nuit (chambres).
+        <p>
+          Un monolithe de pierre autour duquel la vie de l’appartement va
+          prendre corps.<br />Il devient une zone tampon entre un espace jour
+          (séjour, cuisine) et un espace nuit (chambres).
         </p>
-        <div className="projet__divider projet__divider--thin"></div>
-        <div className="projet__image--fullWidth">
-          <img src={plan} alt='plan' />
+        <div className="projet__divider projet__divider--thin" />
+        <div className="projet__image--fullWidth marginbottom">
+          <img src={plan} alt="plan" />
         </div>
         <div className="projet__image--fullWidth">
-          <img src={couloir} alt='couloir' />
+          <img src={couloir} alt="couloir" />
         </div>
         <div className="projet__image--fullWidth">
-          <img src={placardferme} alt='placard ferme' />
+          <img src={placardferme} alt="placard ferme" />
         </div>
         <div className="projet__image--fullWidth">
-          <img src={placardouvert} alt='placard ouvert' />
+          <img src={placardouvert} alt="placard ouvert" />
         </div>
         <div className="projet__image--fullWidth">
-          <img src={banc} alt='banc' />
+          <img src={banc} alt="banc" />
         </div>
         <div className="projet__image--fullWidth">
-          <img src={detail} alt='detail - prise électrique' />
+          <img src={detail} alt="detail - prise électrique" />
         </div>
         <div className="projet__image--fullWidth">
-          <img src={pierre} alt='pierre' />
+          <img src={pierre} alt="pierre" />
         </div>
         <div className="projet__image--fullWidth">
-          <img src={salon} alt='salon' />
+          <img src={salon} alt="salon" />
         </div>
         <div className="projet__image--fullWidth">
-          <img src={couloirchambre} alt='couloir chambre' />
+          <img src={couloirchambre} alt="couloir chambre" />
         </div>
         <div className="projet__image--fullWidth">
-          <img src={couloir2} alt='couloir2' />
+          <img src={couloir2} alt="couloir2" />
         </div>
         <div className="projet__image--fullWidth">
-          <img src={sdb} alt='salle de bain' />
+          <img src={sdb} alt="salle de bain" />
         </div>
       </div>
-
-
-      )
+    );
   }
 }
 
 AD38.propTypes = {
   //*propName*: React.PropTypes.*proptype*.*isRequired*,
-}
+};

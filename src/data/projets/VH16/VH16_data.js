@@ -3,7 +3,6 @@ import vh16_material from './vh16_material.jpg';
 
 import VH16 from './VH16';
 
-
 const vh16 = {
   vh16: {
     name: 'vh16',
@@ -11,16 +10,20 @@ const vh16 = {
     winDate: new Date(2016, 4, 1),
     surface: 320,
     materialPicHeight: 10,
+    cost: 'NC',
     img: vh16_material,
-    component(language, name, index: 0) {return <VH16 language={language} name={name} key={index}/> },
+    component(language, name, index: 0) {
+      return <VH16 language={language} name={name} key={index} />;
+    },
     en: {
       title: {
         __html: 'building of private house'
       },
       madeBy: 'ADT',
       madeFor: {
-        __html: 'private<br />client',
-      },      city: 'orléans',
+        __html: 'private<br />client'
+      },
+      city: 'orléans',
       departmentName: 'loiret',
       departmentNumber: '45',
       country: 'france',
@@ -28,7 +31,7 @@ const vh16 = {
       phasesWorked: 'DET',
       status: 'EXE',
       material: {
-        __html: 'balayed<br />enduit',
+        __html: 'balayed enduit'
       }
     },
     fr: {
@@ -37,8 +40,9 @@ const vh16 = {
       },
       madeBy: 'ADT',
       madeFor: {
-        __html: 'client<br />privé',
-      },      city: 'orléans',
+        __html: 'client<br />privé'
+      },
+      city: 'orléans',
       departmentName: 'loiret',
       departmentNumber: '45',
       country: 'france',
@@ -46,11 +50,10 @@ const vh16 = {
       phasesWorked: 'DET',
       status: 'EXE',
       material: {
-        __html: 'enduit<br />balayé',
+        __html: 'Enduit balayé'
       }
     }
   }
-}
-
+};
 
 export default vh16;

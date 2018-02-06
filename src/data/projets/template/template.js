@@ -1,18 +1,16 @@
 import React from 'react';
-import data_projets from '../../data_projets';
+// import data_projets from '../../data_projets';
 
-import './template.css';
+// import './template.css';
 
 // import picture from './img/picture.jpg';
 
 export default class template extends React.Component {
-
   render() {
+    // const lang = this.props.language;
+    // const pageName = this.props.name;
 
-    const lang = this.props.language;
-    const pageName = this.props.name;
-
-    const content = {
+    /*    const content = {
       title: `${data_projets[`${pageName}`].name}.`,
       surface: {
         en: {
@@ -30,34 +28,30 @@ export default class template extends React.Component {
           __html: 'Coût: NC',
         }
       }
-    }
+    }*/
 
-
-    return(
-
+    return (
       <div className="projet projet__template main__content projet__content">
-        <div className="projet__title">{content.title}</div>
-        <div className="projet__subtitle projet__subtitle--surface" dangerouslySetInnerHTML={content.surface[lang]}></div>
-        <div className="projet__subtitle projet__subtitle--cost" dangerouslySetInnerHTML={content.cost[lang]}></div>
+        {/*<div className="projet__title">{content.title}</div>*/}
+        {/*<div className="projet__subtitle projet__subtitle--surface" dangerouslySetInnerHTML={content.surface[lang]}></div>
+        <div className="projet__subtitle projet__subtitle--cost" dangerouslySetInnerHTML={content.cost[lang]}></div>*/}
         {/*<div className="projet__image--fullWidth">
           <img src={plan} alt='plan' />
         </div>*/}
-        <div className="projet__divider projet__divider--thick"></div>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <div className="projet__divider projet__divider--thin"></div>
+        <div className="projet__divider projet__divider--thick" />
+        <p />
+        <p />
+        <p />
+        <p />
+        <div className="projet__divider projet__divider--thin" />
         {/*<div className="projet__image--fullWidth">
           <img src={plan} alt='plan' />
         </div>*/}
       </div>
-
-
-      )
+    );
   }
 }
 
 template.propTypes = {
   //*propName*: React.PropTypes.*proptype*.*isRequired*,
-}
+};

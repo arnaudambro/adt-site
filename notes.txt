@@ -63,6 +63,8 @@ PRESSE
 
 
 
+
+
 V2
 
 GENERAL
@@ -176,3 +178,47 @@ AGENCE
 // changer l'image de pauline
 
 PRESSE
+
+
+
+
+GENERAL
+// remettre le fond en blanc
+
+PROJET
+// réduire la taille de surface et coût
+// changer la couleur (opacity blanc)
+
+NEWS
+// retirer la petite blague
+// news 12 janvier: retirer l'image du bas
+// news 5 janvier: décaler le texte sur la droite
+//titre de la news 20180827
+
+PRESSE
+// retirer l'image au-dessus
+// rajouter le filtre blanc sur la photo
+
+
+MOBILE 
+PAGE D'ACCUEIL
+// remonter la petite flèche
+
+DATABASE
+// mettre dans le bon ordre
+
+
+// +rajouter les flèches de balade entre projets
+// +maintenir projets en gras
+
+
+
+
+// ajouter facebook instagram à droite de contact, alignés sur la droite
+// ajouter toutes les infos des projets
+// diminuer tous les logos de la presse
+
+
+
+NEWS
+// aligner 5 janvier texte en bas + réduire la taille

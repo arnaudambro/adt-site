@@ -3,8 +3,6 @@ import pm19_material from './pm19_material.jpg';
 
 import PM19 from './PM19';
 
-
-
 const pm19 = {
   pm19: {
     name: 'pm19',
@@ -12,16 +10,20 @@ const pm19 = {
     winDate: new Date(2017, 8, 1),
     surface: 170,
     materialPicHeight: 7,
+    cost: 'NC',
     img: pm19_material,
-    component(language, name, index: 0) {return <PM19 language={language} name={name} key={index}/> },
+    component(language, name, index: 0) {
+      return <PM19 language={language} name={name} key={index} />;
+    },
     en: {
       title: {
         __html: 'conception of a pool and a pool house'
       },
       madeBy: 'ADT',
       madeFor: {
-        __html: 'private<br />client',
-      },      city: 'brézé',
+        __html: 'private<br />client'
+      },
+      city: 'brézé',
       departmentName: 'maine-et-loire',
       departmentNumber: '49',
       country: 'france',
@@ -29,17 +31,18 @@ const pm19 = {
       phasesWorked: 'PRO',
       status: 'EXE',
       material: {
-        __html: 'tufeau',
+        __html: 'tufeau'
       }
     },
     fr: {
       title: {
-        __html: 'conception d’une piscine et d’une pool-house'
+        __html: 'conception d’une piscine et d’un pool-house'
       },
       madeBy: 'ADT',
       madeFor: {
-        __html: 'client<br />privé',
-      },      city: 'brézé',
+        __html: 'client<br />privé'
+      },
+      city: 'brézé',
       departmentName: 'maine-et-loire',
       departmentNumber: '49',
       country: 'france',
@@ -47,10 +50,10 @@ const pm19 = {
       phasesWorked: 'PRO',
       status: 'EXE',
       material: {
-        __html: 'tufeau',
+        __html: 'Tuffeau'
       }
     }
   }
-}
+};
 
 export default pm19;
