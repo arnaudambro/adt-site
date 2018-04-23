@@ -52,73 +52,44 @@
     min-height: 50px;
     display: flex;
     
-    //justify-content: center;
-    //align-items: center;
-    //align-content: center;
     
   }
 
   .th {
 
     &__container {
-      // border: 1px solid #00F;
       font-size: 0.7rem;
-      // line-height: 1em;
       font-weight: 500;
       height: 130px;
       display: flex;
-      // flex-direction: column;
-      // writing-mode: vertical-lr;
-      // transform: rotate(-90deg);
-      // justify-content: flex-end;
-      // align-items: flex-end;
-      // align-content: flex-end;
 
       &--content {
-        // border: 2px solid #F00;
         display: flex;
         flex-direction: column-reverse;
         height: 100%;
         width: 100%;
-        //justify-content: center;
-        //align-items: center;
-        //align-content: center;
-        
-
-
-        // display: grid;
-        // justify-content: center;
-        // align-items: center;
 
         .arrow {
-          // border: 1px solid #000;
           margin-right: 1px;
           cursor: pointer;
-          // transform: rotate(180deg);
           width: 8px;
           height: 8px;
           margin-bottom: 2px;
 
-          // transform: rotate(90deg)
         }
 
         div {
-          // flex-grow: 1;
-          // border: 1px solid #000;
           display: flex;
           
           justify-content: flex-start;
           align-items: flex-end;
           margin-left: -1px;
           margin-bottom: 3px;
-          //align-content: center;
           
           .column__header {
             height: 1em;
-            // border: 1px solid #0F0;
             display: block;
             white-space: nowrap;
-            // color: blue;
             transform: rotate(-90deg) translateX(-1em);
             transform-origin: 0 0;
           }
@@ -167,7 +138,6 @@
 
     &__contour {
       > * {
-        // border: 2px solid #F00
       }
       height: 100%;
       display: grid;
@@ -190,7 +160,6 @@
       &--head {
         padding-top: 20px;
         padding-bottom: 5px;
-        // padding-bottom: 10px;
       }
     }
   }
@@ -206,7 +175,6 @@
   }
 
   .tr0 > * {
-    // padding-top: 55px;
   }
 
   .floorarea {

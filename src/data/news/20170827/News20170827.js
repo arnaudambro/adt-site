@@ -1,6 +1,6 @@
 import React from 'react';
 // import './News20170827.css';
-import pic from './2018_LIBAN.JPG';
+import pic from './2018_LIBAN.jpg';
 
 export default class News20170827 extends React.Component {
   render() {

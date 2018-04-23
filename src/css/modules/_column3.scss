@@ -39,6 +39,11 @@
   margin-top: -3px;
   display: flex;
   align-items: flex-start;
+  // z-index: var(--zindexColumn3);
+  > a > * {
+    pointer-events: none;
+    // z-index: var(--zindexColumn3Content);
+  }
 }
 
 .column3--container:before {

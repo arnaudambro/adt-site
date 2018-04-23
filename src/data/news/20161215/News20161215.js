@@ -1,6 +1,6 @@
 import React from 'react';
 // import './News20161215.css';
-import pic from './atelierdelalandetabourinnewstuilerievb229.png';
+import pic from './atelier-delalande-tabourin-news-tuilerie-vb229.jpg';
 
 export default class News20161215 extends React.Component {
   render() {

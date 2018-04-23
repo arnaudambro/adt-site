@@ -25,7 +25,7 @@ export default class News extends React.Component {
         }}
       >
         <Helmet>
-          <title>ATD | News</title>
+          <title>ADT | News</title>
         </Helmet>
         {Object.keys(data_news)
           .sort((a, b) => (data_news[a].date > data_news[b].date ? -1 : 1))

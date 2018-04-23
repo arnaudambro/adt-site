@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 // import { hydrate, render } from 'react-dom';
+// import { render } from 'react-snapshot';
 import { BrowserRouter } from 'react-router-dom';
 
 import './css/styles.css';
@@ -9,13 +10,12 @@ import registerServiceWorker from './registerServiceWorker';
 
 const Root = () => {
   return (
-    <BrowserRouter basename="/">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   );
 };
 
-// render(<Root />, document.getElementById('root'));
 render(<Root />, document.getElementById('root'));
 registerServiceWorker();
 

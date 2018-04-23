@@ -38,6 +38,8 @@ export default class Presse20160301 extends React.Component {
         <a
           className="presse__20160301--link1"
           href="http://www.lecourrierdelarchitecte.com/article_6913"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <div
             className="presse__20160301--pic1 presse__20160301--pic"
@@ -49,6 +51,8 @@ export default class Presse20160301 extends React.Component {
         <a
           className="presse__20160301--link2"
           href="https://www.amc-archi.com/article/trophee-beton-2016-remise-des-prix,4161"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <div
             className="presse__20160301--pic2 presse__20160301--pic"
@@ -59,6 +63,8 @@ export default class Presse20160301 extends React.Component {
         <a
           className="presse__20160301--link3"
           href="https://www.trophee-beton.com/#eco/3"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <div
             className="presse__20160301--pic3 presse__20160301--pic"
@@ -69,6 +75,8 @@ export default class Presse20160301 extends React.Component {
         <a
           className="presse__20160301--link4"
           href="http://www.academiedesbeauxarts.fr/prix/description.php?id=2"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <div
             className="presse__20160301--pic4 presse__20160301--pic"
@@ -79,6 +87,8 @@ export default class Presse20160301 extends React.Component {
         <a
           className="presse__20160301--link5"
           href="https://actu.fr/bretagne/pleubian_22195/architecture-leur-projet-de-beton-se-veut-lhorloge-de-la-maree_7717614.html"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <div
             className="presse__20160301--pic5 presse__20160301--pic"

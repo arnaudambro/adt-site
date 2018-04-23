@@ -251,6 +251,7 @@
       font-weight: 300;
     }
     &__picture {
+      display: -ms-grid;
       display: grid;
       grid-template-columns: 1fr;
       --rowHeight: 40px; 
@@ -309,6 +310,7 @@
     }
 
     &__picture {
+      display: -ms-grid;
       display: grid;
       grid-template-columns: 1fr;
       --rowHeight: 40px; 
@@ -349,6 +351,7 @@
     &__top {
       grid-column: 1;
       grid-row: 15;
+      display: -ms-grid;
       display: grid;
       
       justify-content: start;    
@@ -356,6 +359,7 @@
 
     &__bottom {
       grid-row: 25;
+      display: -ms-grid;
       display: grid;
   
     }
@@ -393,6 +397,7 @@
     &__picture {
       z-index: 1;
       overflow: hidden;
+      display: -ms-grid;
       display: grid;
       grid-template-columns: 1fr;
       --rowHeight: 40px; 

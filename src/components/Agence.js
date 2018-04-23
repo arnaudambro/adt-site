@@ -47,7 +47,7 @@ export default class Agence extends React.Component {
 
     this.state = {
       automaticOvering: true,
-      showAssociate5: true,
+      showAssociate5: false,
       showAssociate6: false,
       showAssociate7: false,
       showAssociate8: false,
@@ -57,6 +57,9 @@ export default class Agence extends React.Component {
 
   componentDidMount() {
     this.props.willmount(false);
+    if (window.matchMedia('(max-width: 1100px)').matches) {
+      this.setState({ showAssociate5: true });
+    }
   }
 
   handleClick(e) {
@@ -150,7 +153,7 @@ export default class Agence extends React.Component {
       >
         <div className="agence main__content">
           <Helmet>
-            <title>ATD | Agence</title>
+            <title>ADT | Agence</title>
           </Helmet>
           <div className="title atelier__title">
             <span>l'atelier</span>

@@ -9,7 +9,8 @@ export default class Projets extends React.Component {
     super(props);
 
     this.state = {
-      clickedMaterial: '0'
+      clickedMaterial: '0',
+      landscape: null
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -23,20 +24,15 @@ export default class Projets extends React.Component {
 
   componentDidMount() {
     this.props.willmount(false);
+    if (window.matchMedia('(min-width: 1100px)').matches) {
+      this.setState({ landscape: true });
+    } else {
+      this.setState({ landscape: false });
+    }
   }
 
   handleClickResponsive(e) {
-    let clickedState = this.state.clickedMaterial;
-    if (clickedState === null) {
-      clickedState = e.target.dataset.index;
-      this.setState({ clickedMaterial: clickedState });
-      return;
-    } else if (clickedState !== e.target.dataset.index) {
-      this.setState({ clickedMaterial: e.target.dataset.index });
-    } else {
-      // this.setState({ clickedMaterial: null });
-      return;
-    }
+    this.setState({ clickedMaterial: e.target.dataset.index });
   }
 
   componentWillUnmount() {
@@ -107,7 +103,7 @@ export default class Projets extends React.Component {
         }}
       >
         <Helmet>
-          <title>ATD | Projets</title>
+          <title>ADT | Projets</title>
         </Helmet>
         {Object.keys(data_projets)
           .sort(
@@ -123,7 +119,9 @@ export default class Projets extends React.Component {
                     : `#`
                 }
                 className={`material__container ${
-                  this.state.clickedMaterial === index ? 'active' : ''
+                  this.state.clickedMaterial === index.toString()
+                    ? 'active'
+                    : ''
                 }`}
                 style={{ gridRowEnd: `${data_projets[key].materialPicHeight}` }}
                 onClick={this.handleClickResponsive}
@@ -147,12 +145,24 @@ export default class Projets extends React.Component {
                     : ''
                 }`}
                 style={{
-                  zIndex: `${Object.keys(data_projets).length + 100 - index}`
+                  zIndex: `${
+                    this.state.clickedMaterial === index.toString()
+                      ? 200
+                      : Object.keys(data_projets).length + 100 - index
+                  }`
                 }}
               >
                 <Link
-                  to={`/projet/${key}`}
+                  to={
+                    this.state.landscape
+                      ? `/projet/${key}`
+                      : this.state.clickedMaterial === index.toString()
+                        ? `/projet/${key}`
+                        : `#`
+                  }
                   className="material__projet--content"
+                  onClick={this.handleClickResponsive}
+                  data-index={index}
                 >
                   <div className="material__projet--headline">
                     {data_projets[key].name}{' '}

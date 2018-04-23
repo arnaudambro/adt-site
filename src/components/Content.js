@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route /*, Redirect*/ } from 'react-router';
 import data_projets from '../data/data_projets';
 import Projets from './Projets';
-import NoMatch from './NoMatch';
+import Error404 from './Error404';
 import Projet from './Projet';
 import Database from './Database';
 import News from './News';
@@ -32,8 +32,9 @@ export default class Content extends React.Component {
     this.setState({ orderingArray: [...arrayToShowInDatabase] });
   }
 
-  handleDatabaseWillMount(boolean) {
-    this.setState({ database: boolean });
+  handleDatabaseWillMount(databaseBoolean, projetBoolean: false) {
+    this.setState({ database: databaseBoolean });
+    this.props.showProjet(databaseBoolean, projetBoolean);
   }
 
   passOrderingParametersToProjet(params) {
@@ -163,7 +164,7 @@ export default class Content extends React.Component {
               />
             )}
           />
-          <Route component={NoMatch} />
+          <Route component={Error404} />
         </Switch>
       </div>
     );

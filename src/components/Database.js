@@ -51,9 +51,19 @@ export default class Database extends React.Component {
 
     const arrayToShowInDatabase = Object.keys(data_projets).sort((a, b) => {
       if (data_projets[a][`${this.state.sortBy}`]) {
+        console.log('yes');
         if (
           data_projets[a][`${this.state.sortBy}`] >=
           data_projets[b][`${this.state.sortBy}`]
+        ) {
+          return this.state.ascendant ? 1 : -1;
+        } else {
+          return this.state.ascendant ? -1 : 1;
+        }
+      } else if (data_projets[a][`${lang}`][`${this.state.sortBy}`].__html) {
+        if (
+          data_projets[a][`${lang}`][`${this.state.sortBy}`].__html >
+          data_projets[b][`${lang}`][`${this.state.sortBy}`].__html
         ) {
           return this.state.ascendant ? 1 : -1;
         } else {
@@ -146,7 +156,7 @@ export default class Database extends React.Component {
         }}
       >
         <Helmet>
-          <title>ATD | Base de données</title>
+          <title>ADT | Base de données</title>
         </Helmet>
         <div className="main__content database">
           <div className="tr thead">
@@ -433,55 +443,61 @@ export default class Database extends React.Component {
               </div>
             </div>
           </div>
-          {arrayToShowInDatabase.map((key, index) => (
-            <div
-              className={`tr tr${index} tr__clickable`}
-              key={index}
-              style={{
-                height: `${minHeight +
-                  data_projets[key].materialPicHeight * heightFactor}px`
-              }}
-            >
-              <Link to={`/projet/${key}`} className="tr__contour">
-                <div className="td name td__name">{data_projets[key].name}</div>
-                <div className="td winyear">
-                  {data_projets[key].winDate.getFullYear()}
-                </div>
-                <div
-                  className="td madefor"
-                  dangerouslySetInnerHTML={data_projets[key][lang].madeFor}
-                />
-                <div className="td location">
-                  {data_projets[key][lang].city}
-                  <br />
-                  {data_projets[key][lang].departmentNumber}
-                  <br />
-                  {data_projets[key][lang].country}
-                </div>
-                <div className="td function">
-                  {data_projets[key][lang].function}
-                </div>
-                <div className="td floorarea td__surface">
-                  {data_projets[key].surface}m<sup>2</sup>
-                </div>
-                <div className="td status">
-                  {data_projets[key][lang].status === null
-                    ? ''
-                    : data_projets[key][lang].status === content.delivered[lang]
-                      ? `${content.delivered[lang]}`
-                      : data_projets[key].delivery !== null
-                        ? `${data_projets[key][lang].status} - ${
-                            content.delivery[lang]
-                          } ${data_projets[key].delivery.getFullYear()}`
-                        : `${data_projets[key][lang].status}`}
-                </div>
-                <div
-                  className="td material"
-                  dangerouslySetInnerHTML={data_projets[key][lang].material}
-                />
-              </Link>
-            </div>
-          ))}
+          {arrayToShowInDatabase.map((key, index) => {
+            console.log(index);
+            return (
+              <div
+                className={`tr tr${index} tr__clickable`}
+                key={index}
+                style={{
+                  height: `${minHeight +
+                    data_projets[key].materialPicHeight * heightFactor}px`
+                }}
+              >
+                <Link to={`/projet/${key}`} className="tr__contour">
+                  <div className="td name td__name">
+                    {data_projets[key].name}
+                  </div>
+                  <div className="td winyear">
+                    {data_projets[key].winDate.getFullYear()}
+                  </div>
+                  <div
+                    className="td madefor"
+                    dangerouslySetInnerHTML={data_projets[key][lang].madeFor}
+                  />
+                  <div className="td location">
+                    {data_projets[key][lang].city}
+                    <br />
+                    {data_projets[key][lang].departmentNumber}
+                    <br />
+                    {data_projets[key][lang].country}
+                  </div>
+                  <div className="td function">
+                    {data_projets[key][lang].function}
+                  </div>
+                  <div className="td floorarea td__surface">
+                    {data_projets[key].surface}m<sup>2</sup>
+                  </div>
+                  <div className="td status">
+                    {data_projets[key][lang].status === null
+                      ? ''
+                      : data_projets[key][lang].status ===
+                        content.delivered[lang]
+                        ? `${content.delivered[lang]}`
+                        : data_projets[key].delivery !== null
+                          ? `${data_projets[key][lang].status} - ${
+                              content.delivery[lang]
+                            } ${data_projets[key].delivery.getFullYear()}`
+                          : `${data_projets[key][lang].status}`}
+                  </div>
+                  <div
+                    className="td material"
+                    dangerouslySetInnerHTML={data_projets[key][lang].material}
+                  />
+                </Link>
+              </div>
+            );
+          })}
           <div className="tr tr__empty">
             <div className="tr__contour">
               <div className="td name" />

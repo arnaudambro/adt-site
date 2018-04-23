@@ -18,16 +18,24 @@ class App extends Component {
     this.state = {
       showHeaderAndContent: false,
       showLanding: true,
+      showDatabase: false,
+      showProjet: false,
       language: 'fr'
     };
 
     this.handleLandingAction = this.handleLandingAction.bind(this);
+    this.handleShowProjet = this.handleShowProjet.bind(this);
   }
 
   handleLandingAction() {
     window.scroll({ top: window.innerHeight, left: 0, behavior: 'smooth' });
     this.setState({ showLanding: !this.state.showLanding });
     this.setState({ showHeaderAndContent: !this.state.showHeaderAndContent });
+  }
+
+  handleShowProjet(databaseBoolean, projetBoolean: false) {
+    this.setState({ showDatabase: databaseBoolean });
+    this.setState({ showProjet: projetBoolean });
   }
 
   componentWillMount() {
@@ -39,9 +47,7 @@ class App extends Component {
   }
 
   render() {
-    const showDatabase =
-      window.location.pathname.split('/')[1] === Object.keys(menu)[1];
-    const showProjet = window.location.pathname.split('/')[1] === 'projet';
+    const { showDatabase, showProjet } = this.state;
     const showLongDivider = showDatabase || showProjet;
 
     return (
@@ -90,10 +96,7 @@ class App extends Component {
             property="og:url"
             content="http://atelierdelalandetabourin.com/"
           />
-          <meta
-            property="og:site_property"
-            content="Atelier Delalande Tabourin | Architecture + Material LAB + Design "
-          />
+          <meta property="og:type" content="website" />
           <meta property="og:locale" content="fr_FR" />
           <meta property="og:type" content="article" />
           <meta
@@ -102,11 +105,11 @@ class App extends Component {
           />
           <meta
             name="keywords"
-            content="atelierdelalandetabourin,delalande,tabourin,architecture,architecturehautdegamme,architecte,jeune,agence,architectureinterieure,paysage,landart,atelier,hd11,pm19,eb12,ad38,vh16,vb229,paris,orleans,bretagne,granit,tuffeau,bois,accoya,barillet,brique,pierrecalcaire,béton,siegesocial,hotel,hotelcharme,hautdegamme,maison,,appartement,villa,logement,scenographie,rehabilitation,extension,surelevation,trophéebéton,meilleurdiplome,ecolespecialdarchitecture"
+            content="atelier-delalande-tabourin,delalande,tabourin,architecture,architecture-haut-de-gamme,architecte,jeune,agence,architecture-interieure,paysage,landart,atelier,hd11,pm19,eb12,ad38,vh16,vb229,paris,orléans,bretagne,granit,tuffeau,bois,accoya,barillet,brique,pierre-calcaire,béton,siège-social,hôtel,hôtel-charme,haut-de-gamme,maison,appartement,villa,logement,scénographie,réhabilitation,extension,surélévation,trophée-béton,meilleur-diplôme,école-spéciale-d-architecture"
           />
           <link
             rel="canonical"
-            href="http://www.atelierdelalandetabourin.com/"
+            href="https://www.atelierdelalandetabourin.com/"
           />
         </Helmet>
         <Route exact path="/" render={() => <Redirect to="/projets" />} />
@@ -130,7 +133,7 @@ class App extends Component {
             <li
               key={index}
               className={`menu__items--item item ${index} ${
-                showProjet && key === 'projets' ? 'active' : ''
+                showProjet === true && key === 'projets' ? 'active' : ''
               }`}
             >
               <NavLink to={`/${key}`} activeClassName="active">
@@ -141,6 +144,7 @@ class App extends Component {
         </ul>
         <Content
           language={this.state.language}
+          showProjet={this.handleShowProjet}
           ref={contentArea => {
             this.contentArea = contentArea;
           }}

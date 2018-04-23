@@ -25,12 +25,8 @@
 /********** COLUMN 1 ********/
 @media all and (min-width: 1100px) {
   .presse__20160301--content {
-    /* display: grid; */
     grid-template-columns: calc(var(--middleColumn) * 0.6 ) calc(var(--middleColumn) * 0.4) !important;
     grid-template-rows: 20px repeat(4, 60px) 20px !important;
-    /* grid-auto-rows: 40px; */
-    /* grid-row-gap: 10px; */
-    /* grid-column-gap: 50px !important; */
   }
 
 

@@ -8,7 +8,7 @@ const ad38 = {
     name: 'ad38',
     delivery: new Date(2016, 11, 1),
     winDate: new Date(2016, 1, 1),
-    surface: '110',
+    surface: 110,
     materialPicHeight: 21,
     cost: 'NC',
     img: ad38_material,

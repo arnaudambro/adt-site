@@ -24,7 +24,7 @@ export default class Projets extends React.Component {
 
   componentWillMount() {
     this.props.area && this.props.area.scrollTo(0, 0);
-    this.props.willmount(true);
+    this.props.willmount(true, true);
     menu.projets.active = true;
   }
 
@@ -53,23 +53,23 @@ export default class Projets extends React.Component {
 
   render() {
     const lang = this.props.language;
-    const name = this.props.match.match.params.id;
+    const projet = this.props.match.match.params.id;
     const content = {
-      title: `${data_projets[name].name}.`,
+      title: `${data_projets[projet].name}.`,
       surface: {
         en: {
-          __html: `Floor area: ${data_projets[name].surface} m<sup>2<sup>`
+          __html: `Floor area: ${data_projets[projet].surface} m<sup>2<sup>`
         },
         fr: {
-          __html: `Surface: ${data_projets[name].surface} m<sup>2<sup>`
+          __html: `Surface: ${data_projets[projet].surface} m<sup>2<sup>`
         }
       },
       cost: {
         en: {
-          __html: `Cost: ${data_projets[name].cost}`
+          __html: `Cost: ${data_projets[projet].cost}`
         },
         fr: {
-          __html: `Coût: ${data_projets[name].cost}`
+          __html: `Coût: ${data_projets[projet].cost}`
         }
       },
       material: {
@@ -77,16 +77,18 @@ export default class Projets extends React.Component {
         fr: 'Matière'
       },
       delivery: {
-        en(name) {
-          if (data_projets[name].delivery) {
-            if (Date.now() < data_projets[name].delivery) {
-              return `Delivery ${data_projets[name].delivery.toLocaleDateString(
-                'en-US',
-                { month: 'long', year: 'numeric' }
-              )}`;
+        en(projet) {
+          if (data_projets[projet].delivery) {
+            if (Date.now() < data_projets[projet].delivery) {
+              return `Delivery ${data_projets[
+                projet
+              ].delivery.toLocaleDateString('en-US', {
+                month: 'long',
+                year: 'numeric'
+              })}`;
             } else {
               return `Delivered ${data_projets[
-                name
+                projet
               ].delivery.toLocaleDateString('en-US', {
                 month: 'long',
                 year: 'numeric'
@@ -96,17 +98,17 @@ export default class Projets extends React.Component {
             return '';
           }
         },
-        fr(name) {
-          if (data_projets[name].delivery) {
-            if (Date.now() < data_projets[name].delivery) {
+        fr(projet) {
+          if (data_projets[projet].delivery) {
+            if (Date.now() < data_projets[projet].delivery) {
               return `Livraison ${data_projets[
-                name
+                projet
               ].delivery.toLocaleDateString('fr-FR', {
                 month: 'long',
                 year: 'numeric'
               })}`;
             } else {
-              return `Livré ${data_projets[name].delivery.toLocaleDateString(
+              return `Livré ${data_projets[projet].delivery.toLocaleDateString(
                 'fr-FR',
                 { month: 'long', year: 'numeric' }
               )}`;
@@ -126,7 +128,7 @@ export default class Projets extends React.Component {
         }}
       >
         <Helmet>
-          <title>ATD | {data_projets[name].name.toUpperCase()}</title>
+          <title>ADT | {data_projets[projet].name.toUpperCase()}</title>
         </Helmet>
         <div className="projet__header">
           <div className="projet__header--title">
@@ -151,12 +153,12 @@ export default class Projets extends React.Component {
           </div>
           <div
             className="projet__subtitle projet__subtitle--headline"
-            dangerouslySetInnerHTML={data_projets[name][lang].title}
+            dangerouslySetInnerHTML={data_projets[projet][lang].title}
           />
           <div className="projet__subtitle projet__subtitle--location">
-            {data_projets[name][lang].city},{' '}
-            {data_projets[name][lang].departmentName},{' '}
-            {data_projets[name][lang].country}
+            {data_projets[projet][lang].city},{' '}
+            {data_projets[projet][lang].departmentName},{' '}
+            {data_projets[projet][lang].country}
           </div>
           <div
             className="projet__subtitle projet__subtitle--surface"
@@ -164,17 +166,19 @@ export default class Projets extends React.Component {
           />
           <div className="projet__subtitle projet__subtitle--material">
             {content.material[`${lang}`]}:{' '}
-            <span dangerouslySetInnerHTML={data_projets[name][lang].material} />
+            <span
+              dangerouslySetInnerHTML={data_projets[projet][lang].material}
+            />
           </div>
           <div
             className="projet__subtitle projet__subtitle--cost"
             dangerouslySetInnerHTML={content.cost[lang]}
           />
           <div className="projet__subtitle projet__subtitle--delivery">
-            {content.delivery[`${lang}`](name)}
+            {content.delivery[`${lang}`](projet)}
           </div>
         </div>
-        {data_projets[name].component(lang, name)}
+        {data_projets[projet].component(lang, projet)}
         <div
           className="main__container--marginbottom database"
           onClick={this.handleScrollingClick}
