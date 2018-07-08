@@ -13,6 +13,7 @@ import elevation4 from './img/atelierdelalandetabourin-villa-campagne-tuile-elev
 import existant from './img/atelierdelalandetabourin-villa-existant-VB229.jpg';
 import facade from './img/atelierdelalandetabourin-villa-campagne-briques-facade-VB229.jpg';
 import salon from './img/atelierdelalandetabourin-villa-campagne-briques-salon-VB229.jpg';
+import diagram from './img/atelierdelalandetabourin-villa-campagne-briques-diagram-VB229.jpg';
 
 export default class VB229 extends React.Component {
   render() {
@@ -44,6 +45,9 @@ export default class VB229 extends React.Component {
         {/*<div className="projet__title">{content.title}</div>*/}
         {/*<div className="projet__subtitle projet__subtitle--surface" dangerouslySetInnerHTML={content.surface[lang]}></div>
         <div className="projet__subtitle projet__subtitle--cost" dangerouslySetInnerHTML={content.cost[lang]}></div>*/}
+        <div className="projet__image--fullWidth">
+          <img src={diagram} alt="diagram" />
+        </div>
         <div className="projet__image--fullWidth">
           <img src={tuilerieargile} alt="tuilerie argile" />
         </div>

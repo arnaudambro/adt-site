@@ -21,8 +21,85 @@ import News20160106 from './news/20160106/News20160106';
 import News20150909 from './news/20150909/News20150909';
 import News20150415 from './news/20150415/News20150415';
 import News20180202 from './news/20180202/News20180202';
+import News20180209 from './news/20180209/News20180209';
+import News20180220 from './news/20180220/News20180220';
+import News20180314 from './news/20180314/News20180314';
+import News20180325 from './news/20180325/News20180325';
+import News20180327 from './news/20180327/News20180327';
+import News20180410 from './news/20180410/News20180410';
+import News20180503 from './news/20180503/News20180503';
+import News20180518 from './news/20180518/News20180518';
+import News20180608 from './news/20180608/News20180608';
+import News20180615 from './news/20180615/News20180615';
+import News20180627 from './news/20180627/News20180627';
 
 const data_news = {
+  news20180627: {
+    component(language, index) {
+      return <News20180627 language={language} key={index} />;
+    },
+    date: 20180627
+  },
+  news20180615: {
+    component(language, index) {
+      return <News20180615 language={language} key={index} />;
+    },
+    date: 20180615
+  },
+  news20180608: {
+    component(language, index) {
+      return <News20180608 language={language} key={index} />;
+    },
+    date: 20180608
+  },
+  news20180518: {
+    component(language, index) {
+      return <News20180518 language={language} key={index} />;
+    },
+    date: 20180518
+  },
+  news20180503: {
+    component(language, index) {
+      return <News20180503 language={language} key={index} />;
+    },
+    date: 20180503
+  },
+  news20180410: {
+    component(language, index) {
+      return <News20180410 language={language} key={index} />;
+    },
+    date: 20180410
+  },
+  news20180327: {
+    component(language, index) {
+      return <News20180327 language={language} key={index} />;
+    },
+    date: 20180327
+  },
+  news20180325: {
+    component(language, index) {
+      return <News20180325 language={language} key={index} />;
+    },
+    date: 20180325
+  },
+  news20180314: {
+    component(language, index) {
+      return <News20180314 language={language} key={index} />;
+    },
+    date: 20180314
+  },
+  news20180209: {
+    component(language, index) {
+      return <News20180209 language={language} key={index} />;
+    },
+    date: 20180209
+  },
+  news20180220: {
+    component(language, index) {
+      return <News20180220 language={language} key={index} />;
+    },
+    date: 20180220
+  },
   news20180202: {
     component(language, index) {
       return <News20180202 language={language} key={index} />;

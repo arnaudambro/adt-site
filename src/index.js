@@ -10,7 +10,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 const Root = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/adt/">
       <App />
     </BrowserRouter>
   );

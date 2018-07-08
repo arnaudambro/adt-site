@@ -40,7 +40,7 @@ class App extends Component {
 
   componentWillMount() {
     //For reload : if we reload, no need the landing page anymore
-    if (window.location.pathname !== '/') {
+    if (window.location.pathname !== '/adt/') {
       this.setState({ showLanding: !this.state.showLanding });
       this.setState({ showHeaderAndContent: !this.state.showHeaderAndContent });
     }
@@ -96,7 +96,10 @@ class App extends Component {
             property="og:url"
             content="http://atelierdelalandetabourin.com/"
           />
-          <meta property="og:type" content="website" />
+          <meta
+            property="og:site_property"
+            content="Atelier Delalande Tabourin | Architecture + Material LAB + Design "
+          />
           <meta property="og:locale" content="fr_FR" />
           <meta property="og:type" content="article" />
           <meta
@@ -105,11 +108,11 @@ class App extends Component {
           />
           <meta
             name="keywords"
-            content="atelier-delalande-tabourin,delalande,tabourin,architecture,architecture-haut-de-gamme,architecte,jeune,agence,architecture-interieure,paysage,landart,atelier,hd11,pm19,eb12,ad38,vh16,vb229,paris,orléans,bretagne,granit,tuffeau,bois,accoya,barillet,brique,pierre-calcaire,béton,siège-social,hôtel,hôtel-charme,haut-de-gamme,maison,appartement,villa,logement,scénographie,réhabilitation,extension,surélévation,trophée-béton,meilleur-diplôme,école-spéciale-d-architecture"
+            content="atelierdelalandetabourin,delalande,tabourin,architecture,architecturehautdegamme,architecte,jeune,agence,architectureinterieure,paysage,landart,atelier,hd11,pm19,eb12,ad38,vh16,vb229,paris,orleans,bretagne,granit,tuffeau,bois,accoya,barillet,brique,pierrecalcaire,béton,siegesocial,hotel,hotelcharme,hautdegamme,maison,,appartement,villa,logement,scenographie,rehabilitation,extension,surelevation,trophéebéton,meilleurdiplome,ecolespecialdarchitecture"
           />
           <link
             rel="canonical"
-            href="https://www.atelierdelalandetabourin.com/"
+            href="http://www.atelierdelalandetabourin.com/"
           />
         </Helmet>
         <Route exact path="/" render={() => <Redirect to="/projets" />} />
