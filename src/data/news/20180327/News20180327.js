@@ -44,7 +44,7 @@ export default class News20180327 extends React.Component {
         <div
           className="news__20180327--pic1"
           style={{ backgroundImage: `url(${pic}) ` }}
-          title="chantier de la maison privée"
+          title="Nouveau chantier - réhabilitation siège EALIS"
         />
         <div className="news__20180327--column3--container column3--container active">
           <div className="news__20180327--column3">

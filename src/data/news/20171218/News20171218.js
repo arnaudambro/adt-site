@@ -1,6 +1,6 @@
 import React from 'react';
 // import './News20171218.css';
-import pic1 from './reunion_bretagne.jpg';
+import pic1 from './atelier-delalande-tabourin-reunion-bretagne.jpg';
 import pic2 from './speleo_hotel.jpg';
 
 export default class News20171218 extends React.Component {

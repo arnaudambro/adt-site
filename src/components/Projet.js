@@ -130,7 +130,7 @@ export default class Projets extends React.Component {
         <Helmet>
           <title>ADT | {data_projets[projet].name.toUpperCase()}</title>
         </Helmet>
-        <div className="projet__header">
+        <div className={`projet__header projet-${projet}`}>
           <div className="projet__header--title">
             <div className="projet__title">{content.title}</div>
             <div className="projet__arrows">

@@ -49,6 +49,7 @@ export default class News20180105 extends React.Component {
         <div
           className="news__20180105--column1"
           style={{ backgroundImage: `url(${PARCHAMP}) ` }}
+          title="Parchamp"
         />
         <div className="news__20180105--column2">
           <div className="news__20180105--title column1">

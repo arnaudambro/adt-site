@@ -1,0 +1,21 @@
+
+.projet-be69 {
+  &.projet {
+
+    &__header {
+      grid-template-rows: 4rem repeat(2, 1rem) 1.4rem repeat(3, 1rem) 0.75rem;
+      &--title {
+        display: flex; 
+        justify-content: space-between !important;
+        align-items: center;
+        flex-direction: row !important;
+        align-self: start !important;
+      }
+      > * {
+        align-self: end;
+      }
+
+    }
+
+  }
+}

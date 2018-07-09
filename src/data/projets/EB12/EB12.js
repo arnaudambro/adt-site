@@ -3,19 +3,20 @@ import React from 'react';
 
 // import './EB12.css';
 
-import bois from './img/atelierdelalandetabourin-scierie-bois-EB12.jpg';
-import plan from './img/atelierdelalandetabourin-entreprisebarillet-patio-EB12-plan.jpg';
-import elevation1 from './img/atelierdelalandetabourin-entreprisebarillet-patio-EB12-elevation1.jpg';
-import elevation2 from './img/atelierdelalandetabourin-entreprisebarillet-patio-EB12-elevation2.jpg';
-import elevation3 from './img/atelierdelalandetabourin-entreprisebarillet-patio-EB12-elevation3.jpg';
-import elevation4 from './img/atelierdelalandetabourin-entreprisebarillet-patio-EB12-elevation4.jpg';
-import coupedetail from './img/atelierdelalandetabourin-entreprisebarillet-patio-EB12-coupedetail.jpg';
-import facade from './img/atelierdelalandetabourin-entreprisebarillet-facade-EB12.jpg';
-import facadepatio from './img/atelierdelalandetabourin-entreprisebarillet-facadepatio-EB12.jpg';
-import couloirbureaux from './img/atelierdelalandetabourin-entreprisebarillet-couloir-bureaux-EB12.jpg';
-import bureauxcompta from './img/atelierdelalandetabourin-entreprisebarillet-bureaux-compta-EB12.jpg';
-import bureaux from './img/atelierdelalandetabourin-entreprisebarillet-bureaux-EB12.jpg';
-import bureauxmiroir from './img/atelierdelalandetabourin-entreprisebarillet-bureaux-miroir-EB12.jpg';
+import bois from './img/atelier-delalande-tabourin-scierie-bois-EB12.jpg';
+import plan from './img/atelier-delalande-tabourin-entreprisebarillet-patio-EB12-plan.jpg';
+import elevation1 from './img/atelier-delalande-tabourin-entreprisebarillet-patio-EB12-elevation1.jpg';
+import elevation2 from './img/atelier-delalande-tabourin-entreprisebarillet-patio-EB12-elevation2.jpg';
+import elevation3 from './img/atelier-delalande-tabourin-entreprisebarillet-patio-EB12-elevation3.jpg';
+import elevation4 from './img/atelier-delalande-tabourin-entreprisebarillet-patio-EB12-elevation4.jpg';
+import coupedetail from './img/atelier-delalande-tabourin-entreprisebarillet-patio-EB12-coupedetail.jpg';
+import facade from './img/atelier-delalande-tabourin-entreprisebarillet-facade-EB12.jpg';
+import facadepatio from './img/atelier-delalande-tabourin-entreprisebarillet-facadepatio-EB12.jpg';
+import couloirbureaux from './img/atelier-delalande-tabourin-entreprisebarillet-couloir-bureaux-EB12.jpg';
+import bureauxcompta from './img/atelier-delalande-tabourin-entreprisebarillet-bureaux-compta-EB12.jpg';
+import bureaux from './img/atelier-delalande-tabourin-entreprisebarillet-bureaux-EB12.jpg';
+import bureauxmiroir from './img/atelier-delalande-tabourin-entreprisebarillet-bureaux-miroir-EB12.jpg';
+import diagramme from './img/atelier-delalande-tabourin-entreprisebarillet-diagramme-EB12.jpg';
 
 export default class EB12 extends React.Component {
   render() {
@@ -81,6 +82,9 @@ export default class EB12 extends React.Component {
           Une nouvelle identité visuelle fidèle aux racines de l’entreprise.
         </p>
         <div className="projet__divider projet__divider--thin" />
+        <div className="projet__image--fullWidth marginbottom">
+          <img src={diagramme} alt="diagramme" />
+        </div>
         <div className="projet__image--fullWidth marginbottom">
           <img src={plan} alt="plan" />
         </div>

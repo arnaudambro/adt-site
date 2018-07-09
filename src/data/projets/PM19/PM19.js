@@ -3,13 +3,14 @@ import React from 'react';
 
 // import './PM19.css';
 
-import matiere from './img/atelierdelalandetabourin-paysage-piscine-PM19-matiere.jpg';
-import plan from './img/atelierdelalandetabourin-paysage-piscine-PM19-plan.jpg';
-import coupesud from './img/atelierdelalandetabourin-paysage-piscine-PM19-coupesud.jpg';
-import coupeest from './img/atelierdelalandetabourin-paysage-piscine-PM19-coupeest.jpg';
-import coupenord from './img/atelierdelalandetabourin-paysage-piscine-PM19-coupenord.jpg';
-import perspective1 from './img/atelierdelalandetabourin-paysage-piscine-PM19-perspective1.jpg';
-import perspective2 from './img/atelierdelalandetabourin-paysage-piscine-PM19-perspective2.jpg';
+import matiere from './img/atelier-delalande-tabourin-paysage-piscine-PM19-matiere.jpg';
+import plan from './img/atelier-delalande-tabourin-paysage-piscine-PM19-plan.jpg';
+import coupesud from './img/atelier-delalande-tabourin-paysage-piscine-PM19-coupesud.jpg';
+import coupeest from './img/atelier-delalande-tabourin-paysage-piscine-PM19-coupeest.jpg';
+import coupenord from './img/atelier-delalande-tabourin-paysage-piscine-PM19-coupenord.jpg';
+import perspective1 from './img/atelier-delalande-tabourin-paysage-piscine-PM19-perspective1.jpg';
+import perspective2 from './img/atelier-delalande-tabourin-paysage-piscine-PM19-perspective2.jpg';
+import diagramme from './img/atelier-delalande-tabourin-paysage-piscine-PM19-diagramme.jpg';
 
 export default class PM19 extends React.Component {
   render() {
@@ -65,6 +66,9 @@ export default class PM19 extends React.Component {
           paysage à l’autre. On s’y promène comme dans une ruine.
         </p>
         <div className="projet__divider projet__divider--thin" />
+        <div className="projet__image--fullWidth marginbottom">
+          <img src={diagramme} alt="diagramme" />
+        </div>
         <div
           className="projet__image--fullWidth"
           style={{ marginBottom: `140px` }}

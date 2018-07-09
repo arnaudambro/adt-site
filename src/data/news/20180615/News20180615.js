@@ -43,12 +43,12 @@ export default class News20180615 extends React.Component {
         <div
           className="news__20180615--pic1"
           style={{ backgroundImage: `url(${pic1}) ` }}
-          title="port de bretagne"
+          title="ELAIS - avancement de projet"
         />
         <div
           className="news__20180615--pic2"
           style={{ backgroundImage: `url(${pic2}) ` }}
-          title="cave sous un hotel"
+          title="ELAIS - avancement de projet"
         />
         <div className="news__20180615--column3--container column3--container active">
           <div className="news__20180615--column3">

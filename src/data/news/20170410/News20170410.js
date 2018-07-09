@@ -1,6 +1,6 @@
 import React from 'react';
 // import './News20170410.css';
-import pic from './atelierdelalandetabourinnewsmaquetteetudehd11.jpg';
+import pic from './atelier-delalande-tabourin-news-maquette-etude-hd11.jpg';
 
 export default class News20170410 extends React.Component {
   render() {
@@ -42,7 +42,7 @@ export default class News20170410 extends React.Component {
         <div
           className="news__20170410--pic1"
           style={{ backgroundImage: `url(${pic}) ` }}
-          title="chantier de la maison privée"
+          title="Maquette d’étude d’un hôtel en Bretagne."
         />
         <div className="news__20170410--column3--container column3--container active">
           <div className="news__20170410--column3">

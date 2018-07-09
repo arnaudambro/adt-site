@@ -7,7 +7,7 @@ export default class News20180410 extends React.Component {
     const content = {
       date: {
         en() {
-          const date = new Date(2018, 4, 10);
+          const date = new Date(2018, 3, 10);
           return date.toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long',
@@ -15,7 +15,7 @@ export default class News20180410 extends React.Component {
           });
         },
         fr() {
-          const date = new Date(2018, 4, 10);
+          const date = new Date(2018, 3, 10);
           return date.toLocaleDateString('fr-FR', {
             year: 'numeric',
             month: 'long',
@@ -43,7 +43,7 @@ export default class News20180410 extends React.Component {
         <div
           className="news__20180410--pic1"
           style={{ backgroundImage: `url(${pic}) ` }}
-          title="chantier de la maison privée"
+          title="Avancement chantier VH16"
         />
         <div className="news__20180410--column3--container column3--container active">
           <div className="news__20180410--column3">

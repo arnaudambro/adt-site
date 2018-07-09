@@ -24,10 +24,10 @@ export default class News20180115 extends React.Component {
         fr:
           'Nous avons le plaisir d’accueillir Mathilde Lizoret au sein de l’agence. Elle sera notamment responsable du montage du dossier de permis de construire du complexe scolaire.'
       },
-      blague: {
-        en: 'What a joke !',
-        fr: 'Bonne petite blague...'
-      },
+      // blague: {
+      //   en: 'What a joke !',
+      //   fr: 'Bonne petite blague...'
+      // },
       date: {
         en() {
           const date = new Date(2018, 0, 15);
@@ -69,6 +69,7 @@ export default class News20180115 extends React.Component {
         <div
           className="news__20180115--column2"
           style={{ backgroundImage: `url(${mathilde}) ` }}
+          title="Mathilde"
         />
         <div className="news__20180115--column3--container column3--container active">
           <div className="news__20180115--column3">
@@ -83,9 +84,9 @@ export default class News20180115 extends React.Component {
             <div className="news__20180115--description column3">
               {content.newsDescription[this.props.language]}
             </div>
-            <div className="news__20180115--blague column3">
+            {/*<div className="news__20180115--blague column3">
               {content.blague[this.props.language]}
-            </div>
+            </div>*/}
           </div>
         </div>
       </div>

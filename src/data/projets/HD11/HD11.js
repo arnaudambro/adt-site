@@ -1,15 +1,15 @@
 import React from 'react';
 // import data_projets from '../../data_projets';
-import salon from './img/atelierdelalandetabourin-hotel-morbihan-pierre-HD11-salon.jpg';
-import ref from './img/atelierdelalandetabourin-hotel-morbihan-pierre-HD11-ref.jpg';
-import plan from './img/atelierdelalandetabourin-hotel-morbihan-pierre-HD11-plan.jpg';
-import coupe3 from './img/atelierdelalandetabourin-hotel-morbihan-pierre-HD11-coupe3.jpg';
-import coupe2 from './img/atelierdelalandetabourin-hotel-morbihan-pierre-HD11-coupe2.jpg';
-import coupe1 from './img/atelierdelalandetabourin-hotel-morbihan-pierre-HD11-coupe1.jpg';
-import piscine from './img/atelierdelalandetabourin-hotel-morbihan-pierre-HD11-piscine.jpg';
-import bronzo from './img/atelierdelalandetabourin-hotel-morbihan-pierre-HD11-bronzo.jpg';
-import auray from './img/atelierdelalandetabourin-hotel-morbihan-pierre-HD11-auray.jpg';
-import diagram from './img/atelierdelalandetabourin-villa-campagne-briques-diagram2-VB229.jpg';
+import salon from './img/atelier-delalande-tabourin-hotel-morbihan-pierre-HD11-salon.jpg';
+import ref from './img/atelier-delalande-tabourin-hotel-morbihan-pierre-HD11-ref.jpg';
+import plan from './img/atelier-delalande-tabourin-hotel-morbihan-pierre-HD11-plan.jpg';
+import coupe3 from './img/atelier-delalande-tabourin-hotel-morbihan-pierre-HD11-coupe3.jpg';
+import coupe2 from './img/atelier-delalande-tabourin-hotel-morbihan-pierre-HD11-coupe2.jpg';
+import coupe1 from './img/atelier-delalande-tabourin-hotel-morbihan-pierre-HD11-coupe1.jpg';
+import piscine from './img/atelier-delalande-tabourin-hotel-morbihan-pierre-HD11-piscine.jpg';
+import bronzo from './img/atelier-delalande-tabourin-hotel-morbihan-pierre-HD11-bronzo.jpg';
+import auray from './img/atelier-delalande-tabourin-hotel-morbihan-pierre-HD11-auray.jpg';
+import diagramme from './img/atelier-delalande-tabourin-hotel-morbihan-pierre-HD11-diagramme.jpg';
 
 // import './HD11.css';
 export default class HD11 extends React.Component {
@@ -43,9 +43,6 @@ export default class HD11 extends React.Component {
         {/*<div className="projet__subtitle projet__subtitle--surface" dangerouslySetInnerHTML={content.surface[lang]}></div>
         <div className="projet__subtitle projet__subtitle--cost" dangerouslySetInnerHTML={content.cost[lang]}></div>*/}
         <div className="projet__image--fullWidth">
-          <img src={diagram} alt="diagram" />
-        </div>
-        <div className="projet__image--fullWidth">
           <img src={ref} alt="dolmens et menhirs" />
         </div>
         <div className="projet__divider projet__divider--thick" />
@@ -70,6 +67,9 @@ export default class HD11 extends React.Component {
           visiteurs.
         </p>
         <div className="projet__divider projet__divider--thin" />
+        <div className="projet__image--fullWidth marginbottom">
+          <img src={diagramme} alt="diagramme" />
+        </div>
         <div className="projet__image--fullWidth marginbottom">
           <img src={plan} alt="plan" />
         </div>

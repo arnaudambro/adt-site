@@ -3,17 +3,17 @@ import React from 'react';
 
 // import './VB229.css';
 
-import tuilerieargile from './img/atelierdelalandetabourin-villa-campagne-tuilerie-argile-VB229.jpg';
-import tuileriebriques from './img/atelierdelalandetabourin-villa-campagne-tuilerie-briques-VB229.jpg';
-import plan from './img/atelierdelalandetabourin-villa-campagne-tuile-plan.jpg';
-import elevation1 from './img/atelierdelalandetabourin-villa-campagne-tuile-elevation1.jpg';
-import elevation2 from './img/atelierdelalandetabourin-villa-campagne-tuile-elevation2.jpg';
-import elevation3 from './img/atelierdelalandetabourin-villa-campagne-tuile-elevation3.jpg';
-import elevation4 from './img/atelierdelalandetabourin-villa-campagne-tuile-elevation4.jpg';
-import existant from './img/atelierdelalandetabourin-villa-existant-VB229.jpg';
-import facade from './img/atelierdelalandetabourin-villa-campagne-briques-facade-VB229.jpg';
-import salon from './img/atelierdelalandetabourin-villa-campagne-briques-salon-VB229.jpg';
-import diagram from './img/atelierdelalandetabourin-villa-campagne-briques-diagram-VB229.jpg';
+import tuilerieargile from './img/atelier-delalande-tabourin-villa-campagne-tuilerie-argile-VB229.jpg';
+import tuileriebriques from './img/atelier-delalande-tabourin-villa-campagne-tuilerie-briques-VB229.jpg';
+import plan from './img/atelier-delalande-tabourin-villa-campagne-tuile-plan.jpg';
+import elevation1 from './img/atelier-delalande-tabourin-villa-campagne-tuile-elevation1.jpg';
+import elevation2 from './img/atelier-delalande-tabourin-villa-campagne-tuile-elevation2.jpg';
+import elevation3 from './img/atelier-delalande-tabourin-villa-campagne-tuile-elevation3.jpg';
+import elevation4 from './img/atelier-delalande-tabourin-villa-campagne-tuile-elevation4.jpg';
+import existant from './img/atelier-delalande-tabourin-villa-existant-VB229.jpg';
+import facade from './img/atelier-delalande-tabourin-villa-campagne-briques-facade-VB229.jpg';
+import salon from './img/atelier-delalande-tabourin-villa-campagne-briques-salon-VB229.jpg';
+import diagramme from './img/atelier-delalande-tabourin-villa-campagne-briques-diagram-VB229.jpg';
 
 export default class VB229 extends React.Component {
   render() {
@@ -46,9 +46,6 @@ export default class VB229 extends React.Component {
         {/*<div className="projet__subtitle projet__subtitle--surface" dangerouslySetInnerHTML={content.surface[lang]}></div>
         <div className="projet__subtitle projet__subtitle--cost" dangerouslySetInnerHTML={content.cost[lang]}></div>*/}
         <div className="projet__image--fullWidth">
-          <img src={diagram} alt="diagram" />
-        </div>
-        <div className="projet__image--fullWidth">
           <img src={tuilerieargile} alt="tuilerie argile" />
         </div>
         <div className="projet__divider projet__divider--thick" />
@@ -74,6 +71,9 @@ export default class VB229 extends React.Component {
           du béton ciré.
         </p>
         <div className="projet__divider projet__divider--thin" />
+        <div className="projet__image--fullWidth marginbottom">
+          <img src={diagramme} alt="diagramme" />
+        </div>
         <div
           className="projet__image--fullWidth"
           style={{ marginBottom: `140px` }}

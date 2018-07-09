@@ -6,7 +6,7 @@ import EB12 from './EB12';
 const eb12 = {
   eb12: {
     name: 'eb12',
-    delivery: new Date(2018, 12, 1),
+    delivery: new Date(2019, 8, 1),
     winDate: new Date(2017, 6, 1),
     surface: 720,
     materialPicHeight: 29,

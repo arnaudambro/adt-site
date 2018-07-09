@@ -1,10 +1,10 @@
 import React from 'react';
 // import './Presse20160301.css';
-import le_courrier_de_l_architecte from './le_courrier_de_l_architecte_2.jpg';
+import le_courrier_de_l_architecte from './le-courrier-de-l-architecte-2.jpg';
 import ADB from './ADB.png';
 import AMC from './AMC.png';
-import LA_PRESSE_D_ARMOR from './LA_PRESSE_D_ARMOR.png';
-import TROPHEE_BETON from './TROPHEE_BETON.png';
+import LA_PRESSE_D_ARMOR from './LA-PRESSE-D-ARMOR.png';
+import TROPHEE_BETON from './TROPHEE-BETON.png';
 
 export default class Presse20160301 extends React.Component {
   render() {

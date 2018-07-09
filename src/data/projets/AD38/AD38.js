@@ -3,19 +3,20 @@ import React from 'react';
 
 // import './AD38.css';
 
-// import chambre from './img/atelierdelalandetabourin-appartements-AD38-chambre.jpg';
-import matiere from './img/atelierdelalandetabourin-appartements-AD38-matiere.jpg';
-import plan from './img/atelierdelalandetabourin-appartements-AD38-plan.jpg';
-import couloir from './img/atelierdelalandetabourin-appartements-AD38-couloir.jpg';
-import placardferme from './img/atelierdelalandetabourin-appartements-AD38-placardferme.jpg';
-import placardouvert from './img/atelierdelalandetabourin-appartements-AD38-placardouvert.jpg';
-import banc from './img/atelierdelalandetabourin-appartements-AD38-banc.jpg';
-import detail from './img/atelierdelalandetabourin-appartements-AD38-detail.jpg';
-import pierre from './img/atelierdelalandetabourin-appartements-AD38-pierre.jpg';
-import salon from './img/atelierdelalandetabourin-appartements-AD38-salon.jpg';
-import couloirchambre from './img/atelierdelalandetabourin-appartements-AD38-couloirchambre.jpg';
-import couloir2 from './img/atelierdelalandetabourin-appartements-AD38-couloir2.jpg';
-import sdb from './img/atelierdelalandetabourin-appartements-AD38-sdb.jpg';
+// import chambre from './img/atelier-delalande-tabourin-appartements-AD38-chambre.jpg';
+import matiere from './img/atelier-delalande-tabourin-appartements-AD38-matiere.jpg';
+import plan from './img/atelier-delalande-tabourin-appartements-AD38-plan.jpg';
+import couloir from './img/atelier-delalande-tabourin-appartements-AD38-couloir.jpg';
+import placardferme from './img/atelier-delalande-tabourin-appartements-AD38-placardferme.jpg';
+import placardouvert from './img/atelier-delalande-tabourin-appartements-AD38-placardouvert.jpg';
+import banc from './img/atelier-delalande-tabourin-appartements-AD38-banc.jpg';
+import detail from './img/atelier-delalande-tabourin-appartements-AD38-detail.jpg';
+import pierre from './img/atelier-delalande-tabourin-appartements-AD38-pierre.jpg';
+import salon from './img/atelier-delalande-tabourin-appartements-AD38-salon.jpg';
+import couloirchambre from './img/atelier-delalande-tabourin-appartements-AD38-couloirchambre.jpg';
+import couloir2 from './img/atelier-delalande-tabourin-appartements-AD38-couloir2.jpg';
+import sdb from './img/atelier-delalande-tabourin-appartements-AD38-sdb.jpg';
+import diagramme from './img/atelier-delalande-tabourin-appartements-AD38-diagramme.jpg';
 
 export default class AD38 extends React.Component {
   render() {
@@ -71,6 +72,9 @@ export default class AD38 extends React.Component {
           (séjour, cuisine) et un espace nuit (chambres).
         </p>
         <div className="projet__divider projet__divider--thin" />
+        <div className="projet__image--fullWidth marginbottom">
+          <img src={diagramme} alt="diagramme" />
+        </div>
         <div className="projet__image--fullWidth marginbottom">
           <img src={plan} alt="plan" />
         </div>

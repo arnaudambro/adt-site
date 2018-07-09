@@ -1,6 +1,6 @@
 import React from 'react';
 // import './News20180102.css';
-import pic from './atelierdelalandetabourin-hotel-morbihan-pierre-HD11-salon.jpg';
+import pic from './atelier-delalande-tabourin-hotel-morbihan-pierre-HD11-salon.jpg';
 
 export default class News20180102 extends React.Component {
   render() {
@@ -42,7 +42,7 @@ export default class News20180102 extends React.Component {
         <div
           className="news__20180102--pic1"
           style={{ backgroundImage: `url(${pic}) ` }}
-          title="chantier de la maison privée"
+          title="HD11 - Hôtel dans le Morbihan"
         />
         <div className="news__20180102--column3--container column3--container active">
           <div className="news__20180102--column3">

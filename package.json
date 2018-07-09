@@ -2,7 +2,6 @@
   "name": "atd-site",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://ambroselli.io/adt/",
   "dependencies": {
     "husky": "^0.14.3",
     "lint-staged": "^6.0.1",

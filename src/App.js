@@ -40,7 +40,7 @@ class App extends Component {
 
   componentWillMount() {
     //For reload : if we reload, no need the landing page anymore
-    if (window.location.pathname !== '/adt/') {
+    if (window.location.pathname !== '/') {
       this.setState({ showLanding: !this.state.showLanding });
       this.setState({ showHeaderAndContent: !this.state.showHeaderAndContent });
     }

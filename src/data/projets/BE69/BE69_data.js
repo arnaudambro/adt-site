@@ -21,7 +21,7 @@ const be69 = {
       },
       madeBy: 'ADT',
       madeFor: {
-        __html: 'EOLIS'
+        __html: 'GROUPE EALIS'
       },
       city: 'orléans',
       departmentName: 'loiret',
@@ -31,16 +31,17 @@ const be69 = {
       phasesWorked: 'EXE',
       status: 'EXE',
       material: {
-        __html: 'black wood'
+        __html: 'steel'
       }
     },
     fr: {
       title: {
-        __html: "réhabilitation d'un<br />immeuble de bureaux"
+        __html:
+          "réhabilitation d'un immeuble de bureaux<br />pour le groupe Ealis"
       },
       madeBy: 'ADT',
       madeFor: {
-        __html: 'EOLIS'
+        __html: 'GROUPE EALIS'
       },
       city: 'orléans',
       departmentName: 'loiret',
@@ -50,7 +51,7 @@ const be69 = {
       phasesWorked: 'EXE',
       status: 'EXE',
       material: {
-        __html: 'bois noir'
+        __html: 'métal'
       }
     }
   }

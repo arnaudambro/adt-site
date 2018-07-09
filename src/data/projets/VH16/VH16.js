@@ -3,13 +3,13 @@ import React from 'react';
 
 // import './VH16.css';
 
-import patiointerieur from './img/atelierdelalandetabourin-villa-patio-interieur-VH16.jpg';
-import plan from './img/atelierdelalandetabourin-villa-patio-VH16-plan.jpg';
-import elevation1 from './img/atelierdelalandetabourin-villa-patio-VH16-elevation1.jpg';
-import coupe2 from './img/atelierdelalandetabourin-villa-patio-VH16-coupe2.jpg';
-import coupe3 from './img/atelierdelalandetabourin-villa-patio-VH16-coupe3.jpg';
-import piscine from './img/atelierdelalandetabourin-villa-patio-VH16-piscine.jpg';
-import salon from './img/atelierdelalandetabourin-villa-patio-VH16-salon.jpg';
+import patiointerieur from './img/atelier-delalande-tabourin-villa-patio-interieur-VH16.jpg';
+import plan from './img/atelier-delalande-tabourin-villa-patio-VH16-plan.jpg';
+import elevation1 from './img/atelier-delalande-tabourin-villa-patio-VH16-elevation1.jpg';
+import coupe2 from './img/atelier-delalande-tabourin-villa-patio-VH16-coupe2.jpg';
+import coupe3 from './img/atelier-delalande-tabourin-villa-patio-VH16-coupe3.jpg';
+import piscine from './img/atelier-delalande-tabourin-villa-patio-VH16-piscine.jpg';
+import salon from './img/atelier-delalande-tabourin-villa-patio-VH16-salon.jpg';
 
 export default class VH16 extends React.Component {
   render() {
@@ -41,6 +41,7 @@ export default class VH16 extends React.Component {
         {/*<div className="projet__title">{content.title}</div>*/}
         {/*<div className="projet__subtitle projet__subtitle--surface" dangerouslySetInnerHTML={content.surface[lang]}></div>
         <div className="projet__subtitle projet__subtitle--cost" dangerouslySetInnerHTML={content.cost[lang]}></div>*/}
+
         <div className="projet__image--fullWidth">
           <img src={patiointerieur} alt="patio interieur" />
         </div>
