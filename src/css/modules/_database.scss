@@ -51,8 +51,10 @@
     padding-top: 1rem;
     min-height: 50px;
     display: flex;
-    
-    
+
+    &.location {
+      flex-direction: column;
+    }
   }
 
   .th {
@@ -80,12 +82,12 @@
 
         div {
           display: flex;
-          
+
           justify-content: flex-start;
           align-items: flex-end;
           margin-left: -1px;
           margin-bottom: 3px;
-          
+
           .column__header {
             height: 1em;
             display: block;

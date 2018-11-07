@@ -42,29 +42,29 @@ export default class HD11 extends React.Component {
         {/*<div className="projet__title">{content.title}</div>*/}
         {/*<div className="projet__subtitle projet__subtitle--surface" dangerouslySetInnerHTML={content.surface[lang]}></div>
         <div className="projet__subtitle projet__subtitle--cost" dangerouslySetInnerHTML={content.cost[lang]}></div>*/}
-        <div className="projet__image--fullWidth">
+        <div className="projet__image--fullWidth contexte">
           <img src={ref} alt="dolmens et menhirs" />
         </div>
         <div className="projet__divider projet__divider--thick" />
         <p>
-          HD11 s’inscrit à l’entrée de la ville de Locmariaquer. Forte de son
-          port et de ses sites mégalithiques. C’est autour de ce patrimoine
+          HD11 s’inscrit à l’entrée de la ville de Locmariaquer, forte de son
+          port et de ses sites mégalithiques. C’est donc autour de ce patrimoine
           architectural que l’agence a souhaité développer ce projet. A l’image
           du grand menhir brisé d’Er Grah, l’extension de l’hôtel s’impose au
           sein de la parcelle dans une radicale dynamique de chute.
         </p>
         <p>
-          Le monolithe éclaté le long du mur mitoyen est essentiellement composé
-          de chambres aux ambiances lumineuses et minérales. Une stratégie qui
-          permet de libérer de très généreuses pièces de vie au rez de chaussée
-          et un vaste jardin paysagé ou les bassins et ruissellement d’eau
-          rappellent la proximité de la mer.
+          Ce monolithe éclaté le long du mur mitoyen est essentiellement composé
+          de chambres aux ambiances lumineuses et minérales ; stratégie qui
+          permet de libérer de très généreuses pièces de vie au rez de chaussée.
+          Un vaste jardin paysagé ornementé de vastes bassins et ruissellement
+          d’eau rappellent la proximité de la mer et de la rivière d’Auray.
         </p>
         <p>
-          Un geste architectural qui permet à l’hôtel de passer de 600 à 900m2
-          de surface plancher, et ainsi de passer en catégorie 4*. Le projet se
-          veut donc comme signal d’accueil d’un patrimoine local pour les
-          visiteurs.
+          Notre projet architectural permet à l’hôtel de passer de 600 à 900m2
+          de surface plancher, et ainsi de passer en catégorie 4*. Face à la
+          mer, l’hôtel se veut comme signal d’accueil d’un patrimoine local pour
+          les nombreux visiteurs.
         </p>
         <div className="projet__divider projet__divider--thin" />
         <div className="projet__image--fullWidth marginbottom">

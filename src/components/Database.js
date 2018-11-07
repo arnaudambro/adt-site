@@ -466,11 +466,17 @@ export default class Database extends React.Component {
                     dangerouslySetInnerHTML={data_projets[key][lang].madeFor}
                   />
                   <div className="td location">
-                    {data_projets[key][lang].city}
-                    <br />
-                    {data_projets[key][lang].departmentNumber}
-                    <br />
-                    {data_projets[key][lang].country}
+                    {data_projets[key][lang].cityDatabase ? (
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: data_projets[key][lang].cityDatabase
+                        }}
+                      />
+                    ) : (
+                      data_projets[key][lang].city
+                    )}
+                    <span>{data_projets[key][lang].departmentNumber}</span>
+                    <span>{data_projets[key][lang].country}</span>
                   </div>
                   <div className="td function">
                     {data_projets[key][lang].function}
@@ -492,7 +498,10 @@ export default class Database extends React.Component {
                   </div>
                   <div
                     className="td material"
-                    dangerouslySetInnerHTML={data_projets[key][lang].material}
+                    dangerouslySetInnerHTML={
+                      data_projets[key][lang].materialDatabase ||
+                      data_projets[key][lang].material
+                    }
                   />
                 </Link>
               </div>

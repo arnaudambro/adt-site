@@ -20,6 +20,7 @@ const rp24 = {
         __html: 'rehabilitation of a restaurant'
       },
       madeBy: 'ADT',
+      collab: { __html: 'Cotreatance with<br/> Maud Saget Architecte' },
       madeFor: {
         __html: 'private<br />client'
       },
@@ -39,6 +40,7 @@ const rp24 = {
         __html: "réhabilitation d'un restaurant"
       },
       madeBy: 'ADT',
+      collab: { __html: 'Cotraitance avec<br/> Maud Saget Architecte' },
       madeFor: {
         __html: 'client<br />privé'
       },

@@ -7,7 +7,7 @@ export default class News20180314 extends React.Component {
     const content = {
       date: {
         en() {
-          const date = new Date(2016, 2, 14);
+          const date = new Date(2018, 2, 14);
           return date.toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long',
@@ -15,7 +15,7 @@ export default class News20180314 extends React.Component {
           });
         },
         fr() {
-          const date = new Date(2016, 2, 14);
+          const date = new Date(2018, 2, 14);
           return date.toLocaleDateString('fr-FR', {
             year: 'numeric',
             month: 'long',

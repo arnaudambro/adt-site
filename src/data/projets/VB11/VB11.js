@@ -6,7 +6,7 @@ import React from 'react';
 import contexte from './img/atelierdelalandetabourin-maison-loiret-VB11-contexte.jpg';
 import diagramme from './img/atelierdelalandetabourin-maison-loiret-VB11-diagramme.jpg';
 import planRDC from './img/atelierdelalandetabourin-maison-loiret-VB11-planRDC.jpg';
-import photo from './img/atelierdelalandetabourin-maison-loiret-VB11-photo.jpg';
+// import photo from './img/atelierdelalandetabourin-maison-loiret-VB11-photo.jpg';
 import coupe from './img/atelierdelalandetabourin-maison-loiret-VB11-coupe.jpg';
 import facade from './img/atelierdelalandetabourin-maison-loiret-VB11-facade.jpg';
 
@@ -41,7 +41,7 @@ export default class VB11 extends React.Component {
         {/*<div className="projet__title">{content.title}</div>*/}
         {/*<div className="projet__subtitle projet__subtitle--surface" dangerouslySetInnerHTML={content.surface[lang]}></div>
         <div className="projet__subtitle projet__subtitle--cost" dangerouslySetInnerHTML={content.cost[lang]}></div>*/}
-        <div className="projet__image--fullWidth">
+        <div className="projet__image--fullWidth contexte">
           <img src={contexte} alt="contexte" />
         </div>
         <div className="projet__divider projet__divider--thick" />
@@ -57,7 +57,7 @@ export default class VB11 extends React.Component {
         <p>
           A l’intérieur, un décalage des niveaux de sol permet de séparer les
           différents espaces de séjour et d’ouvrir plus généreusement le volume
-          crée sur les différentes vues qu’offres le paysage. Un patio minéral
+          créé sur les différentes vues qu’offres le paysage. Un patio minéral
           aux allures de dunes vient amener une ambiance supplémentaire au lieu.
         </p>
         <div className="projet__divider projet__divider--thin" />
@@ -70,17 +70,17 @@ export default class VB11 extends React.Component {
         >
           <img src={planRDC} alt="plan RDC" />
         </div>
-        <div
+        {/* <div
           className="projet__image--fullWidth"
           style={{ marginBottom: `140px` }}
         >
           <img src={photo} alt="photographie" />
+        </div> */}
+        <div className="projet__image--fullWidth">
+          <img src={facade} alt="coupe sud" />
         </div>
         <div className="projet__image--fullWidth">
           <img src={coupe} alt="coupe" />
-        </div>
-        <div className="projet__image--fullWidth">
-          <img src={facade} alt="coupe sud" />
         </div>
       </div>
     );

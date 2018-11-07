@@ -48,7 +48,7 @@ export default class EB12 extends React.Component {
         {/*<div className="projet__title">{content.title}</div>*/}
         {/*<div className="projet__subtitle projet__subtitle--surface" dangerouslySetInnerHTML={content.surface[lang]}></div>
         <div className="projet__subtitle projet__subtitle--cost" dangerouslySetInnerHTML={content.cost[lang]}></div>*/}
-        <div className="projet__image--fullWidth">
+        <div className="projet__image--fullWidth contexte">
           <img src={bois} alt="scierie" />
         </div>
         <div className="projet__divider projet__divider--thick" />

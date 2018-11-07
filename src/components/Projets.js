@@ -168,6 +168,12 @@ export default class Projets extends React.Component {
                     {data_projets[key].name}{' '}
                     {data_projets[key].winDate.getFullYear()}
                   </div>
+                  {data_projets[key][lang].collab && (
+                    <span
+                      className="material__projet--collab"
+                      dangerouslySetInnerHTML={data_projets[key][lang].collab}
+                    />
+                  )}
                   <span
                     className="material__projet--title"
                     dangerouslySetInnerHTML={data_projets[key][lang].title}

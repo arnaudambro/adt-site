@@ -1,13 +1,14 @@
 import React from 'react';
-// import './News20181022.css';
-import pic1 from './adt-everest.JPG';
+// import './News20181029.css';
+import pic1 from './atelier-delalande-tabourin-siege-orleans-1.JPG';
+import pic2 from './atelier-delalande-tabourin-siege-orleans-2.JPG';
 
-export default class News20181022 extends React.Component {
+export default class News20181029 extends React.Component {
   render() {
     const content = {
       date: {
         en() {
-          const date = new Date(2018, 9, 22);
+          const date = new Date(2018, 9, 29);
           return date.toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long',
@@ -15,7 +16,7 @@ export default class News20181022 extends React.Component {
           });
         },
         fr() {
-          const date = new Date(2018, 9, 22);
+          const date = new Date(2018, 9, 29);
           return date.toLocaleDateString('fr-FR', {
             year: 'numeric',
             month: 'long',
@@ -28,7 +29,7 @@ export default class News20181022 extends React.Component {
           __html: `TODO`
         },
         fr: {
-          __html: "ADT au pied de l'Everest"
+          __html: 'Nouvelles photos du chantier du siège d’Orléans'
         }
       }
       // description: {
@@ -38,24 +39,29 @@ export default class News20181022 extends React.Component {
     };
 
     return (
-      <div className="news__20181022--content news__content main__content">
+      <div className="news__20181029--content news__content main__content">
         <div
-          className="news__20181022--pic1"
+          className="news__20181029--pic1"
           style={{ backgroundImage: `url(${pic1}) ` }}
-          title="ADT au pied de l\'Everest"
+          title="siège d'orléans"
         />
-        <div className="news__20181022--column3--container column3--container active">
-          <div className="news__20181022--column3">
-            <div className="news__20181022--date">
+        <div
+          className="news__20181029--pic2"
+          style={{ backgroundImage: `url(${pic2}) ` }}
+          title="siège d'orléans"
+        />
+        <div className="news__20181029--column3--container column3--container active">
+          <div className="news__20181029--column3">
+            <div className="news__20181029--date">
               {content.date[this.props.language]()}
             </div>
             <div
-              className="news__20181022--date--datesubtitle"
+              className="news__20181029--date--datesubtitle"
               dangerouslySetInnerHTML={
                 content.dateSubtitle[this.props.language]
               }
             />
-            {/*<div className="news__20181022--date--description">{content.description[this.props.language]}</div>*/}
+            {/*<div className="news__20181029--date--description">{content.description[this.props.language]}</div>*/}
           </div>
         </div>
       </div>
@@ -63,6 +69,6 @@ export default class News20181022 extends React.Component {
   }
 }
 
-News20181022.propTypes = {
+News20181029.propTypes = {
   // language: React.PropTypes.string.isRequired,
 };

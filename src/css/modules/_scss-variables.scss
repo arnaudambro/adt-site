@@ -43,7 +43,6 @@ $dbMedia4: $databaseMaxWidth + 2 * $minMargin - $dbLocation - $dbMadeFor - $dbSt
   }
   .projet__content, .projet__header, .projet > p, .projet__image--fullWidth {
     max-width: ($dbName + $dbYear + $dbMadeFor + $dbLocation + $dbFunction + $dbFloorArea + $dbStatus + $dbMaterial);
-    max-max-width: ($dbName + $dbYear + $dbMadeFor + $dbLocation + $dbFunction + $dbFloorArea + $dbStatus + $dbMaterial);
   }
 }
 

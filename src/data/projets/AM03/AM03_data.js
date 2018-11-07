@@ -51,6 +51,9 @@ const am03 = {
       status: 'livré',
       material: {
         __html: 'Béton teinté'
+      },
+      materialDatabase: {
+        __html: 'Béton<br/>teinté'
       }
     }
   }

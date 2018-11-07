@@ -28,8 +28,8 @@ const vd232 = {
       departmentNumber: '49',
       country: 'france',
       function: 'private house',
-      phasesWorked: 'PRO',
-      status: 'PRO',
+      phasesWorked: 'APD',
+      status: 'APD',
       material: {
         __html: 'sanded concrete'
       }
@@ -43,14 +43,18 @@ const vd232 = {
         __html: 'client<br />privé'
       },
       city: 'saint-denis-en-val',
+      cityDatabase: 'saint-denis<br/>-en-val',
       departmentName: 'loiret',
       departmentNumber: '49',
       country: 'france',
       function: 'maison privée',
-      phasesWorked: 'PRO',
-      status: 'PRO',
+      phasesWorked: 'APD',
+      status: 'APD',
       material: {
         __html: 'Béton sablé'
+      },
+      materialDatabase: {
+        __html: 'Béton<br/>sablé'
       }
     }
   }

@@ -28,8 +28,8 @@ const vb11 = {
       departmentNumber: '49',
       country: 'france',
       function: 'private house',
-      phasesWorked: 'PRO',
-      status: 'PRO',
+      phasesWorked: 'APD',
+      status: 'APD',
       material: {
         __html: 'sanded concrete'
       }
@@ -47,10 +47,13 @@ const vb11 = {
       departmentNumber: '49',
       country: 'france',
       function: 'maison privée',
-      phasesWorked: 'PRO',
-      status: 'PRO',
+      phasesWorked: 'APD',
+      status: 'APD',
       material: {
         __html: 'Béton sablé'
+      },
+      materialDatabase: {
+        __html: 'Béton<br/>sablé'
       }
     }
   }
