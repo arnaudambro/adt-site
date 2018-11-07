@@ -31,7 +31,7 @@ const vh16 = {
       phasesWorked: 'DET',
       status: 'EXE',
       material: {
-        __html: 'balayed enduit'
+        __html: 'Balayed enduit'
       }
     },
     fr: {

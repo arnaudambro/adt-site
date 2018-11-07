@@ -34,7 +34,7 @@ export default class News20180518 extends React.Component {
       },
       description: {
         en: 'Extension of a private house. Orléans, Paris, France.',
-        fr: 'Extension d’une maison privée in Orléans, Paris, France.'
+        fr: 'Extension d’une maison privée à Orléans, Paris, France.'
       }
     };
 

@@ -29,7 +29,7 @@ const be69 = {
       country: 'france',
       function: 'office building',
       phasesWorked: 'EXE',
-      status: 'EXE',
+      status: 'delivered',
       material: {
         __html: 'steel'
       }
@@ -49,9 +49,9 @@ const be69 = {
       country: 'france',
       function: 'bureaux',
       phasesWorked: 'EXE',
-      status: 'EXE',
+      status: 'livré',
       material: {
-        __html: 'métal'
+        __html: 'Métal'
       }
     }
   }

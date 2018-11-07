@@ -75,8 +75,12 @@ export default class BE69 extends React.Component {
         <div className="projet__image--fullWidth">
           <img src={facade} alt="facade" />
         </div>
-        <div className="projet__image--fullWidth lessMargin">
-          <img src={texture_plan_rdc} alt="texture plan rdc" />
+        <div className="projet__image--fullWidth" style={{ marginBottom: -30 }}>
+          <img
+            src={texture_plan_rdc}
+            alt="texture plan rdc"
+            style={{ maxHeight: 'none' }}
+          />
         </div>
         <div className="projet__image--fullWidth lessMargin">
           <img src={texture_plan_r1} alt="texture plan r+1" />

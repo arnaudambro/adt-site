@@ -32,8 +32,36 @@ import News20180518 from './news/20180518/News20180518';
 import News20180608 from './news/20180608/News20180608';
 import News20180615 from './news/20180615/News20180615';
 import News20180627 from './news/20180627/News20180627';
+import News20180922 from './news/20180922/News20180922';
+import News20181018 from './news/20181018/News20181018';
+import News20181022 from './news/20181022/News20181022';
+import News20181105 from './news/20181105/News20181105';
 
 const data_news = {
+  news20181105: {
+    component(language, index) {
+      return <News20181105 language={language} key={index} />;
+    },
+    date: 20181105
+  },
+  news20181022: {
+    component(language, index) {
+      return <News20181022 language={language} key={index} />;
+    },
+    date: 20181022
+  },
+  news20181018: {
+    component(language, index) {
+      return <News20181018 language={language} key={index} />;
+    },
+    date: 20181018
+  },
+  news20180922: {
+    component(language, index) {
+      return <News20180922 language={language} key={index} />;
+    },
+    date: 20180922
+  },
   news20180627: {
     component(language, index) {
       return <News20180627 language={language} key={index} />;

@@ -29,7 +29,7 @@ const pm19 = {
       country: 'france',
       function: 'piscine & pool house',
       phasesWorked: 'PRO',
-      status: 'EXE',
+      status: 'delivered',
       material: {
         __html: 'tufeau'
       }
@@ -48,7 +48,7 @@ const pm19 = {
       country: 'france',
       function: 'piscine & pool house',
       phasesWorked: 'PRO',
-      status: 'EXE',
+      status: 'livré',
       material: {
         __html: 'Tuffeau'
       }
