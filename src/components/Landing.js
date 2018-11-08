@@ -15,7 +15,7 @@ export default class Landing extends React.Component {
   }
 
   componentDidMount() {
-    this.video.playbackRate = 0.5;
+    this.video.playbackRate = 0.75;
   }
 
   handleClick() {
