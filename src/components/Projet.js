@@ -155,6 +155,12 @@ export default class Projets extends React.Component {
             className="projet__subtitle projet__subtitle--headline"
             dangerouslySetInnerHTML={data_projets[projet][lang].title}
           />
+          {data_projets[projet][lang].subtitle && (
+            <div
+              className="projet__subtitle projet__subtitle--headline"
+              dangerouslySetInnerHTML={data_projets[projet][lang].subtitle}
+            />
+          )}
           <div className="projet__subtitle projet__subtitle--location">
             {data_projets[projet][lang].city},{' '}
             {data_projets[projet][lang].departmentName},{' '}

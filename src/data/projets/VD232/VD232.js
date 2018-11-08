@@ -89,13 +89,13 @@ export default class VD232 extends React.Component {
         <div className="projet__image--fullWidth">
           <img src={facadeouest} alt="facade ouest" />
         </div>
-        <div className="projet__image--fullWidth">
-          <img src={facadesud} alt="facade sud" />
-        </div>
         <div
           className="projet__image--fullWidth"
-          style={{ marginBottom: `140px` }}
+          style={{ marginBottom: `110px` }}
         >
+          <img src={facadesud} alt="facade sud" />
+        </div>
+        <div className="projet__image--fullWidth">
           <img src={pers} alt="perspective" />
         </div>
       </div>

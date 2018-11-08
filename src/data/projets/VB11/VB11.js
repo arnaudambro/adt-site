@@ -51,7 +51,7 @@ export default class VB11 extends React.Component {
           avant-gardiste des années 70. La demande d’une extension des espaces
           de vie prend donc la forme d’une avancée vers le fleuve. Apparait
           alors une géométrie simple et en rupture avec les lignes du bâtiment
-          existant. Sa façade est composée d’un béton sablée qui miroite au
+          existant. Sa façade est composée d’un béton sablé qui miroite au
           promeneur la proximité du sablonneux paysage de l’affluent.
         </p>
         <p>

@@ -1,11 +1,11 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-import hero from '../img/hero.jpg';
-import hero_mobile from '../img/hero_mobile.jpg';
 import logo from '../img/logo.svg';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import FaAngleDown from 'react-icons/lib/fa/angle-down';
+import video from '../img/rain.mp4';
+import poster from '../img/poster.png';
 
 export default class Landing extends React.Component {
   constructor(props) {
@@ -29,15 +29,20 @@ export default class Landing extends React.Component {
         onClick={this.handleClick}
         className="landing"
         title="ADT: une mise en architecture de la matière"
-        style={{
-          backgroundImage: `url(${
-            window.innerWidth < 500 ? hero_mobile : hero
-          })`
-        }}
       >
         <Helmet>
           <title>Atelier Delalande Tabourin | Architectes</title>
         </Helmet>
+
+        <video
+          src={video}
+          className="video"
+          autoplay="true"
+          muted="true"
+          loop="true"
+          preload="true"
+          poster={poster}
+        />
         <div className="calltoscroll-div">
           <FaAngleDown className="scroll-icon" size={60} />
         </div>

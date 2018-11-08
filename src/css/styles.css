@@ -346,6 +346,25 @@ a {
   }
 }
 
+@media all and (min-width: 700px) {
+  .video {
+    min-height: 110vh;
+    min-width: 100vw;
+    position: absolute;
+    top: -5vh;
+    left: 0;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .video {
+    display: none;
+  }
+  .landing {
+    background-image: url(../img/hero_mobile.jpg);
+  }
+}
+
 @media all and (max-width: 1100px) {
   .landing {
     --logoWidth: 170px;

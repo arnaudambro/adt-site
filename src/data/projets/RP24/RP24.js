@@ -43,9 +43,6 @@ export default class BE69 extends React.Component {
           <img src={concept} alt="concept" />
         </div> */}
         <div className="projet__divider projet__divider--thick" />
-        <p style={{ fontStyle: 'italic', marginBottom: 30 }}>
-          Réalisé en collaboration avec Maud Saget Architecte.
-        </p>
         <p>
           En angle de rue dans le quartier d’Oberkampf « le coin POP » propose
           un espace partagé entre restauration et co-working. Le geste
@@ -62,28 +59,34 @@ export default class BE69 extends React.Component {
           grande partie des baies vitrées permet aux utilisateurs d’oublier la
           limite entre la rue et le restaurant.
         </p>
-        <p>
-          Un espace cafétéria et repos est aménagé au fond du jardin paysagé.
-        </p>
         <p />
         <div className="projet__divider projet__divider--thin" />
         {/* <div className="projet__image--fullWidth marginbottom">
           <img src={diagramme} alt="diagramme" />
         </div> */}
-        <div className="projet__image--fullWidth">
+        <div
+          className="projet__image--fullWidth"
+          style={{ marginBottom: `80px` }}
+        >
           <img src={plan} alt="plan" />
-        </div>
-        <div className="projet__image--fullWidth">
-          <img src={elevationinterieure1} alt="elevation interieure" />
-        </div>
-        <div className="projet__image--fullWidth">
-          <img src={elevationinterieure2} alt="elevation interieure" />
         </div>
         <div className="projet__image--fullWidth">
           <img src={facade} alt="facade" />
         </div>
+        <div
+          className="projet__image--fullWidth"
+          style={{ marginBottom: `80px` }}
+        >
+          <img src={elevationinterieure2} alt="elevation interieure" />
+        </div>
         <div className="projet__image--fullWidth">
           <img src={facade2} alt="facade" />
+        </div>
+        <div
+          className="projet__image--fullWidth"
+          style={{ marginTop: `-50px` }}
+        >
+          <img src={elevationinterieure1} alt="elevation interieure" />
         </div>
       </div>
     );

@@ -39,6 +39,9 @@ const rp24 = {
       title: {
         __html: "réhabilitation d'un restaurant"
       },
+      subtitle: {
+        __html: 'Réalisé en collaboration avec Maud Saget Architecte'
+      },
       madeBy: 'ADT',
       collab: { __html: 'Cotraitance avec<br/> Maud Saget Architecte' },
       madeFor: {
