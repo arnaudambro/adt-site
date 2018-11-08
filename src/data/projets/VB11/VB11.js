@@ -57,7 +57,7 @@ export default class VB11 extends React.Component {
         <p>
           A l’intérieur, un décalage des niveaux de sol permet de séparer les
           différents espaces de séjour et d’ouvrir plus généreusement le volume
-          créé sur les différentes vues qu’offres le paysage. Un patio minéral
+          créé sur les différentes vues qu’offre le paysage. Un patio minéral
           aux allures de dunes vient amener une ambiance supplémentaire au lieu.
         </p>
         <div className="projet__divider projet__divider--thin" />

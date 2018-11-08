@@ -522,36 +522,6 @@ a {
   display: block;
 }
 
-/******** MEDIA QUERY ********/
-@media all and (min-width: 1100px) {
-  .projets .material:hover .material__container--overlay {
-    opacity: 1;
-  }
-  .projets .material__container {
-    grid-column: 1 / 3;
-  }
-  .projets .material__container--overlay {
-    background-color: var(--whiteTransparent);
-    opacity: 0;
-    transition: opacity var(--transition);
-    z-index: var(--zindexOverlay);
-  }
-  .projets .material__container__projet--container {
-    width: 130%;
-  }
-}
-
-@media all and (max-width: 1100px) {
-  .projets .material__container img {
-    height: 100%;
-  }
-  .projets .material__container--overlay {
-    background-color: var(--white);
-    width: 50%;
-    justify-self: end;
-  }
-}
-
 /******** STYLING **********/
 .projets.main__container--marginbottom {
   margin-top: calc(var(--gridGap) * -1 - 3px);
@@ -568,12 +538,16 @@ a {
   transform-style: flat;
   margin-bottom: var(--gridGap);
 }
-.projets .material__container img {
+.projets .material__container .img {
   z-index: 5;
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   width: 100%;
+  height: 100%;
   object-fit: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .projets .material__projet--content {
   display: flex;
@@ -621,6 +595,40 @@ a {
   font-size: 0.7rem;
   opacity: 0.8;
   width: 115%;
+}
+
+/******** MEDIA QUERY ********/
+@media all and (min-width: 1100px) {
+  .projets .material:hover .material__container--overlay {
+    opacity: 1;
+  }
+  .projets .material__container {
+    grid-column: 1 / 3;
+  }
+  .projets .material__container--overlay {
+    background-color: var(--whiteTransparent);
+    opacity: 0;
+    transition: opacity var(--transition);
+    z-index: var(--zindexOverlay);
+  }
+  .projets .material__container__projet--container {
+    width: 130%;
+  }
+}
+
+@media all and (max-width: 1100px) {
+  .projets .material__container .img {
+    height: 100%;
+  }
+  .projets .material__container .img.rp24 {
+    background-size: 200%;
+    background-position: 75%;
+  }
+  .projets .material__container--overlay {
+    background-color: var(--white);
+    width: 50%;
+    justify-self: end;
+  }
 }
 
 /******** MEDIA QUERY ********/

@@ -70,7 +70,10 @@ export default class BE69 extends React.Component {
         >
           <img src={plan} alt="plan" />
         </div>
-        <div className="projet__image--fullWidth">
+        <div
+          className="projet__image--fullWidth"
+          style={{ marginBottom: `150px` }}
+        >
           <img src={facade} alt="facade" />
         </div>
         <div
@@ -84,7 +87,7 @@ export default class BE69 extends React.Component {
         </div>
         <div
           className="projet__image--fullWidth"
-          style={{ marginTop: `-50px` }}
+          // style={{ marginTop: `-50px` }}
         >
           <img src={elevationinterieure1} alt="elevation interieure" />
         </div>

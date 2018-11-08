@@ -126,10 +126,10 @@ export default class Projets extends React.Component {
                 style={{ gridRowEnd: `${data_projets[key].materialPicHeight}` }}
                 onClick={this.handleClickResponsive}
               >
-                <img
-                  src={data_projets[key].img}
-                  alt={data_projets[key][lang].material}
-                  style={{ objectFit: 'cover' }}
+                <div
+                  style={{ backgroundImage: `url(${data_projets[key].img})` }}
+                  title={data_projets[key][lang].material}
+                  className={`${key} img`}
                   data-index={index}
                 />
               </Link>

@@ -1,65 +1,3 @@
-/******** MEDIA QUERY ********/
-
-
-@media all and (min-width: 1100px) {
-
-  .projets {
-
-    .material {
-
-      &:hover .material__container--overlay {
-        opacity: 1;
-      }
-
-      &__container {
-        grid-column: 1 / 3;
-
-        &--overlay {
-          // grid-column: 1 / 4 !important;
-          background-color: var(--whiteTransparent);
-          opacity: 0;
-          transition: opacity var(--transition);
-          z-index: var(--zindexOverlay);
-        }
-
-        &__projet {
-
-          &--container {
-            width: 130%;
-          }
-        }
-      }
-    }
-  }
-}
-@media all and (max-width: 1100px) {
-  .projets {
-
-    &.active .material__container--overlay {
-      // transform: translateX(0);
-    }
-
-    .material {
-
-      &__container {
-
-        img {
-          height: 100%;
-        }
-
-
-        &--overlay {
-          background-color: var(--white);
-          width: 50%;
-          justify-self: end;
-          // transform: translateX(50vw);
-        }
-
-      }
-    }
-  }
-}
-
 /******** STYLING **********/
 
 .projets {
@@ -79,12 +17,16 @@
 
       transform-style: flat;
       margin-bottom: var(--gridGap);
-      img {
+      .img {
         z-index: 5;
         grid-column: 1 / -1;
         grid-row: 1 / -1;
         width: 100%;
+        height: 100%;
         object-fit: cover;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
       }
 
       &--overlay {
@@ -148,6 +90,73 @@
         font-size: 0.7rem;
         opacity: 0.8;
         width: 115%;
+      }
+    }
+  }
+}
+/******** MEDIA QUERY ********/
+
+
+@media all and (min-width: 1100px) {
+
+  .projets {
+
+    .material {
+
+      &:hover .material__container--overlay {
+        opacity: 1;
+      }
+
+      &__container {
+        grid-column: 1 / 3;
+
+        &--overlay {
+          // grid-column: 1 / 4 !important;
+          background-color: var(--whiteTransparent);
+          opacity: 0;
+          transition: opacity var(--transition);
+          z-index: var(--zindexOverlay);
+        }
+
+        &__projet {
+
+          &--container {
+            width: 130%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1100px) {
+  .projets {
+
+    &.active .material__container--overlay {
+      // transform: translateX(0);
+    }
+
+    .material {
+
+      &__container {
+
+        .img {
+          height: 100%;
+
+          &.rp24 {
+            background-size: 200%;
+            background-position: 75%;
+          }
+        }
+
+
+        &--overlay {
+          background-color: var(--white);
+          width: 50%;
+          justify-self: end;
+          // transform: translateX(50vw);
+        }
+
       }
     }
   }

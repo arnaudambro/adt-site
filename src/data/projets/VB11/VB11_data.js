@@ -9,7 +9,7 @@ const vb11 = {
     delivery: new Date(2019, 8, 1),
     winDate: new Date(2018, 7, 1),
     surface: 100,
-    materialPicHeight: 14,
+    materialPicHeight: 15,
     cost: 'NC',
     img: material,
     component(language, name, index: 0) {

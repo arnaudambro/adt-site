@@ -9,7 +9,7 @@ const rp24 = {
     delivery: new Date(2018, 11, 1),
     winDate: new Date(2018, 5, 27),
     surface: 150,
-    materialPicHeight: 19,
+    materialPicHeight: 16,
     cost: 'NC',
     img: material,
     component(language, name, index: 0) {

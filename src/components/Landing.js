@@ -14,6 +14,10 @@ export default class Landing extends React.Component {
     // this.handleWheel = this.handleWheel.bind(this);
   }
 
+  componentDidMount() {
+    this.video.playbackRate = 0.5;
+  }
+
   handleClick() {
     this.props.handleShow();
   }
@@ -36,8 +40,9 @@ export default class Landing extends React.Component {
 
         <video
           src={video}
+          ref={vid => (this.video = vid)}
           className="video"
-          autoplay="true"
+          autoPlay="true"
           muted="true"
           loop="true"
           preload="true"

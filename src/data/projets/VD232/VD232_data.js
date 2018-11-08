@@ -9,7 +9,7 @@ const vd232 = {
     delivery: new Date(2020, 0, 1),
     winDate: new Date(2018, 9, 1),
     surface: 200,
-    materialPicHeight: 24,
+    materialPicHeight: 25,
     cost: 'NC',
     img: material,
     component(language, name, index: 0) {
