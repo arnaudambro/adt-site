@@ -37,8 +37,15 @@ import News20181018 from './news/20181018/News20181018';
 import News20181022 from './news/20181022/News20181022';
 import News20181029 from './news/20181029/News20181029';
 import News20181105 from './news/20181105/News20181105';
+import News20181108 from './news/20181108/News20181108';
 
 const data_news = {
+  news20181108: {
+    component(language, index) {
+      return <News20181108 language={language} key={index} />;
+    },
+    date: 20181108
+  },
   news20181105: {
     component(language, index) {
       return <News20181105 language={language} key={index} />;
