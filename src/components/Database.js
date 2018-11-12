@@ -51,7 +51,6 @@ export default class Database extends React.Component {
 
     const arrayToShowInDatabase = Object.keys(data_projets).sort((a, b) => {
       if (data_projets[a][`${this.state.sortBy}`]) {
-        console.log('yes');
         if (
           data_projets[a][`${this.state.sortBy}`] >=
           data_projets[b][`${this.state.sortBy}`]
@@ -444,7 +443,6 @@ export default class Database extends React.Component {
             </div>
           </div>
           {arrayToShowInDatabase.map((key, index) => {
-            console.log(index);
             return (
               <div
                 className={`tr tr${index} tr__clickable`}

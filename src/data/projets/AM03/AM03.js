@@ -4,7 +4,7 @@ import React from 'react';
 // import './AM03.css';
 
 // import elevationinterieure1 from './img/atelierdelalandetabourin-appartement-paris-AM03-elevationinterieure1.jpg';
-import elevationinterieure2 from './img/atelierdelalandetabourin-appartement-paris-AM03-elevationinterieure2.jpg';
+// import elevationinterieure2 from './img/atelierdelalandetabourin-appartement-paris-AM03-elevationinterieure2.jpg';
 import plan from './img/atelierdelalandetabourin-appartement-paris-AM03-plan.jpg';
 
 export default class AM03 extends React.Component {
@@ -56,14 +56,14 @@ export default class AM03 extends React.Component {
         <div className="projet__image--fullWidth">
           <img src={plan} alt="plan-RDC" />
         </div>
-        <div
+        {/*         <div
           className="projet__image--fullWidth"
           style={{
             width: '50%'
           }}
         >
           <img src={elevationinterieure2} alt="elevation interieure" />
-        </div>
+        </div> */}
       </div>
     );
   }

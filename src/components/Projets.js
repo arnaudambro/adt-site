@@ -103,7 +103,7 @@ export default class Projets extends React.Component {
         }}
       >
         <Helmet>
-          <title>ADT | Projets</title>
+          <title>{this.props.title}</title>
         </Helmet>
         {Object.keys(data_projets)
           .sort(

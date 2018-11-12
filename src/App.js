@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Route, Redirect } from 'react-router';
 import Content from './components/Content';
 import Landing from './components/Landing';
 import { NavLink } from 'react-router-dom';
@@ -72,7 +71,7 @@ class App extends Component {
           {/*<!-- Search Engine -->*/}
           <meta
             name="description"
-            content="Architecture + Material LAB + Design "
+            content="L'Atelier Delalande Tabourin est un cabinet d'architecture, un Material LAB et un bureau de Design"
           />
           <meta name="image" content={hero} />
           {/*<!-- Schema.org for Google -->*/}
@@ -106,16 +105,11 @@ class App extends Component {
             name="google-site-verification"
             content="Ka5ugOyxQ4SwwFupKsJ3udE7RQd85eyyTO7AS9vlASw"
           />
-          <meta
-            name="keywords"
-            content="atelierdelalandetabourin,delalande,tabourin,architecture,architecturehautdegamme,architecte,jeune,agence,architectureinterieure,paysage,landart,atelier,hd11,pm19,eb12,ad38,vh16,vb229,paris,orleans,bretagne,granit,tuffeau,bois,accoya,barillet,brique,pierrecalcaire,béton,siegesocial,hotel,hotelcharme,hautdegamme,maison,,appartement,villa,logement,scenographie,rehabilitation,extension,surelevation,trophéebéton,meilleurdiplome,ecolespecialdarchitecture"
-          />
           <link
             rel="canonical"
             href="http://www.atelierdelalandetabourin.com/"
           />
         </Helmet>
-        <Route exact path="/" render={() => <Redirect to="/projets" />} />
         <Landing handleShow={this.handleLandingAction} />
         <NavLink
           className="header header__companyName"

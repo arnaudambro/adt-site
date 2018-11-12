@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 
 export default class Error404 extends React.Component {
   //constructor(props) {
@@ -8,7 +9,14 @@ export default class Error404 extends React.Component {
   // }
 
   render() {
-    return <div>Erreur: la page demandée n'existe pas</div>;
+    return (
+      <div>
+        <Helmet>
+          <title>Atelier Delalande Tabourin | Erreur 404</title>
+        </Helmet>
+        <div>Erreur: la page demandée n'existe pas</div>
+      </div>
+    );
   }
 }
 

@@ -15,7 +15,7 @@ export default class Landing extends React.Component {
   }
 
   componentDidMount() {
-    this.video.playbackRate = 0.75;
+    this.div.firstElementChild.playbackRate = 0.75;
   }
 
   handleClick() {
@@ -37,17 +37,23 @@ export default class Landing extends React.Component {
         <Helmet>
           <title>Atelier Delalande Tabourin | Architectes</title>
         </Helmet>
+        {/* muted attribute is not given to the video, this is a workaround */}
 
-        <video
-          src={video}
-          ref={vid => (this.video = vid)}
-          className="video"
-          autoPlay="true"
-          muted="true"
-          loop="true"
-          preload="true"
-          poster={poster}
+        <div
+          ref={div => (this.div = div)}
+          dangerouslySetInnerHTML={{
+            __html: `<video
+          class="video"
+          muted
+          autoplay
+          loop
+          preload
+          src=${video}
+          poster=${poster}
+        ></video>`
+          }}
         />
+
         <div className="calltoscroll-div">
           <FaAngleDown className="scroll-icon" size={60} />
         </div>
