@@ -82,21 +82,6 @@ export default class Content extends React.Component {
       >
         <Switch>
           <Route
-            path="/"
-            render={() => (
-              <Projets
-                language={language}
-                onarrowclick={this.handleArrowClick}
-                willmount={this.handleDatabaseWillMount}
-                orderingParameters={this.passOrderingParametersToProjet}
-                title="Atelier Delalande Tabourin | Architecture + Material LAB + Design"
-                ref={projets => {
-                  this.projets = projets;
-                }}
-              />
-            )}
-          />
-          <Route
             path="/projets"
             render={() => (
               <Projets
@@ -181,6 +166,21 @@ export default class Content extends React.Component {
             )}
           />
           <Route component={Error404} />
+          <Route
+            path="/"
+            render={() => (
+              <Projets
+                language={language}
+                onarrowclick={this.handleArrowClick}
+                willmount={this.handleDatabaseWillMount}
+                orderingParameters={this.passOrderingParametersToProjet}
+                title="Atelier Delalande Tabourin | Architecture + Material LAB + Design"
+                ref={projets => {
+                  this.projets = projets;
+                }}
+              />
+            )}
+          />
         </Switch>
       </div>
     );
