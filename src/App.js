@@ -4,7 +4,7 @@ import Landing from './components/Landing';
 import { NavLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import menu from './data/menu';
-import './css/styles.css';
+import './css/styles.scss';
 import hero from './img/hero_mobile.jpg';
 import logo from './img/logo.jpg';
 

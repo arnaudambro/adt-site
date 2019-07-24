@@ -13,8 +13,6 @@ import picture6 from '../img/agence/picture6.jpg';
 import picture7 from '../img/agence/picture7.jpg';
 import picture8 from '../img/agence/picture8.jpg';
 
-// import _ from 'lodash';
-
 const duration = 200;
 const timeout = 0;
 
@@ -260,20 +258,27 @@ export default class Agence extends React.Component {
                   <span className="function">architecte associé</span>
                   <span className="name">nicolas delalande</span>
                   <p className="summary">
-                    Né en 1990<br />Architecte Diplômé d’Etat<br />Ecole
-                    Spéciale d’Architecture, 2014<br />Mention du Meilleur
-                    Diplôme, 2015
+                    Né en 1990
+                    <br />
+                    Architecte Diplômé d’Etat
+                    <br />
+                    Ecole Spéciale d’Architecture, 2014
+                    <br />
+                    Mention du Meilleur Diplôme, 2015
                   </p>
                   <p className="prices">
                     <b>Lauréat du Trophée Béton</b>
-                    <br />2ème prix – 2016<br />
+                    <br />
+                    2ème prix – 2016
+                    <br />
                     <b>Lauréat du Grand Prix d’Architecture des Beaux-Arts</b> –
                     2016
                   </p>
                   <p className="experiences">
                     <b>Expériences:</b>
-                    <br />M-Cube architectures, F.Borel architecture, ALC
-                    architectes, AWP – Agence de reconfiguration territoriale.
+                    <br />
+                    M-Cube architectures, F.Borel architecture, ALC architectes,
+                    AWP – Agence de reconfiguration territoriale.
                   </p>
                 </div>
               </div>
@@ -305,14 +310,20 @@ export default class Agence extends React.Component {
                   <span className="name">sébastien tabourin</span>
                   <p className="summary">
                     <b>
-                      Né en 1991<br />Architecte Diplômé d’Etat<br />Ecole
-                      Spéciale d’Architecture, 2014<br />Mention du Meilleur
-                      Diplôme, 2015
+                      Né en 1991
+                      <br />
+                      Architecte Diplômé d’Etat
+                      <br />
+                      Ecole Spéciale d’Architecture, 2014
+                      <br />
+                      Mention du Meilleur Diplôme, 2015
                     </b>
                   </p>
                   <p className="prices">
                     <b>Lauréat du Trophée Béton</b>
-                    <br />2ème prix – 2016<br />
+                    <br />
+                    2ème prix – 2016
+                    <br />
                     <b>Lauréat du Grand Prix d’Architecture des Beaux-Arts</b> –
                     2016
                   </p>
@@ -350,15 +361,23 @@ export default class Agence extends React.Component {
                   <span className="name">mathilde lizoret</span>
                   <p className="summary">
                     <b>
-                      Née en 1993<br />Architecte Diplômée d’Etat<br />Ecole
-                      Spéciale d’Architecture, 2016<br />Félicitations du jury
+                      Née en 1993
+                      <br />
+                      Architecte Diplômée d’Etat
+                      <br />
+                      Ecole Spéciale d’Architecture, 2016
+                      <br />
+                      Félicitations du jury
                     </b>
                   </p>
                   <p className="experiences">
                     <b>Expériences:</b>
-                    <br />Jean-Paul Viguier architecte, Paris,<br />BA75
-                    architectes, Buenos Aires,<br />Richard+Shoeller
-                    architectes, Paris.
+                    <br />
+                    Jean-Paul Viguier architecte, Paris,
+                    <br />
+                    BA75 architectes, Buenos Aires,
+                    <br />
+                    Richard+Shoeller architectes, Paris.
                   </p>
                 </div>
               </div>
@@ -390,12 +409,15 @@ export default class Agence extends React.Component {
                   <span className="name">pauline taupin</span>
                   <p className="summary">
                     <b>
-                      Née en 1995<br />ENSA Paris La Villette, Master 2
+                      Née en 1995
+                      <br />
+                      ENSA Paris La Villette, Master 2
                     </b>
                   </p>
                   <p className="experiences">
                     <b>Expériences:</b>
-                    <br />KOZ architectes, Paris
+                    <br />
+                    KOZ architectes, Paris
                   </p>
                 </div>
               </div>

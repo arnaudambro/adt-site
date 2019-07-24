@@ -3,7 +3,7 @@ import { hydrate, render } from 'react-dom';
 
 import { BrowserRouter } from 'react-router-dom';
 
-import './css/styles.css';
+import './css/styles.scss';
 import App from './App';
 
 const Root = () => {

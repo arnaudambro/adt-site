@@ -6,7 +6,6 @@ import arrow_down_filled from '../img/icons/arrow_down_filled.svg';
 import arrow_up_filled from '../img/icons/arrow_up_filled.svg';
 import arrow_down_stroked from '../img/icons/arrow_down_stroked.svg';
 import arrow_up_stroked from '../img/icons/arrow_up_stroked.svg';
-import _ from 'lodash';
 
 export default class Database extends React.Component {
   constructor(props) {
@@ -44,8 +43,10 @@ export default class Database extends React.Component {
     const lang = this.props.language;
     const minHeight = 50;
     const maxHeight = 150;
-    const biggestProjectHeight = _.max(
-      Object.keys(data_projets).map(key => data_projets[key].materialPicHeight)
+    const biggestProjectHeight = Math.max(
+      ...Object.keys(data_projets).map(
+        key => data_projets[key].materialPicHeight
+      )
     );
     const heightFactor = (maxHeight - minHeight) / biggestProjectHeight;
 
@@ -487,12 +488,12 @@ export default class Database extends React.Component {
                       ? ''
                       : data_projets[key][lang].status ===
                         content.delivered[lang]
-                        ? `${content.delivered[lang]}`
-                        : data_projets[key].delivery !== null
-                          ? `${data_projets[key][lang].status} - ${
-                              content.delivery[lang]
-                            } ${data_projets[key].delivery.getFullYear()}`
-                          : `${data_projets[key][lang].status}`}
+                      ? `${content.delivered[lang]}`
+                      : data_projets[key].delivery !== null
+                      ? `${data_projets[key][lang].status} - ${
+                          content.delivery[lang]
+                        } ${data_projets[key].delivery.getFullYear()}`
+                      : `${data_projets[key][lang].status}`}
                   </div>
                   <div
                     className="td material"
