@@ -1,0 +1,25 @@
+{
+  "title": "AM03",
+  "properties": {
+    "size": 100,
+    "material": "Béton teinté",
+    "description": "réhabilitation d'un appartement",
+    "madeBy": "ADT",
+    "madeFor": "client privé",
+    "city": "levallois-perret",
+    "departmentName": "hauts-de-seine",
+    "departmentNumber": "92",
+    "country": "france",
+    "function": "appartement",
+    "phasesWorked": "EXE",
+    "status": "livré",
+    "dates": {
+      "win": "2018-07-01",
+      "delivery": "2018-11-01"
+    }
+  },
+  "presentation": {
+    "image": "AM03-BOULEAU-BASEDEDONNEE-200px.jpg",
+    "height": 80
+  }
+}

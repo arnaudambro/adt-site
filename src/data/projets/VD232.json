@@ -1,0 +1,25 @@
+{
+  "title": "VD232",
+  "properties": {
+    "size": 200,
+    "material": "Béton sablé",
+    "description": "extension et réhabilitation d'une maison privée",
+    "madeBy": "ADT",
+    "madeFor": "client privé",
+    "city": "saint-denis-en-val",
+    "departmentName": "loiret",
+    "departmentNumber": "45",
+    "country": "france",
+    "function": "maison privée",
+    "phasesWorked": "APD",
+    "status": "APD",
+    "dates": {
+      "win": "2019-10-01",
+      "delivery": "2020-01-01"
+    }
+  },
+  "presentation": {
+    "image": "VD232-betonsable-BASEDEDONNEE-200px.jpg",
+    "height": 190
+  }
+}

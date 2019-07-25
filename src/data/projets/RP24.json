@@ -1,0 +1,26 @@
+{
+  "title": "AM03",
+  "properties": {
+    "size": 150,
+    "material": "Carreau de verre",
+    "description": "réhabilitation d'un restaurant",
+    "collaboration": "Réalisé en collaboration avec Maud Saget Architecte",
+    "madeBy": "ADT",
+    "madeFor": "client privé",
+    "city": "paris",
+    "departmentName": "île-de-france",
+    "departmentNumber": "75",
+    "country": "france",
+    "function": "restaurant",
+    "phasesWorked": "DET",
+    "status": "livré",
+    "dates": {
+      "win": "2018-06-27",
+      "delivery": "2018-12-01"
+    }
+  },
+  "presentation": {
+    "image": "POP-RP24-BETON-CIRE-BASEDEDONNEES-200px.jpg",
+    "height": 110
+  }
+}

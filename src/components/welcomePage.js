@@ -1,12 +1,14 @@
 import React from "react"
 import styled, { keyframes } from 'styled-components'
 import SEO from "./seo"
+import Img from "gatsby-image/withIEPolyfill"
 
 import logo from '../images/logo.svg';
-import poster from '../images/poster.png';
 import { media } from "../styles/mediaQueries";
-import { Link } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
 import { projets } from "../reference/pages";
+import { background, gatsbyImage } from "../styles/mixins";
+import { getImagePropsForGatsby, getImageSrcFromImages } from "../helpers/selectors";
 
 
 const LandingStyled = styled(Link)`
@@ -16,10 +18,10 @@ const LandingStyled = styled(Link)`
   height: 100vh;
   width: 100vw;
   flex-shrink: 0;
-  background-image: url(${poster});
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  ${gatsbyImage({
+    width: '100vw !important',
+    height: '100vh !important',
+  })}
 `
 
 const clignote = keyframes`
@@ -57,12 +59,7 @@ const ArrowDownStyled = styled.svg`
 
 const Logo = styled.div`
   position: absolute;
-  background-repeat: no-repeat;
-  background-position: center;
-  background: url(${logo});
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  ${background({ url: logo })}
   left: 12.5vw;
   bottom: 30vh;
   width: ${({ theme }) => theme.width.logo}px;
@@ -90,16 +87,41 @@ const ScrollIcon = () =>
     </g>
   </ArrowDownStyled>
 
-const WelcomePage = () =>
-  <LandingStyled
-    to={'/' + projets}
-    title="ADT: une mise en architecture de la matière"
-    id="landing"
-  >
-    <SEO title="ADT" />
-    {/* muted attribute is not given to the video, this is a workaround */}
-    <ScrollIcon />
-    <Logo />
-  </LandingStyled>
+const WelcomePage = ({ startAnimation }) => {
+
+  const {
+    allImageSharp:{edges: images },
+  } = useStaticQuery(graphql`
+  query ImagesQuery {
+      allImageSharp {
+        edges {
+          node {
+            id
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <LandingStyled
+      to={'/' + projets}
+      id="landing"
+      onClick={startAnimation}
+    >
+      <SEO title="ADT" />
+      <Img
+        fluid={getImagePropsForGatsby(images.find(img => getImageSrcFromImages(img).includes('poster')))}
+        alt="ADT: une mise en architecture de la matière"
+        title="ADT: une mise en architecture de la matière"
+      />
+      <ScrollIcon />
+      <Logo />
+    </LandingStyled>
+  )
+}
 
 export default WelcomePage;

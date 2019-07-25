@@ -29,6 +29,8 @@ const theme = {
     logo: 170 * 60 / 96,
     desktop: {
       logo: 250 * 60 / 96,
+      logoLine: 64,
+      menuItem: 28.8
     }
   },
   width: {
@@ -38,9 +40,18 @@ const theme = {
     max: {
       headerColumn: 300
     },
-    logo: 170,
+    hideScrollbar: 16,
+    scrollBar: 14,
+    logo: 177,
+    indicator: 15,
+    material: 150,
     desktop: {
+      material: 385,
       logo: 250,
+      sideColumn: 380,
+      centerColumn: 300,
+      divider: 785,
+      indicator: 30,
     }
 
   },
@@ -51,8 +62,16 @@ const theme = {
     bottom: {
     },
     right: {
+      indicator: 5,
+      desktop: {
+        indicator: 15
+      }
     },
     left: {
+      indicator: 7,
+      desktop: {
+        indicator: 35
+      }
     }
   },
   padding: {

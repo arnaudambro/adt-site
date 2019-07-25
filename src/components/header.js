@@ -4,6 +4,7 @@ import React from "react"
 import styled, { css } from 'styled-components'
 import { displayFlex, displayGrid } from "../styles/mixins";
 import pages from "../reference/pages";
+import { media } from "../styles/mediaQueries";
 
 const borderBottom = css`
   &::after {
@@ -19,6 +20,13 @@ const borderBottom = css`
     right: 0;
     margin-left: auto;
     margin-right: auto;
+    ${media.desktop`
+      bottom: unset;
+      top: ${({ theme: { height: { desktop: { logoLine } } } }) => 3 * logoLine + 10}px;
+      width: ${({ theme: { width: { desktop: { divider } } } }) => divider}px;
+      max-width: unset;
+      z-index: 10;
+    `}
   }
 `
 
@@ -28,21 +36,33 @@ const HeaderStyled = styled.header`
     padding: ${Y.header}px 0px;
     height: ${height.header}px;
   `}
+  flex-shrink: 0;
+
   ${({ theme: { width: { min : { app }, max }, padding: { X, Y } } }) => displayGrid({
       gridTemplateColumns: `minmax(${X.header}px,1fr) repeat(2, minmax(${app / 2 - 2 * X.header}px, ${max.headerColumn}px)) minmax(${X.header}px,1fr)`,
-      gridTemplateAreas: '"margin-left left-column right-column margin-right"'
+      gridTemplateAreas: '"margin-left title menu margin-right"'
     })}
   ${borderBottom}
+  ${({ theme: { height: { desktop: { logoLine, menuItem } } } }) => media.desktop`
+    grid-area: header;
+    height: 100%;
+    padding: 0;
+    ${displayGrid({
+      gridTemplateColumns: '1fr',
+      gridTemplateRows: 3 * logoLine + 'px 1fr ' + Object.keys(pages).length * menuItem + 'px',
+      gridTemplateAreas: '"title" "space" "menu"'
+    })}
+  `}
 `
 
 const Title = styled.h1`
   ${displayFlex({
     flexDirection: 'column',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-end',
     alignItems: 'flex-start'
   })}
   height: 100%;
-  grid-area: left-column;
+  grid-area: title;
   span {
     white-space:nowrap;
     display: inline-block;
@@ -52,6 +72,9 @@ const Title = styled.h1`
     -webkit-text-stroke: .05em ${({ theme }) => theme.color.black};
     -webkit-text-fill-color: transparent;
     font-weight: 700;
+    ${media.desktop`
+      font-size: 1.5em;
+    `}
   }
 `
 
@@ -65,7 +88,10 @@ const Nav = styled.nav`
     height: 100%;
     width: 100%;
   }
-  grid-area: right-column;
+  grid-area: menu;
+  ${media.desktop`
+    justify-self: flex-start;
+  `}
 `
 
 const Page = styled.li`
@@ -76,9 +102,17 @@ const Page = styled.li`
   left: ${({ position, theme }) => (position + 1) * theme.height.menuItem}px;
   width: ${({ theme }) => theme.height.header - theme.padding.X.header}px;
   font-size: 0.8em;
+  font-weight: 300;
   .active {
     font-weight: 700;
   }
+  ${media.desktop`
+    transform: unset;
+    position: relative;
+    left: unset;
+    font-size: 1em;
+    height: ${({ theme: { height: { desktop: { menuItem } } } }) => menuItem}px;
+  `}
 `
 
 const Header = ({ siteTitle }) =>

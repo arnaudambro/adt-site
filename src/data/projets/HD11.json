@@ -1,0 +1,25 @@
+{
+  "title": "HD11",
+  "properties": {
+    "size": 1020,
+    "material": "Granit",
+    "description": "réhabilitation et extension d’un hôtel 4*",
+    "madeBy": "ADT",
+    "madeFor": "société sadim",
+    "city": "locmariaquer",
+    "departmentName": "morbihan",
+    "departmentNumber": "56",
+    "country": "france",
+    "function": "hôtel",
+    "phasesWorked": "PRO",
+    "status": "PRO",
+    "dates": {
+      "win": "2017-10-01",
+      "delivery": "2019-10-01"
+    }
+  },
+  "presentation": {
+    "image": "HD11-granit-BASEDEDONNEES.jpg",
+    "height": 240
+  }
+}

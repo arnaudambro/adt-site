@@ -1,8 +1,14 @@
 import { createGlobalStyle } from 'styled-components';
-import { displayFlex } from './mixins';
+
+function isTouchDevice() {
+  var el = document.createElement('div');
+  el.setAttribute('ongesturestart', 'return;'); // or try "ontouchstart"
+  return typeof el.ongesturestart === "function";
+}
+window.isTouchDevice = isTouchDevice()
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
   html, body, #___gatsby {
     width: 100%;
     height: 100%;
@@ -14,7 +20,6 @@ const GlobalStyle = createGlobalStyle`
   div[role="group"][tabindex] {
     height: 100%;
     max-height: 100%;
-    ${displayFlex({ flexDirection: 'column' })};
     overflow: hidden;
   }
 
@@ -23,6 +28,8 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
     position: relative;
     font-family: inherit;
     margin: 0;

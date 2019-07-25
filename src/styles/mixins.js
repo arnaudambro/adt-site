@@ -1,4 +1,9 @@
 import { css } from 'styled-components'
+import smoothscroll from 'smoothscroll-polyfill';
+import { media } from './mediaQueries';
+
+// kick off the polyfill!
+smoothscroll.polyfill();
 
 const displayFlex = ({
   justifyContent = 'center',
@@ -38,8 +43,41 @@ const displayGrid = ({
   ${gridTemplateAreas && ('grid-template-areas: ' + gridTemplateAreas + ';')}
 `
 
+const background = ({
+  size = 'cover',
+  url,
+  position = 'center'
+}) => css`
+  background: url(${url});
+  background-position: ${position};
+  background-size: ${size};
+  background-repeat: no-repeat;
+`
+
+const gatsbyImage = ({ height, width, desktop = {} }) => css`
+    .gatsby-image-wrapper {
+    width: ${width};
+    height: ${height};
+    ${desktop.width && media.desktop`
+      width: ${desktop.width}
+    `}
+    ${desktop.height && media.desktop`
+      height: ${desktop.height}
+    `}
+  }
+  picture {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+  }
+`
+
 
 export {
   displayFlex,
-  displayGrid
+  displayGrid,
+  background,
+  gatsbyImage
 }

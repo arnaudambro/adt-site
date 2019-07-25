@@ -1,14 +1,4 @@
-import React from "react"
-import Layout from "../components/layout";
-import WelcomePage from "../components/welcomePage";
 
+import Projets from './projets';
 
-const LandingPage = () => {
-  window.transitionWithLandingRequested = true;
-  return <Layout landing>
-    <WelcomePage />
-  </Layout>
-}
-
-
-export default LandingPage;
+export default Projets;

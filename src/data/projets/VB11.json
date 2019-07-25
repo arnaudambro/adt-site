@@ -1,0 +1,25 @@
+{
+  "title": "VB11",
+  "properties": {
+    "size": 100,
+    "material": "Béton sablé",
+    "description": "extension et réhabilitation d'une résidence privée",
+    "madeBy": "ADT",
+    "madeFor": "client privé",
+    "city": "orléans",
+    "departmentName": "loiret",
+    "departmentNumber": "49",
+    "country": "france",
+    "function": "maison privée",
+    "phasesWorked": "APD",
+    "status": "APD",
+    "dates": {
+      "win": "2019-08-01",
+      "delivery": "2018-09-01"
+    }
+  },
+  "presentation": {
+    "image": "VB11-betonSABLE-BASE DE DONNEE-200xp.jpg",
+    "height": 120
+  }
+}
