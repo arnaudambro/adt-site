@@ -1,0 +1,26 @@
+[
+  {
+    "description": "ADT en pignon sur rue",
+    "date": "2018-11-08",
+    "images": [
+      {
+        "file": "2018-11-08-adt-enseigne.jpg",
+        "height": 280
+      }
+    ]
+  },
+  {
+    "description": "Nouvelles photos du chantier du siège d’Orléans",
+    "date": "2018-10-29",
+    "images": [
+      {
+        "file": "2018-10-29-atelier-delalande-tabourin-siege-orleans-1.jpg",
+        "height": 510
+      },
+      {
+        "file": "2018-10-29-atelier-delalande-tabourin-siege-orleans-2.jpg",
+        "height": 560
+      }
+    ]
+  }
+]

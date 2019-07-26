@@ -19,6 +19,13 @@ const getLocation = ({ properties: { city, departmentName, country } }) => `${ci
 const getSurface = ({ properties: { size } }) => size
 
 
+const getNewsDescription = news => news.description;
+const getNewsHeight = news => news.images.reduce((newsHeight, { height }) => {
+  return newsHeight + height + 10
+}, -10);
+const getNewsImageFile = image => image.file;
+const getNewsDate = news => (new Date(news.date)).toLocaleString('fr', { month: 'long', year: 'numeric', day: 'numeric' })
+
 export {
   getTitle,
   getDescription,
@@ -32,4 +39,8 @@ export {
   getMaterialImageSrc,
   getLocation,
   getSurface,
+  getNewsDate,
+  getNewsDescription,
+  getNewsImageFile,
+  getNewsHeight
 }
