@@ -14,12 +14,13 @@ const borderBottom = css`
     position: absolute;
     bottom: 0;
     max-width: ${({ theme: { width: { max: { headerColumn } }}}) => 2 * headerColumn}px;
-    min-width: ${({ theme: { width: { min : { app } }, padding: { X } } }) => app - 2 * X.header}px;
-    width: calc(100vw - ${({ theme: { padding: { X } } }) => 2 * X.header}px);
+    min-width: ${({ theme: { width: { min : { app } }, margin } }) => app - 2 * margin.X.min.app}px;
+    width: calc(100vw - ${({ theme: { margin } }) => 2 * margin.X.min.app}px);
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
+    pointer-events: none;
     ${media.desktop`
       bottom: unset;
       top: ${({ theme: { height: { desktop: { logoLine } } } }) => 3 * logoLine + 10}px;
@@ -31,15 +32,15 @@ const borderBottom = css`
 `
 
 const HeaderStyled = styled.header`
-  ${({ theme: { width: { min : { app } }, height, padding: { X, Y } } }) => `
+  ${({ theme: { width: { min : { app } }, height, padding: { Y } } }) => `
     min-width: ${app}px;
     padding: ${Y.header}px 0px;
     height: ${height.header}px;
   `}
   flex-shrink: 0;
 
-  ${({ theme: { width: { min : { app }, max }, padding: { X, Y } } }) => displayGrid({
-      gridTemplateColumns: `minmax(${X.header}px,1fr) repeat(2, minmax(${app / 2 - 2 * X.header}px, ${max.headerColumn}px)) minmax(${X.header}px,1fr)`,
+  ${({ theme: { width: { min : { app }, max }, margin: { X: { min: { app: minAppMargin } } } } }) => displayGrid({
+      gridTemplateColumns: `minmax(${minAppMargin}px,1fr) repeat(2, minmax(${app / 2 - 2 * minAppMargin}px, ${max.headerColumn}px)) minmax(${minAppMargin}px,1fr)`,
       gridTemplateAreas: '"margin-left title menu margin-right"'
     })}
   ${borderBottom}

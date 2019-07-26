@@ -5,6 +5,9 @@ export const grey = 'rgba(235,234,239,1)'
 export const darkGrey = 'rgba(200,200,200,1)'
 const boxShadow = '0px 0px 26px 0px rgba(220,220,220,0.5)'
 
+const dividerWidth = 1000;
+const sideColumnWidth = 380;
+
 const theme = {
   color: {
     black,
@@ -38,7 +41,8 @@ const theme = {
       app: 315
     },
     max: {
-      headerColumn: 300
+      headerColumn: 300,
+      content: (dividerWidth - sideColumnWidth) * 0.9
     },
     hideScrollbar: 16,
     scrollBar: 14,
@@ -48,9 +52,9 @@ const theme = {
     desktop: {
       material: 385,
       logo: 250,
-      sideColumn: 380,
+      sideColumn: sideColumnWidth,
       centerColumn: 300,
-      divider: 785,
+      divider: dividerWidth,
       indicator: 30,
     }
 
@@ -71,6 +75,11 @@ const theme = {
       indicator: 7,
       desktop: {
         indicator: 35
+      }
+    },
+    X: {
+      min: {
+        app: 16
       }
     }
   },

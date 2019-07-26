@@ -95,12 +95,7 @@ const WelcomePage = ({ startAnimation }) => {
   query ImagesQuery {
       allImageSharp {
         edges {
-          node {
-            id
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
+          ...AllImages
         }
       }
     }

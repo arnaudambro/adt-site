@@ -135,19 +135,14 @@ const Projets = () => {
       }
       allImageSharp {
         edges {
-          node {
-            id
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
+          ...AllImages
         }
       }
     }
   `)
 
-  return <Layout pageWithtransitionWithLanding >
-    <SEO title="Home" />
+  return <Layout >
+    <SEO title="Projets" />
     {projets
     .sort(
       (a, b) =>

@@ -33,9 +33,12 @@ const FullPage = styled.div`
   ${displayFlex({ flexDirection: 'column' })};
   overflow: hidden;
   ${media.desktop`
-    ${({ theme: { width: { desktop: { sideColumn, centerColumn } }, height: { desktop: { logoLine, menuItem } },  padding: { X } } }) => displayGrid({
-      gridTemplateColumns: `minmax(${X.header}px,1fr) ${sideColumn}px ${centerColumn}px ${sideColumn}px minmax(${X.header}px,1fr)`,
-      gridTemplateRows: `minmax(${X.header}px,10vh) ${3 * logoLine}px 10px 0 34px ${Object.keys(pages).length * menuItem}px 1fr`,
+    ${({ theme: {
+      width: { desktop: { sideColumn, centerColumn } },
+      height: { desktop: { logoLine, menuItem } },
+      margin: { X: { min: { app: appMinMargin } } } } }) => displayGrid({
+      gridTemplateColumns: `minmax(${appMinMargin}px,1fr) ${sideColumn}px ${centerColumn}px ${sideColumn}px minmax(${appMinMargin}px,1fr)`,
+      gridTemplateRows: `minmax(${appMinMargin}px,10vh) ${3 * logoLine}px 10px 0 34px ${Object.keys(pages).length * menuItem}px 1fr`,
       gridTemplateAreas: `
       "leftmargin topmargin   topmargin topmargin rightmargin"
       "leftmargin header        content   content   rightmargin"
@@ -118,8 +121,8 @@ const AnimationWrapper = styled.div`
   ${props => props.withAnimation && animationCss}
 `
 
-const Layout = ({ children, pageWithtransitionWithLanding }) => {
-  // console.log(window.location.pathname, 'window.showWelcomePage', window.showWelcomePage, 'window.startAnimation', window.startAnimation)
+const Layout = ({ children }) => {
+
   const contentRef = React.useRef(null);
   const [welcomeAnimationDone, setWelcomeAnimationDone] = React.useState(false);
   const [withAnimation, startAnimation] = React.useState(false);
@@ -137,12 +140,6 @@ const Layout = ({ children, pageWithtransitionWithLanding }) => {
   const startAnimationRequested = window.location.pathname === `/${projets}` && showWelcomePage && !withAnimation;
   const hideWelcomePage = welcomeAnimationDone && showWelcomePage;
 
-  console.log({
-    showWelcomePage,
-    startAnimationRequested,
-    hideWelcomePage,
-    withAnimation
-  })
   if (startAnimationRequested) startAnimation(true)
   if (hideWelcomePage) {
     window.showWelcomePage = false;
@@ -178,12 +175,10 @@ const Layout = ({ children, pageWithtransitionWithLanding }) => {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   landing: PropTypes.bool,
-  pageWithtransitionWithLanding: PropTypes.bool,
 }
 
 Layout.defaultProps = {
   landing: false,
-  pageWithtransitionWithLanding: false,
 }
 
 export default Layout

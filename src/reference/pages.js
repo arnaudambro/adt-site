@@ -1,8 +1,8 @@
 
 export const projets = 'projets';
 export const database = 'database';
-export const news = 'news';
-export const agency = 'agency';
+export const journal = 'journal';
+export const atelier = 'atelier';
 export const infos = 'infos';
 
 
@@ -10,14 +10,14 @@ export default {
   [projets]: {
     fr: 'projets',
   },
+  [atelier]: {
+    fr: 'l\'atelier',
+  },
   [database]: {
     fr: 'base de données',
   },
-  [news]: {
+  [journal]: {
     fr: 'journal',
-  },
-  [agency]: {
-    fr: 'l\'atelier',
   },
   [infos]: {
     fr: 'infos',
