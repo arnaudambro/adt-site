@@ -10,6 +10,16 @@
     ]
   },
   {
+    "description": "Fossiles bloqués dans le temps.",
+    "date": "2018-11-05",
+    "images": [
+      {
+        "file": "adt-fossiles.jpg",
+        "height": 370
+      }
+    ]
+  },
+  {
     "description": "Nouvelles photos du chantier du siège d’Orléans",
     "date": "2018-10-29",
     "images": [
@@ -20,6 +30,401 @@
       {
         "file": "2018-10-29-atelier-delalande-tabourin-siege-orleans-2.jpg",
         "height": 560
+      }
+    ]
+  },
+  {
+    "description": "ADT au pied de l'Everest",
+    "date": "2018-10-22",
+    "images": [
+      {
+        "file": "adt-everest.jpg",
+        "height": 370
+      }
+    ]
+  },
+  {
+    "description": "Avancement du chantier du restaurant RP24.<br/>Paris, France.",
+    "date": "2018-10-18",
+    "images": [
+      {
+        "file": "adt-avancement-rp24.jpg",
+        "height": 280
+      }
+    ]
+  },
+  {
+    "description": "NOUVEAU PROJET !!<br/><br/>Réhabilitation d’une résidence secondaire<br/>Picardie, France.",
+    "date": "2018-09-22",
+    "images": [
+      {
+        "file": "atelier-delalande-tabourin-picardie-facade.jpg",
+        "height": 510
+      },
+      {
+        "file": "atelier-delalande-tabourin-picardie-escalier.jpg",
+        "height": 560
+      }
+    ]
+  },
+  {
+    "description": "Avancement du chantier de la maison privée VH16.<br/>Orléans, France.",
+    "date": "2018-06-27",
+    "images": [
+      {
+        "file": "adt-VH16-site-progress.jpg",
+        "height": 280
+      }
+    ]
+  },
+  {
+    "description": "Avancement du chantier du siège de l’entreprise EALIS.<br/>Orléans, France.",
+    "date": "2018-06-15",
+    "images": [
+      {
+        "file": "adt-ealis-1.jpg",
+        "height": 510
+      },
+      {
+        "file": "adt-ealis-2.jpg",
+        "height": 230
+      }
+    ]
+  },
+  {
+    "description": "SOIRÉE DES 1 ANS !!!<br/><br/>Et présentation du premier album de nos chers amis musiciens RIVIEREMONK.<br/>Agence ADT, Paris, France.",
+    "withDivider": true,
+    "date": "2018-06-08",
+    "images": [
+      {
+        "file": "adt-soiree-1-ans.jpg",
+        "height": 560
+      }
+    ]
+  },
+  {
+    "description": "NOUVEAU PROJET !!!<br/><br/>Extension d’une maison privée à Orléans, France.",
+    "date": "2018-05-18",
+    "images": [
+      {
+        "file": "extension-maison-orleans-1.jpg",
+        "height": 230
+      },
+      {
+        "file": "extension-maison-orleans-2.jpg",
+        "height": 230
+      }
+    ]
+  },
+  {
+    "description": "NOUVEAU PROJET !!!<br/><br/>Réhabilitation d’un restaurant à Oberkampf, Paris, France.",
+    "date": "2018-05-03",
+    "withDivider": true,
+    "images": [
+      {
+        "file": "adt-rehabilitation-restaurant-oberkampf.jpg",
+        "height": 560
+      }
+    ]
+  },
+  {
+    "description": "Avancement du chantier de la maison privée VH16.<br/>Orléans, France.",
+    "date": "2018-04-10",
+    "withDivider": true,
+    "images": [
+      {
+        "file": "adt-avancement-vh16-orleans.jpg",
+        "height": 280
+      }
+    ]
+  },
+  {
+    "description": "NOUVEAU PROJET !!!<br/><br/>Réhabilitation d'un immeuble de bureaux dans le centre d'Orléans, France.",
+    "date": "2018-03-27",
+    "images": [
+      {
+        "file": "adt-rehabilitation-bureaux-orleans.jpg",
+        "height": 560
+      }
+    ]
+  },
+  {
+    "description": "NOUVEAU PROJET !!!<br/><br/>Réhabilitation d'un immeuble de bureaux dans le centre d'Orléans, France.",
+    "date": "2018-03-27",
+    "images": [
+      {
+        "file": "adt-rehabilitation-bureaux-orleans.jpg",
+        "height": 560
+      }
+    ]
+  },
+  {
+    "description": "Avancement du projet PM19.<br/>Brézé, France.",
+    "date": "2018-03-25",
+    "images": [
+      {
+        "file": "adt-breze-terrassement.jpg",
+        "height": 230
+      },
+      {
+        "file": "adt-breze-fondations.jpg",
+        "height": 230
+      }
+    ]
+  },
+  {
+    "description": "NOUVEAU PROJET !!<br/><br/>Extension et réhabilitation d’une maison vers Orléans, France.",
+    "date": "2018-03-14",
+    "withDivider": true,
+    "images": [
+      {
+        "file": "adt-maison-orleans.jpg",
+        "height": 420
+      }
+    ]
+  },
+  {
+    "description": "ADT s'envoie en l'air en Birmanie",
+    "date": "2018-02-20",
+    "images": [
+      {
+        "file": "adt-birmanie.jpg",
+        "height": 280
+      }
+    ]
+  },
+  {
+    "description": "ADT à Singapour",
+    "date": "2018-02-09",
+    "images": [
+      {
+        "file": "adt-singapour.jpg",
+        "height": 280
+      }
+    ]
+  },
+  {
+    "description": "Réflexion sur la matérialité de l’hôtel HD11",
+    "date": "2018-02-02",
+    "images": [
+      {
+        "file": "atelier-delalande-tabourin-news-etude-hd11-matiere.jpg",
+        "height": 280
+      }
+    ]
+  },
+  {
+    "description": "NOUVELLE ARRIVANTE !<br/><br/>Nouvelle chargée de projet<br/><br/>Nous avons le plaisir d’accueillir Mathilde Lizoret au sein de l’agence. Elle sera notamment responsable du montage du dossier de permis de construire du complexe scolaire.",
+    "date": "2018-01-15",
+    "images": [
+      {
+        "file": "mathilde.jpg",
+        "height": 500
+      }
+    ]
+  },
+  {
+    "description": "Promenade hivernale<br/>Valgrisenche, Italie",
+    "date": "2018-01-12",
+    "images": [
+      {
+        "file": "hiver2018.jpg",
+        "height": 180
+      }
+    ]
+  },
+  {
+    "description": "PREMÈRE COLLABORATION !<br/><br/>L’atelier a été contacté par l’agence ALC afin de collaborer sur la mise en place d’un dossier de permis de construire pour la réhabilitation et l’extension d’un groupe scolaire dans la région parisienne.",
+    "date": "2018-01-05",
+    "images": [
+      {
+        "file": "PARCHAMP.jpg",
+        "height": 430
+      }
+    ]
+  },
+  {
+    "description": "Permis de construire accepté HD11",
+    "date": "2018-01-02",
+    "withDivider": true,
+    "images": [
+      {
+        "file": "atelier-delalande-tabourin-hotel-morbihan-pierre-HD11-salon.jpg",
+        "height": 280
+      }
+    ]
+  },
+  {
+    "description": "MEILLEURS VOEUX POUR CETTE NOUVELLE ANNEÉ !<br/><br/>Pleins de voeux de bonheur et de réussite de la part de toute l’équipe.",
+    "date": "2017-12-31",
+    "images": [
+      {
+        "file": "bonne_annee_2018.jpg",
+        "height": 280
+      }
+    ]
+  },
+  {
+    "description": "Chantier de la maison privée VH16",
+    "date": "2017-12-24",
+    "images": [
+      {
+        "file": "atelier-delalande-tabourin-news-vh16-chantier.jpg",
+        "height": 280
+      }
+    ]
+  },
+  {
+    "description": "Réunion d'étude et spéléologie VS avec l’AMO pour le projet de l’hôtel à Locmariaquer.",
+    "date": "2017-12-18",
+    "images": [
+      {
+        "file": "atelier-delalande-tabourin-reunion-bretagne.jpg",
+        "height": 420
+      },
+      {
+        "file": "speleo_hotel.jpg",
+        "height": 140
+      }
+    ]
+  },
+  {
+    "description": "Excursion irlandaise dans le Connemara.",
+    "date": "2017-11-01",
+    "images": [
+      {
+        "file": "2017_irlande.jpg",
+        "height": 280
+      }
+    ]
+  },
+  {
+    "description": "Lumière matinale sur un palais à Beyrouth.",
+    "date": "2017-08-27",
+    "images": [
+      {
+        "file": "2018_LIBAN.jpg",
+        "height": 560
+      }
+    ]
+  },
+  {
+    "description": "Nouveau projet !!<br/><br/>Extension et Réhabilitation d’un hôtel 3* en 4*",
+    "date": "2017-07-15",
+    "images": [
+      {
+        "file": "atelier-delalande-tabourin-news-HD11.jpg",
+        "height": 560
+      }
+    ]
+  },
+  {
+    "description": "Test sur la matière – Appartement D",
+    "date": "2017-04-13",
+    "images": [
+      {
+        "file": "atelier-delalande-tabourin-news-chantier-pierre-ad38.jpg",
+        "height": 370
+      }
+    ]
+  },
+  {
+    "description": "Maquette d’étude d’un hôtel en Bretagne.",
+    "date": "2017-04-10",
+    "images": [
+      {
+        "file": "atelier-delalande-tabourin-news-maquette-etude-hd11.jpg",
+        "height": 380
+      }
+    ]
+  },
+  {
+    "description": "Etude façade bois Entreprise B. Lequel choisir ?",
+    "date": "2017-01-26",
+    "images": [
+      {
+        "file": "atelier-delalande-tabourin-news-matiere-test-eb12.png",
+        "height": 370
+      }
+    ]
+  },
+  {
+    "description": "Démarrage du chantier de l’appartement D.",
+    "date": "2017-01-11",
+    "images": [
+      {
+        "file": "atelier-delalande-tabourin-news-chantier-ad38.png",
+        "height": 370
+      }
+    ]
+  },
+  {
+    "description": "Visite de la dernière briqueterie artisanale de France pour la réhabilitation de la Grange B.",
+    "date": "2016-12-15",
+    "images": [
+      {
+        "file": "atelier-delalande-tabourin-news-tuilerie-vb229.jpg",
+        "height": 380
+      }
+    ]
+  },
+  {
+    "description": "Visite de la scierie de Vitry-aux-Loges pour le projet de l'entreprise Barillet.",
+    "date": "2016-12-14",
+    "images": [
+      {
+        "file": "atelier-delalande-tabourin-news-scierie-eb12.png",
+        "height": 370
+      }
+    ]
+  },
+  {
+    "description": "Lauréat finaliste du GRAND PRIX D’ARCHITECTURE de l’Académie des Beaux-Arts.<br/>Félicitations à notre ami et confrère Boris Lefèvre pour son premier prix.",
+    "date": "2016-05-17",
+    "images": [
+      {
+        "file": "atelier-delalande-tabourin-news-prix-de-l-academie.png",
+        "height": 370
+      }
+    ]
+  },
+  {
+    "description": "2ème prix du Trophée Béton 2016.<br/><br/>Ce concours est organisé par les associations Betocib et CIMbéton et la fondation d’entreprise Ecole française du béton. Ils récompensent de jeunes diplômés (depuis moins d’un an) des écoles d’architecture françaises pour leur projet de fin d’études.",
+    "date": "2016-01-11",
+    "images": [
+      {
+        "file": "atelier-delalande-tabourin-news-trophee-beton.png",
+        "height": 380
+      }
+    ]
+  },
+  {
+    "description": "Ca parle de nous dans la Presse d’Armor.",
+    "date": "2016-01-06",
+    "images": [
+      {
+        "file": "atelier-delalande-tabourin-news-presse-armor.png",
+        "height": 380
+      }
+    ]
+  },
+  {
+    "description": "Article dans Le Courrier de l’Architecte",
+    "date": "2015-09-09",
+    "images": [
+      {
+        "file": "atelier-delalande-tabourin-news-courrier-archi.png",
+        "height": 380
+      }
+    ]
+  },
+  {
+    "description": "Mention du meilleur diplôme de l’Ecole spéciale d’Architecture.",
+    "date": "2015-04-15",
+    "images": [
+      {
+        "file": "atelier-delalande-tabourin-news-prix-meilleur-diplome.png",
+        "height": 375
       }
     ]
   }

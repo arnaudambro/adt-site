@@ -1,25 +1,71 @@
 {
   "title": "AM03",
-  "properties": {
-    "size": 100,
-    "material": "Béton teinté",
-    "description": "réhabilitation d'un appartement",
-    "madeBy": "ADT",
-    "madeFor": "client privé",
-    "city": "levallois-perret",
-    "departmentName": "hauts-de-seine",
-    "departmentNumber": "92",
-    "country": "france",
-    "function": "appartement",
-    "phasesWorked": "EXE",
-    "status": "livré",
-    "dates": {
-      "win": "2018-07-01",
-      "delivery": "2018-11-01"
+  "code_projet": "AM03",
+  "content": [
+    {
+      "type": "summary",
+      "section": 1,
+      "content": "#1 - Analyse du contexte",
+      "image": "AM03-BOULEAU-existant.jpg"
+    },
+    {
+      "type": "image",
+      "section": 1,
+      "src": "ATELIER-ANALYSE-CONTEXTE.jpg"
+    },
+    {
+      "type": "p",
+      "section": 1,
+      "content": "Située face à la promenade pédestre des bords de Loire, la Villa VB11 se démarque du contexte paysagé par son architecture prononcée et avant-gardiste des années 70. La demande d’une extension des espaces de vie prend donc la forme d’une avancée vers le fleuve. Apparait alors une géométrie simple et en rupture avec les lignes du bâtiment existant. Sa façade est composée d’un béton sablé qui miroite au promeneur la proximité du sablonneux paysage de l’affluent."
+    },
+    {
+      "type": "p",
+      "section": 1,
+      "content": "A l’intérieur, un décalage des niveaux de sol permet de séparer les diffé- rents espaces de séjour et d’ouvrir plus généreusement le volume créé sur les différentes vues qu’offre le paysage. Un patio minéral aux allures de dunes vient amener une ambiance supplémentaire au lieu."
+    },
+    {
+      "type": "summary",
+      "section": 2,
+      "content": "#2 - Table des matières",
+      "image": "AM03-BOULEAU-TABLEDESMATIERES.jpg"
+    },
+    {
+      "type": "summary",
+      "section": 3,
+      "content": "#3 - Projet",
+      "image": "_F1A6479-optimise.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "AM03-BOULEAU-plan.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "_F1A6421_optimise.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "_F1A6434_optimise.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "_F1A6495-optimise.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "_F1A6533-optimise.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "_F1A6548-optimise.jpg"
     }
-  },
-  "presentation": {
-    "image": "AM03-BOULEAU-BASEDEDONNEE-200px.jpg",
-    "height": 80
-  }
+  ]
 }
+
+

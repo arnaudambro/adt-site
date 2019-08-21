@@ -1,12 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 
-function isTouchDevice() {
-  var el = document.createElement('div');
-  el.setAttribute('ongesturestart', 'return;'); // or try "ontouchstart"
-  return typeof el.ongesturestart === "function";
-}
-window.isTouchDevice = isTouchDevice()
-
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
   html, body, #___gatsby {

@@ -33,7 +33,7 @@ const theme = {
     desktop: {
       logo: 250 * 60 / 96,
       logoLine: 64,
-      menuItem: 28.8
+      menuItem: 25
     }
   },
   width: {
@@ -61,9 +61,10 @@ const theme = {
   },
   margin: {
     top: {
-      content: 34
+      content: 34,
     },
     bottom: {
+      projetName: 18
     },
     right: {
       indicator: 5,
@@ -89,7 +90,10 @@ const theme = {
       content: 16,
     },
     Y: {
-      header: 25
+      header: 25,
+      desktop: {
+        main: 236
+      }
     }
   },
   duration: {}

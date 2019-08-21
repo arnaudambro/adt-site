@@ -4,11 +4,13 @@ import Img from "gatsby-image/withIEPolyfill"
 
 import { displayFlex, gatsbyImage } from "../styles/mixins";
 import { media } from "../styles/mediaQueries";
+import windowExists from "../helpers/windowExists";
 
 const ItemWrapper = styled.div`
   height: ${({ height }) => height}px;
   margin-bottom: ${({ bigMarginBottom }) => bigMarginBottom ? 30 : 5}px;
   display: flex;
+  /* overflow: hidden; */
   ${({ theme }) => gatsbyImage({
     width: theme.width.material + 'px !important',
     height: '100% !important',
@@ -54,38 +56,39 @@ const DescriptionContainer = styled.div`
 `
 
 export const Item = ({
-  as,
+  as = 'div',
   setVisible,
   visible,
+  directClick = false,
   to,
   height,
   alt,
   children,
   id,
   images,
-  bigMarginBottom
+  bigMarginBottom = false
 }) =>
   <ItemWrapper
     as={as}
     to={to}
-    bigMarginBottom={bigMarginBottom}
+    bigMarginBottom={bigMarginBottom ? true : false}
     height={height}
     onClick={(e) => {
-      if (!visible) {
+      if (!visible && !directClick) {
         e.preventDefault();
         setVisible(id)
       }
     }}
     onMouseEnter={() => {
-      if (window.isTouchDevice) return;
+      if (windowExists() && window.isTouchDevice) return;
       setVisible(id)
     }}
     onMouseOver={() => {
-      if (window.isTouchDevice) return;
+      if (windowExists() && window.isTouchDevice) return;
       !visible && setVisible(id)
     }}
     onMouseLeave={() => {
-      if (window.isTouchDevice) return;
+      if (windowExists() && window.isTouchDevice) return;
       setVisible(null)
     }}
   >
@@ -101,18 +104,14 @@ export const Item = ({
         />
       ))}
     </ImagesContainer>
-    <DescriptionContainer
-      visible={visible}
-    >
-      {children}
-    </DescriptionContainer>
+    {children && (
+      <DescriptionContainer
+        visible={visible}
+      >
+        {children}
+      </DescriptionContainer>
+    )}
   </ItemWrapper>
-
-
-Item.defaultProps = {
-  as: 'div',
-}
-
 
 
 export default Item

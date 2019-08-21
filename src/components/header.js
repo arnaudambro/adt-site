@@ -32,11 +32,13 @@ const borderBottom = css`
 `
 
 const HeaderStyled = styled.header`
-  ${({ theme: { width: { min : { app } }, height, padding: { Y } } }) => `
-    min-width: ${app}px;
-    padding: ${Y.header}px 0px;
-    height: ${height.header}px;
-  `}
+  ${({ theme: { width: { min : { app } }, height, padding: { Y } } }) => {
+    return `
+      min-width: ${app}px;
+      padding: ${Y.header}px 0px;
+      height: ${height.header}px;
+    `
+  }}
   flex-shrink: 0;
 
   ${({ theme: { width: { min : { app }, max }, margin: { X: { min: { app: minAppMargin } } } } }) => displayGrid({
@@ -111,7 +113,7 @@ const Page = styled.li`
     transform: unset;
     position: relative;
     left: unset;
-    font-size: 1em;
+    font-size: 0.9em;
     height: ${({ theme: { height: { desktop: { menuItem } } } }) => menuItem}px;
   `}
 `
@@ -129,7 +131,7 @@ const Header = ({ siteTitle }) =>
             position={ind}
           >
             <Link
-              to={"/" + page}
+              to={`/${page}/`}
               activeClassName='active'
             >
                 {pages[page].fr}

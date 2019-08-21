@@ -12,33 +12,32 @@ export const imagesQuery = graphql`
   }
 `
 
-export const projetsQuery = graphql`
-  fragment AllProjets on ProjetsJsonEdge {
-    projet: node {
+export const projetsDataQuery = graphql`
+  fragment AllProjetsData on DataXlsx__Sheet1Edge {
+    node {
+      annee_page_bdd_YYYY
+      classement_page_projets
+      code_projet
+      collab
+      departement_code
+      departement_nom
+      description
+      fonction
+      hauteur_page_bdd_px
+      hauteur_page_projets_px
+      livraison_YYYY_MM_DD
+      matiere
+      matiere_page_bdd
+      mission
+      nom
+      nom_fichier_page_bdd
+      nom_fichier_page_projets
+      pays
+      prix_eur
+      programme
+      surface_m2
+      ville
       id
-      properties {
-        size
-        material
-        dates {
-          win
-          delivery
-        }
-        description
-        madeBy
-        madeFor
-        city
-        departmentName
-        departmentNumber
-        country
-        function
-        phasesWorked
-        status
-      }
-      presentation {
-        image
-        height
-      }
-      title
     }
   }
 `

@@ -1,9 +1,5 @@
 import { css } from 'styled-components'
-import smoothscroll from 'smoothscroll-polyfill';
 import { media } from './mediaQueries';
-
-// kick off the polyfill!
-smoothscroll.polyfill();
 
 const displayFlex = ({
   justifyContent = 'center',
@@ -54,10 +50,14 @@ const background = ({
   background-repeat: no-repeat;
 `
 
-const gatsbyImage = ({ height, width, desktop = {} }) => css`
+const gatsbyImage = ({ height, width, marginTop, desktop = {} }) => css`
     .gatsby-image-wrapper {
+    ${marginTop && `margin-top: ${marginTop}px`}
     width: ${width};
     height: ${height};
+    ${desktop.marginTop && media.desktop`
+      margin-top: ${desktop.marginTop}
+    `}
     ${desktop.width && media.desktop`
       width: ${desktop.width}
     `}

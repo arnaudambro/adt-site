@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/adt`,
   siteMetadata: {
     // title: `Atelier Delalande Tabourin | Architecture + Material LAB + Design`,
     title: `Atelier Delalande Tabourin`,
@@ -13,8 +14,15 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
-        path: `${__dirname}/src/data`,
+        path: `${__dirname}/src/data/`,
       },
+    },
+    {
+      resolve: `gatsby-transformer-excel`,
+      options: {
+        raw: false,
+        defval: null,
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,

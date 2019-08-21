@@ -1,25 +1,61 @@
 {
   "title": "VB11",
-  "properties": {
-    "size": 100,
-    "material": "Béton sablé",
-    "description": "extension et réhabilitation d'une résidence privée",
-    "madeBy": "ADT",
-    "madeFor": "client privé",
-    "city": "orléans",
-    "departmentName": "loiret",
-    "departmentNumber": "49",
-    "country": "france",
-    "function": "maison privée",
-    "phasesWorked": "APD",
-    "status": "APD",
-    "dates": {
-      "win": "2019-08-01",
-      "delivery": "2018-09-01"
+  "code_projet": "VB11",
+  "content": [
+    {
+      "type": "summary",
+      "section": 1,
+      "content": "#1 - Analyse du contexte",
+      "image": "VB11-contexte.jpg"
+    },
+    {
+      "type": "p",
+      "section": 1,
+      "content": "Située face à la promenade pédestre des bords de Loire, la Villa VB11 se démarque du contexte paysagé par son architecture prononcée et avant-gardiste des années 70. La demande d’une extension des espaces de vie prend donc la forme d’une avancée vers le fleuve.<br/>Apparait alors une géométrie simple et en rupture avec les lignes du bâtiment existant. Sa façade est composée d’un béton sablé qui miroite au promeneur la proximité du sablonneux paysage de l’affluent."
+    },
+    {
+      "type": "p",
+      "section": 1,
+      "content": "A l’intérieur, un décalage des niveaux de sol permet de séparer les différents espaces de séjour et d’ouvrir plus généreusement le volume créé sur les différentes vues qu’offre le paysage. Un patio minéral aux allures de dunes vient amener une ambiance supplémentaire au lieu."
+    },
+    {
+      "type": "image",
+      "section": 1,
+      "src": "VB11-diagramme.jpg"
+    },
+    {
+      "type": "image",
+      "section": 1,
+      "src": "VB11-existant1.jpg"
+    },
+    {
+      "type": "summary",
+      "section": 2,
+      "content": "#2 - Table des matières",
+      "image": "VB11-BETONBOUCHARDE-TABLE-DES-MATIERES.jpg"
+    },
+    {
+      "type": "summary",
+      "section": 3,
+      "content": "#3 - Projet",
+      "image": "BEULIN_optimise.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "atelierdelalandetabourin-maison-loiret-VB11-planRDC.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "VD232-PLANR1.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "atelierdelalandetabourin-maison-loiret-VB11-facade.jpg"
     }
-  },
-  "presentation": {
-    "image": "VB11-betonSABLE-BASE DE DONNEE-200xp.jpg",
-    "height": 120
-  }
+  ]
 }
+
+

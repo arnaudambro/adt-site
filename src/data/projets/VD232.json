@@ -1,25 +1,76 @@
 {
   "title": "VD232",
-  "properties": {
-    "size": 200,
-    "material": "Béton sablé",
-    "description": "extension et réhabilitation d'une maison privée",
-    "madeBy": "ADT",
-    "madeFor": "client privé",
-    "city": "saint-denis-en-val",
-    "departmentName": "loiret",
-    "departmentNumber": "45",
-    "country": "france",
-    "function": "maison privée",
-    "phasesWorked": "APD",
-    "status": "APD",
-    "dates": {
-      "win": "2019-10-01",
-      "delivery": "2020-01-01"
+  "code_projet": "VD232",
+  "content": [
+    {
+      "type": "summary",
+      "section": 1,
+      "content": "#1 - Analyse du contexte",
+      "image": "VD232-contexte.jpg"
+    },
+    {
+      "type": "p",
+      "section": 1,
+      "content": "Ce projet a été conçu et imaginé dans la continuité de celui de la villa Beulin (VB11) car il est seulement sur l’autre rive de la Loire, à 2km plus au sud. Il y reprend donc le même principe d’une extension où l’architecture vient apaiser la géométrie de l’existant."
+    },
+    {
+      "type": "p",
+      "section": 1,
+      "content": "Concernant la matérialité, VD232 se veut comme le négatif de VB11. C’est-à-dire qu’à la place d’avoir en façade un béton beige avec un granulat blanc nous avons un béton blanc avec un granulat beige. La Loire n’étant pas visible depuis le site, il y a donc encore plus ici la volonté de rappeler sa matérialité. L’intégralité de la maison a été réhabilitée autour d’un patio central et d’une toiture terrasse minérale. Des espaces paysagers aux allures de dunes amènent une ambiance supplémentaire au lieu."
+    },
+    {
+      "type": "p",
+      "section": 1,
+      "content": "Sur la façade principale, un biais vient dynamiser les volumes et devient comme une invitation à entrer."
+    },
+    {
+      "type": "image",
+      "section": 1,
+      "src": "VD232-diagramme.jpg"
+    },
+    {
+      "type": "image",
+      "section": 1,
+      "src": "VD232-existant.jpg"
+    },
+    {
+      "type": "summary",
+      "section": 2,
+      "content": "#2 - Table des matières",
+      "image": "VD232-BETON-BOUCHARDE-TABLE-DES-MATIERES.jpg"
+    },
+    {
+      "type": "summary",
+      "section": 3,
+      "content": "#3 - Projet",
+      "image": "atelierdelalandetabourin-maison-loiret-VD232.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "VD232-PLANRDC.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "VD232-PLANR1.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "VD232-facadenord.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "VD232-facadeouest.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "VD232-facadesud.jpg"
     }
-  },
-  "presentation": {
-    "image": "VD232-betonsable-BASEDEDONNEE-200px.jpg",
-    "height": 190
-  }
+  ]
 }
+
+

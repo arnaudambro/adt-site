@@ -103,7 +103,7 @@ const WelcomePage = ({ startAnimation }) => {
 
   return (
     <LandingStyled
-      to={'/' + projets}
+      to={`/${projets}/`}
       id="landing"
       onClick={startAnimation}
     >

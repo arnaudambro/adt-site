@@ -10,13 +10,15 @@ import PropTypes from "prop-types"
 import styled, { ThemeProvider, keyframes, css } from 'styled-components'
 import GlobalStyles from '../styles/global';
 import theme from '../styles/theme';
-import { useStaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import WelcomePage from "./welcomePage";
 import { media } from "../styles/mediaQueries";
 import { displayGrid, displayFlex } from "../styles/mixins";
 import pages, { projets } from "../reference/pages";
+import windowExists from "../helpers/windowExists";
+import windowPathNameIs from "../helpers/windowPathNameIs";
 
 const swipeup = keyframes`
   0% {
@@ -53,7 +55,18 @@ const FullPage = styled.div`
 `
 
 const ContentWrapper = styled.div`
-  max-width: ${({ theme: { width: { min : { app } }, padding: { X } } }) => app - 2 * X.content}px;
+  ${({ noMaxWidth, theme: { width: { min : { app } }, padding: { X } } }) => {
+    if (noMaxWidth) {
+      return `
+        max-width: 490px;
+        padding-left: ${X.content}px;
+        padding-right: ${X.content}px;
+      `
+    }
+    return `
+      max-width: ${app - 2 * X.content}px;
+    `
+  }}
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -73,12 +86,21 @@ const ContentWrapper = styled.div`
   `}
 `
 const Content = styled.main`
-  width: calc(100% + ${({ theme }) => theme.width.hideScrollbar}px);
+  ${({ noMaxWidth, theme: { width: { hideScrollbar } } }) => {
+    if (noMaxWidth) {
+      return `
+        width: calc(100% + ${2 * hideScrollbar}px);
+      `
+    }
+    return `
+      width: calc(100% + ${hideScrollbar}px);
+    `
+  }}
   overflow-y: scroll;
   overflow-x: hidden;
   height: 100%;
-  ${media.desktop`
-    padding-top: 236px;
+  ${({ theme }) => media.desktop`
+    padding-top: ${theme.padding.Y.desktop.main}px;
   `}
 
 `
@@ -121,64 +143,86 @@ const AnimationWrapper = styled.div`
   ${props => props.withAnimation && animationCss}
 `
 
-const Layout = ({ children }) => {
-
-  const contentRef = React.useRef(null);
-  const [welcomeAnimationDone, setWelcomeAnimationDone] = React.useState(false);
-  const [withAnimation, startAnimation] = React.useState(false);
-  const [showWelcomePage, toggleWelcomePage] = React.useState(window.showWelcomePage);
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
-  const startAnimationRequested = window.location.pathname === `/${projets}` && showWelcomePage && !withAnimation;
-  const hideWelcomePage = welcomeAnimationDone && showWelcomePage;
-
-  if (startAnimationRequested) startAnimation(true)
-  if (hideWelcomePage) {
-    window.showWelcomePage = false;
-    toggleWelcomePage(false)
+class Layout extends React.Component {
+  state = {
+    withAnimation: false,
+    showWelcomePage: true
   }
 
-  return(
-    <ThemeProvider theme={theme}>
-    <>
-      <GlobalStyles />
-      <AnimationWrapper
-        withAnimation={withAnimation}
-        onAnimationEnd={() => setWelcomeAnimationDone(true)}
-      >
-        {showWelcomePage && <WelcomePage />}
-        <FullPage>
-          <Header siteTitle={data.site.siteMetadata.title} />
-          <ContentWrapper>
-            <Content ref={contentRef}>
-              {children}
-              <MarginBottom
-                onClick={() => contentRef.current.scrollTo({ top: 0, behavior: 'smooth' })}
-              />
-            </Content>
-          </ContentWrapper>
-        </FullPage>
-      </AnimationWrapper>
-    </>
-  </ThemeProvider>
-  )
+  componentDidMount() {
+    if (!windowExists()) {
+      this.setState({ showWelcomePage: false })
+      return
+    }
+    if (windowExists()) {
+      if (!window.showWelcomePage) {
+        this.setState({ showWelcomePage: false })
+        return
+      }
+      if (windowPathNameIs(`/${projets}/`)) this.setState({ withAnimation: true })
+    }
+  }
+
+  handleAnimationEnd = () => {
+    window.showWelcomePage = false
+    this.setState({ showWelcomePage: false })
+  }
+
+  render() {
+    const {
+      withAnimation,
+      showWelcomePage
+    } = this.state;
+
+    return(
+      <StaticQuery
+        query={graphql`
+          query SiteTitleQuery {
+            site {
+              siteMetadata {
+                title
+              }
+            }
+          }
+        `}
+        render={data => (
+          <ThemeProvider theme={theme}>
+            <>
+              <GlobalStyles />
+              <AnimationWrapper
+                withAnimation={withAnimation}
+                onAnimationEnd={this.handleAnimationEnd}
+              >
+                {showWelcomePage && <WelcomePage />}
+                <FullPage>
+                  <Header siteTitle={data.site.siteMetadata.title} />
+                  <ContentWrapper noMaxWidth={this.props.noMaxWidth}>
+                    <Content ref={r => this.contentRef = r} noMaxWidth={this.props.noMaxWidth}>
+                      {this.props.children}
+                      <MarginBottom
+                        onClick={() => this.contentRef.scrollTo({ top: 0, behavior: 'smooth' })}
+                      />
+                    </Content>
+                  </ContentWrapper>
+                </FullPage>
+              </AnimationWrapper>
+            </>
+          </ThemeProvider>
+        )}
+      />
+    )
+  }
 }
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   landing: PropTypes.bool,
+  noMaxWidth: PropTypes.bool,
 }
 
 Layout.defaultProps = {
   landing: false,
+  noMaxWidth: false
 }
 
 export default Layout

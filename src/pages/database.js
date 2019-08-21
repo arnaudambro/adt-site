@@ -1,11 +1,14 @@
 import React from "react"
 import styled from 'styled-components'
+import { Link } from "gatsby";
 
+import { displayFlex, displayGrid } from "../styles/mixins";
+import { programmes, matieres, anneesCaption } from "../reference/database";
+import { useProjetsDataAndImages } from "../helpers/hooks";
+import { getYear, getTitle, isProjetInCategory, getCode, getMaterialHeightPageBDD, getProjetMaterialImageForBDDPage, getMaterial, rankProjectsInBDD } from "../helpers/selectors";
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import database, { annees } from "../reference/database";
-import { displayFlex, displayGrid } from "../styles/mixins";
-import { useStaticQuery, graphql } from "gatsby";
+import Item from "../components/item";
 
 const Filters = styled.div`
   ${displayFlex({
@@ -40,8 +43,8 @@ const Filter = styled.span`
 
 const Categories = styled.div`
   ${displayGrid({
-    gridTemplateColumns: "repeat(3,1fr)",
-    gridAutoRows: "200px",
+    gridTemplateColumns: "repeat(auto-fit, 125px)",
+    gridAutoRows: "auto",
     gridGap: "35px"
   })}
   padding-right: 100px;
@@ -63,7 +66,10 @@ const Projets = styled.div`
   })}
   flex-grow: 1;
   width: 100%;
-  border: 1px solid #000;
+  overflow: hidden;
+  > :last-child {
+    margin-bottom: 0 !important;
+  }
 `
 
 const Category = styled.span`
@@ -78,42 +84,54 @@ const Category = styled.span`
 
 
 const Database = () => {
-  const [visibleCategory, setVisibleCategory] = React.useState(annees);
-  const {
-    allProjetsJson:{edges: projets },
-    allImageSharp:{edges: images },
-  } = useStaticQuery(graphql`
-    query {
-      allProjetsJson {
-        edges {
-          ...AllProjets
-        }
-      }
-      allImageSharp {
-        edges {
-          ...AllImages
-        }
-      }
-    }
-  `)
-  console.log(database[visibleCategory])
+  const { projets, images } = useProjetsDataAndImages()
+
+  const annees = React.useMemo(() => new Set(projets.map(getYear)))
+
+  const filters = { annees, matieres, programmes }
+
+  const [visibleCategory, setVisibleCategory] = React.useState(anneesCaption);
+  const [visibleProjet, setVisibleProjet] = React.useState(null);
+
   return(
     <Layout>
       <SEO title="Base de données" />
       <Filters>
-        {Object.keys(database.filters).map(filter => (
+        {Object.keys(filters).map(filter => (
           <Filter
             key={filter}
             onClick={() => setVisibleCategory(filter)}
           >
-            {database.filters[filter].fr}
+            {filter}
           </Filter>
         ))}
       </Filters>
       <Categories>
-        {Object.keys(database[visibleCategory]).map(category => (
-          <CategoryContainer>
-            <Projets></Projets>
+        {[...filters[visibleCategory]].map((category, ind) => (
+          <CategoryContainer key={ind}>
+            <Projets>
+              {projets
+                .filter(isProjetInCategory(visibleCategory, category))
+                .sort(rankProjectsInBDD(visibleCategory))
+                .map(projet => ({
+                  images: [getProjetMaterialImageForBDDPage(images, projet)],
+                  to: `/projet/${getCode(projet)}`,
+                  alt: `${getTitle(projet)} - ${getMaterial(projet)}`,
+                  height: getMaterialHeightPageBDD(projet),
+                  id: projet.id
+                }))
+                .map((projet, ind) => (
+                  <Item
+                    key={ind}
+                    as={Link}
+                    directClick
+                    id={projet.id}
+                    visible={visibleProjet === projet.id}
+                    setVisible={setVisibleProjet}
+                    {...projet}
+                  />
+                ))}
+            </Projets>
             <Category>{category}</Category>
           </CategoryContainer>
         ))}

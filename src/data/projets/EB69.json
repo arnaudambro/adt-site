@@ -1,0 +1,101 @@
+{
+  "title": "EB69",
+  "code_projet": "EB69",
+  "content": [
+    {
+      "type": "summary",
+      "section": 1,
+      "content": "#1 - Analyse du contexte",
+      "image": "BE69-concept.jpg"
+    },
+    {
+      "type": "p",
+      "section": 1,
+      "content": "Situé en plein cœur d’Orléans, l’immeuble classé du 69 boulevard Alexandre Martin accueille désormais le siège du groupe EALIS. Nous sommes donc partis de l’identité graphique de cette entreprise afin de pouvoir imaginer et concevoir le projet de réhabilitation de leurs futurs bureaux."
+    },
+    {
+      "type": "p",
+      "section": 1,
+      "content": "Depuis son entrée par la grande porte cochère jusque dans chacun des niveaux de bureau, le salarié et le client sont guidés par une circulation aux multiples reflets noirs. Un jeu ponctuel de panneaux de bois et de claustras métalliques qui vient dynamiser les interventions sur le bâtiment existant et ainsi donner ainsi une âme plus industrielle et chaleureuse au lieu."
+    },
+    {
+      "type": "p",
+      "section": 1,
+      "content": "Un espace cafétéria et repos est aménagé au fond du jardin paysagé."
+    },
+    {
+      "type": "image",
+      "section": 1,
+      "src": "BE69-diagramme.jpg"
+    },
+    {
+      "type": "image",
+      "section": 1,
+      "src": "BE69-existant.jpg"
+    },
+    {
+      "type": "image",
+      "section": 1,
+      "src": "BE69-existant2.jpg"
+    },
+    {
+      "type": "summary",
+      "section": 2,
+      "content": "#2 - Table des matières",
+      "image": "BE69-ACIER-TABLEDESMATIERES.jpg"
+    },
+    {
+      "type": "summary",
+      "section": 3,
+      "content": "#3 - Projet",
+      "image": "atelierdelalandetabourin-bureau-loiret-orleans-black-BE69.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "BE69-facade.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "BE69-texture-plan-rdc.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "BE69-texture-plan-r1.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "BE69-texture-plan-r3.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "BE69-axonometrie-rdc.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "BE69-axonometrie-r1.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "BE69-axonometrie-r3.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "BE69-accueil.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "BE69-bureau.jpg"
+    }
+  ]
+}
+
+
