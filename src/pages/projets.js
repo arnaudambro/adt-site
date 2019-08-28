@@ -1,16 +1,14 @@
 import React from "react"
-
 import { getProjetMaterialImageForProjetsPage } from '../helpers/selectors'
-import { useProjetsDataAndImages } from "../helpers/hooks";
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ProjetMaterialIcon from "../components/projetMaterialIcon";
+import useProjetsDataAndImages from "../helpers/hooks/useProjetsDataAndImages";
 
 const Projets = () => {
-  const [visibleProjet, setVisibleProjet] = React.useState(null)
-
   const { projets, images } = useProjetsDataAndImages()
+  const [visibleProjet, setVisibleProjet] = React.useState(null)
 
   return <Layout >
     <SEO title="Projets" />

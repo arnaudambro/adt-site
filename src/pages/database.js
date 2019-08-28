@@ -4,11 +4,11 @@ import { Link } from "gatsby";
 
 import { displayFlex, displayGrid } from "../styles/mixins";
 import { programmes, matieres, anneesCaption } from "../reference/database";
-import { useProjetsDataAndImages } from "../helpers/hooks";
 import { getYear, getTitle, isProjetInCategory, getCode, getMaterialHeightPageBDD, getProjetMaterialImageForBDDPage, getMaterial, rankProjectsInBDD } from "../helpers/selectors";
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Item from "../components/item";
+import useProjetsDataAndImages from "../helpers/hooks/useProjetsDataAndImages";
 
 const Filters = styled.div`
   ${displayFlex({

@@ -54,6 +54,7 @@ text-transform: capitalize;
 const Material = styled.span`
 text-transform: capitalize;
   ${cssContent}
+font-weight: 500;
 `
 
 const ProjetMaterialIcon = ({ setVisible, visible, ...projet }) =>

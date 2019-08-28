@@ -3,12 +3,13 @@ import styled from 'styled-components';
 import Img from "gatsby-image/withIEPolyfill"
 import { displayFlex, gatsbyImage } from '../styles/mixins';
 import { getImageFromSrc } from '../helpers/selectors';
-import { useWindowSize } from '../helpers/hooks';
+import useWindowSize from '../helpers/hooks/useWindowSize';
 
 const ContentStyled = styled.div`
   margin-right: ${({ theme }) => theme.margin.X.min.app}px;
   max-width: ${({ theme }) => theme.width.max.content}px;
   min-width: ${({ theme }) => theme.width.min.app - 2 * theme.margin.X.min.app}px;
+  font-weight: 400;
   ${displayFlex({
     flexDirection: 'column',
     justifyContent: 'flex-start',
@@ -16,7 +17,8 @@ const ContentStyled = styled.div`
   })}
   p {
     margin-bottom: 20px;
-    font-weight: 300;
+    color: rgba(99, 100, 99, 1.00);
+    font-size: 0.9em;
     &:last-of-type {
       margin-bottom: 60px;
 
@@ -43,6 +45,7 @@ const ContentStyled = styled.div`
   summary #title {
     text-transform: uppercase;
     width: 100%;
+    font-size: 0.9em;
     &::after {
       content: "";
       border-bottom: 1px solid black;
@@ -61,7 +64,7 @@ const ContentStyled = styled.div`
   }
 `
 
-const Content = ({ images, nodes, debug = false }) => {
+const Content = ({ images, nodes, debug = false, open = false }) => {
   const contentRef = React.createRef(null);
   const { width: windowWidth } = useWindowSize()
   const formattedNodes = nodes.reduce((newNodes, nodeContent, ind) => {
@@ -131,7 +134,7 @@ const Content = ({ images, nodes, debug = false }) => {
 
   const renderSection = section => (
     <section key={section.id}>
-      <details>
+      <details open={open}>
         {section.content.map(node => renderNode(node))}
       </details>
     </section>

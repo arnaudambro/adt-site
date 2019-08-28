@@ -41,6 +41,7 @@ const theme = {
       app: 315
     },
     max: {
+      app: 490,
       headerColumn: 300,
       content: (dividerWidth - sideColumnWidth) * 0.9
     },

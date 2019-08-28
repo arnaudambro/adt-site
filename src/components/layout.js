@@ -55,16 +55,16 @@ const FullPage = styled.div`
 `
 
 const ContentWrapper = styled.div`
-  ${({ noMaxWidth, theme: { width: { min : { app } }, padding: { X } } }) => {
+  ${({ noMaxWidth, theme: { width: { min : { app: appMin }, max: { app: appMax } }, padding: { X } } }) => {
     if (noMaxWidth) {
       return `
-        max-width: 490px;
+        max-width: ${appMax}px;
         padding-left: ${X.content}px;
         padding-right: ${X.content}px;
       `
     }
     return `
-      max-width: ${app - 2 * X.content}px;
+      max-width: ${appMin - 2 * X.content}px;
     `
   }}
   width: 100%;
@@ -118,11 +118,12 @@ const MarginBottom = styled.div`
     line-height: 1em;
     margin-top: 30%;
     display: inline-block;
-    margin-left: ${({ theme }) => theme.width.material - 20}px;
-    ${media.desktop`
-      margin-bottom: 80px;
-      margin-left: ${({ theme }) => theme.width.desktop.material - 20}px;
-    `}
+    margin-left: ${({ theme }) => `calc(100% - ${3 * theme.width.hideScrollbar}px)`};
+    ${({ noMaxWidth, theme }) => {
+      return media.desktop`
+          margin-left: calc(${theme.width.max.content}px - 2rem);
+          `
+    }}
   }
 `
 
@@ -173,6 +174,10 @@ class Layout extends React.Component {
       withAnimation,
       showWelcomePage
     } = this.state;
+    const {
+      noMaxWidth,
+      children
+    } = this.props;
 
     return(
       <StaticQuery
@@ -196,11 +201,12 @@ class Layout extends React.Component {
                 {showWelcomePage && <WelcomePage />}
                 <FullPage>
                   <Header siteTitle={data.site.siteMetadata.title} />
-                  <ContentWrapper noMaxWidth={this.props.noMaxWidth}>
-                    <Content ref={r => this.contentRef = r} noMaxWidth={this.props.noMaxWidth}>
-                      {this.props.children}
+                  <ContentWrapper noMaxWidth={noMaxWidth}>
+                    <Content ref={r => this.contentRef = r} noMaxWidth={noMaxWidth}>
+                      {children}
                       <MarginBottom
                         onClick={() => this.contentRef.scrollTo({ top: 0, behavior: 'smooth' })}
+                        noMaxWidth={noMaxWidth}
                       />
                     </Content>
                   </ContentWrapper>

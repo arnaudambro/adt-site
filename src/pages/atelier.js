@@ -31,7 +31,7 @@ const Atelier = () => {
 `)
   return <Layout>
     <SEO title="Atelier" />
-    <Content nodes={atelier.map(({ node }) => node)} images={images} />
+    <Content nodes={atelier.map(({ node }) => node)} images={images} open />
   </Layout>
 }
 

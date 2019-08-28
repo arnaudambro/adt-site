@@ -76,7 +76,7 @@ const Title = styled.h1`
     -webkit-text-fill-color: transparent;
     font-weight: 700;
     ${media.desktop`
-      font-size: 1.5em;
+      font-size: 1.25em;
     `}
   }
 `

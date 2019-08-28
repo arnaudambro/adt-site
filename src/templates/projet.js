@@ -4,7 +4,6 @@ import styled, { css } from 'styled-components';
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Content from "../components/content";
-import { useProjetsDataAndImages } from "../helpers/hooks";
 import {
   getTitle,
   getDescription,
@@ -15,6 +14,7 @@ import {
   getCollab,
   getPrix } from "../helpers/selectors";
 import Arrows from "../components/arrows";
+import useProjetsDataAndImages from "../helpers/hooks/useProjetsDataAndImages";
 
 const Title = styled.h2`
   text-transform: uppercase;

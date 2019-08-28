@@ -92,35 +92,20 @@ const getNewsDate = news => (new Date(news.date)).toLocaleString('fr', { month: 
 
 /* GET IMAGE FLUID */
 
-const getProjetMaterialImageForProjetsPage = (images, projet) =>
-  getImagePropsForGatsby(
-    images
-    .find(img =>
-      getImageSrcFromImages(img).includes(getMaterialImageSrcForProjetsPage(projet))
-    )
-  )
-
-const getProjetMaterialImageForBDDPage = (images, projet) =>
-  getImagePropsForGatsby(
-    images
-    .find(img =>
-      getImageSrcFromImages(img).includes(getMaterialImageSrcForBDDPage(projet))
-    )
-  )
 
 const getImageFromSrc = (images, src) => getImagePropsForGatsby(
-      images
-      .find(img => getImageSrcFromImages(img).includes(src))
-      )
+  images
+  .find(img => getImageSrcFromImages(img).includes(src))
+  )
 
+const getProjetMaterialImageForProjetsPage = (images, projet) =>
+  getImageFromSrc(images, getMaterialImageSrcForProjetsPage(projet))
+
+const getProjetMaterialImageForBDDPage = (images, projet) =>
+  getImageFromSrc(images, getMaterialImageSrcForBDDPage(projet))
 
 const getImagesForNews = (images, news) =>
-  news.images.map(image => getImagePropsForGatsby(
-      images
-      .find(img =>
-        getImageSrcFromImages(img).includes(getNewsImageFile(image))
-      )
-    ))
+  news.images.map(image => getImageFromSrc(images, getNewsImageFile(image)))
 
 export {
   getTitle,

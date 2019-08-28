@@ -3,12 +3,13 @@ import styled, { keyframes } from 'styled-components'
 import SEO from "./seo"
 import Img from "gatsby-image/withIEPolyfill"
 
+import { getImageFromSrc } from "../helpers/selectors";
 import logo from '../images/logo.svg';
 import { media } from "../styles/mediaQueries";
-import { Link, useStaticQuery, graphql } from "gatsby";
+import { Link } from "gatsby";
 import { projets } from "../reference/pages";
 import { background, gatsbyImage } from "../styles/mixins";
-import { getImagePropsForGatsby, getImageSrcFromImages } from "../helpers/selectors";
+import useImages from "../helpers/hooks/useImages";
 
 
 const LandingStyled = styled(Link)`
@@ -73,6 +74,19 @@ const Logo = styled.div`
   `}
 `
 
+const PageNumber = styled.pre`
+  position: fixed;
+  z-index: 100000;
+  width: 100%;
+  height: auto;
+  background: black;
+  color: white;
+  top: 0;
+  left: 0;
+  display: none;
+`
+
+
 const ScrollIcon = () =>
   <ArrowDownStyled
     className="scroll-icon"
@@ -87,19 +101,24 @@ const ScrollIcon = () =>
     </g>
   </ArrowDownStyled>
 
+const landingPageNumber = () => {
+  const now = new Date();
+  const nowZero = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const changeFrequency = 3;
+  const numberOfImages = 8;
+  const nowZeroInDays = Math.floor(Date.parse(nowZero) / 1000 / 60 / 60 / 24);
+  const parsedPageNumber = nowZeroInDays % (changeFrequency * numberOfImages) + 1;
+  return {
+    nowZero,
+    nowZeroInDays,
+    parsedPageNumber,
+    landingPageNumber: Math.floor(parsedPageNumber / changeFrequency + 1)
+  };
+}
+
 const WelcomePage = ({ startAnimation }) => {
 
-  const {
-    allImageSharp:{edges: images },
-  } = useStaticQuery(graphql`
-  query ImagesQuery {
-      allImageSharp {
-        edges {
-          ...AllImages
-        }
-      }
-    }
-  `)
+  const images = useImages();
 
   return (
     <LandingStyled
@@ -108,8 +127,9 @@ const WelcomePage = ({ startAnimation }) => {
       onClick={startAnimation}
     >
       <SEO title="ADT" />
+      <PageNumber>{JSON.stringify(landingPageNumber(), null, 2)}</PageNumber>
       <Img
-        fluid={getImagePropsForGatsby(images.find(img => getImageSrcFromImages(img).includes('poster')))}
+        fluid={getImageFromSrc(images, `CONCEPT-PDG${landingPageNumber().landingPageNumber}.jpg`)}
         alt="ADT: une mise en architecture de la matière"
         title="ADT: une mise en architecture de la matière"
       />

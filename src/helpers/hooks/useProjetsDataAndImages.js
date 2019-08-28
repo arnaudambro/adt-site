@@ -1,6 +1,5 @@
-import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
-import { getClassementPageProjets } from './selectors'
+import { getClassementPageProjets } from '../selectors'
 
 const useProjetsDataAndImages = () => {
 
@@ -8,7 +7,7 @@ const useProjetsDataAndImages = () => {
     allDataXlsxSheet1:{edges },
     allImageSharp:{edges: images },
   } = useStaticQuery(graphql`
-    query PROJETS_AND_IMAGES {
+    query {
       allDataXlsxSheet1 {
         edges {
           node {
@@ -63,35 +62,4 @@ const useProjetsDataAndImages = () => {
 
 }
 
-const useWindowSize = () => {
-  const isClient = typeof window === 'object';
-
-  function getSize() {
-    return {
-      width: isClient ? window.innerWidth : undefined,
-      height: isClient ? window.innerHeight : undefined
-    };
-  }
-
-  const [windowSize, setWindowSize] = React.useState(getSize);
-
-  React.useEffect(() => {
-    if (!isClient) {
-      return false;
-    }
-
-    function handleResize() {
-      setWindowSize(getSize());
-    }
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []); // Empty array ensures that effect is only run on mount and unmount
-
-  return windowSize;
-}
-
-export {
-  useProjetsDataAndImages,
-  useWindowSize
-}
+export default useProjetsDataAndImages
