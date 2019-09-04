@@ -1,7 +1,77 @@
 {
   "title": "EB12",
   "code_projet": "EB12",
-  "content": []
+  "content": [
+    {
+      "type": "summary",
+      "section": 1,
+      "content": "#1 - Analyse du contexte",
+      "image": "EB12-contexte.jpg"
+    },
+    {
+      "type": "image",
+      "section": 1,
+      "src": "EB12-existant1.jpg"
+    },
+    {
+      "type": "image",
+      "section": 1,
+      "src": "EB12-existant2.jpg"
+    },
+    {
+      "type": "p",
+      "section": 1,
+      "content": "Spécialisée dans l’exploitation forestière et la scierie, la société est historiquement située au cœur de la forêt d’Orléans. La demande du client est d’étendre et de réhabiliter les 600m2 de locaux de son siège social. La proximité de la matière première, et de son usinage, s’est naturellement imposée comme le point de départ de notre réflexion et de la conception architecturale du projet."
+    },
+    {
+      "type": "p",
+      "section": 1,
+      "content": "Le bâtiment s’organise aujourd’hui sous la forme d’un « U » autour d’un patio végétalisé. L’extension viendra aligner et refermer en partie le volume initial tandis qu’un couloir de verre traversera le patio pour faciliter les déplacements transitoires entre les ailes nord et sud. Ensuite, un long couloir intérieur dessert les différents espaces de l’entreprise."
+    },
+    {
+      "type": "p",
+      "section": 1,
+      "content": "Notre intention première est d’apporter de la lumière et de la profondeur. Mais également une homogénéité esthétique entre cette longue déambulation circulaire et les espaces de travail desservis. Grâce à un jeu de claires-voies extérieures, la nouvelle façade écran apportera une continuité entre l’extension et l’existant. Une dynamique de tasseaux de bois thermo-chauffés, sous forme de grandes portes pivotantes, viendra animer la façade, tout en cachant le système de climatisation existant."
+    },
+    {
+      "type": "p",
+      "section": 1,
+      "content": "Une nouvelle identité visuelle fidèle aux racines de l’entreprise."
+    },
+    {
+      "type": "image",
+      "section": 1,
+      "src": "EB12-diagramme.jpg"
+    },
+    {
+      "type": "summary",
+      "section": 2,
+      "content": "#2 - Table des matières",
+      "image": "HD11-REDCEDAR-TABLEDESMATIERES.jpg"
+    },
+    {
+      "type": "summary",
+      "section": 3,
+      "content": "#3 - Projet",
+      "image": "atelierdelalandetabourin-entreprisebarillet-redcedar-EB12.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB12-plan.jpg",
+      "style": "margin-top: 90px !important;"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB12-facades.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB12-coupe.jpg"
+    }
+  ]
 }
 
 

@@ -5,8 +5,7 @@
     {
       "type": "summary",
       "section": 1,
-      "content": "#1 - Analyse du contexte",
-      "image": "atelierdelalandetabourin-villa-patio-interieur-VH16.jpg"
+      "content": "#1 - Analyse du contexte"
     },
     {
       "type": "p",
@@ -31,14 +30,19 @@
     {
       "type": "summary",
       "section": 2,
-      "content": "#2 - Table des matières",
-      "image": "atelierdelalandetabourin-villa-patio-VH16-carrire.jpg"
+      "content": "#2 - Table des matières"
     },
     {
       "type": "summary",
       "section": 3,
       "content": "#3 - Projet",
-      "image": "atelierdelalandetabourin-villa-patio-VH16-plan.jpg"
+      "image": "atelierdelalandetabourin-villa-patio-interieur-VH16.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "atelierdelalandetabourin-villa-patio-VH16-plan.jpg",
+      "style": "margin-top: 120px !important;"
     },
     {
       "type": "image",

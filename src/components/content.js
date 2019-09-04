@@ -4,12 +4,22 @@ import Img from "gatsby-image/withIEPolyfill"
 import { displayFlex, gatsbyImage } from '../styles/mixins';
 import { getImageFromSrc } from '../helpers/selectors';
 import useWindowSize from '../helpers/hooks/useWindowSize';
+import windowExists from '../helpers/windowExists';
+import windowPathNameIncludes from '../helpers/windowPathNameIncludes';
+// import triangleSvg from '../images/Triangle.svg';
+
+const triangleInlineSvg = '\'data:image/svg+xml;utf8,<svg width="6px" height="7px" viewBox="0 0 64 75"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon stroke="%23979797" stroke-width="7" transform="translate(30.000000, 37.500000) rotate(90.000000) translate(-30.000000, -37.500000) " points="30 11 61 64 -1 64"></polygon></g></svg>\''
+
+const ImgStyled = styled(Img)`
+  ${props => props.customStyle && `${props.customStyle}`}
+`
 
 const ContentStyled = styled.div`
+  font-size: 14px;
   margin-right: ${({ theme }) => theme.margin.X.min.app}px;
   max-width: ${({ theme }) => theme.width.max.content}px;
   min-width: ${({ theme }) => theme.width.min.app - 2 * theme.margin.X.min.app}px;
-  font-weight: 400;
+  font-weight: 300;
   ${displayFlex({
     flexDirection: 'column',
     justifyContent: 'flex-start',
@@ -17,15 +27,16 @@ const ContentStyled = styled.div`
   })}
   p {
     margin-bottom: 20px;
-    color: rgba(99, 100, 99, 1.00);
+    color: ${({ theme }) => theme.color.defaultColor};
     font-size: 0.9em;
     &:last-of-type {
-      margin-bottom: 60px;
-
+      margin-bottom: ${({ theme }) => theme.margin.bottom.contentSummary}px;
     }
     b {
       font-weight: 500;
+      color: hsla(0,0%,0%,0.8);
     }
+    ${props => props.customStyle && `${props.customStyle}`}
   }
   section {
     margin-top: 20px;
@@ -36,10 +47,30 @@ const ContentStyled = styled.div`
     }
   }
   summary {
-    margin-bottom: 60px;
+    ${props => props.forceOpen && `pointer-events: none;`}
+    margin-bottom: ${({ theme }) => theme.margin.bottom.contentSummary}px;
     cursor: pointer;
+    font-weight: 400;
+    transition: opacity 200ms ease-in-out;
+    &:hover {
+      opacity: 0.5;
+    }
+    /* list-style-image: url(${({ triangle }) => triangle}); */
+    /* list-style-image: url(${triangleInlineSvg}); */
+
+    &::-webkit-details-marker {
+      /* background: url(${({ triangle }) => triangle}); */
+      /* color: transparent; */
+    }
+
+    &::marker {
+      /* font-size: 0.9em; */
+      -webkit-text-stroke: .05em rgba(19,21,22,1);
+      -webkit-text-fill-color: transparent;
+    }
+
     .gatsby-image-wrapper {
-      margin-Top: 40px;
+      margin-top: 40px;
     }
   }
   summary #title {
@@ -60,11 +91,16 @@ const ContentStyled = styled.div`
     height: '100%',
   })}
   details > .gatsby-image-wrapper {
-    margin-bottom: 60px;
+    margin-bottom: ${({ theme }) => theme.margin.bottom.contentItem}px;
+  }
+  details > * {
+    ${() => windowExists() && windowPathNameIncludes('debug') && `
+      border: 1px solid #000;
+    `}
   }
 `
 
-const Content = ({ images, nodes, debug = false, open = false }) => {
+const Content = ({ images, nodes, debug = false, open = false, forceOpen = false }) => {
   const contentRef = React.createRef(null);
   const { width: windowWidth } = useWindowSize()
   const formattedNodes = nodes.reduce((newNodes, nodeContent, ind) => {
@@ -104,7 +140,7 @@ const Content = ({ images, nodes, debug = false, open = false }) => {
     }
   }, [windowWidth])
 
-  const renderNode = node => {
+  const renderNode = (node, ind) => {
     if (debug) return <pre key={node.id}>{JSON.stringify(node, null, 2)}</pre>
     switch (node.type) {
       case 'section': {
@@ -128,26 +164,33 @@ const Content = ({ images, nodes, debug = false, open = false }) => {
       case 'image':
         return renderImage(node);
       default:
-        return renderElement(node)
+        return renderElement(node, ind)
     }
   }
 
   const renderSection = section => (
     <section key={section.id}>
       <details open={open}>
-        {section.content.map(node => renderNode(node))}
+        {section.content.map((node, ind) => renderNode(node, ind))}
       </details>
     </section>
   )
 
-  const renderElement = node => <node.type key={node.content} dangerouslySetInnerHTML={{ __html: node.content }} />
+  const renderElement = (node, ind) => (
+    <node.type
+      key={ind}
+      dangerouslySetInnerHTML={{ __html: node.content }}
+      style={node.style ? JSON.parse(node.style) : {}}
+    />
+  )
 
   const renderImage = image => (
-    <Img
+    <ImgStyled
       fluid={getImageFromSrc(images, image.src)}
       alt={image.alt || image.src}
       title={image.alt || image.src}
       key={image.src}
+      customStyle={image.style}
     />
   )
 
@@ -155,8 +198,10 @@ const Content = ({ images, nodes, debug = false, open = false }) => {
     <ContentStyled
       ref={contentRef}
       contentWidth={contentWidth}
+      triangle={getImageFromSrc(images, 'Triangle.png').src}
+      forceOpen={forceOpen}
     >
-      {formattedNodes.map(node => renderNode(node))}
+      {formattedNodes.map((node, ind) => renderNode(node, ind))}
     </ContentStyled>
   )
 }

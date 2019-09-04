@@ -1,5 +1,5 @@
+
 module.exports = {
-  pathPrefix: `/adt`,
   siteMetadata: {
     // title: `Atelier Delalande Tabourin | Architecture + Material LAB + Design`,
     title: `Atelier Delalande Tabourin`,
@@ -10,6 +10,12 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-json`,
+    {
+      resolve: 'gatsby-plugin-htaccess',
+      options: {
+        RewriteBase: '/',
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

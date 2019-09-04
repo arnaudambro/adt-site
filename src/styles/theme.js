@@ -45,7 +45,7 @@ const theme = {
       headerColumn: 300,
       content: (dividerWidth - sideColumnWidth) * 0.9
     },
-    hideScrollbar: 16,
+    hideScrollbar: 18,
     scrollBar: 14,
     logo: 177,
     indicator: 15,
@@ -65,7 +65,10 @@ const theme = {
       content: 34,
     },
     bottom: {
-      projetName: 18
+      projetName: 18,
+      contentSummary: 30,
+      contentItem: 30,
+
     },
     right: {
       indicator: 5,

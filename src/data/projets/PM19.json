@@ -48,7 +48,14 @@
     {
       "type": "image",
       "section": 3,
-      "src": "PM19-coupeest.jpg"
+      "src": "PM19-plan.jpg",
+      "style": "margin-top: 110px !important;"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "PM19-coupeest.jpg",
+      "style": "margin-top: 60px !important;"
     },
     {
       "type": "image",
@@ -59,11 +66,6 @@
       "type": "image",
       "section": 3,
       "src": "PM19-coupesud.jpg"
-    },
-    {
-      "type": "image",
-      "section": 3,
-      "src": "PM19-plan.jpg"
     }
   ]
 }

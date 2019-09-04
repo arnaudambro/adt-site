@@ -5,12 +5,19 @@ import { Link } from "gatsby";
 import { displayFlex, displayGrid } from "../styles/mixins";
 import { programmes, matieres, anneesCaption } from "../reference/database";
 import { getYear, getTitle, isProjetInCategory, getCode, getMaterialHeightPageBDD, getProjetMaterialImageForBDDPage, getMaterial, rankProjectsInBDD } from "../helpers/selectors";
+import { addSuffix } from "../helpers/projetUrl";
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Item from "../components/item";
 import useProjetsDataAndImages from "../helpers/hooks/useProjetsDataAndImages";
+import { media } from "../styles/mediaQueries";
+
+const categoryWidth = 145;
+const gridGap = 35;
+const dbWidth = 3 * categoryWidth + 2 * gridGap;
 
 const Filters = styled.div`
+  width: ${dbWidth}px;
   ${displayFlex({
     flexDirection: 'column',
     justifyContent: 'flex-start',
@@ -23,10 +30,12 @@ const Filter = styled.span`
   cursor: pointer;
   text-decoration: underline;
   text-transform: uppercase;
-  width: 200px;
-  height: 30px;
-  line-height: 30px;
+  width: 85px;
+  height: 22px;
+  line-height: 22px;
   font-weight: 500;
+  font-size: .75em;
+  color: ${({ active, theme }) => active ? theme.color.black : theme.color.defaultColor};
   &::before {
     content: "\\002B";
     position: absolute;
@@ -43,11 +52,20 @@ const Filter = styled.span`
 
 const Categories = styled.div`
   ${displayGrid({
-    gridTemplateColumns: "repeat(auto-fit, 125px)",
+    gridTemplateColumns: `repeat(auto-fit, ${categoryWidth}px)`,
     gridAutoRows: "auto",
-    gridGap: "35px"
+    gridGap: gridGap + "px",
+    justifyContent: 'center'
   })}
-  padding-right: 100px;
+  ${media.desktop`
+    ${displayGrid({
+      gridTemplateColumns: "repeat(auto-fit, 145px)",
+      gridAutoRows: "auto",
+      gridGap: "35px",
+      justifyContent: 'flex-start'
+    })}
+  `}
+  /* padding-right: 100px; */
   margin-top: 50px;
 `
 
@@ -73,11 +91,13 @@ const Projets = styled.div`
 `
 
 const Category = styled.span`
+  border-top: 1px solid ${({ theme }) => theme.color.defaultColor};
   font-weight: 400;
   text-align: left;
   width: 100%;
   font-size: .75em;
   margin-top: 10px;
+  padding-top: 5px;
   text-transform: uppercase;
 `
 
@@ -94,13 +114,14 @@ const Database = () => {
   const [visibleProjet, setVisibleProjet] = React.useState(null);
 
   return(
-    <Layout>
+    <Layout arrowWidth={dbWidth}>
       <SEO title="Base de données" />
       <Filters>
         {Object.keys(filters).map(filter => (
           <Filter
             key={filter}
             onClick={() => setVisibleCategory(filter)}
+            active={filter === visibleCategory}
           >
             {filter}
           </Filter>
@@ -115,7 +136,7 @@ const Database = () => {
                 .sort(rankProjectsInBDD(visibleCategory))
                 .map(projet => ({
                   images: [getProjetMaterialImageForBDDPage(images, projet)],
-                  to: `/projet/${getCode(projet)}`,
+                  to: `/projet/${addSuffix(getCode(projet))}`,
                   alt: `${getTitle(projet)} - ${getMaterial(projet)}`,
                   height: getMaterialHeightPageBDD(projet),
                   id: projet.id

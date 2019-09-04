@@ -9,7 +9,7 @@ import { media } from "../styles/mediaQueries";
 import { Link } from "gatsby";
 import { projets } from "../reference/pages";
 import { background, gatsbyImage } from "../styles/mixins";
-import useImages from "../helpers/hooks/useImages";
+import useLargeImages from "../helpers/hooks/useLargeImages";
 
 
 const LandingStyled = styled(Link)`
@@ -118,11 +118,11 @@ const landingPageNumber = () => {
 
 const WelcomePage = ({ startAnimation }) => {
 
-  const images = useImages();
+  const images = useLargeImages();
 
   return (
     <LandingStyled
-      to={`/${projets}/`}
+      to={`/${projets}`}
       id="landing"
       onClick={startAnimation}
     >

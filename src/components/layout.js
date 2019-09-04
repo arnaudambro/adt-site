@@ -18,7 +18,7 @@ import { media } from "../styles/mediaQueries";
 import { displayGrid, displayFlex } from "../styles/mixins";
 import pages, { projets } from "../reference/pages";
 import windowExists from "../helpers/windowExists";
-import windowPathNameIs from "../helpers/windowPathNameIs";
+import windowPathNameIncludes from "../helpers/windowPathNameIncludes";
 
 const swipeup = keyframes`
   0% {
@@ -107,10 +107,27 @@ const Content = styled.main`
 
 const MarginBottom = styled.div`
   height: 95%;
+  padding-top: 30%;
+  cursor: pointer;
+  * {
+    pointer-events: none;
+  }
+
+
   ${media.desktop`
     height: calc(90vh - 236px);
   `}
-  &::before {
+  ${displayFlex({
+    justifyContent: 'flex-end',
+    alignItems: 'flex-start'
+  })}
+  width: ${({ theme }) => `calc(100% - ${3 * theme.width.hideScrollbar}px)`};
+  ${({ theme, width }) => {
+      return width
+      ? media.desktop`width: ${width}px;`
+      : media.desktop`width: calc(${theme.width.max.content}px - 2rem);`
+  }}
+  /* &::before {
     content: "\\2191";
     height: 25px;
     font-size: 2rem;
@@ -123,7 +140,7 @@ const MarginBottom = styled.div`
       return media.desktop`
           margin-left: calc(${theme.width.max.content}px - 2rem);
           `
-    }}
+    }} */
   }
 `
 
@@ -147,7 +164,7 @@ const AnimationWrapper = styled.div`
 class Layout extends React.Component {
   state = {
     withAnimation: false,
-    showWelcomePage: true
+    showWelcomePage: windowExists() ? window.showWelcomePage : false
   }
 
   componentDidMount() {
@@ -160,11 +177,11 @@ class Layout extends React.Component {
         this.setState({ showWelcomePage: false })
         return
       }
-      if (windowPathNameIs(`/${projets}/`)) this.setState({ withAnimation: true })
+      if (windowPathNameIncludes(projets)) this.setState({ withAnimation: true })
     }
   }
 
-  handleAnimationEnd = () => {
+  handleAnimationEnd = (e) => {
     window.showWelcomePage = false
     this.setState({ showWelcomePage: false })
   }
@@ -176,7 +193,8 @@ class Layout extends React.Component {
     } = this.state;
     const {
       noMaxWidth,
-      children
+      children,
+      arrowWidth
     } = this.props;
 
     return(
@@ -207,7 +225,10 @@ class Layout extends React.Component {
                       <MarginBottom
                         onClick={() => this.contentRef.scrollTo({ top: 0, behavior: 'smooth' })}
                         noMaxWidth={noMaxWidth}
-                      />
+                        width={arrowWidth}
+                      >
+                        <svg viewBox="0 0 678 384" x="0px" y="0px" fillRule="evenodd" clipRule="evenodd" height="20"><g><path fill="black" fillRule="nonzero" d="M663 306c42,41 -22,106 -64,63l-261 -260 -260 260c-42,42 -107,-21 -64,-63l292 -293c18,-17 47,-17 65,0l292 293zm-5 5l-293 -292c-14,-15 -39,-15 -53,-1l-293 293c-35,35 19,88 53,53l266 -266 266 266c36,35 88,-19 54,-53z"/></g></svg>
+                      </MarginBottom>
                     </Content>
                   </ContentWrapper>
                 </FullPage>
@@ -224,11 +245,13 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
   landing: PropTypes.bool,
   noMaxWidth: PropTypes.bool,
+  arrowWidth: PropTypes.number
 }
 
 Layout.defaultProps = {
   landing: false,
-  noMaxWidth: false
+  noMaxWidth: false,
+  arrowWidth: 0
 }
 
 export default Layout

@@ -6,7 +6,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const Infos = () => {
-  const { allInfosJson:{edges: infos }} = useStaticQuery(graphql`
+  const {
+    allInfosJson:{edges: infos },
+    allImageSharp:{edges: images },
+  } = useStaticQuery(graphql`
     query {
       allInfosJson {
         edges {
@@ -15,7 +18,13 @@ const Infos = () => {
             content
             section
             type
+            style
           }
+        }
+      }
+      allImageSharp(filter: {fluid: {src: {regex: "\/Triangle\/"}}}) {
+        edges {
+          ...AllImages
         }
       }
     }
@@ -23,7 +32,7 @@ const Infos = () => {
   return(
     <Layout>
       <SEO title="Infos" />
-      <Content nodes={infos.map(({ node }) => node)} />
+      <Content forceOpen images={images} nodes={infos.map(({ node }) => node)} open />
     </Layout>
   )
 

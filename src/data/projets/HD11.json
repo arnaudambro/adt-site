@@ -9,6 +9,16 @@
       "image": "HD11-contexte.jpg"
     },
     {
+      "type": "image",
+      "section": 1,
+      "src": "HD11-existant1.jpg"
+    },
+    {
+      "type": "image",
+      "section": 1,
+      "src": "HD11-existant2.jpg"
+    },
+    {
       "type": "p",
       "section": 1,
       "content": "HD11 s’inscrit à l’entrée de la ville de Locmariaquer, forte de son port et de ses sites mégalithiques. C’est donc autour de ce patrimoine architectural que l’agence a souhaité développer ce projet. A l’image du grand menhir brisé d’Er Grah, l’extension de l’hôtel s’impose au sein de la parcelle dans une radicale dynamique de chute."
@@ -29,16 +39,6 @@
       "src": "HD11-diagramme.jpg"
     },
     {
-      "type": "image",
-      "section": 1,
-      "src": "HD11-existant1.jpg"
-    },
-    {
-      "type": "image",
-      "section": 1,
-      "src": "HD11-existant2.jpg"
-    },
-    {
       "type": "summary",
       "section": 2,
       "content": "#2 - Table des matières",
@@ -53,7 +53,8 @@
     {
       "type": "image",
       "section": 3,
-      "src": "HD11-plan.jpg"
+      "src": "HD11-plan.jpg",
+      "style": "margin-top: 110px !important;"
     },
     {
       "type": "image",

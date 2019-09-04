@@ -7,7 +7,8 @@
   {
     "type": "p",
     "section": 1,
-    "content": "<b>Nicolas Delalande<b>"
+    "content": "<b>Nicolas Delalande<b>",
+    "style": "{\"marginBottom\": 5}"
   },
   {
     "type": "p",
@@ -27,7 +28,8 @@
   {
     "type": "p",
     "section": 1,
-    "content": "<b>Sébastien Tabourin</b>"
+    "content": "<b>Sébastien Tabourin</b>",
+    "style": "{\"marginBottom\": 5}"
   },
   {
     "type": "p",
@@ -47,7 +49,8 @@
   {
     "type": "p",
     "section": 1,
-    "content": "<b>Collaborateurs</b>"
+    "content": "<b>Collaborateurs</b>",
+    "style": "{\"marginBottom\": 5}"
   },
   {
     "type": "p",
@@ -57,7 +60,8 @@
   {
     "type": "p",
     "section": 1,
-    "content": "<b>Sont passés par l’Atelier:</b>"
+    "content": "<b>Sont passés par l’Atelier:</b>",
+    "style": "{\"marginBottom\": 5}"
   },
   {
     "type": "p",
@@ -87,7 +91,7 @@
   {
     "type": "p",
     "section": 3,
-    "content": "ADT est toujours à la recherche d’architectes partageant leur approche du métier. Si toi aussi tu as une vision poétique de l’architecture, que tu as une certaine sensi- bilité au travail de la matière et de son paysage, alors nous recevrons avec plaisir ta candidature, même si nous ne recrutrons pas à ce moment là."
+    "content": "ADT est toujours à la recherche d’architectes partageant leur approche du métier. Si toi aussi tu as une vision poétique de l’architecture, que tu as une certaine sensibilité au travail de la matière et de son paysage, alors nous recevrons avec plaisir ta candidature, même si nous ne recrutrons pas à ce moment là."
   },
   {
     "type": "p",

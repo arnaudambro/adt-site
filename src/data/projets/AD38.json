@@ -38,12 +38,13 @@
       "type": "summary",
       "section": 3,
       "content": "#3 - Projet",
-      "image": "01_atelierdelalandetabourin-appartements-AD38-plan.jpg"
+      "image": "atelierdelalandetabourin-appartements-AD38-couloir.jpg"
     },
     {
       "type": "image",
       "section": 3,
-      "src": "atelierdelalandetabourin-appartements-AD38-couloir.jpg"
+      "src": "01_atelierdelalandetabourin-appartements-AD38-plan.jpg",
+      "style": "margin-bottom: 70px !important;margin-top: 160px !important;"
     },
     {
       "type": "image",

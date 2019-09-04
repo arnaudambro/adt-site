@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { displayFlex } from '../styles/mixins';
 import { media } from '../styles/mediaQueries';
+import { findPrevProjet, findNextProjet } from '../helpers/projetUrl';
 import { Link } from 'gatsby';
 
 const ArrowsContainer = styled.div`
@@ -51,11 +52,11 @@ const Arrows = ({ projets, projet }) => {
   const projetIndex = (projetInProjets) => projetInProjets === projet;
   return(
     <ArrowsContainer>
-      <Link to={`/projet/${projets[projets.findIndex(projetIndex) - 1] || projets[projets.length - 1]}/`} >
+      <Link to={`/projet/${findPrevProjet(projets, projetIndex)}`} >
         <ArrowLeft />
       </Link>
       <Divider />
-      <Link to={`/projet/${projets[projets.findIndex(projetIndex) + 1] || projets[0]}/`} >
+      <Link to={`/projet/${findNextProjet(projets, projetIndex)}`} >
         <ArrowRight />
       </Link>
     </ArrowsContainer>

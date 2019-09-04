@@ -9,6 +9,16 @@
       "image": "BE69-concept.jpg"
     },
     {
+      "type": "image",
+      "section": 1,
+      "src": "BE69-existant.jpg"
+    },
+    {
+      "type": "image",
+      "section": 1,
+      "src": "BE69-existant2.jpg"
+    },
+    {
       "type": "p",
       "section": 1,
       "content": "Situé en plein cœur d’Orléans, l’immeuble classé du 69 boulevard Alexandre Martin accueille désormais le siège du groupe EALIS. Nous sommes donc partis de l’identité graphique de cette entreprise afin de pouvoir imaginer et concevoir le projet de réhabilitation de leurs futurs bureaux."
@@ -29,16 +39,6 @@
       "src": "BE69-diagramme.jpg"
     },
     {
-      "type": "image",
-      "section": 1,
-      "src": "BE69-existant.jpg"
-    },
-    {
-      "type": "image",
-      "section": 1,
-      "src": "BE69-existant2.jpg"
-    },
-    {
       "type": "summary",
       "section": 2,
       "content": "#2 - Table des matières",
@@ -53,47 +53,13 @@
     {
       "type": "image",
       "section": 3,
-      "src": "BE69-facade.jpg"
-    },
-    {
-      "type": "image",
-      "section": 3,
-      "src": "BE69-texture-plan-rdc.jpg"
+      "src": "BE69-texture-plan-rdc.jpg",
+      "style": "margin-top: 120px !important;"
     },
     {
       "type": "image",
       "section": 3,
       "src": "BE69-texture-plan-r1.jpg"
-    },
-    {
-      "type": "image",
-      "section": 3,
-      "src": "BE69-texture-plan-r3.jpg"
-    },
-    {
-      "type": "image",
-      "section": 3,
-      "src": "BE69-axonometrie-rdc.jpg"
-    },
-    {
-      "type": "image",
-      "section": 3,
-      "src": "BE69-axonometrie-r1.jpg"
-    },
-    {
-      "type": "image",
-      "section": 3,
-      "src": "BE69-axonometrie-r3.jpg"
-    },
-    {
-      "type": "image",
-      "section": 3,
-      "src": "BE69-accueil.jpg"
-    },
-    {
-      "type": "image",
-      "section": 3,
-      "src": "BE69-bureau.jpg"
     }
   ]
 }

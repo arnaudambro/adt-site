@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled, { css } from 'styled-components'
 import { displayFlex, displayGrid } from "../styles/mixins";
-import pages from "../reference/pages";
+import pages, { projets } from "../reference/pages";
 import { media } from "../styles/mediaQueries";
 
 const borderBottom = css`
@@ -121,7 +121,9 @@ const Page = styled.li`
 const Header = ({ siteTitle }) =>
   <HeaderStyled>
     <Title>
-      {siteTitle.split(' ').map(title => <span key={title}>{title}</span>)}
+      <Link to={'/' + projets}>
+        {siteTitle.split(' ').map(title => <span key={title}>{title}</span>)}
+      </Link>
     </Title>
     <Nav numberOfItems={Object.keys(pages).length}>
       <ul>
@@ -131,7 +133,8 @@ const Header = ({ siteTitle }) =>
             position={ind}
           >
             <Link
-              to={`/${page}/`}
+              to={`/${page}`}
+              partiallyActive
               activeClassName='active'
             >
                 {pages[page].fr}

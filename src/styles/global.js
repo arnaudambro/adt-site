@@ -39,8 +39,7 @@ const GlobalStyle = createGlobalStyle`
   main,
   menu,
   nav,
-  section,
-  summary {
+  section {
     display: block;
   }
   audio,

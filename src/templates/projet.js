@@ -9,10 +9,11 @@ import {
   getDescription,
   getLocation,
   getSurface,
-  getDeliveryDisplayed,
+  getEtat,
   getMaterial,
   getCollab,
-  getPrix } from "../helpers/selectors";
+  getPrix,
+  getMission} from "../helpers/selectors";
 import Arrows from "../components/arrows";
 import useProjetsDataAndImages from "../helpers/hooks/useProjetsDataAndImages";
 
@@ -50,14 +51,19 @@ const Surface = styled.span`
   margin-top: 10px;
   ${cssContent}
 `
-const Delivery = styled.span`
-text-transform: capitalize;
+const Etat = styled.span`
+  text-transform: capitalize;
   ${cssContent}
 `
 const Material = styled.span`
 text-transform: capitalize;
   ${cssContent}
 `
+const Mission = styled.span`
+  ${cssContent}
+margin-bottom: 30px;
+`
+
 const Cout = styled.span`
 text-transform: capitalize;
   ${cssContent}
@@ -77,11 +83,12 @@ const Projet = (props) => {
       <Surface>Surface: {getSurface(details)} m<sup>2</sup></Surface>
       <Material>Matière: {getMaterial(details)}</Material>
       <Cout>Coût: {getPrix(details)}</Cout>
-      <Delivery>{getDeliveryDisplayed(details, true)}</Delivery>
+      <Etat>{getEtat(details)}</Etat>
+      <Mission>{getMission(details)}</Mission>
       <Content
         nodes={projet.content}
         images={images}
-      />
+        />
       <Arrows projets={projets.map(({ code_projet }) => code_projet)} projet={projet.code_projet} />
     </Layout>
   )

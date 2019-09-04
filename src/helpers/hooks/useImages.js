@@ -17,7 +17,6 @@ const useImages = () => {
       }
     }
   `)
-
     return images;
 }
 

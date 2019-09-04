@@ -25,6 +25,7 @@ const useProjetsDataAndImages = () => {
             matiere
             matiere_page_bdd
             mission
+            etat
             nom
             nom_fichier_page_bdd
             nom_fichier_page_projets

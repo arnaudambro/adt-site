@@ -9,10 +9,12 @@ import {
   getMaterial,
   getMaterialHeightPageProjets,
   getYear,
-  getDeliveryDisplayed,
+  getEtat,
   getLocation,
   getSurface,
+  getMission,
 } from '../helpers/selectors'
+import { addSuffix } from '../helpers/projetUrl'
 import Item from "./item";
 import { Link } from "gatsby";
 
@@ -47,7 +49,11 @@ const Location = styled.span`
 const Surface = styled.span`
   ${cssContent}
 `
-const Delivery = styled.span`
+const Mission = styled.span`
+  ${cssContent}
+`
+
+const Etat = styled.span`
 text-transform: capitalize;
   ${cssContent}
 `
@@ -60,7 +66,7 @@ font-weight: 500;
 const ProjetMaterialIcon = ({ setVisible, visible, ...projet }) =>
   <Item
     height={getMaterialHeightPageProjets(projet)}
-    to={`/projet/${getCode(projet)}`}
+    to={`/projet/${addSuffix(getCode(projet))}`}
     as={Link}
     setVisible={setVisible}
     visible={visible}
@@ -72,9 +78,10 @@ const ProjetMaterialIcon = ({ setVisible, visible, ...projet }) =>
     {getCollab(projet) && <Collab>Cotraitance avec {getCollab(projet)}</Collab>}
     <Description>{getDescription(projet)}</Description>
     <Location>{getLocation(projet)}</Location>
-    <Surface>{getSurface(projet)} m<sup>2</sup></Surface>
-    <Delivery>{getDeliveryDisplayed(projet)}</Delivery>
+    <Surface>Surface: {getSurface(projet)} m<sup>2</sup></Surface>
+    <Etat>{getEtat(projet)}</Etat>
     <Material>Matière: {getMaterial(projet)}</Material>
+    <Mission>{getMission(projet)}</Mission>
   </Item>
 
 

@@ -9,6 +9,11 @@
       "image": "VD232-contexte.jpg"
     },
     {
+      "type": "image",
+      "section": 1,
+      "src": "VD232-existant.jpg"
+    },
+    {
       "type": "p",
       "section": 1,
       "content": "Ce projet a été conçu et imaginé dans la continuité de celui de la villa Beulin (VB11) car il est seulement sur l’autre rive de la Loire, à 2km plus au sud. Il y reprend donc le même principe d’une extension où l’architecture vient apaiser la géométrie de l’existant."
@@ -29,11 +34,6 @@
       "src": "VD232-diagramme.jpg"
     },
     {
-      "type": "image",
-      "section": 1,
-      "src": "VD232-existant.jpg"
-    },
-    {
       "type": "summary",
       "section": 2,
       "content": "#2 - Table des matières",
@@ -48,7 +48,8 @@
     {
       "type": "image",
       "section": 3,
-      "src": "VD232-PLANRDC.jpg"
+      "src": "VD232-PLANRDC.jpg",
+      "style": "margin-top: 130px !important;"
     },
     {
       "type": "image",

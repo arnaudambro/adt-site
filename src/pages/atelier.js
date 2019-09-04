@@ -22,7 +22,7 @@ const Atelier = () => {
         }
       }
     }
-    allImageSharp(filter: {fluid: {src: {regex: "\/ATELIER\/"}}}) {
+    allImageSharp(filter: {fluid: {src: {regex: "\/ATELIER|Triangle\/"}}}) {
       edges {
         ...AllImages
       }
@@ -31,7 +31,7 @@ const Atelier = () => {
 `)
   return <Layout>
     <SEO title="Atelier" />
-    <Content nodes={atelier.map(({ node }) => node)} images={images} open />
+    <Content forceOpen nodes={atelier.map(({ node }) => node)} images={images} open />
   </Layout>
 }
 

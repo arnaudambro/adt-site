@@ -5,13 +5,12 @@
     {
       "type": "summary",
       "section": 1,
-      "content": "#1 - Analyse du contexte",
-      "image": "AM03-BOULEAU-existant.jpg"
+      "content": "#1 - Analyse du contexte"
     },
     {
       "type": "image",
       "section": 1,
-      "src": "ATELIER-ANALYSE-CONTEXTE.jpg"
+      "src": "AM03-BOULEAU-existant.jpg"
     },
     {
       "type": "p",
@@ -33,22 +32,18 @@
       "type": "summary",
       "section": 3,
       "content": "#3 - Projet",
-      "image": "_F1A6479-optimise.jpg"
+      "image": "_F1A6434_optimise.jpg"
     },
     {
       "type": "image",
       "section": 3,
-      "src": "AM03-BOULEAU-plan.jpg"
+      "src": "AM03-BOULEAU-plan.jpg",
+      "style": "margin-top: 110px !important;"
     },
     {
       "type": "image",
       "section": 3,
-      "src": "_F1A6421_optimise.jpg"
-    },
-    {
-      "type": "image",
-      "section": 3,
-      "src": "_F1A6434_optimise.jpg"
+      "src": "_F1A6479-optimise.jpg"
     },
     {
       "type": "image",

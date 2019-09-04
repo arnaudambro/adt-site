@@ -9,6 +9,11 @@
       "image": "VB11-contexte.jpg"
     },
     {
+      "type": "image",
+      "section": 1,
+      "src": "VB11-existant1.jpg"
+    },
+    {
       "type": "p",
       "section": 1,
       "content": "Située face à la promenade pédestre des bords de Loire, la Villa VB11 se démarque du contexte paysagé par son architecture prononcée et avant-gardiste des années 70. La demande d’une extension des espaces de vie prend donc la forme d’une avancée vers le fleuve.<br/>Apparait alors une géométrie simple et en rupture avec les lignes du bâtiment existant. Sa façade est composée d’un béton sablé qui miroite au promeneur la proximité du sablonneux paysage de l’affluent."
@@ -22,11 +27,6 @@
       "type": "image",
       "section": 1,
       "src": "VB11-diagramme.jpg"
-    },
-    {
-      "type": "image",
-      "section": 1,
-      "src": "VB11-existant1.jpg"
     },
     {
       "type": "summary",
@@ -43,7 +43,8 @@
     {
       "type": "image",
       "section": 3,
-      "src": "atelierdelalandetabourin-maison-loiret-VB11-planRDC.jpg"
+      "src": "atelierdelalandetabourin-maison-loiret-VB11-planRDC.jpg",
+      "style": "margin-top: 150px !important;"
     },
     {
       "type": "image",

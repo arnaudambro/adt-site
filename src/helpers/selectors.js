@@ -10,6 +10,8 @@ const getMaterialHeightPageProjets = ({ hauteur_page_projets_px }) => hauteur_pa
 const getMaterialHeightPageBDD = ({ hauteur_page_bdd_px }) => hauteur_page_bdd_px;
 const getClassementPageProjets = ({ classement_page_projets }) => parseInt(classement_page_projets, 10);
 const getDeliveryDate = ({ livraison_YYYY_MM_DD }) => new Date(livraison_YYYY_MM_DD);
+const getEtat = ({ etat }) => `État: ${etat || '-'}`;
+const getMission = ({ mission }) => `Mission: ${mission}`;
 const getDeliveryDisplayed = (projet, long = false) => {
   const deliveryDate = getDeliveryDate(projet);
   const formattedDate = getDeliveryDate(projet).toLocaleString('fr', { month: long ? 'long' : 'short', year: 'numeric' });
@@ -25,8 +27,8 @@ const getPrix = ({ prix_eur }) => prix_eur ? prix_eur + ' €' : 'NC'
 
 const getBDDValueCategory = (value) => value.split('-')[0]
 const getBDDValueRank = (value) => parseInt(value.split('-')[1])
-const getYearBDDValue = ({ annee_page_bdd_YYYY }) => annee_page_bdd_YYYY
-const getYear = (projet) => getBDDValueCategory(getYearBDDValue(projet))
+  const getYearBDDValue = ({ annee_page_bdd_YYYY }) =>  annee_page_bdd_YYYY
+const getYear = (projet) => parseInt(getBDDValueCategory(getYearBDDValue(projet)), 10)
 const getMaterialBDDValue = ({ matiere_page_bdd }) => matiere_page_bdd
 const getMaterialCategory = (projet) => getBDDValueCategory(getMaterialBDDValue(projet))
 const getProgrammeBDDValue = ({ programme }) => programme
@@ -35,7 +37,7 @@ const isProjetInCategory = (caption, category) => projet => {
   let categoryValue;
   switch (caption) {
     case anneesCaption: {
-      categoryValue = getYearBDDValue(projet);
+      categoryValue = getYearBDDValue(projet).toString();
       break;
     }
     case programmesCaption: {
@@ -51,7 +53,7 @@ const isProjetInCategory = (caption, category) => projet => {
       break;
     }
   }
-  return getBDDValueCategory(categoryValue).toUpperCase() === category.toUpperCase()
+  return getBDDValueCategory(categoryValue).toString().toUpperCase() === category.toString().toUpperCase()
 }
 const getBDDRanking = caption => projet => {
   let categoryValue;
@@ -125,6 +127,8 @@ export {
   getClassementPageProjets,
   getDeliveryDate,
   getDeliveryDisplayed,
+  getEtat,
+  getMission,
   getImagePropsForGatsby,
   getImageSrcFromImages,
   getImagesForNews,

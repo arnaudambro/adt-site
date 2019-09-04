@@ -5266,6 +5266,14 @@ gatsby-page-utils@^0.0.5:
     micromatch "^3.1.10"
     slash "^1.0.0"
 
+gatsby-plugin-htaccess@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-htaccess/-/gatsby-plugin-htaccess-1.2.1.tgz#765f1fe05554771e338f133055bc4dadd72bafe9"
+  integrity sha512-fVEEHdV5s8IuGmhXovNyt7gyxn7Y1cYxki7ScfGYiv09g2IlLXFrBPIhzoQnUnOGxRnunrLVVy2sC9q25WbnYw==
+  dependencies:
+    fs-extra "^7.0.1"
+    lodash "^4.17.15"
+
 gatsby-plugin-manifest@^2.2.1:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.2.5.tgz#cfa3f5a5f02989e9a15a3b08b11548be45af11e8"

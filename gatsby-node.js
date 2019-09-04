@@ -27,6 +27,7 @@ exports.createPages = ({ graphql, actions }) => {
               section
               src
               type
+              style
             }
           }
         }
@@ -38,10 +39,26 @@ exports.createPages = ({ graphql, actions }) => {
       }
 
       // Create blog post pages.
-      result.data.allProjetsJson.edges.forEach(({ node: projet }) => {
+      result.data.allProjetsJson.edges
+      .reduce((projets, { node: projet }) => {
+         return [
+           ...projets,
+           {
+            ...projet,
+            debug: false
+          },
+           {
+             ...projet,
+             debug: true
+           }
+         ]
+      }, [])
+      .forEach(projet => {
         createPage({
           // Path for this page — required
-          path: 'projet/' + projet.code_projet,
+          path: projet.debug
+          ? 'projet/' + projet.code_projet + '-debug'
+          : 'projet/' + projet.code_projet,
           component: projetPage,
           context: {
             projet

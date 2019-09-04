@@ -9,6 +9,16 @@
       "image": "atelierdelalandetabourin-villa-campagne-tuilerie-argile-VB229.jpg"
     },
     {
+      "type": "image",
+      "section": 1,
+      "src": "VB229-existant1.jpg"
+    },
+    {
+      "type": "image",
+      "section": 1,
+      "src": "atelierdelalandetabourin-villa-campagne-briques-diagram-VB229.jpg"
+    },
+    {
       "type": "p",
       "section": 1,
       "content": "Le projet consiste ici à surélever et réhabiliter trois corps de ferme mitoyens au sein d’une propriété en Sologne."
@@ -29,15 +39,10 @@
       "content": "A l’intérieur, de nombreux puits de lumière viendront illuminer l‘espace et révéler la délicate association de la brique, du bois et du béton ciré."
     },
     {
-      "type": "image",
-      "section": 1,
-      "src": "atelierdelalandetabourin-villa-campagne-briques-diagram-VB229.jpg"
-    },
-    {
       "type": "summary",
       "section": 2,
       "content": "#2 - Table des matières",
-      "image": "atelierdelalandetabourin-VB229-matiere-briquesologne.jpg"
+      "image": "VB229-BRIQUES-TABLEDESMATIERES.jpg"
     },
     {
       "type": "summary",
@@ -48,37 +53,38 @@
     {
       "type": "image",
       "section": 3,
-      "src": "atelierdelalandetabourin-villa-campagne-tuile-plan.jpg"
+      "src": "atelierdelalandetabourin-villa-campagne-tuile-plan.jpg",
+      "style": "margin-bottom: 10px !important;"
     },
     {
       "type": "image",
       "section": 3,
-      "src": "atelierdelalandetabourin-villa-campagne-tuile-elevation1.jpg"
+      "src": "atelierdelalandetabourin-villa-campagne-tuile-elevation1.jpg",
+      "style": "margin-bottom: 10px !important;"
     },
     {
       "type": "image",
       "section": 3,
-      "src": "atelierdelalandetabourin-villa-campagne-tuile-elevation2.jpg"
+      "src": "atelierdelalandetabourin-villa-campagne-tuile-elevation2.jpg",
+      "style": "margin-bottom: 10px !important;"
     },
     {
       "type": "image",
       "section": 3,
-      "src": "atelierdelalandetabourin-villa-campagne-tuile-elevation3.jpg"
+      "src": "atelierdelalandetabourin-villa-campagne-tuile-elevation3.jpg",
+      "style": "margin-bottom: 10px !important;"
     },
     {
       "type": "image",
       "section": 3,
-      "src": "atelierdelalandetabourin-villa-campagne-tuile-elevation4.jpg"
+      "src": "atelierdelalandetabourin-villa-campagne-tuile-elevation4.jpg",
+      "style": "margin-bottom: 10px !important;"
     },
     {
       "type": "image",
       "section": 3,
-      "src": "atelierdelalandetabourin-villa-existant-VB229.jpg"
-    },
-    {
-      "type": "image",
-      "section": 3,
-      "src": "atelierdelalandetabourin-villa-campagne-briques-facade-VB229.jpg"
+      "src": "atelierdelalandetabourin-villa-existant-VB229.jpg",
+      "style": "margin-bottom: 10px !important;"
     },
     {
       "type": "image",
