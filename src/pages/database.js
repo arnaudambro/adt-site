@@ -17,12 +17,18 @@ const gridGap = 35;
 const dbWidth = 3 * categoryWidth + 2 * gridGap;
 
 const Filters = styled.div`
-  width: ${dbWidth}px;
+  width: ${categoryWidth}px;
+  margin-left: auto;
+    margin-right: auto;
   ${displayFlex({
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'flex-end',
   })}
+
+  ${media.desktop`
+    width: ${dbWidth}px;
+  `}
 
 `
 
@@ -59,7 +65,7 @@ const Categories = styled.div`
   })}
   ${media.desktop`
     ${displayGrid({
-      gridTemplateColumns: "repeat(auto-fit, 145px)",
+      gridTemplateColumns: `repeat(auto-fit, ${categoryWidth}px)`,
       gridAutoRows: "auto",
       gridGap: "35px",
       justifyContent: 'flex-start'

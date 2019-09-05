@@ -33,8 +33,8 @@ const Divider = styled.div`
   `}
 `
 
-const News = ({ setVisible, visible, withDivider, ...news }) =>
-  <>
+const News = ({ setVisible, visible, withDivider, ...news }) => {
+  return <>
     <Item
       height={getNewsHeight(news)}
       setVisible={setVisible}
@@ -42,7 +42,7 @@ const News = ({ setVisible, visible, withDivider, ...news }) =>
       alt={getNewsDescription(news)}
       id={news.id}
       images={news.images}
-      bigMarginBottom={true}
+      bigMarginBottom
       withDivider={withDivider}
     >
       <Title>{getNewsDate(news)}</Title>
@@ -50,6 +50,7 @@ const News = ({ setVisible, visible, withDivider, ...news }) =>
     </Item>
     {withDivider && <Divider />}
   </>
+}
 
 
 export default News

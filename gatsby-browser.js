@@ -8,12 +8,7 @@
 var smoothscroll = require('smoothscroll-polyfill');
 var windowExists = require('./src/helpers/windowExists').default;
 var windowPathNameIncludes = require('./src/helpers/windowPathNameIncludes').default;
-
-function isTouchDevice() {
-  var el = document.createElement('div');
-  el.setAttribute('ongesturestart', 'return;'); // or try "ontouchstart"
-  return typeof el.ongesturestart === "function";
-}
+var isTouchDevice = require('./src/helpers/isTouchDevice').default;
 
 exports.onClientEntry = () => {
   if (windowExists()) {

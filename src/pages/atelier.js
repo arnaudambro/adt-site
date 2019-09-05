@@ -19,6 +19,7 @@ const Atelier = () => {
           section
           src
           type
+          style
         }
       }
     }

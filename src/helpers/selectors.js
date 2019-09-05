@@ -86,8 +86,9 @@ const getImageSrcFromImages = ({ node: { fluid: { src }}}) => src;
 
 
 const getNewsDescription = news => news.description;
-const getNewsHeight = news => news.images.reduce((newsHeight, { height }) => {
-  return newsHeight + height + 10
+const getNewsHeight = news => news.imagesParameters.reduce((newsHeight, { height }) => {
+  return null // working better like that, dont ask
+  // return newsHeight + height + 10
 }, -10);
 const getNewsImageFile = image => image.file;
 const getNewsDate = news => (new Date(news.date)).toLocaleString('fr', { month: 'long', year: 'numeric', day: 'numeric' })
@@ -107,7 +108,7 @@ const getProjetMaterialImageForBDDPage = (images, projet) =>
   getImageFromSrc(images, getMaterialImageSrcForBDDPage(projet))
 
 const getImagesForNews = (images, news) =>
-  news.images.map(image => getImageFromSrc(images, getNewsImageFile(image)))
+  news.imagesParameters.map(image => getImageFromSrc(images, getNewsImageFile(image)))
 
 export {
   getTitle,

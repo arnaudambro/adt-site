@@ -7,8 +7,6 @@ import SEO from "../components/seo"
 import News from "../components/news";
 
 const Journal = () => {
-    const [visibleNews, setVisibleNews] = React.useState(null)
-
     const {
       allJournalJson:{edges: journal },
       allImageSharp:{edges: images },
@@ -21,7 +19,7 @@ const Journal = () => {
             description
             date
             withDivider
-            images {
+            imagesParameters: images {
               file
               height
             }
@@ -35,6 +33,7 @@ const Journal = () => {
       }
     }
   `)
+  const [visibleNews, setVisibleNews] = React.useState(journal[0].news.id)
   return <Layout >
     <SEO title="Journal" />
     {journal.map(({ news }) => (

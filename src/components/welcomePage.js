@@ -112,7 +112,7 @@ const landingPageNumber = () => {
     nowZero,
     nowZeroInDays,
     parsedPageNumber,
-    landingPageNumber: Math.floor(parsedPageNumber / changeFrequency + 1)
+    landingPageNumber: Math.floor(parsedPageNumber / (changeFrequency + 1))
   };
 }
 

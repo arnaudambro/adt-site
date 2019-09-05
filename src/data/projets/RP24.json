@@ -5,8 +5,12 @@
     {
       "type": "summary",
       "section": 1,
-      "content": "#1 - Analyse du contexte",
-      "image": "RP24-existant1.jpg"
+      "content": "#1 - Analyse du contexte"
+    },
+    {
+      "type": "image",
+      "section": 1,
+      "src": "RP24-existant1.jpg"
     },
     {
       "type": "p",

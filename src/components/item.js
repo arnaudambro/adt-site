@@ -5,12 +5,12 @@ import Img from "gatsby-image/withIEPolyfill"
 import { displayFlex, gatsbyImage } from "../styles/mixins";
 import { media } from "../styles/mediaQueries";
 import windowExists from "../helpers/windowExists";
+import isTouchDevice from "../helpers/isTouchDevice";
 
-const ItemWrapper = styled.div`
+const ItemWrapper = styled(({ bigMarginBottom, height, theme, ...rest }) => <div {...rest} />)`
   height: ${({ height }) => height}px;
   margin-bottom: ${({ bigMarginBottom }) => bigMarginBottom ? 30 : 5}px;
   display: flex;
-  /* overflow: hidden; */
   ${({ theme }) => gatsbyImage({
     width: theme.width.material + 'px !important',
     height: '100% !important',
@@ -37,7 +37,8 @@ const DescriptionContainer = styled.div`
     margin-left: ${({ theme }) => theme.width.desktop.indicator + theme.margin.right.desktop.indicator + theme.margin.left.desktop.indicator}px;
   `}
   ${displayFlex({ flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start' })}
-  margin-right: ${({ theme }) => theme.width.hideScrollbar - theme.width.scrollBar}px;
+  margin-right: ${({ theme }) => isTouchDevice() ? theme.width.hideScrollbar : theme.width.hideScrollbar - theme.width.scrollBar}px;
+
   opacity: ${({ visible }) => visible ? 1 : 0};
   transform: ${({ visible }) => visible ? 'translateX(0)' : 'translateX(50px)'};
   transition: all 200ms ease-in-out;
@@ -66,12 +67,12 @@ export const Item = ({
   children,
   id,
   images,
-  bigMarginBottom = false
+  bigMarginBottom
 }) =>
   <ItemWrapper
     as={as}
     to={to}
-    bigMarginBottom={bigMarginBottom ? true : false}
+    bigMarginBottom={bigMarginBottom}
     height={height}
     onClick={(e) => {
       if (!visible && !directClick) {

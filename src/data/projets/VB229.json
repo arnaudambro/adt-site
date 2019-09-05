@@ -14,11 +14,6 @@
       "src": "VB229-existant1.jpg"
     },
     {
-      "type": "image",
-      "section": 1,
-      "src": "atelierdelalandetabourin-villa-campagne-briques-diagram-VB229.jpg"
-    },
-    {
       "type": "p",
       "section": 1,
       "content": "Le projet consiste ici à surélever et réhabiliter trois corps de ferme mitoyens au sein d’une propriété en Sologne."
@@ -37,6 +32,11 @@
       "type": "p",
       "section": 1,
       "content": "A l’intérieur, de nombreux puits de lumière viendront illuminer l‘espace et révéler la délicate association de la brique, du bois et du béton ciré."
+    },
+    {
+      "type": "image",
+      "section": 1,
+      "src": "atelierdelalandetabourin-villa-campagne-briques-diagram-VB229.jpg"
     },
     {
       "type": "summary",
@@ -78,12 +78,6 @@
       "type": "image",
       "section": 3,
       "src": "atelierdelalandetabourin-villa-campagne-tuile-elevation4.jpg",
-      "style": "margin-bottom: 10px !important;"
-    },
-    {
-      "type": "image",
-      "section": 3,
-      "src": "atelierdelalandetabourin-villa-existant-VB229.jpg",
       "style": "margin-bottom: 10px !important;"
     },
     {
