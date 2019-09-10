@@ -1,17 +1,37 @@
 import React from 'react'
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Img from "gatsby-image/withIEPolyfill"
 import { displayFlex, gatsbyImage } from '../styles/mixins';
 import { getImageFromSrc } from '../helpers/selectors';
 import useWindowSize from '../helpers/hooks/useWindowSize';
 import windowExists from '../helpers/windowExists';
 import windowPathNameIncludes from '../helpers/windowPathNameIncludes';
-// import triangleSvg from '../images/Triangle.svg';
-
-const triangleInlineSvg = '\'data:image/svg+xml;utf8,<svg width="6px" height="7px" viewBox="0 0 64 75"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon stroke="%23979797" stroke-width="7" transform="translate(30.000000, 37.500000) rotate(90.000000) translate(-30.000000, -37.500000) " points="30 11 61 64 -1 64"></polygon></g></svg>\''
 
 const ImgStyled = styled(Img)`
   ${props => props.customStyle && `${props.customStyle}`}
+`
+
+const triangleSize = 18;
+const triangleCss = image => css`
+  list-style-image: none;
+  &::marker {
+    display: none;
+  }
+  &::-webkit-details-marker {
+      display: none
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    background-image: url(${image});
+    background-size: contain;
+    height: ${triangleSize}px;
+    width: ${triangleSize}px;
+    background-repeat: no-repeat;
+    color: transparent;
+  }
 `
 
 const ContentStyled = styled.div`
@@ -56,34 +76,28 @@ const ContentStyled = styled.div`
       opacity: 0.5;
     }
     /* list-style-image: url(${({ triangle }) => triangle}); */
-    /* list-style-image: url(${triangleInlineSvg}); */
 
-    &::-webkit-details-marker {
-      /* background: url(${({ triangle }) => triangle}); */
-      /* color: transparent; */
-    }
-
-    &::marker {
-      /* font-size: 0.9em; */
-      -webkit-text-stroke: .05em rgba(19,21,22,1);
-      -webkit-text-fill-color: transparent;
-    }
+    ${({ triangle }) => triangleCss(triangle.close)}
 
     .gatsby-image-wrapper {
       margin-top: 40px;
     }
   }
+  details[open] summary {
+    ${({ triangle }) => triangleCss(triangle.open)}
+  }
   summary #title {
     text-transform: uppercase;
     width: 100%;
     font-size: 0.9em;
+    padding-left: ${triangleSize + triangleSize / 6}px;
     &::after {
       content: "";
       border-bottom: 1px solid black;
       width: ${({ contentWidth }) => contentWidth}px;
       position: absolute;
       bottom: -10px;
-      left: -20px;
+      left: 0;
     }
   }
   ${gatsbyImage({
@@ -133,11 +147,13 @@ const Content = ({ images, nodes, debug = false, open = false, forceOpen = false
   }, [])
 
   const [contentWidth, setContentWidth] = React.useState(0);
+  // eslint-disable-next-line
   React.useLayoutEffect(() => {
     const width = contentRef.current ? contentRef.current.getBoundingClientRect().width : 0
     if (width !== contentWidth) {
       setContentWidth(width)
     }
+  // eslint-disable-next-line
   }, [windowWidth])
 
   const renderNode = (node, ind) => {
@@ -198,7 +214,10 @@ const Content = ({ images, nodes, debug = false, open = false, forceOpen = false
     <ContentStyled
       ref={contentRef}
       contentWidth={contentWidth}
-      triangle={getImageFromSrc(images, 'Triangle.png').src}
+      triangle={{
+        close: getImageFromSrc(images, 'Triangle-droite.png').src,
+        open: getImageFromSrc(images, 'Triangle-bas.png').src,
+      }}
       forceOpen={forceOpen}
     >
       {formattedNodes.map((node, ind) => renderNode(node, ind))}

@@ -19,6 +19,7 @@ import { displayGrid, displayFlex } from "../styles/mixins";
 import pages, { projets } from "../reference/pages";
 import windowExists from "../helpers/windowExists";
 import windowPathNameIncludes from "../helpers/windowPathNameIncludes";
+import isTouchDevice from "../helpers/isTouchDevice";
 
 const swipeup = keyframes`
   0% {
@@ -88,6 +89,11 @@ const ContentWrapper = styled.div`
 const Content = styled.main`
   ${({ noMaxWidth, theme: { width: { hideScrollbar } } }) => {
     if (noMaxWidth) {
+      if (isTouchDevice()) {
+        return `
+          width: 100%;
+        `
+      }
       return `
         width: calc(100% + ${2 * hideScrollbar}px);
       `

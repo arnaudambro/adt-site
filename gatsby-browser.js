@@ -13,7 +13,6 @@ var isTouchDevice = require('./src/helpers/isTouchDevice').default;
 exports.onClientEntry = () => {
   if (windowExists()) {
     window.showWelcomePage = windowPathNameIncludes()
-    console.log('window.showWelcomePage', window.showWelcomePage)
     window.isTouchDevice = isTouchDevice()
     // kick off the polyfill!
     smoothscroll.polyfill();

@@ -19,15 +19,22 @@ const dbWidth = 3 * categoryWidth + 2 * gridGap;
 const Filters = styled.div`
   width: ${categoryWidth}px;
   margin-left: auto;
-    margin-right: auto;
+  padding-left: 20px;
+  margin-right: auto;
   ${displayFlex({
     flexDirection: 'column',
     justifyContent: 'flex-start',
-    alignItems: 'flex-end',
+    alignItems: 'flex-start',
   })}
 
   ${media.desktop`
+    margin-left: unset;
     width: ${dbWidth}px;
+    ${displayFlex({
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      alignItems: 'flex-end',
+    })}
   `}
 
 `
@@ -112,7 +119,7 @@ const Category = styled.span`
 const Database = () => {
   const { projets, images } = useProjetsDataAndImages()
 
-  const annees = React.useMemo(() => new Set(projets.map(getYear)))
+  const annees = React.useMemo(() => new Set(projets.map(getYear)), [projets])
 
   const filters = { annees, matieres, programmes }
 

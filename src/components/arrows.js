@@ -4,13 +4,14 @@ import { displayFlex } from '../styles/mixins';
 import { media } from '../styles/mediaQueries';
 import { findPrevProjet, findNextProjet } from '../helpers/projetUrl';
 import { Link } from 'gatsby';
+import isTouchDevice from '../helpers/isTouchDevice';
 
 const ArrowsContainer = styled.div`
   height: 25px;
-  width: 50px;
+  width: ${({ theme }) => theme.width.arrows}px;
   padding-right: 1px;
   position: absolute;
-  right: ${({ theme }) => theme.width.hideScrollbar}px;
+  right: ${({ theme }) => isTouchDevice() ? 0 : theme.width.hideScrollbar}px;
   top: 0;
   ${({ theme }) => media.desktop`
     top: ${theme.padding.Y.desktop.main}px;

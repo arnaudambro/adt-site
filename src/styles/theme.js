@@ -45,6 +45,7 @@ const theme = {
       headerColumn: 300,
       content: (dividerWidth - sideColumnWidth) * 0.9
     },
+    arrows: 50,
     hideScrollbar: 18,
     scrollBar: 14,
     logo: 177,

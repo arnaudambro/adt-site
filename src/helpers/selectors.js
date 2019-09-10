@@ -86,6 +86,7 @@ const getImageSrcFromImages = ({ node: { fluid: { src }}}) => src;
 
 
 const getNewsDescription = news => news.description;
+const getNewsAlt = news => news.description.replace('<br/>', ' ');
 const getNewsHeight = news => news.imagesParameters.reduce((newsHeight, { height }) => {
   return null // working better like that, dont ask
   // return newsHeight + height + 10
@@ -141,6 +142,7 @@ export {
   getSurface,
   getNewsDate,
   getNewsDescription,
+  getNewsAlt,
   getNewsImageFile,
   getNewsHeight
 }

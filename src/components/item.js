@@ -25,7 +25,7 @@ const ImagesContainer = styled.div`
 `
 
 const ImgStyled = styled(Img)`
-  opacity: ${props => props.visible ? 0.5 : 1};
+  opacity: ${props => props.visible && !props.noScreening ? 0.5 : 1};
   transition: opacity 200ms ease-in-out;
   ${props => props.marginBottom && 'margin-bottom: 5px;'}
 `
@@ -67,7 +67,8 @@ export const Item = ({
   children,
   id,
   images,
-  bigMarginBottom
+  bigMarginBottom,
+  noScreening = false
 }) =>
   <ItemWrapper
     as={as}
@@ -101,6 +102,7 @@ export const Item = ({
           alt={alt}
           title={alt}
           visible={visible}
+          noScreening={noScreening}
           marginBottom={ind !== images.length - 1}
         />
       ))}

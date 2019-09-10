@@ -5,6 +5,7 @@ import {
   getNewsDescription,
   getNewsDate,
   getNewsHeight,
+  getNewsAlt,
 } from '../helpers/selectors'
 import Item from "./item";
 import { media } from "../styles/mediaQueries";
@@ -39,11 +40,12 @@ const News = ({ setVisible, visible, withDivider, ...news }) => {
       height={getNewsHeight(news)}
       setVisible={setVisible}
       visible={visible}
-      alt={getNewsDescription(news)}
+      alt={getNewsAlt(news)}
       id={news.id}
       images={news.images}
       bigMarginBottom
       withDivider={withDivider}
+      noScreening
     >
       <Title>{getNewsDate(news)}</Title>
       <Description dangerouslySetInnerHTML={{__html: getNewsDescription(news) }} />

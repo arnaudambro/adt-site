@@ -105,7 +105,7 @@ const landingPageNumber = () => {
   const now = new Date();
   const nowZero = new Date(now.getFullYear(), now.getMonth(), now.getDate());
   const changeFrequency = 3;
-  const numberOfImages = 8;
+  const numberOfImages = 9;
   const nowZeroInDays = Math.floor(Date.parse(nowZero) / 1000 / 60 / 60 / 24);
   const parsedPageNumber = nowZeroInDays % (changeFrequency * numberOfImages) + 1;
   return {
