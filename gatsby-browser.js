@@ -7,12 +7,10 @@
 // You can delete this file if you're not using it
 var smoothscroll = require('smoothscroll-polyfill');
 var windowExists = require('./src/helpers/windowExists').default;
-var windowPathNameIncludes = require('./src/helpers/windowPathNameIncludes').default;
 var isTouchDevice = require('./src/helpers/isTouchDevice').default;
 
-exports.onClientEntry = () => {
+exports.onInitialClientRender = (args) => {
   if (windowExists()) {
-    window.showWelcomePage = windowPathNameIncludes()
     window.isTouchDevice = isTouchDevice()
     // kick off the polyfill!
     smoothscroll.polyfill();

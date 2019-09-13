@@ -20,6 +20,7 @@ import pages, { projets } from "../reference/pages";
 import windowExists from "../helpers/windowExists";
 import windowPathNameIncludes from "../helpers/windowPathNameIncludes";
 import isTouchDevice from "../helpers/isTouchDevice";
+import makeSureWindow from "../helpers/makeSureWindow";
 
 const swipeup = keyframes`
   0% {
@@ -170,21 +171,25 @@ const AnimationWrapper = styled.div`
 class Layout extends React.Component {
   state = {
     withAnimation: false,
-    showWelcomePage: windowExists() ? window.showWelcomePage : false
+    showWelcomePage: makeSureWindow().showWelcomePage || windowPathNameIncludes(),
+    mounted: false
   }
 
   componentDidMount() {
     if (!windowExists()) {
-      this.setState({ showWelcomePage: false })
+      this.setState({ showWelcomePage: false, mounted: true })
       return
     }
     if (windowExists()) {
-      if (!window.showWelcomePage) {
-        this.setState({ showWelcomePage: false })
-        return
+      if (windowPathNameIncludes(projets) && window.showWelcomePage) {
+        this.setState({ withAnimation: true, mounted: true })
+        return;
       }
-      if (windowPathNameIncludes(projets)) this.setState({ withAnimation: true })
+      if (windowPathNameIncludes()) {
+        window.showWelcomePage = true;
+      }
     }
+    this.setState({ mounted: true })
   }
 
   handleAnimationEnd = (e) => {
@@ -195,13 +200,16 @@ class Layout extends React.Component {
   render() {
     const {
       withAnimation,
-      showWelcomePage
+      showWelcomePage,
+      mounted
     } = this.state;
     const {
       noMaxWidth,
       children,
       arrowWidth
     } = this.props;
+
+    if (!mounted) return null;
 
     return(
       <StaticQuery

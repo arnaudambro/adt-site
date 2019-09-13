@@ -1,4 +1,5 @@
 const windowPathNameIncludes = (path = '') => {
+  if (typeof window === 'undefined') return false;
   const urlPaths = window.location.pathname
   .trim()
   .split('/')
