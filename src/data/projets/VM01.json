@@ -1,0 +1,61 @@
+{
+  "title": "VM01",
+  "code_projet": "VM01",
+  "content": [
+    {
+      "type": "summary",
+      "section": 1,
+      "content": "#1 - Analyse du contexte",
+      "image": "VM01-contexte.jpg"
+    },
+    {
+      "type": "p",
+      "section": 1,
+      "content": "Le terrain de la villa VM01 se situe dans les Ardennes, au cœur d’une exploitation agricole. Cette proximité entre espace privé et visiteur fut le point de départ de notre réflexion pour l’extension de la résidence principale. Une volumétrie simple et traditionnelle renfermée en toute intimité derrière un épais mur de pierre. "
+    },
+    {
+      "type": "p",
+      "section": 1,
+      "content": "Un travail contemporain de rythme et d’ouvertures sur le paysage mis en valeur par l’utilisation de la pierre jaune d’Hannogne dont la carrière se situe à moins de 5km. "
+    },
+    {
+      "type": "image",
+      "section": 1,
+      "src": "VM01-diagramme.jpg"
+    },
+    {
+      "type": "image",
+      "section": 1,
+      "src": "VM01-existant.jpg"
+    },
+    {
+      "type": "summary",
+      "section": 2,
+      "content": "#2 - Table des matières",
+      "image": "VM01-TABLE_DES_MATIERES.jpg"
+    },
+    {
+      "type": "summary",
+      "section": 3,
+      "content": "#3 - Projet"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "VM01-PLAN-MASSE.jpg",
+      "style": "margin-bottom: 100px !important;margin-top: 100px !important;"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "VM01-PLAN-RDC_2.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "VM01-ELEVATION.jpg"
+    }
+  ]
+}
+
+

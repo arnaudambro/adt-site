@@ -59,17 +59,68 @@
       "type": "image",
       "section": 3,
       "src": "EB12-plan.jpg",
-      "style": "margin-top: 90px !important;"
+      "style": "margin-top: 90px !important;margin-bottom: 90px !important;"
     },
     {
       "type": "image",
       "section": 3,
-      "src": "EB12-facades.jpg"
+      "src": "EB12-atelierdelalandetabourin-F1A5438.jpg"
     },
     {
       "type": "image",
       "section": 3,
-      "src": "EB12-coupe.jpg"
+      "src": "EB12-atelierdelalandetabourin-F1A5452.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB12-atelierdelalandetabourin-F1A5490.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB12-atelierdelalandetabourin-F1A5500.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB12-atelierdelalandetabourin-F1A5528.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB12-atelierdelalandetabourin-F1A5571.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB12-atelierdelalandetabourin-F1A5591.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB12-atelierdelalandetabourin-F1A5602.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB12-atelierdelalandetabourin-F1A5609.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB12-atelierdelalandetabourin-F1A5635.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB12-atelierdelalandetabourin-F1A5649.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB12-facades.jpg",
+      "style": "margin-top: 50px !important;"
     }
   ]
 }

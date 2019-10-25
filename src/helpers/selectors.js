@@ -81,7 +81,14 @@ const getBDDRanking = caption => projet => {
 const rankProjectsInBDD = (caption) => (a, b) => getBDDRanking(caption)(a) > getBDDRanking(caption)(b) ? -1 : 1
 
 /* GATSBY-IMAGE */
-const getImagePropsForGatsby = ({ node: { fluid }}) => fluid;
+const getImagePropsForGatsby = edge => {
+  try {
+    const { node: { fluid }} = edge;
+    return fluid;
+  } catch (e) {
+    throw new Error(e)
+  }
+} ;
 const getImageSrcFromImages = ({ node: { fluid: { src }}}) => src;
 
 
@@ -97,10 +104,16 @@ const getNewsDate = news => (new Date(news.date)).toLocaleString('fr', { month: 
 /* GET IMAGE FLUID */
 
 
-const getImageFromSrc = (images, src) => getImagePropsForGatsby(
-  images
-  .find(img => getImageSrcFromImages(img).includes(src))
-  )
+const getImageFromSrc = (images, src) =>{
+  try {
+    return getImagePropsForGatsby(
+    images
+    .find(img => getImageSrcFromImages(img).includes(src))
+    )
+  } catch (e) {
+    console.error('getImageFromSrc', src, e)
+  }
+}
 
 const getProjetMaterialImageForProjetsPage = (images, projet) =>
   getImageFromSrc(images, getMaterialImageSrcForProjetsPage(projet))

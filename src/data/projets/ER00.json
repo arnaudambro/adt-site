@@ -1,0 +1,81 @@
+{
+  "title": "ER00",
+  "code_projet": "ER00",
+  "content": [
+    {
+      "type": "summary",
+      "section": 1,
+      "content": "#1 - Analyse du contexte"
+    },
+    {
+      "type": "image",
+      "section": 1,
+      "src": "ER00_existant.jpg"
+    },
+    {
+      "type": "p",
+      "section": 1,
+      "content": "Situé à 7km au nord de Rukomo, sur les hauteurs d’un plateau, notre sanctuaire se veut comme la finalité d’un pèlerinage paysagé contemplatif. "
+    },
+    {
+      "type": "p",
+      "section": 1,
+      "content": "Avec une emprise rectangulaire mais sans réelle limite, le sanctuaire traverse et  rassemble  trois identités fortes et symboliques du paysage rwandais: la plaine, la forêt, la vallée. C’est donc au travers du divin de chacune de ces identités paysagères que nous sommes venus définir les espaces du refuge. Une sculpture de l’expression sensorielle et surnaturelle de la nature."
+    },
+    {
+      "type": "p",
+      "section": 1,
+      "content": "Du décor plat et lumineux de la plaine où se situe la chapelle de la lisière, entrée du sanctuaire ;  jusqu’à la cime des arbres où flotte la chapelle de l’horizon, le paysage architectural du projet est décomposé d’une série de chapelles rayonnantes et  isolées. Chacune d’entre elles  tire au maximum les qualités sensorielles et spirituelles de son site afin de proposer au promeneur une succession d’expériences uniques. Elles mettent progressivement en condition le pèlerin avant l’accès à la dernière chapelle, aboutissement du pèlerinage. "
+    },
+    {
+      "type": "p",
+      "section": 1,
+      "content": "Toutes vêtues de terre, elles  sont le prolongement matériel direct du site et du patrimoine local. D’une sobriété éclatante, les différentes interventions architecturales deviennent des signaux et des points de repère dans le paysage. Elles appellent le lointain à une ascension entre réalité et divinité. Une expérience intemporelle d’évasion comme message de vie, de paix et d’avenir."
+    },
+    {
+      "type": "image",
+      "section": 1,
+      "src": "ER00_diagramme.jpg"
+    },
+    {
+      "type": "summary",
+      "section": 2,
+      "content": "#2 - Table des matières",
+      "image": "ER00-TERRE-TABLE-DES-MATIERES.jpg"
+    },
+    {
+      "type": "summary",
+      "section": 3,
+      "content": "#3 - Projet",
+      "image": "ER00-atelierdelalandetabourin-rwandachapel-exterieur.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "ER00-planmasse-00.jpg",
+      "style": "margin-bottom: 100px !important;margin-top: 100px !important;"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "ER00-planscoupe-01.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "ER00-coupedetail-02.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "ER00-image-loin-04.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "ER00-atelierdelalandetabourin-rwandachapel-interieur-05.jpg"
+    }
+  ]
+}
+
+

@@ -6,17 +6,17 @@
       "type": "summary",
       "section": 1,
       "content": "#1 - Analyse du contexte",
-      "image": "BE69-concept.jpg"
+      "image": "EB69-concept.jpg"
     },
     {
       "type": "image",
       "section": 1,
-      "src": "BE69-existant.jpg"
+      "src": "EB69-existant.jpg"
     },
     {
       "type": "image",
       "section": 1,
-      "src": "BE69-existant2.jpg"
+      "src": "EB69-existant2.jpg"
     },
     {
       "type": "p",
@@ -26,7 +26,7 @@
     {
       "type": "p",
       "section": 1,
-      "content": "Depuis son entrée par la grande porte cochère jusque dans chacun des niveaux de bureau, le salarié et le client sont guidés par une circulation aux multiples reflets noirs. Un jeu ponctuel de panneaux de bois et de claustras métalliques qui vient dynamiser les interventions sur le bâtiment existant et ainsi donner ainsi une âme plus industrielle et chaleureuse au lieu."
+      "content": "Depuis son entrée par la grande porte cochère jusque dans chacun des niveaux de bureau, le salarié et le client sont guidés par une circulation aux multiples reflets noirs. Un jeu ponctuel de panneaux de bois et de claustras métalliques qui vient dynamiser les interventions sur le bâtiment existant et donner ainsi une âme plus industrielle et chaleureuse au lieu."
     },
     {
       "type": "p",
@@ -36,30 +36,124 @@
     {
       "type": "image",
       "section": 1,
-      "src": "BE69-diagramme.jpg"
+      "src": "EB69-diagramme.jpg"
     },
     {
       "type": "summary",
       "section": 2,
       "content": "#2 - Table des matières",
-      "image": "BE69-ACIER-TABLEDESMATIERES.jpg"
+      "image": "EB69-ACIER-TABLEDESMATIERES.jpg"
     },
     {
       "type": "summary",
       "section": 3,
       "content": "#3 - Projet",
-      "image": "atelierdelalandetabourin-bureau-loiret-orleans-black-BE69.jpg"
+      "image": "atelierdelalandetabourin-bureau-loiret-orleans-black-EB69.jpg"
     },
     {
       "type": "image",
       "section": 3,
-      "src": "BE69-texture-plan-rdc.jpg",
-      "style": "margin-top: 120px !important;"
+      "src": "EB69-texture-plan-rdc.jpg"
     },
     {
       "type": "image",
       "section": 3,
-      "src": "BE69-texture-plan-r1.jpg"
+      "src": "EB69-atelierdelalandetabourin-00F1A4664_BIS.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB69-atelierdelalandetabourin-01-F1A4397.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB69-atelierdelalandetabourin-02F1A4710.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB69-atelierdelalandetabourin-03F1A4504.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB69-atelierdelalandetabourin-04F1A4519.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB69-atelierdelalandetabourin-05F1A4587.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB69-atelierdelalandetabourin-06CF1A4642.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB69-atelierdelalandetabourin-06DF1A4650.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB69-atelierdelalandetabourin-06EF1A4634.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB69-atelierdelalandetabourin-06F1A4845.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB69-atelierdelalandetabourin-07F1A4474.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB69-atelierdelalandetabourin-08F1A4740.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB69-atelierdelalandetabourin-09F1A4757.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB69-atelierdelalandetabourin-10F1A4944.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB69-atelierdelalandetabourin-11F1A4883.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB69-atelierdelalandetabourin-12F1A5196R.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB69-atelierdelalandetabourin-13F1A4987.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB69-atelierdelalandetabourin-14F1A5068.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB69-atelierdelalandetabourin-15F1A5277.jpg"
+    },
+    {
+      "type": "image",
+      "section": 3,
+      "src": "EB69-atelierdelalandetabourin-16F1A5302.jpg"
     }
   ]
 }
