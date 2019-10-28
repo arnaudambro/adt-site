@@ -9,6 +9,11 @@
       "image": "CK04-contexte.jpg"
     },
     {
+      "type": "image",
+      "section": 1,
+      "src": "CK04-existant.jpg"
+    },
+    {
       "type": "p",
       "section": 1,
       "content": "CK04 est un projet de réhabilitation partielle d’une prestigieuse propriété du XVIIème siècle. La qualité du bâtiment existant et la proximité de la carrière de Saint-Pierre d’Aigle ont rendu l’utilisation de la pierre incontournable. Un travail minutieux de la matière qui nous a poussé à collaborer  avec l’artisanat local. Une architecture d’intérieure qui cherche donc à revisiter les codes d’une technique manuelle souvent trop délaissée. Une modernité et une sobriété architecturale qui déclinent la pierre sous forme de claustras, encadrements, vasques et poignées. Un ensemble d’ornements massifs mis en valeur par la présence de panneaux en bois massif."
@@ -17,11 +22,6 @@
       "type": "image",
       "section": 1,
       "src": "CK04-diagramme.jpg"
-    },
-    {
-      "type": "image",
-      "section": 1,
-      "src": "CK04-existant.jpg"
     },
     {
       "type": "summary",

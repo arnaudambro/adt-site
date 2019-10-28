@@ -9,6 +9,11 @@
       "image": "PM19-contexte.jpg"
     },
     {
+      "type": "image",
+      "section": 1,
+      "src": "PM19-existant.jpg"
+    },
+    {
       "type": "p",
       "section": 1,
       "content": "Située près du château de Brézé, la parcelle accueille une maison articulée autour de plusieurs cours et d’un vaste jardin filant à deux mètres au-dessus du niveau la maison. Le projet vient s’y insérer et créer une pente légère liant maison et jardin. La pierre calcaire, présente dans la région et habillant les façades alentour devient l’élément principal."
@@ -27,11 +32,6 @@
       "type": "image",
       "section": 1,
       "src": "PM19-diagramme.jpg"
-    },
-    {
-      "type": "image",
-      "section": 1,
-      "src": "PM19-existant.jpg"
     },
     {
       "type": "summary",

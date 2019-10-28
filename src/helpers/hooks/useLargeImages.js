@@ -9,7 +9,7 @@ const useLargeImages = () => {
         edges {
           node {
             id
-            fluid(maxWidth: 1600) {
+            fluid(maxWidth: 3600, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

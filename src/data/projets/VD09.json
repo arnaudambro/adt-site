@@ -9,6 +9,11 @@
       "image": "VD09-contexte.jpg"
     },
     {
+      "type": "image",
+      "section": 1,
+      "src": "VD09-existant.jpg"
+    },
+    {
       "type": "p",
       "section": 1,
       "content": "La villa VD09 s’inscrit dans un contexte paysagé extrêmement fort.  Au nord, elle fait face au sublime panorama du golfe du Morbihan tandis qu’au sud on retrouve le site mégalithique de Locmariaquer."
@@ -27,11 +32,6 @@
       "type": "image",
       "section": 1,
       "src": "VD09-diagramme.jpg"
-    },
-    {
-      "type": "image",
-      "section": 1,
-      "src": "VD09-existant.jpg"
     },
     {
       "type": "summary",
@@ -53,12 +53,12 @@
     {
       "type": "image",
       "section": 3,
-      "src": "VD09-atelierdelalandetabourin-vue-ext.jpg"
+      "src": "VD09-coupe.jpg"
     },
     {
       "type": "image",
       "section": 3,
-      "src": "VD09-coupe.jpg"
+      "src": "VD09-atelierdelalandetabourin-vue-ext.jpg"
     }
   ]
 }
