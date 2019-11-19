@@ -101,20 +101,23 @@ const ScrollIcon = () =>
     </g>
   </ArrowDownStyled>
 
-const landingPageNumber = () => {
-  const now = new Date();
-  const nowZero = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+const landingPageNumber = (offset = 0) => {
+  const oneDayInMs = 1000 * 60 * 60 * 24;
+  const now = Date.now() - offset * oneDayInMs;
+  const nowDate = new Date(now);
+  const nowZero = new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate());
   const changeFrequency = 3;
   const numberOfImages = 12;
-  const nowZeroInDays = Math.floor(Date.parse(nowZero) / 1000 / 60 / 60 / 24);
+  const nowZeroInDays = Math.floor(Date.parse(nowZero) / oneDayInMs);
   const parsedPageNumber = nowZeroInDays % (changeFrequency * numberOfImages) + 1;
   return {
     nowZero,
     nowZeroInDays,
     parsedPageNumber,
-    landingPageNumber: Math.floor(parsedPageNumber / (changeFrequency + 1))
+    landingPageNumber: Math.floor(parsedPageNumber / changeFrequency) || numberOfImages,
   };
 }
+
 
 const WelcomePage = ({ startAnimation }) => {
 
