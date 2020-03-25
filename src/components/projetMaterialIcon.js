@@ -58,7 +58,7 @@ text-transform: capitalize;
   ${cssContent}
 `
 const Material = styled.span`
-text-transform: capitalize;
+/* text-transform: capitalize; */
   ${cssContent}
 font-weight: 500;
 `

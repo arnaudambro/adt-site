@@ -57,7 +57,7 @@ const Etat = styled.span`
   ${cssContent}
 `
 const Material = styled.span`
-text-transform: capitalize;
+/* text-transform: capitalize; */
   ${cssContent}
 `
 const Mission = styled.span`
