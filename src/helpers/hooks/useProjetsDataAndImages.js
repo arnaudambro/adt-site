@@ -15,6 +15,8 @@ const useProjetsDataAndImages = () => {
             departement_nom
             description
             empty
+            in_projects
+            in_db
             fonction
             hauteur_page_bdd_px
             hauteur_page_projets_px

@@ -1,20 +1,30 @@
 import React from "react"
-import styled from 'styled-components'
-import { Link } from "gatsby";
+import styled from "styled-components"
+import { Link } from "gatsby"
 
-import { displayFlex, displayGrid } from "../styles/mixins";
-import { programmes, matieres, anneesCaption } from "../reference/database";
-import { getYear, getTitle, isProjetInCategory, getCode, getMaterialHeightPageBDD, getProjetMaterialImageForBDDPage, getMaterial, rankProjectsInBDD } from "../helpers/selectors";
-import { addSuffix } from "../helpers/projetUrl";
+import { displayFlex, displayGrid } from "../styles/mixins"
+import { programmes, matieres, anneesCaption } from "../reference/database"
+import {
+  getYear,
+  getInDB,
+  getTitle,
+  isProjetInCategory,
+  getCode,
+  getMaterialHeightPageBDD,
+  getProjetMaterialImageForBDDPage,
+  getMaterial,
+  rankProjectsInBDD,
+} from "../helpers/selectors"
+import { addSuffix } from "../helpers/projetUrl"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Item from "../components/item";
-import useProjetsDataAndImages from "../helpers/hooks/useProjetsDataAndImages";
-import { media } from "../styles/mediaQueries";
+import Item from "../components/item"
+import useProjetsDataAndImages from "../helpers/hooks/useProjetsDataAndImages"
+import { media } from "../styles/mediaQueries"
 
-const categoryWidth = 145;
-const gridGap = 35;
-const dbWidth = 3 * categoryWidth + 2 * gridGap;
+const categoryWidth = 145
+const gridGap = 35
+const dbWidth = 3 * categoryWidth + 2 * gridGap
 
 const Filters = styled.div`
   width: ${categoryWidth}px;
@@ -22,21 +32,20 @@ const Filters = styled.div`
   padding-left: 20px;
   margin-right: auto;
   ${displayFlex({
-    flexDirection: 'column',
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    alignItems: "flex-start",
   })}
 
   ${media.desktop`
     margin-left: unset;
     width: ${dbWidth}px;
     ${displayFlex({
-      flexDirection: 'column',
-      justifyContent: 'flex-start',
-      alignItems: 'flex-end',
+      flexDirection: "column",
+      justifyContent: "flex-start",
+      alignItems: "flex-end",
     })}
   `}
-
 `
 
 const Filter = styled.span`
@@ -47,8 +56,9 @@ const Filter = styled.span`
   height: 22px;
   line-height: 22px;
   font-weight: 500;
-  font-size: .75em;
-  color: ${({ active, theme }) => active ? theme.color.black : theme.color.defaultColor};
+  font-size: 0.75em;
+  color: ${({ active, theme }) =>
+    active ? theme.color.black : theme.color.defaultColor};
   &::before {
     content: "\\002B";
     position: absolute;
@@ -68,14 +78,14 @@ const Categories = styled.div`
     gridTemplateColumns: `repeat(auto-fit, ${categoryWidth}px)`,
     gridAutoRows: "auto",
     gridGap: gridGap + "px",
-    justifyContent: 'center'
+    justifyContent: "center",
   })}
   ${media.desktop`
     ${displayGrid({
       gridTemplateColumns: `repeat(auto-fit, ${categoryWidth}px)`,
       gridAutoRows: "auto",
       gridGap: "35px",
-      justifyContent: 'flex-start'
+      justifyContent: "flex-start",
     })}
   `}
   /* padding-right: 100px; */
@@ -84,16 +94,16 @@ const Categories = styled.div`
 
 const CategoryContainer = styled.div`
   ${displayFlex({
-    flexDirection: 'column',
-    justifyContent: 'flex-end'
+    flexDirection: "column",
+    justifyContent: "flex-end",
   })}
   height: 100%;
 `
 
 const Projets = styled.div`
   ${displayFlex({
-    flexDirection: 'column',
-    justifyContent: 'flex-end'
+    flexDirection: "column",
+    justifyContent: "flex-end",
   })}
   flex-grow: 1;
   width: 100%;
@@ -108,25 +118,26 @@ const Category = styled.span`
   font-weight: 400;
   text-align: left;
   width: 100%;
-  font-size: .75em;
+  font-size: 0.75em;
   margin-top: 10px;
   padding-top: 5px;
   text-transform: uppercase;
 `
 
-
-
 const Database = () => {
   const { projets, images } = useProjetsDataAndImages()
 
-  const annees = React.useMemo(() => new Set(projets.map(getYear)), [projets])
+  const annees = React.useMemo(
+    () => new Set(projets.filter(getInDB).map(getYear)),
+    [projets]
+  )
 
   const filters = { annees, matieres, programmes }
 
-  const [visibleCategory, setVisibleCategory] = React.useState(anneesCaption);
-  const [visibleProjet, setVisibleProjet] = React.useState(null);
+  const [visibleCategory, setVisibleCategory] = React.useState(anneesCaption)
+  const [visibleProjet, setVisibleProjet] = React.useState(null)
 
-  return(
+  return (
     <Layout arrowWidth={dbWidth}>
       <SEO title="Base de données" />
       <Filters>
@@ -152,7 +163,7 @@ const Database = () => {
                   to: `/projet/${addSuffix(getCode(projet))}`,
                   alt: `${getTitle(projet)} - ${getMaterial(projet)}`,
                   height: getMaterialHeightPageBDD(projet),
-                  id: projet.id
+                  id: projet.id,
                 }))
                 .map((projet, ind) => (
                   <Item
@@ -173,6 +184,5 @@ const Database = () => {
     </Layout>
   )
 }
-
 
 export default Database

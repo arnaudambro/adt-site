@@ -9,6 +9,8 @@ const getTitle = ({ nom }) => nom
 const getCode = ({ code_projet }) => code_projet
 const getDescription = ({ description }) => description
 const getEmpty = ({ empty }) => empty === "true"
+const getInProjects = ({ in_projects }) => in_projects === "true"
+const getInDB = ({ in_db }) => in_db === "true"
 const getCollab = ({ collab }) => collab
 const getMaterial = ({ matiere }) => matiere
 const getMaterialHeightPageProjets = ({ hauteur_page_projets_px }) =>
@@ -34,8 +36,8 @@ const getDeliveryDisplayed = (projet, long = false) => {
 }
 const getMaterialImageSrcForProjetsPage = ({ nom_fichier_page_projets }) =>
   encodeURIComponent(nom_fichier_page_projets)
-const getMaterialImageSrcForBDDPage = ({ nom_fichier_page_projets }) =>
-  encodeURIComponent(nom_fichier_page_projets)
+const getMaterialImageSrcForBDDPage = ({ nom_fichier_page_bdd }) =>
+  encodeURIComponent(nom_fichier_page_bdd)
 const getLocation = ({ ville, departement_nom, pays }) => {
   const toShow = []
   Boolean(ville) && toShow.push(ville)
@@ -179,6 +181,8 @@ export {
   getCode,
   getDescription,
   getEmpty,
+  getInProjects,
+  getInDB,
   getCollab,
   getMaterial,
   getYear,
