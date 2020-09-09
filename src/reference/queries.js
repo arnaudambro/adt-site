@@ -1,4 +1,3 @@
-
 import { graphql } from "gatsby"
 
 export const imagesQuery = graphql`
@@ -13,7 +12,7 @@ export const imagesQuery = graphql`
 `
 
 export const projetsDataQuery = graphql`
-  fragment AllProjetsData on DataXlsx__Sheet1Edge {
+  fragment AllProjetsData on DataXlsx__2020Edge {
     node {
       annee_page_bdd_YYYY
       classement_page_projets
@@ -22,6 +21,7 @@ export const projetsDataQuery = graphql`
       departement_code
       departement_nom
       description
+      empty
       fonction
       hauteur_page_bdd_px
       hauteur_page_projets_px

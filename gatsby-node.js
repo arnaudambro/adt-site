@@ -5,7 +5,7 @@
  */
 
 // You can delete this file if you're not using it
-const path = require('path')
+const path = require("path")
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -23,8 +23,6 @@ exports.createPages = ({ graphql, actions }) => {
             code_projet
             content {
               content
-              image
-              section
               src
               type
               style
@@ -32,36 +30,36 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
-    }`)
-    .then(result => {
-      if (result.errors) {
-        throw result.errors
-      }
+    }
+  `).then(result => {
+    if (result.errors) {
+      throw result.errors
+    }
 
-      // Create blog post pages.
-      result.data.allProjetsJson.edges
+    // Create blog post pages.
+    result.data.allProjetsJson.edges
       .reduce((projets, { node: projet }) => {
-         return [
-           ...projets,
-           {
+        return [
+          ...projets,
+          {
             ...projet,
-            debug: false
+            debug: false,
           },
-           {
-             ...projet,
-             debug: true
-           }
-         ]
+          {
+            ...projet,
+            debug: true,
+          },
+        ]
       }, [])
       .forEach(projet => {
         createPage({
           // Path for this page — required
           path: projet.debug
-          ? 'projet/' + projet.code_projet + '-debug'
-          : 'projet/' + projet.code_projet,
+            ? "projet/" + projet.code_projet + "-debug"
+            : "projet/" + projet.code_projet,
           component: projetPage,
           context: {
-            projet
+            projet,
           },
         })
       })

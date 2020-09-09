@@ -1,12 +1,11 @@
+const black = "rgba(19,21,22,1)"
+export const white = "rgba(252,252,252,1)"
+export const grey = "rgba(235,234,239,1)"
+export const darkGrey = "rgba(200,200,200,1)"
+const boxShadow = "0px 0px 26px 0px rgba(220,220,220,0.5)"
 
-const black = 'rgba(19,21,22,1)'
-export const white = 'rgba(252,252,252,1)'
-export const grey = 'rgba(235,234,239,1)'
-export const darkGrey = 'rgba(200,200,200,1)'
-const boxShadow = '0px 0px 26px 0px rgba(220,220,220,0.5)'
-
-const dividerWidth = 1000;
-const sideColumnWidth = 380;
+const dividerWidth = 1000
+const sideColumnWidth = 380
 
 const theme = {
   color: {
@@ -15,35 +14,34 @@ const theme = {
     primary: black,
     grey,
     darkGrey,
-    leftPanelBg: 'rgba(243,242,242,1.00)',
-    mainContentBg: 'rgba(249,248,248,1.00)',
-    defaultColor: 'rgba(116,122,141,1.00)',
-    defaultColorFaded: 'rgba(116,122,141,0.17)',
+    leftPanelBg: "rgba(243,242,242,1.00)",
+    mainContentBg: "rgba(249,248,248,1.00)",
+    defaultColor: "rgba(116,122,141,1.00)",
+    defaultColorFaded: "rgba(116,122,141,0.17)",
   },
   boxShadow: {
-    default: boxShadow
+    default: boxShadow,
   },
   zIndex: {},
-  borderRadius: {
-  },
+  borderRadius: {},
   height: {
     header: 160,
-    menuItem: 20,
-    logo: 170 * 60 / 96,
+    menuItem: 17,
+    logo: (170 * 60) / 96,
     desktop: {
-      logo: 250 * 60 / 96,
+      logo: (250 * 60) / 96,
       logoLine: 64,
-      menuItem: 25
-    }
+      menuItem: 20,
+    },
   },
   width: {
     min: {
-      app: 315
+      app: 315,
     },
     max: {
       app: 490,
       headerColumn: 300,
-      content: (dividerWidth - sideColumnWidth) * 0.9
+      content: (dividerWidth - sideColumnWidth) * 0.9,
     },
     arrows: 50,
     hideScrollbar: 18,
@@ -58,8 +56,7 @@ const theme = {
       centerColumn: 300,
       divider: dividerWidth,
       indicator: 30,
-    }
-
+    },
   },
   margin: {
     top: {
@@ -69,25 +66,24 @@ const theme = {
       projetName: 18,
       contentSummary: 30,
       contentItem: 30,
-
     },
     right: {
       indicator: 5,
       desktop: {
-        indicator: 15
-      }
+        indicator: 15,
+      },
     },
     left: {
       indicator: 7,
       desktop: {
-        indicator: 35
-      }
+        indicator: 35,
+      },
     },
     X: {
       min: {
-        app: 16
-      }
-    }
+        app: 16,
+      },
+    },
   },
   padding: {
     X: {
@@ -97,11 +93,11 @@ const theme = {
     Y: {
       header: 25,
       desktop: {
-        main: 236
-      }
-    }
+        main: 236,
+      },
+    },
   },
-  duration: {}
+  duration: {},
 }
 
 export default theme

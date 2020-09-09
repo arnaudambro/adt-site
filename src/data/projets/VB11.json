@@ -3,55 +3,56 @@
   "code_projet": "VB11",
   "content": [
     {
-      "type": "summary",
-      "section": 1,
-      "content": "#1 - Analyse du contexte",
-      "image": "VB11-contexte.jpg"
-    },
-    {
       "type": "image",
-      "section": 1,
-      "src": "VB11-existant1.jpg"
+      "src": "01-VB11-COM-CONTEXTE.jpg"
     },
     {
       "type": "p",
-      "section": 1,
       "content": "Située face à la promenade pédestre des bords de Loire, la Villa VB11 se démarque du contexte paysagé par son architecture prononcée et avant-gardiste des années 70. La demande d’une extension des espaces de vie prend donc la forme d’une avancée vers le fleuve.<br/>Apparait alors une géométrie simple et en rupture avec les lignes du bâtiment existant. Sa façade est composée d’un béton sablé qui miroite au promeneur la proximité du sablonneux paysage de l’affluent."
     },
     {
       "type": "p",
-      "section": 1,
       "content": "A l’intérieur, un décalage des niveaux de sol permet de séparer les différents espaces de séjour et d’ouvrir plus généreusement le volume créé sur les différentes vues qu’offre le paysage. Un patio minéral aux allures de dunes vient amener une ambiance supplémentaire au lieu."
     },
     {
       "type": "image",
-      "section": 1,
-      "src": "VB11-diagramme.jpg"
-    },
-    {
-      "type": "summary",
-      "section": 2,
-      "content": "#2 - Table des matières",
-      "image": "VB11-BETONBOUCHARDE-TABLE-DES-MATIERES.jpg"
-    },
-    {
-      "type": "summary",
-      "section": 3,
-      "content": "#3 - Projet",
-      "image": "BEULIN_optimise.jpg"
+      "src": "02-VB11-COM-TABLE-DES-MATIERES.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "atelierdelalandetabourin-maison-loiret-VB11-planRDC.jpg",
-      "style": "margin-top: 150px !important;"
+      "src": "03-VB11-COM-ATELIERDELALANDETABOURIN.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "atelierdelalandetabourin-maison-loiret-VB11-facade.jpg"
+      "src": "04-VB11-COM.jpg"
+    },
+    {
+      "type": "image",
+      "src": "05-VB11-COM.jpg"
+    },
+    {
+      "type": "image",
+      "src": "06-VB11-COM.jpg"
+    },
+    {
+      "type": "image",
+      "src": "07-VB11-COM.jpg"
+    },
+    {
+      "type": "image",
+      "src": "08-VB11-COM-PLAN-MASSE.jpg"
+    },
+    {
+      "type": "image",
+      "src": "09-VB11-COM-PLAN.jpg"
+    },
+    {
+      "type": "image",
+      "src": "10-VB11-COM-FACADE.jpg"
+    },
+    {
+      "type": "image",
+      "src": "11-VB11-COM-COUPE.jpg"
     }
   ]
 }
-
-

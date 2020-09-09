@@ -3,64 +3,40 @@
   "code_projet": "AM03",
   "content": [
     {
-      "type": "summary",
-      "section": 1,
-      "content": "#1 - Analyse du contexte"
-    },
-    {
-      "type": "image",
-      "section": 1,
-      "src": "AM03-BOULEAU-existant.jpg"
+      "type": "p",
+      "content": "Niché au cinquième étage d’un immeuble haussmannien l’appartement AM03 était parfaitement représentatif du style de vie de l’époque; une séparation marquée entre les espaces de vie et les espaces servants. La réhabilitation vient donc bouleverser le plan en l’adaptant aux usages d’aujourd’hui."
     },
     {
       "type": "p",
-      "section": 1,
-      "content": "Niché au cinquième étage d’un immeuble haussmannien l’appartement AM03 était parfaitement représentatif du style de vie de l’époque; une séparation marquée entre les espaces de vie et les espaces servants. La réhabilitation vient donc bouleverser le plan en l’adaptant aux usages d’aujourd’hui. C’est à travers notre intervention matérielle que nous sommes venus marquer cette réorganisation spatiale. Le passage d’un espace réhabilité à un autre se fait donc au travers d’un jeu d’encadrements de portes en bouleau et d’un marquage en béton ciré au sol."
+      "content": "C’est à travers notre intervention matérielle que nous sommes venus marquer cette réorganisation spatiale. Le passage d’un espace réhabilité à un autre se fait donc au travers d’un jeu d’encadrements de portes en bouleau et d’un marquage en béton ciré au sol."
     },
     {
       "type": "p",
-      "section": 1,
-      "content": "A l’intérieur, un décalage des niveaux de sol permet de séparer les diffé- rents espaces de séjour et d’ouvrir plus généreusement le volume créé sur les différentes vues qu’offre le paysage. Un patio minéral aux allures de dunes vient amener une ambiance supplémentaire au lieu."
-    },
-    {
-      "type": "summary",
-      "section": 2,
-      "content": "#2 - Table des matières",
-      "image": "AM03-BOULEAU-TABLEDESMATIERES.jpg"
-    },
-    {
-      "type": "summary",
-      "section": 3,
-      "content": "#3 - Projet",
-      "image": "_F1A6434_optimise.jpg"
+      "content": "A l’intérieur, un décalage des niveaux de sol permet de séparer les différents espaces de séjour et d’ouvrir plus généreusement le volume créé sur les différentes vues qu’offre le paysage. Un patio minéral aux allures de dunes vient amener une ambiance supplémentaire au lieu."
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "AM03-BOULEAU-plan.jpg",
-      "style": "margin-top: 110px !important;"
+      "src": "02-AM03-COM-TABLE-DES-MATIERES.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "_F1A6479-optimise.jpg"
+      "src": "03-AM03-COM-ATELIERDELALANDETABOURIN.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "_F1A6495-optimise.jpg"
+      "src": "04-AM03-COM.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "_F1A6533-optimise.jpg"
+      "src": "06-AM03-COM-ATELIERDELALANDETABOURIN.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "_F1A6548-optimise.jpg"
+      "src": "07-AM03-COM.jpg"
+    },
+    {
+      "type": "image",
+      "src": "08-AM03-COM-PLAN.jpg"
     }
   ]
 }
-
-

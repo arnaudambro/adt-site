@@ -1,25 +1,25 @@
 import React from "react"
-import styled, { css } from 'styled-components'
+import styled, { css } from "styled-components"
 
 import {
   getNewsDescription,
   getNewsDate,
   getNewsHeight,
   getNewsAlt,
-} from '../helpers/selectors'
-import Item from "./item";
-import { media } from "../styles/mediaQueries";
+} from "../helpers/selectors"
+import Item from "./item"
+import { media } from "../styles/mediaQueries"
 
 const Title = styled.span`
   font-weight: 500;
-  font-size: .75rem;
+  font-size: 0.75rem;
   line-height: 1em;
   margin-bottom: 18px;
 `
 
 const cssContent = css`
   font-weight: 300;
-  font-size: .7rem;
+  font-size: 0.7rem;
 `
 const Description = styled.span`
   ${cssContent}
@@ -35,25 +35,27 @@ const Divider = styled.div`
 `
 
 const News = ({ setVisible, visible, withDivider, ...news }) => {
-  return <>
-    <Item
-      height={getNewsHeight(news)}
-      setVisible={setVisible}
-      visible={visible}
-      alt={getNewsAlt(news)}
-      id={news.id}
-      images={news.images}
-      bigMarginBottom
-      withDivider={withDivider}
-      noScreening
-    >
-      <Title>{getNewsDate(news)}</Title>
-      <Description dangerouslySetInnerHTML={{__html: getNewsDescription(news) }} />
-    </Item>
-    {withDivider && <Divider />}
-  </>
+  return (
+    <>
+      <Item
+        height={getNewsHeight(news)}
+        setVisible={setVisible}
+        visible={visible}
+        alt={getNewsAlt(news)}
+        id={news.id}
+        images={news.images}
+        withBigBottom
+        withDivider={withDivider}
+        noScreening
+      >
+        <Title>{getNewsDate(news)}</Title>
+        <Description
+          dangerouslySetInnerHTML={{ __html: getNewsDescription(news) }}
+        />
+      </Item>
+      {withDivider && <Divider />}
+    </>
+  )
 }
 
-
 export default News
-

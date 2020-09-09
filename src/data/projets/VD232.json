@@ -3,75 +3,48 @@
   "code_projet": "VD232",
   "content": [
     {
-      "type": "summary",
-      "section": 1,
-      "content": "#1 - Analyse du contexte",
-      "image": "VD232-contexte.jpg"
-    },
-    {
       "type": "image",
-      "section": 1,
-      "src": "VD232-existant.jpg"
+      "src": "01-VB232-COM-CONTEXTE.jpg"
     },
     {
       "type": "p",
-      "section": 1,
-      "content": "Ce projet a été conçu et imaginé dans la continuité de celui de la villa Beulin (VB11) car il est seulement sur l’autre rive de la Loire, à 2km plus au sud. Il y reprend donc le même principe d’une extension où l’architecture vient apaiser la géométrie de l’existant."
+      "content": "Situé à 2km au sud d’Orléans, VD232 s’inscrit dans le contexte paysagé des bords de Loire. A la commande du projet, nous avons tout de suite eu l’intention d’une architecture qui finisse par miroiter la proximité du décors de l’affluent. Le fleuve n’étant pas visible depuis le site, la volonté de rappeler sa matérialité est pour nous d’autant plus forte."
     },
     {
       "type": "p",
-      "section": 1,
-      "content": "Concernant la matérialité, VD232 se veut comme le négatif de VB11. C’est-à-dire qu’à la place d’avoir en façade un béton beige avec un granulat blanc nous avons un béton blanc avec un granulat beige. La Loire n’étant pas visible depuis le site, il y a donc encore plus ici la volonté de rappeler sa matérialité. L’intégralité de la maison a été réhabilitée autour d’un patio central et d’une toiture terrasse minérale. Des espaces paysagers aux allures de dunes amènent une ambiance supplémentaire au lieu."
+      "content": "L’extension prend donc la forme d’un volume horizontale qui vient entourer l’existant tout apaisant sa géométrie. La nouvelle façade principale est composée d’un bandeau sablée pris entre deux dalles blanches, haute et basse. Un biais dynamise sa perspective en nous invitant à entrer. "
     },
     {
       "type": "p",
-      "section": 1,
-      "content": "Sur la façade principale, un biais vient dynamiser les volumes et devient comme une invitation à entrer."
+      "content": "L’intégralité de la maison est réhabilitée autour d’un patio central et d’une toiture terrasse minérale. Des espaces paysagers aux allures de dunes amènent une ambiance supplémentaire au lieu."
     },
     {
       "type": "image",
-      "section": 1,
-      "src": "VD232-diagramme.jpg"
-    },
-    {
-      "type": "summary",
-      "section": 2,
-      "content": "#2 - Table des matières",
-      "image": "VD232-BETON-BOUCHARDE-TABLE-DES-MATIERES.jpg"
-    },
-    {
-      "type": "summary",
-      "section": 3,
-      "content": "#3 - Projet",
-      "image": "atelierdelalandetabourin-maison-loiret-VD232.jpg"
+      "src": "02-VB232-COM-TABLE-DES-MATIERES.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "VD232-PLANRDC.jpg",
-      "style": "margin-top: 130px !important;"
+      "src": "03-VB232-COM-MAQUETTE-ATELIERDELALANDETABOURIN.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "VD232-PLANR1.jpg"
+      "src": "04-VB232-COM-ATELIERDELALANDETABOURIN.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "VD232-facadenord.jpg"
+      "src": "05-VB232-COM-PLANMASSE.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "VD232-facadeouest.jpg"
+      "src": "06-VB232-COM-PLANRDC.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "VD232-facadesud.jpg"
+      "src": "07-VB232-COM-FACADE.jpg"
+    },
+    {
+      "type": "image",
+      "src": "08-VB232-COM-COUPE.jpg"
     }
   ]
 }
-
-

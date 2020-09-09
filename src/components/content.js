@@ -1,24 +1,25 @@
-import React from 'react'
-import styled, { css } from 'styled-components';
+import React from "react"
+import styled, { css } from "styled-components"
 import Img from "gatsby-image/withIEPolyfill"
-import { displayFlex, gatsbyImage } from '../styles/mixins';
-import { getImageFromSrc } from '../helpers/selectors';
-import useWindowSize from '../helpers/hooks/useWindowSize';
-import windowExists from '../helpers/windowExists';
-import windowPathNameIncludes from '../helpers/windowPathNameIncludes';
+import { displayFlex, gatsbyImage } from "../styles/mixins"
+import { getImageFromSrc } from "../helpers/selectors"
+import useWindowSize from "../helpers/hooks/useWindowSize"
+import windowExists from "../helpers/windowExists"
+import windowPathNameIncludes from "../helpers/windowPathNameIncludes"
 
 const ImgStyled = styled(Img)`
+  margin-bottom: 60px;
   ${props => props.customStyle && `${props.customStyle}`}
 `
 
-const triangleSize = 18;
+const triangleSize = 18
 const triangleCss = image => css`
   list-style-image: none;
   &::marker {
     display: none;
   }
   &::-webkit-details-marker {
-      display: none
+    display: none;
   }
   &:after {
     content: "";
@@ -38,12 +39,13 @@ const ContentStyled = styled.div`
   font-size: 14px;
   margin-right: ${({ theme }) => theme.margin.X.min.app}px;
   max-width: ${({ theme }) => theme.width.max.content}px;
-  min-width: ${({ theme }) => theme.width.min.app - 2 * theme.margin.X.min.app}px;
+  min-width: ${({ theme }) =>
+    theme.width.min.app - 2 * theme.margin.X.min.app}px;
   font-weight: 300;
   ${displayFlex({
-    flexDirection: 'column',
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    alignItems: "flex-start",
   })}
   p {
     margin-bottom: 20px;
@@ -101,96 +103,53 @@ const ContentStyled = styled.div`
     }
   }
   ${gatsbyImage({
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
   })}
   details > .gatsby-image-wrapper {
     margin-bottom: ${({ theme }) => theme.margin.bottom.contentItem}px;
   }
   details > * {
-    ${() => windowExists() && windowPathNameIncludes('debug') && `
+    ${() =>
+      windowExists() &&
+      windowPathNameIncludes("debug") &&
+      `
       border: 1px solid #000;
     `}
   }
 `
 
-const Content = ({ images, nodes, debug = false, open = false, forceOpen = false }) => {
-  const contentRef = React.createRef(null);
+const Content = ({
+  images,
+  nodes,
+  debug = false,
+  open = false,
+  forceOpen = false,
+}) => {
+  const contentRef = React.createRef(null)
   const { width: windowWidth } = useWindowSize()
-  const formattedNodes = nodes.reduce((newNodes, nodeContent, ind) => {
-    if (!nodeContent.section) {
-      return [...newNodes, nodeContent]
-    }
-    const newNodesCopy = [...newNodes]
-    const lastNode = newNodesCopy.pop();
-    if (!lastNode || lastNode.type !== 'section' || lastNode.section !== nodeContent.section) {
-      const newSection = {
-        type: 'section',
-        section: nodeContent.section,
-        id: ind,
-        content: [
-          nodeContent
-        ]
-      };
-      if (!lastNode) return [newSection]
-      return [
-        ...newNodesCopy,
-        lastNode,
-        newSection
-      ]
-    }
-    lastNode.content.push(nodeContent)
-    return [
-      ...newNodesCopy,
-      lastNode
-    ]
-  }, [])
 
-  const [contentWidth, setContentWidth] = React.useState(0);
+  const [contentWidth, setContentWidth] = React.useState(0)
   // eslint-disable-next-line
   React.useLayoutEffect(() => {
-    const width = contentRef.current ? contentRef.current.getBoundingClientRect().width : 0
+    const width = contentRef.current
+      ? contentRef.current.getBoundingClientRect().width
+      : 0
     if (width !== contentWidth) {
       setContentWidth(width)
     }
-  // eslint-disable-next-line
+    // eslint-disable-next-line
   }, [windowWidth])
 
   const renderNode = (node, ind) => {
     if (debug) return <pre key={node.id}>{JSON.stringify(node, null, 2)}</pre>
     switch (node.type) {
-      case 'section': {
-        return renderSection(node)
-      }
-      case 'summary': {
-        return(
-          <Summary
-            key={node.content}
-            summary={node}
-            images={images}
-            scrollTo={(scrollHeight) => {
-              contentRef.current.parentNode.scrollTo({
-                top: contentRef.current.parentNode.scrollTop + scrollHeight,
-                behavior: 'smooth'
-              })
-            }}
-          />
-        )
-      }
-      case 'image':
-        return renderImage(node);
+      case "image":
+        return renderImage(node)
       default:
         return renderElement(node, ind)
     }
   }
-
-  const renderSection = section => (
-    <section key={section.id}>
-      <details open={open}>
-        {section.content.map((node, ind) => renderNode(node, ind))}
-      </details>
-    </section>
-  )
 
   const renderElement = (node, ind) => (
     <node.type
@@ -210,42 +169,19 @@ const Content = ({ images, nodes, debug = false, open = false, forceOpen = false
     />
   )
 
-  return(
+  return (
     <ContentStyled
       ref={contentRef}
       contentWidth={contentWidth}
       triangle={{
-        close: getImageFromSrc(images, 'Triangle-droite.png').src,
-        open: getImageFromSrc(images, 'Triangle-bas.png').src,
+        close: getImageFromSrc(images, "Triangle-droite.png").src,
+        open: getImageFromSrc(images, "Triangle-bas.png").src,
       }}
       forceOpen={forceOpen}
     >
-      {formattedNodes.map((node, ind) => renderNode(node, ind))}
+      {nodes.map((node, ind) => renderNode(node, ind))}
     </ContentStyled>
   )
 }
-
-const Summary = ({ summary, images, scrollTo }) => {
-  const contentRef = React.createRef(null);
-  return(
-    <summary
-      ref={contentRef}
-      onClick={() => {
-        const detailsWillOpen = !contentRef.current.parentNode.open;
-        if (detailsWillOpen) scrollTo(contentRef.current.lastChild.getBoundingClientRect().height)
-      }}
-    >
-      <span id="title" dangerouslySetInnerHTML={{ __html: summary.content }} />
-      {summary.image && (
-        <Img
-          fluid={getImageFromSrc(images, summary.image)}
-          alt={summary.content}
-          title={summary.content}
-        />
-      )}
-    </summary>
-  )
-}
-
 
 export default Content

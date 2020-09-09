@@ -1,14 +1,10 @@
 import { useStaticQuery, graphql } from "gatsby"
-import { getClassementPageProjets } from '../selectors'
+import { getClassementPageProjets } from "../selectors"
 
 const useProjetsDataAndImages = () => {
-
-  const {
-    allDataXlsxSheet1:{edges },
-    allImageSharp:{edges: images },
-  } = useStaticQuery(graphql`
+  const result = useStaticQuery(graphql`
     query {
-      allDataXlsxSheet1 {
+      allDataXlsx2020 {
         edges {
           node {
             annee_page_bdd_YYYY
@@ -18,6 +14,7 @@ const useProjetsDataAndImages = () => {
             departement_code
             departement_nom
             description
+            empty
             fonction
             hauteur_page_bdd_px
             hauteur_page_projets_px
@@ -51,16 +48,18 @@ const useProjetsDataAndImages = () => {
     }
   `)
 
-  const projets =
-  edges
-  .map(({ node }) => node)
-  .sort(
-    (a, b) =>
-    getClassementPageProjets(a) > getClassementPageProjets(b) ? -1 : 1
+  const {
+    allDataXlsx2020: { edges },
+    allImageSharp: { edges: images },
+  } = result
+
+  const projets = edges
+    .map(({ node }) => node)
+    .sort((a, b) =>
+      getClassementPageProjets(a) > getClassementPageProjets(b) ? -1 : 1
     )
 
-    return { projets, images }
-
+  return { projets, images }
 }
 
 export default useProjetsDataAndImages

@@ -1,0 +1,54 @@
+{
+  "title": "VG14",
+  "code_projet": "VG14",
+  "content": [
+    {
+      "type": "image",
+      "src": "00-VG14-COM-CONTEXTE.jpg"
+    },
+    {
+      "type": "p",
+      "content": "Le terrain est localisé à l’extrémité ouest du paysage vallonné de la forêt de Fontainebleau, dans le secteur naturel des 25 bosses. Avec ses remarquables chaos de bloc de grès et son dénivelé, il est notamment très prisé des randonneurs ou des amateurs d’escalade.<br>Contrairement à certaines parcelles voisines où d’imposantes pierres viennent rappeler la proximité du paysage rocheux, le terrain en est ici dépeuplé. Une absence qui est devenue un des points de départ de notre réflexion: l’idée d’une architecture qui  devient, à travers sa composition,  le reflet de cette invisible mitoyenneté paysagère."
+    },
+    {
+      "type": "p",
+      "content": "La maison est donc composée d’un volume habitable boisé pris entre deux bandeaux de pierre. Une stratification matérielle renforcée et allégée par un débord des dalles supérieures et inférieures. La façade est habillée de lames de bois du site thermo-chauffées. Sous la forme de trois blocs boisés qui contrastent avec la minéralité du sol, elle se prolonge à l’intérieur du projet passif afin de séparer et organiser les espaces de jour et de nuit."
+    },
+    {
+      "type": "image",
+      "src": "02-VG14-COM-TABLE-DES-MATIERES.jpg"
+    },
+    {
+      "type": "image",
+      "src": "03-VG14-COM-MAQUETTE-ATELIERDELALANDETABOURIN.jpg"
+    },
+    {
+      "type": "image",
+      "src": "04-VG14-COM-ATELIERDELALANDETABOURIN.jpg"
+    },
+    {
+      "type": "image",
+      "src": "05-VG14-COM-ATELIERDELALANDETABOURIN.jpg"
+    },
+    {
+      "type": "image",
+      "src": "06_VG14-COM-PLAN-MASSE.jpg"
+    },
+    {
+      "type": "image",
+      "src": "07-VG14-COM-PLAN-ATELIERDELALANDETABOURIN.jpg"
+    },
+    {
+      "type": "image",
+      "src": "08_VG14-COM-FACADE.jpg"
+    },
+    {
+      "type": "image",
+      "src": "09_VG14-COM-COUPE-ATELIERDELALANDETABOURIN.jpg"
+    },
+    {
+      "type": "image",
+      "src": "10-VG14-COM-COUPEDETAIL-ATELIERDELALANDETABOURIN.jpg"
+    }
+  ]
+}

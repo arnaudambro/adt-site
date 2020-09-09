@@ -3,126 +3,60 @@
   "code_projet": "EB12",
   "content": [
     {
-      "type": "summary",
-      "section": 1,
-      "content": "#1 - Analyse du contexte",
-      "image": "EB12-contexte.jpg"
-    },
-    {
       "type": "image",
-      "section": 1,
-      "src": "EB12-existant1.jpg"
-    },
-    {
-      "type": "image",
-      "section": 1,
-      "src": "EB12-existant2.jpg"
+      "src": "01-EB12-COM-CONTEXTE.jpg"
     },
     {
       "type": "p",
-      "section": 1,
-      "content": "Spécialisée dans l’exploitation forestière et la scierie, la société est historiquement située au cœur de la forêt d’Orléans. La demande du client est d’étendre et de réhabiliter les 600m2 de locaux de son siège social. La proximité de la matière première, et de son usinage, s’est naturellement imposée comme le point de départ de notre réflexion et de la conception architecturale du projet."
+      "content": "Spécialisée dans l’exploitation forestière et la scierie, la société est historiquement située au cœur de la forêt d’Orléans. La demande du client est d’étendre et de réhabiliter les locaux de son siège social."
     },
     {
       "type": "p",
-      "section": 1,
-      "content": "Le bâtiment s’organise aujourd’hui sous la forme d’un « U » autour d’un patio végétalisé. L’extension viendra aligner et refermer en partie le volume initial tandis qu’un couloir de verre traversera le patio pour faciliter les déplacements transitoires entre les ailes nord et sud. Ensuite, un long couloir intérieur dessert les différents espaces de l’entreprise."
+      "content": "La proximité de la matière première et de son usinage s’est naturellement imposée comme le point de départ de notre réflexion et de la conception architecturale du projet. Le bâtiment existant s’organisant sous la forme d’un U autour d’un patio végétalisé, l’extension vient donc aligner et refermer en partie le volume initial. Un couloir de verre traverse ensuite le patio pour faciliter les déplacements transitoires.<br>A l’extérieur, un jeu de claires-voies thermo-chauffées vient animer la nouvelle façade écran et ainsi apporter une continuité entre l’extension et l’existant. A l’intérieur,  des volumes sobres mettent en valeur la beauté naturelle des produits bois utilisés."
     },
     {
       "type": "p",
-      "section": 1,
-      "content": "Notre intention première est d’apporter de la lumière et de la profondeur. Mais également une homogénéité esthétique entre cette longue déambulation circulaire et les espaces de travail desservis. Grâce à un jeu de claires-voies extérieures, la nouvelle façade écran apportera une continuité entre l’extension et l’existant. Une dynamique de tasseaux de bois thermo-chauffés, sous forme de grandes portes pivotantes, viendra animer la façade, tout en cachant le système de climatisation existant."
-    },
-    {
-      "type": "p",
-      "section": 1,
-      "content": "Une nouvelle identité visuelle fidèle aux racines de l’entreprise."
+      "content": "Une démarche matérielle fidèle aux racines de l’entreprise."
     },
     {
       "type": "image",
-      "section": 1,
-      "src": "EB12-diagramme.jpg"
-    },
-    {
-      "type": "summary",
-      "section": 2,
-      "content": "#2 - Table des matières",
-      "image": "EB12-BOISTHERMOCHAUFFE-TABLEDESMATIERES.jpg"
-    },
-    {
-      "type": "summary",
-      "section": 3,
-      "content": "#3 - Projet",
-      "image": "atelierdelalandetabourin-entreprisebarillet-boisthermochauffe-EB12.jpg"
+      "src": "02-EB12-COM-TABLE-DES-MATIERES.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "EB12-plan.jpg",
-      "style": "margin-top: 90px !important;margin-bottom: 90px !important;"
+      "src": "03-EB12-COM-MAQUETTE-ATELIERDELALANDETABOURIN.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "EB12-atelierdelalandetabourin-F1A5438.jpg"
+      "src": "04-EB12-COM-ATELIERDELALANDETABOURIN.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "EB12-atelierdelalandetabourin-F1A5452.jpg"
+      "src": "05-EB12-COM-ATELIERDELALANDETABOURIN.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "EB12-atelierdelalandetabourin-F1A5490.jpg"
+      "src": "06-EB12-COM-ATELIERDELALANDETABOURIN.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "EB12-atelierdelalandetabourin-F1A5500.jpg"
+      "src": "07-EB12-COM-ATELIERDELALANDETABOURIN.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "EB12-atelierdelalandetabourin-F1A5528.jpg"
+      "src": "08-EB12-COM-ATELIERDELALANDETABOURIN.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "EB12-atelierdelalandetabourin-F1A5571.jpg"
+      "src": "09-EB12-COM-ATELIERDELALANDETABOURIN.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "EB12-atelierdelalandetabourin-F1A5591.jpg"
+      "src": "10-EB12-COM-ATELIERDELALANDETABOURIN.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "EB12-atelierdelalandetabourin-F1A5602.jpg"
-    },
-    {
-      "type": "image",
-      "section": 3,
-      "src": "EB12-atelierdelalandetabourin-F1A5609.jpg"
-    },
-    {
-      "type": "image",
-      "section": 3,
-      "src": "EB12-atelierdelalandetabourin-F1A5635.jpg"
-    },
-    {
-      "type": "image",
-      "section": 3,
-      "src": "EB12-atelierdelalandetabourin-F1A5649.jpg"
-    },
-    {
-      "type": "image",
-      "section": 3,
-      "src": "EB12-facades.jpg",
-      "style": "margin-top: 50px !important;"
+      "src": "11-EB12-COM_PLAN-MASSE.png"
     }
   ]
 }
-
-

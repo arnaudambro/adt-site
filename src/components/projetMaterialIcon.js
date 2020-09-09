@@ -1,5 +1,5 @@
 import React from "react"
-import styled, { css } from 'styled-components'
+import styled, { css } from "styled-components"
 
 import {
   getCode,
@@ -13,28 +13,29 @@ import {
   getLocation,
   getSurface,
   getMission,
-} from '../helpers/selectors'
-import { addSuffix } from '../helpers/projetUrl'
-import Item from "./item";
-import { Link } from "gatsby";
+  getEmpty,
+} from "../helpers/selectors"
+import { addSuffix } from "../helpers/projetUrl"
+import Item from "./item"
+import { Link } from "gatsby"
 
 const Title = styled.span`
   text-transform: uppercase;
   font-weight: 500;
-  font-size: .75rem;
+  font-size: 0.75rem;
   line-height: 1em;
   margin-bottom: ${({ theme }) => theme.margin.bottom.projetName}px;
 `
 
 const cssContent = css`
   font-weight: 300;
-  font-size: .7rem;
+  font-size: 0.7rem;
 `
 const Collab = styled.span`
   font-style: italic;
   font-weight: 400;
   font-style: italic;
-  font-size: .7rem;
+  font-size: 0.7rem;
   margin-bottom: ${({ theme }) => theme.margin.bottom.projetName}px;
   margin-top: -${({ theme }) => theme.margin.bottom.projetName}px;
 `
@@ -54,38 +55,46 @@ const Mission = styled.span`
 `
 
 const Etat = styled.span`
-text-transform: capitalize;
+  text-transform: capitalize;
   ${cssContent}
 `
 const Material = styled.span`
-/* text-transform: capitalize; */
+  /* text-transform: capitalize; */
   ${cssContent}
-font-weight: 500;
+  font-weight: 500;
 `
 
-const ProjetMaterialIcon = ({ setVisible, visible, ...projet }) =>
+const ProjetMaterialIcon = ({ setVisible, visible, ...projet }) => (
   <Item
     height={getMaterialHeightPageProjets(projet)}
     to={`/projet/${addSuffix(getCode(projet))}`}
-    as={Link}
+    as={!getEmpty(projet) ? Link : "div"}
     setVisible={setVisible}
     visible={visible}
     alt={`${getTitle(projet)} - ${getMaterial(projet)}`}
     id={projet.id}
     images={projet.images}
+    isEmpty={getEmpty(projet)}
   >
-    <Title>{getTitle(projet)} {getYear(projet)}</Title>
-    {getCollab(projet) && <Collab>Cotraitance avec {getCollab(projet)}</Collab>}
-    <Description>{getDescription(projet)}</Description>
-    <Location>{getLocation(projet)}</Location>
-    <Surface>Surface: {getSurface(projet)} m<sup>2</sup></Surface>
-    <Etat>{getEtat(projet)}</Etat>
-    <Material>Matière: {getMaterial(projet)}</Material>
-    <Mission>{getMission(projet)}</Mission>
+    <Title>
+      {getTitle(projet)} {Number.isNaN(getYear(projet)) ? "" : getYear(projet)}
+    </Title>
+    {Boolean(getCollab(projet)) && (
+      <Collab>Cotraitance avec {getCollab(projet)}</Collab>
+    )}
+    {getDescription(projet) && (
+      <Description>{getDescription(projet)}</Description>
+    )}
+    {getLocation(projet) && <Location>{getLocation(projet)}</Location>}
+    {getSurface(projet) && (
+      <Surface>
+        Surface: {getSurface(projet)} m<sup>2</sup>
+      </Surface>
+    )}
+    {getEtat(projet) && <Etat>{getEtat(projet)}</Etat>}
+    {getMaterial(projet) && <Material>Matière: {getMaterial(projet)}</Material>}
+    {getMission(projet) && <Mission>{getMission(projet)}</Mission>}
   </Item>
-
-
-
+)
 
 export default ProjetMaterialIcon
-

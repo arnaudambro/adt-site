@@ -1,5 +1,185 @@
 [
   {
+    "description": "Chantier en approche!!<br/>Vues sur l’entrée de notre projet de logements à Locmariaquer (GL11).",
+    "date": "2020-08-17",
+    "images": [
+      {
+        "file": "00-VUE-ADT_LOGEMENT_v2.jpg",
+        "height": 310
+      },
+      {
+        "file": "01-IMG_HALL_HD.jpg",
+        "height": 310
+      }
+    ]
+  },
+  {
+    "description": "Visite d’une carrière de granit bretonne.<br/>Test de réemploi de blocs inertes en opus-incertum pour notre projet GL11",
+    "date": "2020-07-21",
+    "images": [
+      {
+        "file": "02-IMG_9546.jpg",
+        "height": 320
+      },
+      {
+        "file": "03-IMG_9421.jpg",
+        "height": 410
+      }
+    ]
+  },
+  {
+    "description": "NOUVEAU PROJET, NOUVELLE MATIERE !<br/><br/>Sur-élévation et réhabilitation d’une habitation dans le 19ème arrondissement de Paris.",
+    "date": "2020-07-13",
+    "images": [
+      {
+        "file": "04-IMG_1690.jpg",
+        "height": 250
+      }
+    ]
+  },
+  {
+    "description": "Visite du musée des ruines d’Empuries, Espagne.<br/>Voyage spatio-temporel.<br/>Terrazzo gréco-romain du 1er siècle.",
+    "date": "2020-07-04",
+    "images": [
+      {
+        "file": "05-IMG_9052.jpg",
+        "height": 410
+      },
+      {
+        "file": "06-IMG_9098.jpg",
+        "height": 320
+      }
+    ]
+  },
+  {
+    "description": "Dernier test de sable avant la livraison de notre projet sur les bords de Loire. VB11.",
+    "date": "2020-06-25",
+    "images": [
+      {
+        "file": "07-IMG_8763.jpg",
+        "height": 450
+      },
+      {
+        "file": "08-IMG_9467.jpg",
+        "height": 435
+      }
+    ]
+  },
+  {
+    "description": "Avancement de notre chantier CK04<br/>Réhabilitation d’un château en Picardie",
+    "date": "2020-06-10",
+    "images": [
+      {
+        "file": "09-IMG_5744.jpg",
+        "height": 450
+      },
+      {
+        "file": "10-IMG_8003.jpg",
+        "height": 320
+      }
+    ]
+  },
+  {
+    "description": "NOUVEAU PROJET !!<br/><br/>Commande d’une maison à Lancieux.<br/>Echantillons issus de la recherche contextuelle et matérielle. ",
+    "date": "2020-06-05",
+    "images": [
+      {
+        "file": "11-IMG_7966.jpg",
+        "height": 370
+      }
+    ]
+  },
+  {
+    "description": "Avancement de notre chantier VB11 à Orléans.",
+    "date": "2020-04-30",
+    "images": [
+      {
+        "file": "12-IMG_7533.jpg",
+        "height": 410
+      },
+      {
+        "file": "13-IMG_6468.jpg",
+        "height": 320
+      }
+    ]
+  },
+  {
+    "description": "Phase 3 du chantier du siège de l’entreprise Barillet (projet EB12).",
+    "date": "2020-04-22",
+    "images": [
+      {
+        "file": "14-IMG_7702.jpg",
+        "height": 435
+      }
+    ]
+  },
+  {
+    "description": "Proposition de l’agence pour le concours BAM architecture,<br/> Maison passive en forêt de Fontainebleau.<br/>Projet finaliste.",
+    "date": "2020-04-08",
+    "images": [
+      {
+        "file": "15-FONTAINEBLEAU_EXT-V3.jpg",
+        "height": 240
+      },
+      {
+        "file": "16-_FONTAIBLEAU_AJAP.jpg",
+        "height": 300
+      }
+    ]
+  },
+  {
+    "description": "Avancement de la façade de notre projet de<br/>réhabilitation et d’extension de la société d’exploitation forestière Barillet, vers Orléans (EB12).",
+    "date": "2020-02-12",
+    "images": [
+      {
+        "file": "17-IMG_SEFB.jpg",
+        "height": 390
+      },
+      {
+        "file": "18-IMG_4940.jpg",
+        "height": 450
+      }
+    ]
+  },
+  {
+    "description": "Passion matières !",
+    "date": "2019-12-15",
+    "images": [
+      {
+        "file": "19-IMG_5250.jpg",
+        "height": 430
+      }
+    ]
+  },
+  {
+    "description": "Proposition de l’agence pour le sanctuaire des Clarisses,<br/>Concours international Rwanda Chapel.<br/>Projet non-retenu.",
+    "date": "2019-11-07",
+    "images": [
+      {
+        "file": "20-RWANDA_VUE-INT_v3.jpg",
+        "height": 410
+      },
+      {
+        "file": "21-RWANDA_VUE-EXT_v2.jpg",
+        "height": 250
+      }
+    ]
+  },
+  {
+    "description": "Vivre la maison comme on traverse un dolmen.<br/>Proposition pour notre projet voisin du site mégalithique de Locmariaquer (VD09).",
+    "date": "2019-10-02",
+    "images": [
+      {
+        "file": "22-CLOS_VUE_ENTREE.jpg",
+        "height": 330
+      },
+      {
+        "file": "23-CLOS_AJAP.jpg",
+        "height": 280
+      }
+    ]
+  },
+  {
     "description": "NOUVELLE COLLABORATION !!<br/><br/>Test de matière avec l’Atelier hollandais LVDW. Ici des essais à base de briques artisanales réutilisées pour le projet VB229.",
     "date": "2019-09-02",
     "images": [

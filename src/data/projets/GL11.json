@@ -1,0 +1,46 @@
+{
+  "title": "GL11",
+  "code_projet": "GL11",
+  "content": [
+    {
+      "type": "image",
+      "src": "01-GL11-CONTEXTE.jpg"
+    },
+    {
+      "type": "p",
+      "content": "Le projet GL11 s’inscrit dans un bâtiment qui était initialement dédié à l’hôtellerie. A travers sa réhabilitation, il a donc été totalement été repensé afin de pouvoir répondre aux besoins du nouveau programme. De l’extérieur, on aperçoit un volume plat et contemporain qui vient entourer la complexité du gabarit existant. Un geste épuré qui relie ainsi l’existant de son extension, tout en donnant une nouvelle dimension à l’entrée du lieu."
+    },
+    {
+      "type": "p",
+      "content": "Notre parcelle étant située à l’entrée de Locmariaquer, ville forte de son port mais surtout de ses sites mégalithiques, l’agence a souhaité  développer son architecture autour de ce patrimoine granitique."
+    },
+    {
+      "type": "p",
+      "content": "Ayant constaté que l’extraction et la transformation d’une carrière locale génère 85% de perte, nous avons décidé de réutiliser cette source abondante de granit au sein du projet: en réutilisant la poussière issu du bouchardage de la pierre en enduit de façade, en transformant les grosses chutes en revêtement de sol façon opus incertum, et en utilisant les concassés pour garnir les toitures terrasses et les espaces extérieurs (rappel des alignements de galets du site néolithique voisin)."
+    },
+    {
+      "type": "image",
+      "src": "02-GL11-COM-TABLE-DES-MATIERES05-GL11-COM-ATELIERDELALANDETABOURIN.jpg"
+    },
+    {
+      "type": "image",
+      "src": "03-GL11-COM-MAQUETTE.jpg"
+    },
+    {
+      "type": "image",
+      "src": "04-GL11-COM-ATELIERDELALANDETABOURIN.jpg"
+    },
+    {
+      "type": "image",
+      "src": "05-GL11-COM-ATELIERDELALANDETABOURIN.jpg"
+    },
+    {
+      "type": "image",
+      "src": "06-GL11-COM.png"
+    },
+    {
+      "type": "image",
+      "src": "07-GL11-COM-PLAN.jpg"
+    }
+  ]
+}

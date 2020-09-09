@@ -3,64 +3,56 @@
   "code_projet": "VD09",
   "content": [
     {
-      "type": "summary",
-      "section": 1,
-      "content": "#1 - Analyse du contexte",
-      "image": "VD09-contexte.jpg"
-    },
-    {
       "type": "image",
-      "section": 1,
-      "src": "VD09-existant.jpg"
+      "src": "00-VD09-COM-CONTEXTE.jpg"
     },
     {
       "type": "p",
-      "section": 1,
-      "content": "La villa VD09 s’inscrit dans un contexte paysagé extrêmement fort.  Au nord, elle fait face au sublime panorama du golfe du Morbihan tandis qu’au sud on retrouve le site mégalithique de Locmariaquer."
+      "content": "La villa VD09 s’inscrit dans un contexte paysagé extrêmement fort. Au nord, elle fait face au sublime panorama du golfe du Morbihan tandis qu’au sud on retrouve le site mégalithique de Locmariaquer."
     },
     {
       "type": "p",
-      "section": 1,
-      "content": "C’est donc une nouvelle fois autour de ce patrimoine architectural que l’agence a souhaité développer sa réflexion. Mais à la différence de notre hôtel HD11 où le travail était axé sur une recherche matérielle, nous voulions ici que le client vive la maison comme on traverse un dolmen. De manière contemporaine, dix orthostates (piliers)  viennent donc soutenir un tablier supérieur.  A l’intérieure du projet les espaces de vies sont articulés autour d’un couloir central qui, à  l’image de son inspiration préhistorique, offre une expérience spatiale séquencée entre ombres et lumières, masse et vide."
+      "content": "C’est donc une nouvelle fois autour de ce patrimoine architectural que l’agence a souhaité développer sa réflexion. Mais à la différence de notre hôtel HD11 où le travail était axé sur une recherche matérielle, nous voulions ici que le client vive la maison comme on traverse un dolmen. De manière contemporaine, dix orthostates (piliers) viennent donc soutenir un tablier supérieur. A l’intérieure du projet les espaces de vies sont articulés autour d’un couloir central qui, à l’image de son inspiration préhistorique, offre une expérience spatiale séquencée entre ombres et lumières, masse et vide."
     },
     {
       "type": "p",
-      "section": 1,
       "content": "L’utilisation d’un béton ocre vient rappeler la teinte des menhirs pendant que le rythme du bardage bois remémore au promeneur les ganivelles du chemin des douaniers."
     },
     {
       "type": "image",
-      "section": 1,
-      "src": "VD09-diagramme.jpg"
-    },
-    {
-      "type": "summary",
-      "section": 2,
-      "content": "#2 - Table des matières",
-      "image": "VD09-BETON-TABLE-DES-MATIERES.jpg"
-    },
-    {
-      "type": "summary",
-      "section": 3,
-      "content": "#3 - Projet",
-      "image": "VD09-atelierdelalandetabourin-vue-entree.jpg"
+      "src": "02-VD09-COM-TABLEDESMATIERES.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "VD09-plan.jpg"
+      "src": "03-VD09-COM-MAQUETTE-ATELIERDELALANDETABOURIN.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "VD09-coupe.jpg"
+      "src": "04-VD09-COM-ATELIERDELALANDETABOURIN.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "VD09-atelierdelalandetabourin-vue-ext.jpg"
+      "src": "05-VD09-COM-VUE-LOINTAINE.jpg"
+    },
+    {
+      "type": "image",
+      "src": "06-VD09-COM-PLANMASSE.jpg"
+    },
+    {
+      "type": "image",
+      "src": "07-VD09-COM-PLAN-ATELIERDELALANDETABOURIN.jpg"
+    },
+    {
+      "type": "image",
+      "src": "08-VD09-COM-FACADE.jpg"
+    },
+    {
+      "type": "image",
+      "src": "09-VD09-COM-COUPE.jpg"
+    },
+    {
+      "type": "image",
+      "src": "10-VD09-COM-DETAIL.jpg"
     }
   ]
 }
-
-

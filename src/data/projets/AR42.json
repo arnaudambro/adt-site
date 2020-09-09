@@ -3,103 +3,36 @@
   "code_projet": "AR42",
   "content": [
     {
-      "type": "summary",
-      "section": 1,
-      "content": "#1 - Analyse du contexte"
-    },
-    {
-      "type": "image",
-      "section": 1,
-      "src": "AR42-existant.jpg"
-    },
-    {
       "type": "p",
-      "section": 1,
-      "content": "Le plan de l’appartement AR42 s’articule autour d’un escalier central qui anciennement appartenait aux parties communes de l’immeuble.<br/> Notre intervention architecturale se fait principalement autour d’une pensée matérielle. Une résine à base d’un mélange de sable et de coquilles d’huitres qui rappelle les origines bretonne du client. Sous la forme d’un bandeau périphérique de l’épaisseur d’une plinthe, elle vient donc parcourir le sol en se voulant comme le négatif projeté des corniches en plafond."
-    },
-    {
-      "type": "p",
-      "section": 1,
-      "content": "Un détail tout en contraste avec le mobilier sur mesure en acajou."
-    },
-    {
-      "type": "summary",
-      "section": 2,
-      "content": "#2 - Table des matières",
-      "image": "AR42-RESINE-TABLE-DES-MATIERES.jpg"
-    },
-    {
-      "type": "summary",
-      "section": 3,
-      "content": "#3 - Projet",
-      "image": "AR42-atelierdelalandetabourin-00-PHOTO-1-HD.jpg"
+      "content": "Le plan de l’appartement AR42 s’articule autour d’un escalier central qui anciennement appartenait aux parties communes de l’immeuble. <br/>Notre intervention architecturale se fait principalement autour d’une pensée matérielle. Une résine à base d’un mélange de sable, de coquilles d’huitres et de nacre qui rappelle les origines bretonnes du client. Sous la forme d’un bandeau périphérique de l’épaisseur d’une plinthe, elle vient parcourir le sol en se voulant comme le négatif projeté des corniches en plafond. Un détail tout en contraste avec le mobilier sur mesure en acajou."
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "AR42-planrdc.jpg"
+      "src": "02-AR42-TABLE-DES-MATIERES.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "AR42-atelierdelalandetabourin-01-PHOTO-3-HD.jpg"
+      "src": "03-AR24-COM-ATELIERDELALANDETABOURIN.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "AR42-atelierdelalandetabourin-02-PHOTO-2-HD.jpg"
+      "src": "04-AR24-COM.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "AR42-atelierdelalandetabourin-03-PHOTO-11-HD.jpg"
+      "src": "05-AR24-COM.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "AR42-atelierdelalandetabourin-04-PHOTO-12-HD.jpg"
+      "src": "06-AR24-COM.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "AR42-atelierdelalandetabourin-05-PHOTO-4-HD.jpg"
+      "src": "07-AR24-COM.jpg"
     },
     {
       "type": "image",
-      "section": 3,
-      "src": "AR42-atelierdelalandetabourin-06-PHOTO-8-HD.jpg"
-    },
-    {
-      "type": "image",
-      "section": 3,
-      "src": "AR42-atelierdelalandetabourin-07-PHOTO-9-HD.jpg"
-    },
-    {
-      "type": "image",
-      "section": 3,
-      "src": "AR42-atelierdelalandetabourin-08-PHOTO-7-HD.jpg"
-    },
-    {
-      "type": "image",
-      "section": 3,
-      "src": "AR42-atelierdelalandetabourin-09-PHOTO-13-HD.jpg"
-    },
-    {
-      "type": "image",
-      "section": 3,
-      "src": "AR42-atelierdelalandetabourin-10-PHOTO-14-HD.jpg"
-    },
-    {
-      "type": "image",
-      "section": 3,
-      "src": "AR42-atelierdelalandetabourin-11-PHOTO-10-HD.jpg"
-    },
-    {
-      "type": "image",
-      "section": 3,
-      "src": "AR42-atelierdelalandetabourin-12-PHOTO-5-HD_2.jpg"
+      "src": "12-AR24-PLAN.jpg"
     }
   ]
 }
-
-

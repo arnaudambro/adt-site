@@ -1,9 +1,9 @@
 import React from "react"
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Content from "../components/content";
+import Content from "../components/content"
 import {
   getTitle,
   getDescription,
@@ -13,9 +13,10 @@ import {
   getMaterial,
   getCollab,
   getPrix,
-  getMission} from "../helpers/selectors";
-import Arrows from "../components/arrows";
-import useProjetsDataAndImages from "../helpers/hooks/useProjetsDataAndImages";
+  getMission,
+} from "../helpers/selectors"
+import Arrows from "../components/arrows"
+import useProjetsDataAndImages from "../helpers/hooks/useProjetsDataAndImages"
 
 const Title = styled.h2`
   text-transform: uppercase;
@@ -57,43 +58,49 @@ const Etat = styled.span`
   ${cssContent}
 `
 const Material = styled.span`
-/* text-transform: capitalize; */
+  /* text-transform: capitalize; */
   ${cssContent}
 `
 const Mission = styled.span`
   ${cssContent}
-margin-bottom: 30px;
+  margin-bottom: 30px;
 `
 
 const Cout = styled.span`
-text-transform: capitalize;
+  text-transform: capitalize;
   ${cssContent}
 `
 
-const Projet = (props) => {
+const Projet = props => {
   const { projets, images } = useProjetsDataAndImages()
-  const { projet } = props.pageContext;
-  const details = projets.find(({ code_projet }) => code_projet === projet.code_projet)
-  return(
-    <Layout noMaxWidth>
+  const { projet } = props.pageContext
+  const details = projets.find(
+    ({ code_projet }) => code_projet === projet.code_projet
+  )
+  return (
+    <Layout forProjet>
       <SEO title={getTitle(details)} />
       <Title>{getTitle(details)}.</Title>
       <Description>{getDescription(details)}</Description>
-      {getCollab(details) && <Collab>Réalisé en collaboration avec {getCollab(details)}</Collab>}
-      <Location>{getLocation(details)}</Location>
-      <Surface>Surface: {getSurface(details)} m<sup>2</sup></Surface>
-      <Material>Matière: {getMaterial(details)}</Material>
-      <Cout>Coût: {getPrix(details)}</Cout>
-      <Etat>{getEtat(details)}</Etat>
-      <Mission>{getMission(details)}</Mission>
-      <Content
-        nodes={projet.content}
-        images={images}
-        />
-      <Arrows projets={projets.map(({ code_projet }) => code_projet)} projet={projet.code_projet} />
+      {getCollab(details) && (
+        <Collab>Réalisé en collaboration avec {getCollab(details)}</Collab>
+      )}
+      {getLocation(details) && <Location>{getLocation(details)}</Location>}
+      {getSurface(details) && (
+        <Surface>
+          Surface: {getSurface(details)} m<sup>2</sup>
+        </Surface>
+      )}
+      {getMaterial(details) && (
+        <Material>Matière: {getMaterial(details)}</Material>
+      )}
+      {getPrix(details) && <Cout>Coût: {getPrix(details)}</Cout>}
+      {getEtat(details) && <Etat>{getEtat(details)}</Etat>}
+      {getMission(details) && <Mission>{getMission(details)}</Mission>}
+      <Content nodes={projet.content} images={images} />
+      <Arrows projets={projets} projet={projet.code_projet} />
     </Layout>
   )
 }
-
 
 export default Projet
