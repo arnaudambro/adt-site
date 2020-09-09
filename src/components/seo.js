@@ -68,9 +68,9 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
-          name: 'robots',
-          content: 'index'
-        }
+          name: "robots",
+          content: "noindex",
+        },
       ].concat(meta)}
     />
   )

@@ -1,25 +1,23 @@
-
-export const projets = 'projets';
-export const database = 'database';
-export const journal = 'journal';
-export const atelier = 'atelier';
-export const infos = 'infos';
-
+export const projets = "projets"
+export const database = "database"
+export const journal = "journal"
+export const atelier = "atelier"
+export const infos = "infos"
 
 export default {
   [projets]: {
-    fr: 'projets',
-  },
-  [atelier]: {
-    fr: 'l\'atelier',
-  },
-  [database]: {
-    fr: 'base de données',
+    fr: "projets",
   },
   [journal]: {
-    fr: 'journal',
+    fr: "journal",
   },
-  [infos]: {
-    fr: 'infos',
+  [database]: {
+    fr: "base de données",
   },
+  [atelier]: {
+    fr: "l'atelier",
+  },
+  // [infos]: {
+  //   fr: "infos",
+  // },
 }

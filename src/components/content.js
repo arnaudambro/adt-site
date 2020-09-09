@@ -1,18 +1,14 @@
 import React from "react"
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 import Img from "gatsby-image/withIEPolyfill"
 import { displayFlex, gatsbyImage } from "../styles/mixins"
 import { getImageFromSrc } from "../helpers/selectors"
 import useWindowSize from "../helpers/hooks/useWindowSize"
-import windowExists from "../helpers/windowExists"
-import windowPathNameIncludes from "../helpers/windowPathNameIncludes"
 
 const ImgStyled = styled(Img)`
   margin-bottom: 60px;
   ${props => props.customStyle && `${props.customStyle}`}
 `
-
-const triangleSize = 18
 
 const ContentStyled = styled.div`
   font-size: 14px;

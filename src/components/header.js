@@ -171,7 +171,7 @@ const Page = styled.li`
     transform: unset;
     position: relative;
     left: unset;
-    font-size: 0.65em;
+    font-size: 0.75em;
     height: ${({
       theme: {
         height: {

@@ -32,7 +32,7 @@ const ImgStyled = styled(Img)`
 `
 
 const Placeholder = styled.div`
-  border: 2px solid #000;
+  border: 1px solid #000;
   height: 100%;
   width: ${props => props.theme.width.material}px;
   ${media.desktop`

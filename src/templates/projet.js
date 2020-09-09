@@ -31,7 +31,7 @@ const Title = styled.h2`
 const cssContent = css`
   display: block;
   font-weight: 300;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
 `
 const Collab = styled.span`
   text-transform: uppercase;

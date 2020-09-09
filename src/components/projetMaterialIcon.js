@@ -67,7 +67,6 @@ const Mission = styled.span`
 `
 
 const Etat = styled.span`
-  text-transform: capitalize;
   ${cssContent}
 `
 const Material = styled.span`
@@ -91,7 +90,7 @@ const ProjetMaterialIcon = ({ setVisible, visible, ...projet }) => (
     >
       <Title>
         {getTitle(projet)}{" "}
-        {Number.isNaN(getYear(projet)) ? "" : getYear(projet)}
+        {/* Number.isNaN(getYear(projet)) ? "" : getYear(projet) */}
       </Title>
       {Boolean(getCollab(projet)) && (
         <Collab>Cotraitance avec {getCollab(projet)}</Collab>
@@ -112,7 +111,8 @@ const ProjetMaterialIcon = ({ setVisible, visible, ...projet }) => (
       {getMission(projet) && <Mission>{getMission(projet)}</Mission>}
     </Item>
     <TitleMobile>
-      {getTitle(projet)} {Number.isNaN(getYear(projet)) ? "" : getYear(projet)}
+      {getTitle(projet)}{" "}
+      {/* Number.isNaN(getYear(projet)) ? "" : getYear(projet) */}
     </TitleMobile>
   </>
 )
