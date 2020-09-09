@@ -14,15 +14,15 @@ const Title = styled.span`
   font-weight: 500;
   font-size: 0.75rem;
   line-height: 1em;
-  margin-bottom: 18px;
+  display: block;
+  margin-bottom: 5px;
 `
 
-const cssContent = css`
+const Description = styled.span`
   font-weight: 300;
   font-size: 0.7rem;
-`
-const Description = styled.span`
-  ${cssContent}
+  display: block;
+  margin-bottom: 30px;
 `
 
 const Divider = styled.div`
@@ -44,15 +44,14 @@ const News = ({ setVisible, visible, withDivider, ...news }) => {
         alt={getNewsAlt(news)}
         id={news.id}
         images={news.images}
-        withBigBottom
+        forceFullWidth
         withDivider={withDivider}
         noScreening
-      >
-        <Title>{getNewsDate(news)}</Title>
-        <Description
-          dangerouslySetInnerHTML={{ __html: getNewsDescription(news) }}
-        />
-      </Item>
+      />
+      <Title>{getNewsDate(news)}</Title>
+      <Description
+        dangerouslySetInnerHTML={{ __html: getNewsDescription(news) }}
+      />
       {withDivider && <Divider />}
     </>
   )

@@ -55,8 +55,8 @@ const Filter = styled.span`
   width: 85px;
   height: 22px;
   line-height: 22px;
-  font-weight: 500;
-  font-size: 0.75em;
+  font-weight: 400;
+  font-size: 0.65em;
   color: ${({ active, theme }) =>
     active ? theme.color.black : theme.color.defaultColor};
   &::before {

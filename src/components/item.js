@@ -7,11 +7,11 @@ import { media } from "../styles/mediaQueries"
 import windowExists from "../helpers/windowExists"
 import isTouchDevice from "../helpers/isTouchDevice"
 
-const ItemWrapper = styled(({ withBigBottom, height, theme, ...rest }) => (
+const ItemWrapper = styled(({ forceFullWidth, height, theme, ...rest }) => (
   <div {...rest} />
 ))`
   height: ${({ height }) => height}px;
-  margin-bottom: ${({ withBigBottom }) => (withBigBottom ? 30 : 5)}px;
+  margin-bottom: 5px;
   display: flex;
   ${({ theme }) =>
     gatsbyImage({
@@ -85,7 +85,7 @@ const DescriptionContainer = styled.div`
   }
 `
 
-export const Item = ({
+const Item = ({
   as = "div",
   setVisible,
   visible,
@@ -96,13 +96,13 @@ export const Item = ({
   children,
   id,
   images,
-  withBigBottom,
+  forceFullWidth,
   noScreening = false,
 }) => (
   <ItemWrapper
     as={as}
     to={to}
-    withBigBottom={withBigBottom}
+    forceFullWidth={forceFullWidth}
     height={height}
     onClick={e => {
       if (!visible && !directClick) {
@@ -125,7 +125,6 @@ export const Item = ({
   >
     <ImagesContainer>
       {images.map((img, ind) => {
-        console.log(img)
         if (!img.src) return <Placeholder key={ind} />
         return (
           <ImgStyled
