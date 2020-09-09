@@ -13,27 +13,6 @@ const ImgStyled = styled(Img)`
 `
 
 const triangleSize = 18
-const triangleCss = image => css`
-  list-style-image: none;
-  &::marker {
-    display: none;
-  }
-  &::-webkit-details-marker {
-    display: none;
-  }
-  &:after {
-    content: "";
-    position: absolute;
-    top: -1px;
-    left: 0;
-    background-image: url(${image});
-    background-size: contain;
-    height: ${triangleSize}px;
-    width: ${triangleSize}px;
-    background-repeat: no-repeat;
-    color: transparent;
-  }
-`
 
 const ContentStyled = styled.div`
   font-size: 14px;
@@ -56,7 +35,7 @@ const ContentStyled = styled.div`
     }
     b {
       font-weight: 500;
-      color: hsla(0,0%,0%,0.8);
+      color: hsla(0, 0%, 0%, 0.8);
     }
     ${props => props.customStyle && `${props.customStyle}`}
   }
@@ -70,6 +49,7 @@ const ContentStyled = styled.div`
   }
   summary {
     ${props => props.forceOpen && `pointer-events: none;`}
+    margin-top: 45px;
     margin-bottom: ${({ theme }) => theme.margin.bottom.contentSummary}px;
     cursor: pointer;
     font-weight: 400;
@@ -77,22 +57,15 @@ const ContentStyled = styled.div`
     &:hover {
       opacity: 0.5;
     }
-    /* list-style-image: url(${({ triangle }) => triangle}); */
-
-    ${({ triangle }) => triangleCss(triangle.close)}
 
     .gatsby-image-wrapper {
       margin-top: 40px;
     }
   }
-  details[open] summary {
-    ${({ triangle }) => triangleCss(triangle.open)}
-  }
   summary #title {
     text-transform: uppercase;
     width: 100%;
     font-size: 0.9em;
-    padding-left: ${triangleSize + triangleSize / 6}px;
     &::after {
       content: "";
       border-bottom: 1px solid black;
@@ -106,17 +79,6 @@ const ContentStyled = styled.div`
     width: "100%",
     height: "100%",
   })}
-  details > .gatsby-image-wrapper {
-    margin-bottom: ${({ theme }) => theme.margin.bottom.contentItem}px;
-  }
-  details > * {
-    ${() =>
-      windowExists() &&
-      windowPathNameIncludes("debug") &&
-      `
-      border: 1px solid #000;
-    `}
-  }
 `
 
 const Content = ({
@@ -146,10 +108,25 @@ const Content = ({
     switch (node.type) {
       case "image":
         return renderImage(node)
+      case "summary":
+        return renderSummary(node, ind)
       default:
         return renderElement(node, ind)
     }
   }
+
+  const renderSummary = (summary, ind) => (
+    <summary key={ind}>
+      <span id="title" dangerouslySetInnerHTML={{ __html: summary.content }} />
+      {summary.image && (
+        <Img
+          fluid={getImageFromSrc(images, summary.image)}
+          alt={summary.content}
+          title={summary.content}
+        />
+      )}
+    </summary>
+  )
 
   const renderElement = (node, ind) => (
     <node.type
