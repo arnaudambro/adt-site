@@ -7,9 +7,7 @@ import { media } from "../styles/mediaQueries"
 import windowExists from "../helpers/windowExists"
 import isTouchDevice from "../helpers/isTouchDevice"
 
-const ItemWrapper = styled(({ forceFullWidth, height, theme, ...rest }) => (
-  <div {...rest} />
-))`
+const ItemWrapper = styled(({ height, theme, ...rest }) => <div {...rest} />)`
   height: ${({ height }) => height}px;
   margin-bottom: 5px;
   display: flex;
@@ -96,13 +94,11 @@ const Item = ({
   children,
   id,
   images,
-  forceFullWidth,
   noScreening = false,
 }) => (
   <ItemWrapper
     as={as}
     to={to}
-    forceFullWidth={forceFullWidth}
     height={height}
     onClick={e => {
       if (!visible && !directClick) {

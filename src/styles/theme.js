@@ -48,7 +48,7 @@ const theme = {
     scrollBar: 14,
     logo: 175,
     indicator: 15,
-    material: 300,
+    material: 280,
     desktop: {
       material: 385,
       logo: 175,
