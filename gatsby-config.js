@@ -1,4 +1,3 @@
-
 module.exports = {
   siteMetadata: {
     // title: `Atelier Delalande Tabourin | Architecture + Material LAB + Design`,
@@ -11,11 +10,11 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-json`,
     {
-      resolve: 'gatsby-plugin-htaccess',
+      resolve: "gatsby-plugin-htaccess",
       options: {
-        RewriteBase: '/',
+        RewriteBase: "/",
         https: true,
-        www: true
+        www: false,
       },
     },
     {
@@ -30,7 +29,7 @@ module.exports = {
       options: {
         raw: false,
         defval: null,
-      }
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -51,7 +50,7 @@ module.exports = {
         theme_color: `#fff`,
         display: `standalone`, //https://developers.google.com/web/fundamentals/web-app-manifest/#display
         icon: `src/images/adt-icon.png`, // This path is relative to the root of the site.
-        legacy: true // for previous ios versions
+        legacy: true, // for previous ios versions
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

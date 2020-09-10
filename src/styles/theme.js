@@ -41,7 +41,7 @@ const theme = {
     max: {
       app: 490,
       headerColumn: 300,
-      content: (dividerWidth - sideColumnWidth) * 0.9,
+      content: (dividerWidth - sideColumnWidth) * 0.75,
     },
     arrows: 50,
     hideScrollbar: 18,

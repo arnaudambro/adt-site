@@ -14,6 +14,7 @@ import {
   getProjetMaterialImageForBDDPage,
   getMaterial,
   rankProjectsInBDD,
+  getInProjects,
 } from "../helpers/selectors"
 import { addSuffix } from "../helpers/projetUrl"
 import Layout from "../components/layout"
@@ -90,6 +91,7 @@ const Categories = styled.div`
   `}
   /* padding-right: 100px; */
   margin-top: 50px;
+  transform: scale(0.9);
 `
 
 const CategoryContainer = styled.div`
@@ -128,7 +130,14 @@ const Database = () => {
   const { projets, images } = useProjetsDataAndImages()
 
   const annees = React.useMemo(
-    () => new Set(projets.filter(getInDB).map(getYear)),
+    () =>
+      new Set(
+        projets
+          .filter(getInDB)
+          .map(getYear)
+          .sort()
+          .reverse()
+      ),
     [projets]
   )
 
@@ -160,7 +169,9 @@ const Database = () => {
                 .sort(rankProjectsInBDD(visibleCategory))
                 .map(projet => ({
                   images: [getProjetMaterialImageForBDDPage(images, projet)],
-                  to: `/projet/${addSuffix(getCode(projet))}`,
+                  to: getInProjects(projet)
+                    ? `/projet/${addSuffix(getCode(projet))}`
+                    : null,
                   alt: `${getTitle(projet)} - ${getMaterial(projet)}`,
                   height: getMaterialHeightPageBDD(projet),
                   id: projet.id,
@@ -168,7 +179,7 @@ const Database = () => {
                 .map((projet, ind) => (
                   <Item
                     key={ind}
-                    as={Link}
+                    as={projet.to ? Link : "div"}
                     directClick
                     id={projet.id}
                     visible={visibleProjet === projet.id}

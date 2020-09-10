@@ -4,7 +4,8 @@
   "content": [
     {
       "type": "image",
-      "src": "01-VB11-COM-CONTEXTE.jpg"
+      "src": "01-VB11-COM-CONTEXTE.jpg",
+      "style": "margin-bottom: 30px;"
     },
     {
       "type": "p",
@@ -29,10 +30,6 @@
     {
       "type": "image",
       "src": "05-VB11-COM.jpg"
-    },
-    {
-      "type": "image",
-      "src": "06-VB11-COM.jpg"
     },
     {
       "type": "image",

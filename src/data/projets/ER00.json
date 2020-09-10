@@ -4,7 +4,8 @@
   "content": [
     {
       "type": "image",
-      "src": "01-ER00-COM-CONTEXTE.jpg"
+      "src": "01-ER00-COM-CONTEXTE.jpg",
+      "style": "margin-bottom: 30px;"
     },
     {
       "type": "p",
@@ -48,7 +49,8 @@
     },
     {
       "type": "image",
-      "src": "08-ER00-COM-DETAILS.jpg"
+      "src": "08-ER00-COM-DETAILS.jpg",
+      "style": "margin-bottom: 120px;"
     },
     {
       "type": "image",

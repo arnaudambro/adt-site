@@ -4,7 +4,8 @@
   "content": [
     {
       "type": "image",
-      "src": "01-BE69-COM-CONTEXTE.jpg"
+      "src": "01-BE69-COM-CONTEXTE.jpg",
+      "style": "margin-bottom: 30px;"
     },
     {
       "type": "p",
@@ -21,6 +22,10 @@
     {
       "type": "image",
       "src": "02-BE69-COM-TABLEDESMATIERES.jpg"
+    },
+    {
+      "type": "image",
+      "src": "03-BE69-COM.png"
     },
     {
       "type": "image",

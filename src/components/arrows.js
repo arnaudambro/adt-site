@@ -9,7 +9,7 @@ import { getEmpty } from "../helpers/selectors"
 
 const ArrowsContainer = styled.div`
   height: 25px;
-  width: ${({ theme }) => theme.width.arrows}px;
+  width: ${({ theme }) => theme.width.arrows * 0.75}px;
   padding-right: 1px;
   position: absolute;
   right: ${({ theme }) => (isTouchDevice() ? 0 : theme.width.hideScrollbar)}px;
@@ -24,7 +24,7 @@ const ArrowsContainer = styled.div`
   })}
 `
 
-const arrowsHeight = 20
+const arrowsHeight = 16
 
 const Divider = () => (
   <svg viewBox="0 0 2 200" width="2" height={arrowsHeight}>

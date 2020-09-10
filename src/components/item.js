@@ -102,7 +102,7 @@ const Item = ({
     height={height}
     onClick={e => {
       if (!visible && !directClick) {
-        e.preventDefault()
+        // e.preventDefault()
         setVisible(id)
       }
     }}

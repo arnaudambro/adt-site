@@ -4,7 +4,8 @@
   "content": [
     {
       "type": "image",
-      "src": "01-GL11-CONTEXTE.jpg"
+      "src": "01-GL11-CONTEXTE.jpg",
+      "style": "margin-bottom: 30px;"
     },
     {
       "type": "p",
@@ -41,6 +42,10 @@
     {
       "type": "image",
       "src": "07-GL11-COM-PLAN.jpg"
+    },
+    {
+      "type": "image",
+      "src": "09-GL11-COM-COUPE.jpg"
     },
     {
       "type": "image",

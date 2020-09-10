@@ -4,7 +4,8 @@
   "content": [
     {
       "type": "image",
-      "src": "01-EB12-COM-CONTEXTE.jpg"
+      "src": "01-EB12-COM-CONTEXTE.jpg",
+      "style": "margin-bottom: 30px;"
     },
     {
       "type": "p",

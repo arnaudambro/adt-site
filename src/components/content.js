@@ -124,13 +124,17 @@ const Content = ({
     </summary>
   )
 
-  const renderElement = (node, ind) => (
-    <node.type
-      key={ind}
-      dangerouslySetInnerHTML={{ __html: node.content }}
-      style={node.style ? JSON.parse(node.style) : {}}
-    />
-  )
+  const renderElement = (node, ind) => {
+    console.log(JSON.parse(node.style))
+
+    return (
+      <node.type
+        key={ind}
+        dangerouslySetInnerHTML={{ __html: node.content }}
+        style={node.style ? JSON.parse(node.style) : {}}
+      />
+    )
+  }
 
   const renderImage = image => (
     <ImgStyled

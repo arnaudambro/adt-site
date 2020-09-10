@@ -4,7 +4,8 @@
   "content": [
     {
       "type": "image",
-      "src": "00-VD09-COM-CONTEXTE.jpg"
+      "src": "00-VD09-COM-CONTEXTE.jpg",
+      "style": "margin-bottom: 30px;"
     },
     {
       "type": "p",

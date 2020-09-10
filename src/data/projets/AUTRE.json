@@ -5,57 +5,63 @@
     {
       "type": "image",
       "src": "00-COM-AUTRESPROJETS-ATELIERDELALANDETABOURIN.jpg",
-      "style": "margin-bottom: 20px; margin-top: 60px;"
+      "style": "margin-bottom: 20px; margin-top: 20px;"
     },
     {
       "type": "p",
-      "content": "<b>REHABILITATION ET EXTENSION D’UN HOTEL 4*</b><br/>Locmariaquer, Morbihan, France<br/>Surface: 1020 m2<br/>Matière: Granit<br/>Coût: 3 500 000 €<br/>État: Arrêté en phase PRO/DCE<br/>Mission: Complète + mobilier<br/>"
+      "content": "<b>REHABILITATION ET EXTENSION D’UN HOTEL 4*</b><br/>Locmariaquer, Morbihan, France<br/>Surface: 1020 m2<br/>Matière: Granit<br/>Coût: 3 500 000 €<br/>État: Arrêté en phase PRO/DCE<br/>Mission: Complète + mobilier<br/>",
+      "style": "{\"fontSize\": \"0.8em\"}"
     },
     {
       "type": "image",
       "src": "01-COM-AUTRESPROJETS-ATELIERDELALANDETABOURIN.jpg",
-      "style": "margin-bottom: 20px; margin-top: 60px;"
+      "style": "margin-bottom: 20px; margin-top: 20px;"
     },
     {
       "type": "p",
-      "content": "<b>CONCEPTION D’UNE PISCINE ET D’UN POOL-HOUSE</b><br/>Brézé, Maine-Et-Loire, France<br/>Surface: 170 m2<br/>Matière: Tuffeau<br/>Coût: 150 000 €<br/>État: Livré, Avril 2018<br/>Mission: Conception<br/>"
+      "content": "<b>CONCEPTION D’UNE PISCINE ET D’UN POOL-HOUSE</b><br/>Brézé, Maine-Et-Loire, France<br/>Surface: 170 m2<br/>Matière: Tuffeau<br/>Coût: 150 000 €<br/>État: Livré, Avril 2018<br/>Mission: Conception<br/>",
+      "style": "{\"fontSize\": \"0.8em\"}"
     },
 
     {
       "type": "image",
       "src": "02-COM.jpg",
-      "style": "margin-bottom: 20px; margin-top: 60px;"
+      "style": "margin-bottom: 20px; margin-top: 20px;"
     },
     {
       "type": "p",
-      "content": "<b>EXTENSION ET REHABILITATION D’UNE GRANGE</b><br/>Quelque part en Sologne, Loiret, France<br/>Surface: 110 m2<br/>Matière: Brique artisanale<br/>Coût: 300 000 €<br/>État: Arrêté en phase APD<br/>Mission: Complète<br/>"
+      "content": "<b>EXTENSION ET REHABILITATION D’UNE GRANGE</b><br/>Quelque part en Sologne, Loiret, France<br/>Surface: 110 m2<br/>Matière: Brique artisanale<br/>Coût: 300 000 €<br/>État: Arrêté en phase APD<br/>Mission: Complète<br/>",
+      "style": "{\"fontSize\": \"0.8em\"}"
     },
     {
       "type": "image",
       "src": "03-COM.jpg",
-      "style": "margin-bottom: 20px; margin-top: 60px;"
+      "style": "margin-bottom: 20px; margin-top: 20px;"
     },
     {
       "type": "p",
-      "content": "<b>REHABILITATION D’UN APPARTEMENT</b><br/>Meudon, Hauts-De-Seine, France<br/>Surface: 110 m2<br/>Matière: Pierre<br/>Coût: 180 000 €<br/>État: Livré, Dec 2017<br/>Mission: Complète<br/>"
+      "content": "<b>REHABILITATION D’UN APPARTEMENT</b><br/>Meudon, Hauts-De-Seine, France<br/>Surface: 110 m2<br/>Matière: Pierre<br/>Coût: 180 000 €<br/>État: Livré, Dec 2017<br/>Mission: Complète<br/>",
+      "style": "{\"fontSize\": \"0.8em\"}"
     },
     {
       "type": "image",
       "src": "04-COM.jpg",
-      "style": "margin-bottom: 20px; margin-top: 60px;"
+      "style": "margin-bottom: 20px; margin-top: 20px;"
     },
     {
       "type": "p",
-      "content": "<b>RÉHABILITATION D’UN RESTAURANT</b><br/><br/>RÉALISÉ EN COLLABORATION AVEC MAUD SAGET ARCHITECTE<br/>Paris, Île-De-France, France<br/>Surface: 150 m2<br/>Matière: Béton ciré<br/>Coût: 100 000 €<br/>État: Livré, Janv 2019<br/>Mission: Complète"
+      "content": "<b>RÉHABILITATION D’UN RESTAURANT</b><br/><br/>RÉALISÉ EN COLLABORATION AVEC MAUD SAGET ARCHITECTE<br/>Paris, Île-De-France, France<br/>Surface: 150 m2<br/>Matière: Béton ciré<br/>Coût: 100 000 €<br/>État: Livré, Janv 2019<br/>Mission: Complète",
+      "style": "{\"fontSize\": \"0.8em\"}"
     },
     {
       "type": "image",
       "src": "05-COM-AUTRESPROJETS-ATELIERDELALANDETABOURIN.jpg",
-      "style": "margin-bottom: 20px; margin-top: 60px;"
+      "style": "margin-bottom: 20px; margin-top: 20px;"
     },
     {
       "type": "p",
-      "content": "<b>SANCTUAIRE DES MAREES ET DE L’HORIZON</b><br/>îles d’Ollone, Côtes D’Armor, France<br/>Surface: 10000 m2<br/>Matière: Béton brut<br/>Coût: NC<br/>État: Projet de Dîplôme ESA<br/>Mission: Conception<br/>"
+      "content": "<b>SANCTUAIRE DES MAREES ET DE L’HORIZON</b><br/>îles d’Ollone, Côtes D’Armor, France<br/>Surface: 10000 m2<br/>Matière: Béton brut<br/>Coût: NC<br/>État: Projet de Dîplôme ESA<br/>Mission: Conception<br/>",
+      "style": "{\"fontSize\": \"0.8em\"}"
     }
   ]
 }
