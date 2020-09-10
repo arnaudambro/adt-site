@@ -16,6 +16,7 @@ const Title = styled.span`
   line-height: 1em;
   display: block;
   margin-bottom: 5px;
+  max-width: ${props => props.theme.width.material}px;
 `
 
 const Description = styled.span`
@@ -23,6 +24,8 @@ const Description = styled.span`
   font-size: 0.7rem;
   display: block;
   margin-bottom: 30px;
+  max-width: ${props => props.theme.width.material}px;
+  ${media.desktop`max-width: ${props => props.theme.width.desktop.material}px;`}
 `
 
 const Divider = styled.div`
@@ -44,7 +47,6 @@ const News = ({ setVisible, visible, withDivider, ...news }) => {
         alt={getNewsAlt(news)}
         id={news.id}
         images={news.images}
-        forceFullWidth
         withDivider={withDivider}
         noScreening
       />

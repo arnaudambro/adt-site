@@ -36,11 +36,15 @@
     },
     {
       "type": "image",
-      "src": "06-GL11-COM.png"
+      "src": "06-GL11-COM-PLANMASSE.jpg"
     },
     {
       "type": "image",
       "src": "07-GL11-COM-PLAN.jpg"
+    },
+    {
+      "type": "image",
+      "src": "10-GL11-COM-COUPE.jpg"
     }
   ]
 }

@@ -1,66 +1,81 @@
 [
   {
-    "type": "p",
-    "content": "Diplômés de l’ESA, passés par les agences Wilmotte & Associés. SA, Frédéric Borel, et Carl Fredrik Svenstedt, Nicolas Delalande et Sébastien Tabourin s’appuient sur leurs connaissances et leurs compétences transversales afin de vous proposer leur vision de l’architecture, de l’architecture d’intérieur et du design."
-  },
-  {
-    "type": "p",
-    "content": "Fondé en 2017, ADT se positionne sur une réflexion contemporaine et sensible de l’architecture en s’articulant principalement autour d’un travail singulier de la matière."
-  },
-  {
-    "type": "p",
-    "content": "<b><u>Ci-dessous</u></b> le processus de création que l’atelier applique à chaque étude (exemple pris sur le projet VB11). Tous leurs projets naissent d’une volonté de révéler la matière qui doit être, là où il faut. Créer sans transgresser."
-  },
-  {
-    "type": "summary",
-    "section": 1,
-    "content": "Etape 1 - analyse du contexte"
-  },
-  {
-    "type": "p",
-    "section": 1,
-    "content": "Qu’elle soit paysagère, urbaine, historique ou qu’elle découle d’une démarche propre à l’image du client, de chaque analyse ADT en tire une matière propre à son contexte."
-  },
-  {
     "type": "image",
-    "section": 1,
-    "src": "ATELIER-ANALYSE-CONTEXTE2.jpg"
-  },
-  {
-    "type": "summary",
-    "section": 2,
-    "content": "ETAPE 2 - TABLE DES MATIERES"
-  },
-  {
-    "type": "p",
-    "section": 2,
-    "content": "Basée autour des éléments du contexte selectionnés, ADT présente ensuite au client une déclinaison de différents matériaux pour leur projet. Sur la base d’un dialogue, ils échangent ensuite sur les matières primaires et secondaires afin d’établir une homogénéité architecturale propre au lieu."
-  },
-  {
-    "type": "image",
-    "section": 2,
-    "src": "ATELIER-TABLE-DES-MATIERES.jpg"
-  },
-  {
-    "type": "summary",
-    "section": 3,
-    "content": "ETAPE 3 - PROJET"
-  },
-  {
-    "type": "p",
-    "section": 3,
-    "content": "ADT vous présente votre projet résultant des deux premières étapes.<br> Plans/ Documents graphiques/ Maquettes/ Images 3D."
-  },
-  {
-    "type": "image",
-    "section": 3,
-    "src": "ATELIER-PROJET2.jpg",
-    "style": "margin-bottom: 120px !important;"
-  },
-  {
-    "type": "image",
-    "section": 3,
     "src": "ATELIER-3TAMIS.jpg"
+  },
+  {
+    "type": "p",
+    "content": "Fondé en 2017, l’Atelier Delalande Tabourin (ADT) se positionne sur une réflexion contemporaine et sensible de l’architecture en s’articulant principalement autour d’un travail singulier de la matière."
+  },
+  {
+    "type": "p",
+    "content": " ADT est animé par une profonde volonté d’apporter à la profession une dimension sensitive et sensorielle supplémentaire. Une recherche propre à chacun de nos sites, qui nous pousse plus à insister sur la contextualisation matérielle de nos projets, que sur une recherche de forme ou d’identité visuelle en particulier. Un travail sur les textures, couleurs, lumières, bruits, odeurs, formes et volumes qui permet à notre architecture de retranscrire l’ambiance ressentie de son lieu."
+  },
+  {
+    "type": "p",
+    "content": "Tous nos projets naissent d’une volonté de révéler la matière qui doit être, là où il faut.Un désir de créer sans transgresser."
+  },
+  {
+    "type": "summary",
+    "content": "EQUIPE"
+  },
+  {
+    "type": "p",
+    "content": "<b>Architectes associés:<b>",
+    "style": "{\"marginBottom\": 5}"
+  },
+  {
+    "type": "p",
+    "content": "Nicolas Delalande<br>Architecte DESA - HMONP<br>Mention du Meilleur Diplôme, 2015<br>Lauréat du Trophée Béton, 2ème prix, 2016<br>Lauréat du Grand Prix d’Architecture des Beaux-Arts, 2016"
+  },
+  {
+    "type": "p",
+    "content": "Sébastien Tabourin<br>Architecte DESA - HMONP<br>Mention du Meilleur Diplôme, 2015<br>Lauréat du Trophée Béton, 2ème prix, 2016<br>Lauréat du Grand Prix d’Architecture des Beaux-Arts, 2016"
+  },
+  {
+    "type": "p",
+    "content": "<b>Architectes collaborateurs:<b>",
+    "style": "{\"marginBottom\": 5}"
+  },
+  {
+    "type": "p",
+    "content": "François-Xavier Jamin,  architecte chef de projet<br>Pierre-Alexy Réty,  assistant chef de projet.<br>Louise Schouvey,  dessinatrice d’architecture d’intérieure et design"
+  },
+  {
+    "type": "p",
+    "content": "<b>Sont passés par l’Atelier depuis 2017:</b>",
+    "style": "{\"marginBottom\": 5}"
+  },
+  {
+    "type": "p",
+    "content": "Mathilde Lizoret, Pauline Taupin, Mathilde Brouard, Angelo de Taisne,Juliette Collas."
+  },
+  {
+    "type": "summary",
+    "content": "Contact"
+  },
+  {
+    "type": "p",
+    "content": "ADT PARIS<br>44 rue du Faubourg du Temple<br>75011 Paris"
+  },
+  {
+    "type": "p",
+    "content": "ADT ORLEANS<br>110, rue de Coulmiers <br>45000 Orléans"
+  },
+  {
+    "type": "p",
+    "content": "+33 9 82 54 23 40<br>contact@atelierdelalandetabourin.com"
+  },
+  {
+    "type": "summary",
+    "content": "RECRUTEMENT"
+  },
+  {
+    "type": "p",
+    "content": "ADT est toujours à la recherche d’architectes partageant leur approche du métier. Si toi aussi tu as une vision poétique de l’architecture, que tu as une certaine sensibilité au travail de la matière et de son paysage, alors nous recevrons avec plaisir ta candidature, même si nous ne recrutons pas à ce moment là."
+  },
+  {
+    "type": "p",
+    "content": "Ta candidature devra inclure une courte lettre de motivation, un CV et un extrait de portfolio au format pdf (10Mo maximum). Si vous préférez le format papier nous privilégierons les dossiers en feuilles A4 séparées (maximum 10 pages)."
   }
 ]
-

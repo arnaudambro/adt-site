@@ -8,7 +8,7 @@ import {
   getDescription,
   getMaterial,
   getMaterialHeightPageProjets,
-  getYear,
+  // getYear,
   getEtat,
   getLocation,
   getSurface,
