@@ -176,11 +176,16 @@ const Database = () => {
                   height: getMaterialHeightPageBDD(projet),
                   id: projet.id,
                 }))
+                .map(projet => {
+                  console.log(projet)
+                  return projet
+                })
                 .map((projet, ind) => (
                   <Item
                     key={ind}
                     as={projet.to ? Link : "div"}
                     directClick
+                    forDB
                     id={projet.id}
                     visible={visibleProjet === projet.id}
                     setVisible={setVisibleProjet}

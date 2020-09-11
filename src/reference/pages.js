@@ -2,7 +2,6 @@ export const projets = "projets"
 export const database = "database"
 export const journal = "journal"
 export const atelier = "atelier"
-export const infos = "infos"
 
 export default {
   [projets]: {
@@ -17,7 +16,4 @@ export default {
   [atelier]: {
     fr: "l'atelier",
   },
-  // [infos]: {
-  //   fr: "infos",
-  // },
 }

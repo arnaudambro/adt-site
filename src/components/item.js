@@ -9,6 +9,7 @@ import isTouchDevice from "../helpers/isTouchDevice"
 
 const ItemWrapper = styled(({ height, theme, ...rest }) => <div {...rest} />)`
   height: ${({ height }) => height}px;
+  width: 100%;
   margin-bottom: 5px;
   display: flex;
   ${({ theme }) =>
@@ -23,9 +24,11 @@ const ItemWrapper = styled(({ height, theme, ...rest }) => <div {...rest} />)`
 
 const ImagesContainer = styled.div`
   height: 100%;
+  ${props => props.forDB && `width: 100% !important;`}
 `
 
 const ImgStyled = styled(Img)`
+${props => props.forDB && `&.gatsby-image-wrapper { width: 100% !important; }`}
   opacity: ${props => (props.visible && !props.noScreening ? 0.5 : 1)};
   transition: opacity 200ms ease-in-out;
   ${props => props.marginBottom && "margin-bottom: 5px;"}
@@ -95,6 +98,7 @@ const Item = ({
   id,
   images,
   noScreening = false,
+  forDB = false,
 }) => (
   <ItemWrapper
     as={as}
@@ -119,7 +123,7 @@ const Item = ({
       setVisible(null)
     }}
   >
-    <ImagesContainer>
+    <ImagesContainer forDB={forDB}>
       {images.map((img, ind) => {
         if (!img.src) return <Placeholder key={ind} />
         return (
@@ -131,6 +135,7 @@ const Item = ({
             visible={visible}
             noScreening={noScreening}
             marginBottom={ind !== images.length - 1}
+            forDB={forDB}
           />
         )
       })}

@@ -1,7 +1,8 @@
 [
   {
     "type": "image",
-    "src": "ATELIER-3TAMIS.jpg"
+    "src": "ATELIER-3TAMIS.jpg",
+    "style": "margin-bottom: 30px;"
   },
   {
     "type": "p",
