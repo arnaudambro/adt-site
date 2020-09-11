@@ -176,10 +176,6 @@ const Database = () => {
                   height: getMaterialHeightPageBDD(projet),
                   id: projet.id,
                 }))
-                .map(projet => {
-                  console.log(projet)
-                  return projet
-                })
                 .map((projet, ind) => (
                   <Item
                     key={ind}

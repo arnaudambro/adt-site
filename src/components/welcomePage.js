@@ -1,16 +1,15 @@
 import React from "react"
-import styled, { keyframes } from 'styled-components'
+import styled, { keyframes } from "styled-components"
 import SEO from "./seo"
 import Img from "gatsby-image/withIEPolyfill"
 
-import { getImageFromSrc } from "../helpers/selectors";
-import logo from '../images/logo.svg';
-import { media } from "../styles/mediaQueries";
-import { Link } from "gatsby";
-import { projets } from "../reference/pages";
-import { background, gatsbyImage } from "../styles/mixins";
-import useLargeImages from "../helpers/hooks/useLargeImages";
-
+import { getImageFromSrc } from "../helpers/selectors"
+import logo from "../images/logo.svg"
+import { media } from "../styles/mediaQueries"
+import { Link } from "gatsby"
+import { projets } from "../reference/pages"
+import { background, gatsbyImage } from "../styles/mixins"
+import useLargeImages from "../helpers/hooks/useLargeImages"
 
 const LandingStyled = styled(Link)`
   z-index: 1000;
@@ -20,8 +19,8 @@ const LandingStyled = styled(Link)`
   width: 100vw;
   flex-shrink: 0;
   ${gatsbyImage({
-    width: '100vw !important',
-    height: '100vh !important',
+    width: "100vw !important",
+    height: "100vh !important",
   })}
 `
 
@@ -57,7 +56,6 @@ const ArrowDownStyled = styled.svg`
   animation-iteration-count: infinite;
 `
 
-
 const Logo = styled.div`
   position: absolute;
   ${background({ url: logo })}
@@ -86,53 +84,57 @@ const PageNumber = styled.pre`
   display: none;
 `
 
-
-const ScrollIcon = () =>
+const ScrollIcon = () => (
   <ArrowDownStyled
     className="scroll-icon"
     fill="currentColor"
     height="60"
     preserveAspectRatio="xMidYMid meet"
-    style={{ verticalAlign: 'middle' }}
+    style={{ verticalAlign: "middle" }}
     viewBox="0 0 40 40"
-    width="60">
+    width="60"
+  >
     <g>
       <path d="m31 16.4q0 0.3-0.2 0.5l-10.4 10.4q-0.3 0.3-0.5 0.3t-0.6-0.3l-10.4-10.4q-0.2-0.2-0.2-0.5t0.2-0.5l1.2-1.1q0.2-0.2 0.5-0.2t0.5 0.2l8.8 8.8 8.7-8.8q0.3-0.2 0.5-0.2t0.6 0.2l1.1 1.1q0.2 0.2 0.2 0.5z" />
     </g>
   </ArrowDownStyled>
+)
 
 const landingPageNumber = (offset = 0) => {
-  const oneDayInMs = 1000 * 60 * 60 * 24;
-  const now = Date.now() - offset * oneDayInMs;
-  const nowDate = new Date(now);
-  const nowZero = new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate());
-  const changeFrequency = 3;
-  const numberOfImages = 12;
-  const nowZeroInDays = Math.floor(Date.parse(nowZero) / oneDayInMs);
-  const parsedPageNumber = nowZeroInDays % (changeFrequency * numberOfImages) + 1;
+  const oneDayInMs = 1000 * 60 * 60 * 24
+  const now = Date.now() - offset * oneDayInMs
+  const nowDate = new Date(now)
+  const nowZero = new Date(
+    nowDate.getFullYear(),
+    nowDate.getMonth(),
+    nowDate.getDate()
+  )
+  const changeFrequency = 3
+  const numberOfImages = 3
+  const nowZeroInDays = Math.floor(Date.parse(nowZero) / oneDayInMs)
+  const parsedPageNumber =
+    (nowZeroInDays % (changeFrequency * numberOfImages)) + 1
   return {
     nowZero,
     nowZeroInDays,
     parsedPageNumber,
-    landingPageNumber: Math.floor(parsedPageNumber / changeFrequency) || numberOfImages,
-  };
+    landingPageNumber:
+      Math.floor(parsedPageNumber / changeFrequency) || numberOfImages,
+  }
 }
 
-
 const WelcomePage = ({ startAnimation }) => {
-
-  const images = useLargeImages();
+  const images = useLargeImages()
 
   return (
-    <LandingStyled
-      to={`/${projets}`}
-      id="landing"
-      onClick={startAnimation}
-    >
+    <LandingStyled to={`/${projets}`} id="landing" onClick={startAnimation}>
       <SEO title="ADT" />
       <PageNumber>{JSON.stringify(landingPageNumber(), null, 2)}</PageNumber>
       <Img
-        fluid={getImageFromSrc(images, `CONCEPT-PDG${landingPageNumber().landingPageNumber}.jpg`)}
+        fluid={getImageFromSrc(
+          images,
+          `CONCEPT-PDG${landingPageNumber().landingPageNumber}.jpg`
+        )}
         alt="ADT: une mise en architecture de la matière"
         title="ADT: une mise en architecture de la matière"
       />
@@ -142,4 +144,4 @@ const WelcomePage = ({ startAnimation }) => {
   )
 }
 
-export default WelcomePage;
+export default WelcomePage

@@ -14,7 +14,7 @@ module.exports = {
       options: {
         RewriteBase: "/",
         https: true,
-        www: false,
+        www: true,
       },
     },
     {

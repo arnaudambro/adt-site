@@ -125,7 +125,6 @@ const Content = ({
   )
 
   const renderElement = (node, ind) => {
-    console.log(JSON.parse(node.style))
 
     return (
       <node.type
