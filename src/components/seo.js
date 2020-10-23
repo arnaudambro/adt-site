@@ -69,7 +69,10 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: "robots",
-          content: "index",
+          content:
+            process.env.GATSBY_ACTIVE_ENV === "production"
+              ? "index"
+              : "noindex",
         },
       ].concat(meta)}
     />

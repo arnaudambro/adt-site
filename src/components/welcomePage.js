@@ -10,6 +10,8 @@ import { Link } from "gatsby"
 import { projets } from "../reference/pages"
 import { background, gatsbyImage } from "../styles/mixins"
 import useLargeImages from "../helpers/hooks/useLargeImages"
+import useWindowSize from "../helpers/hooks/useWindowSize"
+import useMP4 from "../helpers/hooks/useMP4"
 
 const LandingStyled = styled(Link)`
   z-index: 1000;
@@ -54,6 +56,30 @@ const ArrowDownStyled = styled.svg`
   animation-delay: 0s;
   animation-fill-mode: both;
   animation-iteration-count: infinite;
+`
+
+const VideoSubContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+`
+const VideoContainer = styled.div`
+  position: relative;
+  min-width: ${props => props.videoContainerWidth};
+  width: ${props => props.videoContainerWidth};
+  height: 110vh;
+  @media all and (min-width: 700px) {
+    .video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      min-height: 100vh;
+    }
+  }
 `
 
 const Logo = styled.div`
@@ -110,7 +136,7 @@ const landingPageNumber = (offset = 0) => {
     nowDate.getDate()
   )
   const changeFrequency = 3
-  const numberOfImages = 3
+  const numberOfImages = 4
   const nowZeroInDays = Math.floor(Date.parse(nowZero) / oneDayInMs)
   const parsedPageNumber =
     (nowZeroInDays % (changeFrequency * numberOfImages)) + 1
@@ -123,21 +149,49 @@ const landingPageNumber = (offset = 0) => {
   }
 }
 
+const videoDim = { height: 1080, width: 1920 }
+const getRatio = ({ width, height }) => width / height // 16/9 for the video
+
 const WelcomePage = ({ startAnimation }) => {
   const images = useLargeImages()
+  const windowDim = useWindowSize()
+  const video = useMP4()
+  const videoContainerWidth =
+    getRatio(windowDim) < getRatio(videoDim)
+      ? `${windowDim.height * getRatio(videoDim) + 100}px !important`
+      : "110vw"
 
   return (
     <LandingStyled to={`/${projets}`} id="landing" onClick={startAnimation}>
       <SEO title="ADT" />
       <PageNumber>{JSON.stringify(landingPageNumber(), null, 2)}</PageNumber>
-      <Img
-        fluid={getImageFromSrc(
-          images,
-          `CONCEPT-PDG${landingPageNumber().landingPageNumber}.jpg`
-        )}
-        alt="ADT: une mise en architecture de la matière"
-        title="ADT: une mise en architecture de la matière"
-      />
+      {windowDim.width > 700 ? (
+        <VideoSubContainer>
+          <VideoContainer
+            videoContainerWidth={videoContainerWidth}
+            dangerouslySetInnerHTML={{
+              __html: `<video class="video" muted autoplay loop preload src=${video} poster=${getImageFromSrc(
+                images,
+                "poster.png"
+              )}></video>`,
+            }}
+          />
+        </VideoSubContainer>
+      ) : (
+        <Img
+          fluid={getImageFromSrc(
+            images,
+            `CONCEPT-PDG${
+              landingPageNumber().landingPageNumber === 4
+                ? 3
+                : landingPageNumber().landingPageNumber
+            }.jpg`
+          )}
+          alt="ADT: une mise en architecture de la matière"
+          title="ADT: une mise en architecture de la matière"
+        />
+      )}
+
       <ScrollIcon />
       <Logo />
     </LandingStyled>

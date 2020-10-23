@@ -14,7 +14,7 @@ module.exports = {
       options: {
         RewriteBase: "/",
         https: true,
-        www: true,
+        // www: process.env.GATSBY_ACTIVE_ENV === "production" ? false : true,
       },
     },
     {

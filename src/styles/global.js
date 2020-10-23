@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700');
@@ -430,6 +430,5 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-
-`;
-export default GlobalStyle;
+`
+export default GlobalStyle
