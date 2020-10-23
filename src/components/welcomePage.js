@@ -65,6 +65,15 @@ const VideoSubContainer = styled.div`
   height: 100vh;
   width: 100vw;
 `
+
+const PosterContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+`
+
 const VideoContainer = styled.div`
   position: relative;
   min-width: ${props => props.videoContainerWidth};
@@ -152,7 +161,7 @@ const landingPageNumber = (offset = 0) => {
 const videoDim = { height: 1080, width: 1920 }
 const getRatio = ({ width, height }) => width / height // 16/9 for the video
 
-const WelcomePage = ({ startAnimation }) => {
+const WelcomePage = ({ withAnimation }) => {
   const images = useLargeImages()
   const windowDim = useWindowSize()
   const video = useMP4()
@@ -161,12 +170,19 @@ const WelcomePage = ({ startAnimation }) => {
       ? `${windowDim.height * getRatio(videoDim) + 100}px !important`
       : "110vw"
 
-  return (
-    <LandingStyled to={`/${projets}`} id="landing" onClick={startAnimation}>
-      <SEO title="ADT" />
-      <PageNumber>{JSON.stringify(landingPageNumber(), null, 2)}</PageNumber>
-      {windowDim.width > 700 ? (
-        <VideoSubContainer>
+  console.log({ withAnimation })
+  const renderVideo = () => {
+    if (windowDim.width < 700) return null
+    return (
+      <VideoSubContainer>
+        <PosterContainer>
+          <Img
+            fluid={getImageFromSrc(images, "poster.png")}
+            alt="ADT: une mise en architecture de la matière"
+            title="ADT: une mise en architecture de la matière"
+          />
+        </PosterContainer>
+        {!withAnimation && (
           <VideoContainer
             videoContainerWidth={videoContainerWidth}
             dangerouslySetInnerHTML={{
@@ -176,22 +192,35 @@ const WelcomePage = ({ startAnimation }) => {
               )}></video>`,
             }}
           />
-        </VideoSubContainer>
-      ) : (
-        <Img
-          fluid={getImageFromSrc(
-            images,
-            `CONCEPT-PDG${
-              landingPageNumber().landingPageNumber === 4
-                ? 3
-                : landingPageNumber().landingPageNumber
-            }.jpg`
-          )}
-          alt="ADT: une mise en architecture de la matière"
-          title="ADT: une mise en architecture de la matière"
-        />
-      )}
+        )}
+      </VideoSubContainer>
+    )
+  }
 
+  const renderImage = () => {
+    if (windowDim.width > 700) return null
+    return (
+      <Img
+        fluid={getImageFromSrc(
+          images,
+          `CONCEPT-PDG${
+            landingPageNumber().landingPageNumber === 4
+              ? 3
+              : landingPageNumber().landingPageNumber
+          }.jpg`
+        )}
+        alt="ADT: une mise en architecture de la matière"
+        title="ADT: une mise en architecture de la matière"
+      />
+    )
+  }
+
+  return (
+    <LandingStyled to={`/${projets}`} id="landing">
+      <SEO title="ADT" />
+      <PageNumber>{JSON.stringify(landingPageNumber(), null, 2)}</PageNumber>
+      {renderVideo()}
+      {renderImage()}
       <ScrollIcon />
       <Logo />
     </LandingStyled>

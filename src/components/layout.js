@@ -235,7 +235,9 @@ class Layout extends React.Component {
                 withAnimation={withAnimation}
                 onAnimationEnd={this.handleAnimationEnd}
               >
-                {showWelcomePage && <WelcomePage />}
+                {showWelcomePage && (
+                  <WelcomePage withAnimation={withAnimation} />
+                )}
                 <FullPage>
                   <Header siteTitle={data.site.siteMetadata.title} />
                   <ContentWrapper forProjet={forProjet}>
