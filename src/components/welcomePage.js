@@ -183,6 +183,7 @@ const WelcomePage = ({ withAnimation }) => {
   const video = useMP4()
   const renderVideo = () => {
     if (windowDim.width < 700) return null
+    if (landingPageNumber().landingPageNumber !== 4) return null
     return (
       <VideoSubContainer>
         <PosterContainer>
@@ -207,16 +208,15 @@ const WelcomePage = ({ withAnimation }) => {
   }
 
   const renderImage = () => {
-    if (windowDim.width > 700) return null
+    const photoNumber = landingPageNumber().landingPageNumber
+    if (photoNumber === 4) {
+      if (windowDim.width > 700) return null
+    }
     return (
       <Img
         fluid={getImageFromSrc(
           images,
-          `CONCEPT-PDG${
-            landingPageNumber().landingPageNumber === 4
-              ? 3
-              : landingPageNumber().landingPageNumber
-          }.jpg`
+          `CONCEPT-PDG${photoNumber === 4 ? 3 : photoNumber}.jpg`
         )}
         alt="ADT: une mise en architecture de la matière"
         title="ADT: une mise en architecture de la matière"
