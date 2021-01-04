@@ -32,8 +32,10 @@ function SEO({ description, lang, meta, title }) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={title || site.siteMetadata.title}
+      titleTemplate={
+        title ? `%s | ${site.siteMetadata.title}` : site.siteMetadata.title
+      }
       meta={[
         {
           name: `description`,
@@ -69,11 +71,15 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: "robots",
-          content:
-            process.env.GATSBY_ACTIVE_ENV === "production"
-              ? "index"
-              : "noindex",
+          content: "index",
         },
+        // {
+        //   name: "robots",
+        //   content:
+        //     process.env.GATSBY_ACTIVE_ENV === "production"
+        //       ? "index"
+        //       : "noindex",
+        // },
       ].concat(meta)}
     />
   )

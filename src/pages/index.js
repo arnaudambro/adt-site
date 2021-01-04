@@ -1,4 +1,4 @@
+import React from "react"
+import Projets from "./projets"
 
-import Projets from './projets';
-
-export default Projets;
+export default () => <Projets noTitle />

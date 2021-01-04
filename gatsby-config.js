@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     // title: `Atelier Delalande Tabourin | Architecture + Material LAB + Design`,
     title: `Atelier Delalande Tabourin`,
-    description: `L'Atelier Delalande Tabourin est un cabinet d'architecture, un Material LAB et un bureau de Design.`,
+    description: `Pour une recherche matérielle et sensorielle de l'architecture`,
     author: `@arnaudambro`,
   },
   plugins: [

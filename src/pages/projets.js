@@ -9,13 +9,13 @@ import ProjetMaterialIcon from "../components/projetMaterialIcon"
 import useProjetsDataAndImages from "../helpers/hooks/useProjetsDataAndImages"
 import theme from "../styles/theme"
 
-const Projets = () => {
+const Projets = ({ noTitle }) => {
   const { projets, images } = useProjetsDataAndImages()
   const [visibleProjet, setVisibleProjet] = React.useState(null)
 
   return (
     <Layout arrowWidth={theme.width.desktop.material}>
-      <SEO title="Projets" />
+      <SEO title={noTitle ? null : "Projets"} />
       {projets.filter(getInProjects).map(projet => (
         <ProjetMaterialIcon
           key={projet.id}
