@@ -1,5 +1,55 @@
 [
   {
+    "description": "L’agence est lauréat 2020 des Albums des Jeunes Architectes et Paysagistes (AJAP), concours européen de la jeune création architecturale et paysagère.",
+    "date": "2021-01-29",
+    "images": [
+      {
+        "file": "00_ajap-granit.jpg",
+        "height": 310
+      }
+    ]
+  },
+  {
+    "description": "Test de béton de chamotte pour notre projet de Versailles en collaboration avec Anna Saint Pierre.",
+    "date": "2021-01-05",
+    "images": [
+      {
+        "file": "01_collab-asp.jpg",
+        "height": 310
+      }
+    ]
+  },
+  {
+    "description": "Balade enneigée avec Siza",
+    "date": "2020-12-21",
+    "images": [
+      {
+        "file": "02_balade-siza.jpg",
+        "height": 310
+      }
+    ]
+  },
+  {
+    "description": "Visite de chantier à Locmariaquer",
+    "date": "2020-11-18",
+    "images": [
+      {
+        "file": "03_chantier-loc.jpg",
+        "height": 310
+      }
+    ]
+  },
+  {
+    "description": "Nouveau projet d'habitation à Versailles.",
+    "date": "2020-10-11",
+    "images": [
+      {
+        "file": "04_projet-versailles.jpg",
+        "height": 310
+      }
+    ]
+  },
+  {
     "description": "Chantier en approche!!<br/>Vues sur l’entrée de notre projet de logements à Locmariaquer (GL11).",
     "date": "2020-08-17",
     "images": [

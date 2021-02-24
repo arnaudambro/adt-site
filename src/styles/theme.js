@@ -27,9 +27,9 @@ const theme = {
   height: {
     header: 160,
     menuItem: 17,
-    logo: (175 * 60) / 96,
+    logo: ((175 * 60) / 96 - 2) * 0.85,
     desktop: {
-      logo: (175 * 60) / 96,
+      logo: (175 * 60) / 96 - 2,
       logoLine: 64,
       menuItem: 20,
     },
@@ -46,7 +46,7 @@ const theme = {
     arrows: 50,
     hideScrollbar: 18,
     scrollBar: 14,
-    logo: 175,
+    logo: 175 * 0.85,
     indicator: 15,
     material: 280,
     desktop: {

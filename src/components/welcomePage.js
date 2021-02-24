@@ -5,6 +5,7 @@ import Img from "gatsby-image/withIEPolyfill"
 
 import { getImageFromSrc } from "../helpers/selectors"
 import logo from "../images/logo.svg"
+import ajap from "../images/LOGO_AJAP.png"
 import { media } from "../styles/mediaQueries"
 import { Link } from "gatsby"
 import { projets } from "../reference/pages"
@@ -72,6 +73,25 @@ const Logo = styled.div`
   `}
 `
 
+const Ajap = styled.div`
+  position: absolute;
+  ${background({ url: ajap, size: "contain", position: "left" })}
+  /* left: 12.5vw; */
+  /* bottom: calc(33vh + ${({ theme }) => theme.height.logo}px); */
+  left: calc(12.5vw + ${({ theme }) => theme.width.logo + 10}px);
+  bottom: 30vh;
+  width: ${({ theme }) => theme.width.logo}px;
+  height: ${({ theme }) => theme.height.logo}px;
+
+  ${media.desktop`
+    ${background({ url: ajap, size: "contain", position: "center" })}
+    left: calc(14vw + ${({ theme }) => theme.width.desktop.logo}px);
+    bottom: 15vh;
+    width: ${({ theme }) => theme.width.desktop.logo}px;
+    height: ${({ theme }) => theme.height.desktop.logo}px;
+  `}
+`
+
 const PageNumber = styled.pre`
   position: fixed;
   z-index: 100000;
@@ -100,7 +120,7 @@ const ScrollIcon = () => (
   </ArrowDownStyled>
 )
 
-const numberOfImages = 3
+const numberOfImages = 2
 const landingPageNumber = (offset = 0) => {
   const oneDayInMs = 1000 * 60 * 60 * 24
   const now = Date.now() - offset * oneDayInMs
@@ -147,6 +167,7 @@ const WelcomePage = () => {
       {renderImage()}
       <ScrollIcon />
       <Logo />
+      <Ajap />
     </LandingStyled>
   )
 }
