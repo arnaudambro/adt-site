@@ -128,8 +128,10 @@ const Title = styled.h1`
     font-size: calc(0.75rem + 2vh);
     line-height: 1.2em;
     text-transform: uppercase;
+    /* https://github.com/rsms/inter/issues/292#issuecomment-674993644 */
     -webkit-text-stroke: 0.05em ${({ theme }) => theme.color.black};
     -webkit-text-fill-color: transparent;
+    font-family: Roboto;
     font-weight: 700;
     ${media.desktop`
       font-size: 1em;

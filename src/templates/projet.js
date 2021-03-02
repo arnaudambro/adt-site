@@ -20,6 +20,8 @@ import useProjetsDataAndImages from "../helpers/hooks/useProjetsDataAndImages"
 
 const Title = styled.h2`
   text-transform: uppercase;
+  /* https://github.com/rsms/inter/issues/292#issuecomment-674993644 */
+  font-family: Roboto;
   -webkit-text-stroke: 1px ${({ theme }) => theme.color.black};
   -webkit-text-fill-color: transparent;
   font-size: 1.6rem;
