@@ -5,6 +5,7 @@ import {
   getCode,
   getTitle,
   getCollab,
+  getMOE,
   getDescription,
   getMaterial,
   getMaterialHeightPageProjets,
@@ -59,6 +60,10 @@ const Location = styled.span`
   text-transform: capitalize;
   ${cssContent}
 `
+const MOE = styled.span`
+  text-transform: capitalize;
+  ${cssContent}
+`
 const Surface = styled.span`
   ${cssContent}
 `
@@ -104,6 +109,7 @@ const ProjetMaterialIcon = ({ setVisible, visible, ...projet }) => (
           Surface: {getSurface(projet)} m<sup>2</sup>
         </Surface>
       )}
+      {Boolean(getMOE(projet)) && <MOE>MOE: {getMOE(projet)}</MOE>}
       {getEtat(projet) && <Etat>{getEtat(projet)}</Etat>}
       {getMaterial(projet) && (
         <Material>Matière: {getMaterial(projet)}</Material>

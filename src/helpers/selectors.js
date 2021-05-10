@@ -12,6 +12,7 @@ const getEmpty = ({ empty }) => empty === "true"
 const getInProjects = ({ in_projects }) => in_projects === "true"
 const getInDB = ({ in_db }) => in_db === "true"
 const getCollab = ({ collab }) => collab
+const getMOE = ({ MOE }) => MOE
 const getMaterial = ({ matiere }) => matiere
 const getMaterialHeightPageProjets = ({ hauteur_page_projets_px }) =>
   hauteur_page_projets_px
@@ -184,6 +185,7 @@ export {
   getInProjects,
   getInDB,
   getCollab,
+  getMOE,
   getMaterial,
   getYear,
   getPrix,

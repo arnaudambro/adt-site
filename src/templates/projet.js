@@ -12,6 +12,7 @@ import {
   getEtat,
   getMaterial,
   getCollab,
+  getMOE,
   getPrix,
   getMission,
 } from "../helpers/selectors"
@@ -59,6 +60,10 @@ const Etat = styled.span`
   text-transform: capitalize;
   ${cssContent}
 `
+const MOE = styled.span`
+  text-transform: capitalize;
+  ${cssContent}
+`
 const Material = styled.span`
   /* text-transform: capitalize; */
   ${cssContent}
@@ -96,6 +101,7 @@ const Projet = props => {
       {getMaterial(details) && (
         <Material>Matière: {getMaterial(details)}</Material>
       )}
+      {getMOE(details) && <MOE>MOE: {getMOE(details)}</MOE>}
       {getPrix(details) && <Cout>Coût: {getPrix(details)}</Cout>}
       {getEtat(details) && <Etat>{getEtat(details)}</Etat>}
       {getMission(details) && <Mission>{getMission(details)}</Mission>}

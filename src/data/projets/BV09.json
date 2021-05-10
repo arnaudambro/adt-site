@@ -1,0 +1,55 @@
+{
+  "title": "BV09",
+  "code_projet": "BV09",
+  "content": [
+    {
+      "type": "image",
+      "src": "01.jpg",
+      "style": "margin-bottom: 30px;"
+    },
+    {
+      "type": "p",
+      "content": "Le bâtiment à réhabiliter se trouve au cœur d’une zone résidentielle des années 50 de la ville de Versailles. Il est composé de trois planchers habillés en façade par 6 imposantes stèles de brique qui, de par leur verticalité et leur contraste de matérialité, viennent alléger l’aspect massif et cubique de l’édifice."
+    },
+    {
+      "type": "p",
+      "content": "Afin de répondre au diagnostic du bâtiment et aux enjeux du projet, 4 interventions architecturales sont créées. Quatre grands puits de lumière qui viennent perforer les planchers et éblouir de matière l’ensemble des niveaux. En rupture avec l’existant, leur géométrie circulaire de mouvement vient séquencer les différentes expériences de vie tout en y fluidifiant les transitions."
+    },
+    {
+      "type": "p",
+      "content": "Travaillées à l’aide de co-produits de briqueterie francilienne, elles se veulent comme le prolongement matériel de l’existant, comme un clin d’œil contemporain et responsable au déjà-là."
+    },
+    {
+      "type": "image",
+      "src": "02.jpg"
+    },
+    {
+      "type": "image",
+      "src": "03.jpg"
+    },
+    {
+      "type": "image",
+      "src": "04.jpg"
+    },
+    {
+      "type": "image",
+      "src": "05.jpg"
+    },
+    {
+      "type": "image",
+      "src": "06.jpg"
+    },
+    {
+      "type": "image",
+      "src": "07.jpg"
+    },
+    {
+      "type": "image",
+      "src": "08.jpg"
+    },
+    {
+      "type": "image",
+      "src": "09.jpg"
+    }
+  ]
+}

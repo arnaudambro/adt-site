@@ -1,5 +1,45 @@
 [
   {
+    "description": "Appel d’offre remporté !<br>Réhabilitation d’une ancienne chapelle en logements.",
+    "date": "2021-05-03",
+    "images": [
+      {
+        "file": "01_Projet-Chapelle.jpg",
+        "height": 310
+      }
+    ]
+  },
+  {
+    "description": "Maquette de notre nouveau projet de maison dans les Yvelines.",
+    "date": "2021-04-19",
+    "images": [
+      {
+        "file": "02_Maquette-d-une-maison-en-foret.jpg",
+        "height": 310
+      }
+    ]
+  },
+  {
+    "description": "Appel d’offre remporté !<br>Rénovation de l’Hémicycle de l’Hôtel de la Région Centre-Val de Loire.",
+    "date": "2021-04-08",
+    "images": [
+      {
+        "file": "03_Projet-Hemicycle.jpg",
+        "height": 310
+      }
+    ]
+  },
+  {
+    "description": "Collaboration avec une carrière de pierre francilienne pour un projet de bureaux. Benne de rebuts correspondant à 3 heures d’exploitation.",
+    "date": "2021-03-15",
+    "images": [
+      {
+        "file": "04_Dechets-carriere.jpg",
+        "height": 310
+      }
+    ]
+  },
+  {
     "description": "L’agence est lauréat 2020 des Albums des Jeunes Architectes et Paysagistes (AJAP), concours européen de la jeune création architecturale et paysagère.",
     "date": "2021-01-29",
     "images": [

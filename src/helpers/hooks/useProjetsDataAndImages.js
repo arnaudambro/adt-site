@@ -11,6 +11,7 @@ const useProjetsDataAndImages = () => {
             classement_page_projets
             code_projet
             collab
+            MOE
             departement_code
             departement_nom
             description
