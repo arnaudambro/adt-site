@@ -28,8 +28,10 @@ const theme = {
     header: 160,
     menuItem: 17,
     logo: ((175 * 60) / 96 - 2) * 0.85,
+    logoFont: ((175 * 60) / 96 - 2) * 0.7,
     desktop: {
       logo: (175 * 60) / 96 - 2,
+      logoFont: ((175 * 60) / 96 - 2) * 0.85,
       logoLine: 64,
       menuItem: 20,
     },
