@@ -5,6 +5,7 @@ import styled, { css } from "styled-components"
 import { displayGrid } from "../styles/mixins"
 import pages, { projets } from "../reference/pages"
 import { media } from "../styles/mediaQueries"
+import Logo from "./logo"
 
 const borderBottom = css`
   &::after {
@@ -123,18 +124,7 @@ const Title = styled.h1`
   height: 100%;
   grid-area: title;
   span {
-    white-space: nowrap;
-    display: inline-block;
-    font-size: calc(0.75rem + 2vh);
-    line-height: 1.2em;
-    text-transform: uppercase;
-    /* https://github.com/rsms/inter/issues/292#issuecomment-674993644 */
-    -webkit-text-stroke: 0.05em ${({ theme }) => theme.color.black};
-    -webkit-text-fill-color: transparent;
-    font-family: Roboto;
-    font-weight: 700;
     ${media.desktop`
-      font-size: 1em;
       width: 75%;
     `}
   }
@@ -188,9 +178,7 @@ const Header = ({ siteTitle = "" }) => (
   <HeaderStyled>
     <Title>
       <Link to={"/" + projets}>
-        {siteTitle.split(" ").map(title => (
-          <span key={title}>{title}</span>
-        ))}
+        <Logo color="black" />
       </Link>
     </Title>
     <Nav numberOfItems={Object.keys(pages).length}>

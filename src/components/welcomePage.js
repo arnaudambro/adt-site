@@ -4,13 +4,14 @@ import SEO from "./seo"
 import Img from "gatsby-image/withIEPolyfill"
 
 import { getImageFromSrc } from "../helpers/selectors"
-import logo from "../images/logo.svg"
+// import logo from "../images/logo.svg"
 import ajap from "../images/LOGO_AJAP.png"
 import { media } from "../styles/mediaQueries"
 import { Link } from "gatsby"
 import { projets } from "../reference/pages"
 import { background, gatsbyImage } from "../styles/mixins"
 import useLargeImages from "../helpers/hooks/useLargeImages"
+import Logo from "./logo"
 
 const LandingStyled = styled(Link)`
   z-index: 1000;
@@ -57,37 +58,24 @@ const ArrowDownStyled = styled.svg`
   animation-iteration-count: infinite;
 `
 
-const Logo = styled.div`
-  position: absolute;
-  ${background({ url: logo })}
-  left: 12.5vw;
-  bottom: 30vh;
-  width: ${({ theme }) => theme.width.logo}px;
-  height: ${({ theme }) => theme.height.logo}px;
-
-  ${media.desktop`
-    left: 14vw;
-    bottom: 15vh;
-    width: ${({ theme }) => theme.width.desktop.logo}px;
-    height: ${({ theme }) => theme.height.desktop.logo}px;
-  `}
-`
-
 const Ajap = styled.div`
   position: absolute;
-  ${background({ url: ajap, size: "contain", position: "left" })}
+  ${background({ url: ajap, size: "contain", position: "center" })}
   /* left: 12.5vw; */
   /* bottom: calc(33vh + ${({ theme }) => theme.height.logo}px); */
-  left: calc(12.5vw + ${({ theme }) => theme.width.logo + 10}px);
+  left: calc(12.5vw + ${({ theme }) => theme.width.logo + 40}px);
   bottom: 30vh;
   width: ${({ theme }) => theme.width.logo}px;
   height: ${({ theme }) => theme.height.logo}px;
+
+  border-left: 1px solid #fff;
+
 
   ${media.desktop`
     ${background({ url: ajap, size: "contain", position: "center" })}
-    left: calc(14vw + ${({ theme }) => theme.width.desktop.logo}px);
+    left: calc(14vw + ${({ theme }) => theme.width.desktop.logo + 40}px);
     bottom: 15vh;
-    width: ${({ theme }) => theme.width.desktop.logo}px;
+    width: ${({ theme }) => theme.width.desktop.logo * 0.75}px;
     height: ${({ theme }) => theme.height.desktop.logo}px;
   `}
 `
@@ -166,7 +154,7 @@ const WelcomePage = () => {
       <PageNumber>{JSON.stringify(landingPageNumber(), null, 2)}</PageNumber>
       {renderImage()}
       <ScrollIcon />
-      <Logo />
+      <Logo welcomePage />
       <Ajap />
     </LandingStyled>
   )

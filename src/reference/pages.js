@@ -10,9 +10,9 @@ export default {
   [journal]: {
     fr: "journal",
   },
-  [database]: {
-    fr: "base de données",
-  },
+  // [database]: {
+  //   fr: "base de données",
+  // },
   [atelier]: {
     fr: "l'atelier",
   },
