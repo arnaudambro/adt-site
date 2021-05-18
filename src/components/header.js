@@ -7,6 +7,25 @@ import pages, { projets } from "../reference/pages"
 import { media } from "../styles/mediaQueries"
 import Logo from "./logo"
 
+export const widthCss = css`
+  max-width: ${({
+    theme: {
+      width: {
+        max: { headerColumn },
+      },
+    },
+  }) => 2 * headerColumn}px;
+  min-width: ${({
+    theme: {
+      width: {
+        min: { app },
+      },
+      margin,
+    },
+  }) => app - 2 * margin.X.min.app}px;
+  width: calc(100vw - ${({ theme: { margin } }) => 2 * margin.X.min.app}px);
+`
+
 const borderBottom = css`
   &::after {
     content: "";
@@ -14,22 +33,7 @@ const borderBottom = css`
     width: 100%;
     position: absolute;
     bottom: 0;
-    max-width: ${({
-      theme: {
-        width: {
-          max: { headerColumn },
-        },
-      },
-    }) => 2 * headerColumn}px;
-    min-width: ${({
-      theme: {
-        width: {
-          min: { app },
-        },
-        margin,
-      },
-    }) => app - 2 * margin.X.min.app}px;
-    width: calc(100vw - ${({ theme: { margin } }) => 2 * margin.X.min.app}px);
+    ${widthCss}
     left: 0;
     right: 0;
     margin-left: auto;

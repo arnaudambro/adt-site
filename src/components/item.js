@@ -15,6 +15,8 @@ const ItemWrapper = styled(({ height, theme, ...rest }) => <div {...rest} />)`
   ${({ theme }) =>
     gatsbyImage({
       width: theme.width.material + "px !important",
+      width: `calc(100vw - ${2 * theme.margin.X.min.app}px) !important`,
+      maxWidth: 2 * theme.width.max.headerColumn + "px !important",
       height: "100% !important",
       desktop: {
         width: theme.width.desktop.material + "px !important",

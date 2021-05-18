@@ -92,6 +92,7 @@ const ProjetMaterialIcon = ({ setVisible, visible, ...projet }) => (
       id={projet.id}
       images={projet.images}
       isEmpty={getEmpty(projet)}
+      noScreening
     >
       <Title>
         {getTitle(projet)}{" "}

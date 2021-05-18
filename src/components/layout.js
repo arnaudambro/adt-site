@@ -79,6 +79,7 @@ const ContentWrapper = styled.div`
         max: { app: appMax },
       },
       padding: { X },
+      margin,
     },
   }) => {
     if (forProjet) {
@@ -89,7 +90,9 @@ const ContentWrapper = styled.div`
       `
     }
     return `
-      max-width: ${appMin - 2 * X.content}px;
+      /* max-width: ${appMin - 2 * X.content}px; */
+      width: calc(100vw - ${2 * margin.X.min.app}px) !important;
+      max-width: ${2 * theme.width.max.headerColumn}px;
     `
   }}
   width: 100%;
