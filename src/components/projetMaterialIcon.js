@@ -93,6 +93,7 @@ const ProjetMaterialIcon = ({ setVisible, visible, ...projet }) => (
       images={projet.images}
       isEmpty={getEmpty(projet)}
       noScreening
+      forNewBdd
     >
       <Title>
         {getTitle(projet)}{" "}

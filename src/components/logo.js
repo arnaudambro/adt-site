@@ -17,17 +17,8 @@ const welcomePageCss = css`
 `
 
 const normalCss = css`
-  /* position: absolute;
-  left: 12.5vw;
-  bottom: 30vh;
-  width: ${({ theme }) => theme.width.logo}px;
-  height: ${({ theme }) => theme.height.logo}px;
-  ${media.desktop`
-    left: 14vw;
-    bottom: 15vh;
-    width: ${({ theme }) => theme.width.desktop.logo}px;
-    height: ${({ theme }) => theme.height.desktop.logo}px;
-  `} */
+  width: ${({ theme }) => theme.width.logo * 0.75}px !important;
+  height: ${({ theme }) => theme.height.logo * 0.75}px !important;
 `
 
 const Svg = styled.svg`

@@ -9,6 +9,7 @@ const useProjetsDataAndImages = () => {
           node {
             annee_page_bdd_YYYY
             classement_page_projets
+            classement_page_bdd
             code_projet
             collab
             MOE
@@ -28,6 +29,7 @@ const useProjetsDataAndImages = () => {
             etat
             nom
             nom_fichier_page_bdd
+            nom_fichier_page_new_bdd
             nom_fichier_page_projets
             pays
             prix_eur

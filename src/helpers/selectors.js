@@ -11,6 +11,7 @@ const getDescription = ({ description }) => description
 const getEmpty = ({ empty }) => empty === "true"
 const getInProjects = ({ in_projects }) => in_projects === "true"
 const getInDB = ({ in_db }) => in_db === "true"
+const getInNewDB = ({ classement_page_bdd }) => Boolean(classement_page_bdd)
 const getCollab = ({ collab }) => collab
 const getMOE = ({ MOE }) => MOE
 const getMaterial = ({ matiere }) => matiere
@@ -20,6 +21,8 @@ const getMaterialHeightPageBDD = ({ hauteur_page_bdd_px }) =>
   hauteur_page_bdd_px
 const getClassementPageProjets = ({ classement_page_projets }) =>
   parseInt(classement_page_projets, 10)
+const getClassementPageBDD = ({ classement_page_bdd }) =>
+  classement_page_bdd ? parseInt(classement_page_bdd, 10) : null
 const getDeliveryDate = ({ livraison_YYYY_MM_DD }) =>
   new Date(livraison_YYYY_MM_DD)
 const getEtat = ({ etat }) => (Boolean(etat) ? `État: ${etat || "-"}` : "")
@@ -39,6 +42,8 @@ const getMaterialImageSrcForProjetsPage = ({ nom_fichier_page_projets }) =>
   encodeURIComponent(nom_fichier_page_projets)
 const getMaterialImageSrcForBDDPage = ({ nom_fichier_page_bdd }) =>
   encodeURIComponent(nom_fichier_page_bdd)
+const getMaterialImageSrcForNewBDDPage = ({ nom_fichier_page_new_bdd }) =>
+  encodeURIComponent(nom_fichier_page_new_bdd)
 const getLocation = ({ ville, departement_nom, pays }) => {
   const toShow = []
   Boolean(ville) && toShow.push(ville)
@@ -172,6 +177,9 @@ const getProjetMaterialImageForProjetsPage = (images, projet) =>
 const getProjetMaterialImageForBDDPage = (images, projet) =>
   getImageFromSrc(images, getMaterialImageSrcForBDDPage(projet))
 
+const getProjetMaterialImageForNewBDDPage = (images, projet) =>
+  getImageFromSrc(images, getMaterialImageSrcForNewBDDPage(projet))
+
 const getImagesForNews = (images, news) =>
   news.imagesParameters.map(image =>
     getImageFromSrc(images, getNewsImageFile(image))
@@ -184,6 +192,7 @@ export {
   getEmpty,
   getInProjects,
   getInDB,
+  getInNewDB,
   getCollab,
   getMOE,
   getMaterial,
@@ -197,6 +206,7 @@ export {
   getMaterialHeightPageProjets,
   getMaterialHeightPageBDD,
   getClassementPageProjets,
+  getClassementPageBDD,
   getDeliveryDate,
   getDeliveryDisplayed,
   getEtat,
@@ -208,6 +218,7 @@ export {
   getImageFromSrc,
   getMaterialImageSrcForProjetsPage,
   getProjetMaterialImageForBDDPage,
+  getProjetMaterialImageForNewBDDPage,
   getLocation,
   getSurface,
   getNewsDate,

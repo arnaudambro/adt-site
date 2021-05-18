@@ -14,7 +14,7 @@ const ItemWrapper = styled(({ height, theme, ...rest }) => <div {...rest} />)`
   display: flex;
   ${({ theme }) =>
     gatsbyImage({
-      width: theme.width.material + "px !important",
+      // width: theme.width.material + "px !important",
       width: `calc(100vw - ${2 * theme.margin.X.min.app}px) !important`,
       maxWidth: 2 * theme.width.max.headerColumn + "px !important",
       height: "100% !important",
@@ -101,6 +101,7 @@ const Item = ({
   images,
   noScreening = false,
   forDB = false,
+  forNewBdd = false,
 }) => (
   <ItemWrapper
     as={as}
@@ -125,7 +126,7 @@ const Item = ({
       setVisible(null)
     }}
   >
-    <ImagesContainer forDB={forDB}>
+    <ImagesContainer forDB={forDB} forNewBdd={forNewBdd}>
       {images.map((img, ind) => {
         if (!img.src) return <Placeholder key={ind} />
         return (
@@ -138,6 +139,7 @@ const Item = ({
             noScreening={noScreening}
             marginBottom={ind !== images.length - 1}
             forDB={forDB}
+            forNewBdd={forNewBdd}
           />
         )
       })}
