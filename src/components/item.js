@@ -94,31 +94,31 @@ const DescriptionContainer = styled.div`
   transform: ${({ visible }) =>
     visible ? "translateX(0)" : "translateX(50px)"};
   transition: all 200ms ease-in-out;
-  ${props => props.forNewBdd && desciptionContainerForNewBdd}
-  ${props =>
-    !props.forNewBdd &&
-    `
-    &::before {
-      content: "";
-      border-top: 1px solid ${({ theme }) => theme.color.darkGrey};
-      width: ${({ theme }) => theme.width.indicator}px;
-      position: absolute;
-      top: 1px;
+  &::before {
+    content: "";
+    border-top: 1px solid ${({ theme }) => theme.color.darkGrey};
+    width: ${({ theme }) => theme.width.indicator}px;
+    position: absolute;
+    top: 1px;
+    left: ${({ theme }) =>
+      -theme.width.indicator - theme.margin.right.indicator}px;
+    ${media.desktop`
       left: ${({ theme }) =>
-        -theme.width.indicator - theme.margin.right.indicator}px;
-      ${media.desktop`
-        left: ${({ theme }) =>
-          -theme.width.desktop.indicator -
-          theme.margin.right.desktop.indicator}px;
-        width: ${({ theme }) => theme.width.desktop.indicator}px;
-      `}
-    }
-  `}
+        -theme.width.desktop.indicator -
+        theme.margin.right.desktop.indicator}px;
+      width: ${({ theme }) => theme.width.desktop.indicator}px;
+    `}
+  }
+  ${props => props.forNewBdd && desciptionContainerForNewBdd}
 `
 
 const desciptionContainerForNewBdd = css`
   margin-left: 10px !important;
   border: 1px solid #000;
+  padding: 5px;
+  &::before {
+    display: none;
+  }
 `
 
 const Item = ({
