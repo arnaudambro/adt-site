@@ -1,8 +1,9 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import Img from "gatsby-image/withIEPolyfill"
 
 import { displayFlex, gatsbyImage } from "../styles/mixins"
+import { widthCss } from "../components/header"
 import { media } from "../styles/mediaQueries"
 import windowExists from "../helpers/windowExists"
 import isTouchDevice from "../helpers/isTouchDevice"
@@ -22,18 +23,40 @@ const ItemWrapper = styled(({ height, theme, ...rest }) => <div {...rest} />)`
         width: theme.width.desktop.material + "px !important",
       },
     })}
+  ${props => !!props.forNewBdd && itemWrapperForNewBdd}
+`
+
+const itemWrapperForNewBdd = css`
+  height: ${({ height }) => height / 2}px;
+  ${widthCss}
 `
 
 const ImagesContainer = styled.div`
   height: 100%;
-  ${props => props.forDB && `width: 100% !important;`}
+  ${props => props.forDB && "width: 100% !important;"}
+  ${props => props.forNewBdd && imageContainerForNewBdd}
 `
 
+const imageContainerForNewBdd = css`
+  ${media.desktop`
+    width: 180px !important;
+    border: 1px solid #000;
+  `}
+`
 const ImgStyled = styled(Img)`
 ${props => props.forDB && `&.gatsby-image-wrapper { width: 100% !important; }`}
+${props => props.forNewBdd && imageStytledForNewBdd}
   opacity: ${props => (props.visible && !props.noScreening ? 0.5 : 1)};
   transition: opacity 200ms ease-in-out;
   ${props => props.marginBottom && "margin-bottom: 5px;"}
+`
+
+const imageStytledForNewBdd = css`
+  ${media.desktop`
+    &.gatsby-image-wrapper {
+      width: 100% !important;
+    }
+  `}
 `
 
 const Placeholder = styled.div`
@@ -71,21 +94,31 @@ const DescriptionContainer = styled.div`
   transform: ${({ visible }) =>
     visible ? "translateX(0)" : "translateX(50px)"};
   transition: all 200ms ease-in-out;
-  &::before {
-    content: "";
-    border-top: 1px solid ${({ theme }) => theme.color.darkGrey};
-    width: ${({ theme }) => theme.width.indicator}px;
-    position: absolute;
-    top: 1px;
-    left: ${({ theme }) =>
-      -theme.width.indicator - theme.margin.right.indicator}px;
-    ${media.desktop`
+  ${props => props.forNewBdd && desciptionContainerForNewBdd}
+  ${props =>
+    !props.forNewBdd &&
+    `
+    &::before {
+      content: "";
+      border-top: 1px solid ${({ theme }) => theme.color.darkGrey};
+      width: ${({ theme }) => theme.width.indicator}px;
+      position: absolute;
+      top: 1px;
       left: ${({ theme }) =>
-        -theme.width.desktop.indicator -
-        theme.margin.right.desktop.indicator}px;
-      width: ${({ theme }) => theme.width.desktop.indicator}px;
-    `}
-  }
+        -theme.width.indicator - theme.margin.right.indicator}px;
+      ${media.desktop`
+        left: ${({ theme }) =>
+          -theme.width.desktop.indicator -
+          theme.margin.right.desktop.indicator}px;
+        width: ${({ theme }) => theme.width.desktop.indicator}px;
+      `}
+    }
+  `}
+`
+
+const desciptionContainerForNewBdd = css`
+  margin-left: 10px !important;
+  border: 1px solid #000;
 `
 
 const Item = ({
@@ -107,22 +140,27 @@ const Item = ({
     as={as}
     to={to}
     height={height}
+    forNewBdd={forNewBdd}
     onClick={e => {
+      if (forNewBdd) return
       if (!visible && !directClick) {
         // e.preventDefault()
         setVisible(id)
       }
     }}
     onMouseEnter={() => {
-      if (windowExists() && window.isTouchDevice) return
+      if (forNewBdd) return
+      if (!windowExists() && window.isTouchDevice) return
       setVisible(id)
     }}
     onMouseOver={() => {
-      if (windowExists() && window.isTouchDevice) return
+      if (forNewBdd) return
+      if (!windowExists() && window.isTouchDevice) return
       !visible && setVisible(id)
     }}
     onMouseLeave={() => {
-      if (windowExists() && window.isTouchDevice) return
+      if (forNewBdd) return
+      if (!windowExists() && window.isTouchDevice) return
       setVisible(null)
     }}
   >
@@ -145,7 +183,9 @@ const Item = ({
       })}
     </ImagesContainer>
     {children && (
-      <DescriptionContainer visible={visible}>{children}</DescriptionContainer>
+      <DescriptionContainer forNewBdd={forNewBdd} visible={visible}>
+        {children}
+      </DescriptionContainer>
     )}
   </ItemWrapper>
 )

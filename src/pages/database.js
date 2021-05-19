@@ -11,21 +11,21 @@ import theme from "../styles/theme"
 
 const Projets = ({ noTitle }) => {
   const { projets, images } = useProjetsDataAndImages()
-  const [visibleProjet, setVisibleProjet] = React.useState(null)
-
   return (
     <Layout arrowWidth={theme.width.desktop.material}>
       <SEO title={noTitle ? null : "Projets"} />
-      {projets.filter(getInNewDB).map(projet => (
-        <ProjetMaterialIcon
-          key={projet.id}
-          forNewBdd
-          images={[getProjetMaterialImageForNewBDDPage(images, projet)]}
-          setVisible={setVisibleProjet}
-          visible
-          {...projet}
-        />
-      ))}
+      {projets
+        .filter(getInNewDB)
+        .sort((p1, p2) => getInNewDB(p1) > getInNewDB(p2))
+        .map(projet => (
+          <ProjetMaterialIcon
+            key={projet.id}
+            forNewBdd
+            images={[getProjetMaterialImageForNewBDDPage(images, projet)]}
+            visible
+            {...projet}
+          />
+        ))}
     </Layout>
   )
 }

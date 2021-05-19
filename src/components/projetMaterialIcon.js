@@ -54,6 +54,8 @@ const Collab = styled.span`
 `
 const Description = styled.span`
   text-transform: uppercase;
+  max-width: 20vw;
+
   ${cssContent}
 `
 const Location = styled.span`
@@ -80,7 +82,7 @@ const Material = styled.span`
   font-weight: 500;
 `
 
-const ProjetMaterialIcon = ({ setVisible, visible, ...projet }) => (
+const ProjetMaterialIcon = ({ setVisible, visible, forNewBdd, ...projet }) => (
   <>
     <Item
       height={getMaterialHeightPageProjets(projet)}
@@ -93,7 +95,7 @@ const ProjetMaterialIcon = ({ setVisible, visible, ...projet }) => (
       images={projet.images}
       isEmpty={getEmpty(projet)}
       noScreening
-      forNewBdd
+      forNewBdd={forNewBdd}
     >
       <Title>
         {getTitle(projet)}{" "}

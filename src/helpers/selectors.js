@@ -11,7 +11,7 @@ const getDescription = ({ description }) => description
 const getEmpty = ({ empty }) => empty === "true"
 const getInProjects = ({ in_projects }) => in_projects === "true"
 const getInDB = ({ in_db }) => in_db === "true"
-const getInNewDB = ({ classement_page_bdd }) => Boolean(classement_page_bdd)
+const getInNewDB = ({ classement_page_bdd }) => classement_page_bdd
 const getCollab = ({ collab }) => collab
 const getMOE = ({ MOE }) => MOE
 const getMaterial = ({ matiere }) => matiere

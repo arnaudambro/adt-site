@@ -1,7 +1,7 @@
 import { css } from "styled-components"
 import { media } from "./mediaQueries"
 
-const displayFlex = ({
+export const displayFlex = ({
   justifyContent = "center",
   alignItems = "center",
   justifySelf,
@@ -17,7 +17,7 @@ const displayFlex = ({
   ${alignSelf && "justify-self: " + alignSelf + ";"}
 `
 
-const displayGrid = ({
+export const displayGrid = ({
   justifyContent = "center",
   alignItems = "center",
   display = "grid",
@@ -40,14 +40,33 @@ const displayGrid = ({
   ${gridTemplateAreas && "grid-template-areas: " + gridTemplateAreas + ";"}
 `
 
-const background = ({ size = "cover", url, position = "center" }) => css`
+export const background = ({ size = "cover", url, position = "center" }) => css`
   background: url(${url});
   background-position: ${position};
   background-size: ${size};
   background-repeat: no-repeat;
 `
 
-const gatsbyImage = ({
+export const widthCss = css`
+  max-width: ${({
+    theme: {
+      width: {
+        max: { headerColumn },
+      },
+    },
+  }) => 2 * headerColumn}px;
+  min-width: ${({
+    theme: {
+      width: {
+        min: { app },
+      },
+      margin,
+    },
+  }) => app - 2 * margin.X.min.app}px;
+  width: calc(100vw - ${({ theme: { margin } }) => 2 * margin.X.min.app}px);
+`
+
+export const gatsbyImage = ({
   height,
   width,
   maxWidth,
@@ -80,5 +99,3 @@ const gatsbyImage = ({
     top: 0;
   }
 `
-
-export { displayFlex, displayGrid, background, gatsbyImage }
