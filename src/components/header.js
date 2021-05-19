@@ -4,7 +4,7 @@ import React from "react"
 import styled, { css } from "styled-components"
 import { displayGrid } from "../styles/mixins"
 import pages, { projets } from "../reference/pages"
-import { media } from "../styles/mediaQueries"
+import { media, sizes } from "../styles/mediaQueries"
 import Logo from "./logo"
 
 export const widthCss = css`
@@ -163,6 +163,16 @@ const Page = styled.li`
   .active {
     font-weight: 700;
   }
+  &[data-page="projets"] {
+    @media screen and (max-width: ${sizes.desktop}px) {
+      left: ${({ theme }) => 2 * theme.height.menuItem}px;
+    }
+  }
+  &[data-page="database"] {
+    @media screen and (max-width: ${sizes.desktop}px) {
+      display: none;
+    }
+  }
   ${media.desktop`
     transform: unset;
     position: relative;
@@ -178,7 +188,7 @@ const Page = styled.li`
   `}
 `
 
-const Header = ({ siteTitle = "" }) => (
+const Header = () => (
   <HeaderStyled>
     <Title>
       <Link to={"/" + projets}>
@@ -188,7 +198,7 @@ const Header = ({ siteTitle = "" }) => (
     <Nav numberOfItems={Object.keys(pages).length}>
       <ul>
         {Object.keys(pages).map((page, ind) => (
-          <Page key={page} position={ind}>
+          <Page key={page} position={ind} data-page={page}>
             <Link to={`/${page}`} partiallyActive activeClassName="active">
               {pages[page].fr}
             </Link>

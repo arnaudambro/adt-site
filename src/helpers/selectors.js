@@ -8,6 +8,7 @@ import {
 const getTitle = ({ nom }) => nom
 const getCode = ({ code_projet }) => code_projet
 const getDescription = ({ description }) => description
+const getDescriptionBdd = ({ description_bdd }) => description_bdd
 const getEmpty = ({ empty }) => empty === "true"
 const getInProjects = ({ in_projects }) => in_projects === "true"
 const getInDB = ({ in_db }) => in_db === "true"
@@ -15,6 +16,7 @@ const getInNewDB = ({ classement_page_bdd }) => classement_page_bdd
 const getCollab = ({ collab }) => collab
 const getMOE = ({ MOE }) => MOE
 const getMaterial = ({ matiere }) => matiere
+const getMaterialLong = ({ matiere_long }) => matiere_long
 const getMaterialHeightPageProjets = ({ hauteur_page_projets_px }) =>
   hauteur_page_projets_px
 const getMaterialHeightPageBDD = ({ hauteur_page_bdd_px }) =>
@@ -25,9 +27,10 @@ const getClassementPageBDD = ({ classement_page_bdd }) =>
   classement_page_bdd ? parseInt(classement_page_bdd, 10) : null
 const getDeliveryDate = ({ livraison_YYYY_MM_DD }) =>
   new Date(livraison_YYYY_MM_DD)
-const getEtat = ({ etat }) => (Boolean(etat) ? `État: ${etat || "-"}` : "")
+const getEtat = ({ etat }) => etat
 const getMission = ({ mission }) =>
   Boolean(mission) ? `Mission: ${mission}` : ""
+const getMissionLong = ({ mission_long }) => mission_long
 const getDeliveryDisplayed = (projet, long = false) => {
   const deliveryDate = getDeliveryDate(projet)
   const formattedDate = getDeliveryDate(projet).toLocaleString("fr", {
@@ -54,6 +57,7 @@ const getLocation = ({ ville, departement_nom, pays }) => {
 }
 const getSurface = ({ surface_m2 }) => surface_m2
 const getPrix = ({ prix_eur }) => (prix_eur ? prix_eur + " €" : "")
+const getClient = ({ client }) => client
 
 const getBDDValueCategory = (value = "-") => {
   try {
@@ -189,6 +193,7 @@ export {
   getTitle,
   getCode,
   getDescription,
+  getDescriptionBdd,
   getEmpty,
   getInProjects,
   getInDB,
@@ -196,8 +201,10 @@ export {
   getCollab,
   getMOE,
   getMaterial,
+  getMaterialLong,
   getYear,
   getPrix,
+  getClient,
   getMaterialCategory,
   getProgrammeCategory,
   isProjetInCategory,
@@ -211,6 +218,7 @@ export {
   getDeliveryDisplayed,
   getEtat,
   getMission,
+  getMissionLong,
   getImagePropsForGatsby,
   getImageSrcFromImages,
   getImagesForNews,

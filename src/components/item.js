@@ -27,8 +27,10 @@ const ItemWrapper = styled(({ height, theme, ...rest }) => <div {...rest} />)`
 `
 
 const itemWrapperForNewBdd = css`
-  height: ${({ height }) => height / 2}px;
   ${widthCss}
+  ${media.desktop`
+    max-width: ${({ theme }) => theme.width.desktop.material}px;
+  `}
 `
 
 const ImagesContainer = styled.div`
@@ -39,7 +41,7 @@ const ImagesContainer = styled.div`
 
 const imageContainerForNewBdd = css`
   ${media.desktop`
-    width: 180px !important;
+    width: 90px !important;
     border: 1px solid #000;
   `}
 `

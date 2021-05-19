@@ -7,11 +7,11 @@ export default {
   [projets]: {
     fr: "projets",
   },
-  [journal]: {
-    fr: "journal",
-  },
   [database]: {
     fr: "base de données",
+  },
+  [journal]: {
+    fr: "journal",
   },
   [atelier]: {
     fr: "l'atelier",

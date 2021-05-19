@@ -2,6 +2,7 @@ import React from "react"
 import {
   getProjetMaterialImageForProjetsPage,
   getInProjects,
+  getMaterialHeightPageProjets,
 } from "../helpers/selectors"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -19,6 +20,7 @@ const Projets = ({ noTitle }) => {
       {projets.filter(getInProjects).map(projet => (
         <ProjetMaterialIcon
           key={projet.id}
+          getHeight={getMaterialHeightPageProjets}
           images={[getProjetMaterialImageForProjetsPage(images, projet)]}
           setVisible={setVisibleProjet}
           visible={visibleProjet === projet.id}

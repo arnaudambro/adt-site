@@ -13,7 +13,8 @@ const ImgStyled = styled(Img)`
 const ContentStyled = styled.div`
   font-size: 14px;
   margin-right: ${({ theme }) => theme.margin.X.min.app}px;
-  max-width: ${({ theme }) => theme.width.max.content}px;
+  /* max-width: ${({ theme }) => theme.width.max.content}px; */
+  max-width: ${({ theme }) => theme.width.desktop.material}px;
   min-width: ${({ theme }) =>
     theme.width.min.app - 2 * theme.margin.X.min.app}px;
   font-weight: 300;
@@ -125,7 +126,6 @@ const Content = ({
   )
 
   const renderElement = (node, ind) => {
-
     return (
       <node.type
         key={ind}

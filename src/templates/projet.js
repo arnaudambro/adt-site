@@ -103,7 +103,7 @@ const Projet = props => {
       )}
       {getMOE(details) && <MOE>MOE: {getMOE(details)}</MOE>}
       {getPrix(details) && <Cout>Coût: {getPrix(details)}</Cout>}
-      {getEtat(details) && <Etat>{getEtat(details)}</Etat>}
+      <Etat>État: {getEtat(details) || "-"}</Etat>
       {getMission(details) && <Mission>{getMission(details)}</Mission>}
       <Content nodes={projet.content} images={images} />
       <Arrows projets={projets} projet={projet.code_projet} />

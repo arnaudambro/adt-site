@@ -12,10 +12,12 @@ const useProjetsDataAndImages = () => {
             classement_page_bdd
             code_projet
             collab
+            client
             MOE
             departement_code
             departement_nom
             description
+            description_bdd
             empty
             in_projects
             in_db
@@ -24,8 +26,10 @@ const useProjetsDataAndImages = () => {
             hauteur_page_projets_px
             livraison_YYYY_MM_DD
             matiere
+            matiere_long
             matiere_page_bdd
             mission
+            mission_long
             etat
             nom
             nom_fichier_page_bdd

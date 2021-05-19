@@ -2,10 +2,11 @@ import React from "react"
 import {
   getProjetMaterialImageForNewBDDPage,
   getInNewDB,
+  getMaterialHeightPageBDD,
 } from "../helpers/selectors"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import ProjetMaterialIcon from "../components/projetMaterialIcon"
+import NewDatabaseItem from "../components/newDatabaseItem"
 import useProjetsDataAndImages from "../helpers/hooks/useProjetsDataAndImages"
 import theme from "../styles/theme"
 
@@ -18,8 +19,9 @@ const Projets = ({ noTitle }) => {
         .filter(getInNewDB)
         .sort((p1, p2) => getInNewDB(p1) > getInNewDB(p2))
         .map(projet => (
-          <ProjetMaterialIcon
+          <NewDatabaseItem
             key={projet.id}
+            getHeight={getMaterialHeightPageBDD}
             forNewBdd
             images={[getProjetMaterialImageForNewBDDPage(images, projet)]}
             visible

@@ -6,28 +6,21 @@ import {
   getTitle,
   getCollab,
   getMOE,
-  getDescription,
-  getMaterial,
-  getMaterialHeightPageProjets,
-  // getYear,
+  getDescriptionBdd,
   getEtat,
   getLocation,
   getSurface,
-  getMission,
+  getMissionLong,
   getEmpty,
+  getMaterialLong,
+  getMaterial,
+  getPrix,
+  getClient,
 } from "../helpers/selectors"
 import { addSuffix } from "../helpers/projetUrl"
 import Item from "./item"
 import { Link } from "gatsby"
 import { media } from "../styles/mediaQueries"
-
-const Title = styled.span`
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 0.75rem;
-  line-height: 1em;
-  margin-bottom: ${({ theme }) => theme.margin.bottom.projetName}px;
-`
 
 const TitleMobile = styled.span`
   text-transform: uppercase;
@@ -42,22 +35,20 @@ const TitleMobile = styled.span`
 
 const cssContent = css`
   font-weight: 300;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
 `
 const Collab = styled.span`
-  font-style: italic;
-  font-weight: 400;
-  font-style: italic;
-  font-size: 0.7rem;
-  margin-bottom: ${({ theme }) => theme.margin.bottom.projetName}px;
-  margin-top: -${({ theme }) => theme.margin.bottom.projetName}px;
+  ${cssContent}
 `
 const Description = styled.span`
-  text-transform: uppercase;
   max-width: 20vw;
 
   ${cssContent}
 `
+const Client = styled.span`
+  ${cssContent}
+`
+
 const Location = styled.span`
   text-transform: capitalize;
   ${cssContent}
@@ -76,13 +67,18 @@ const Mission = styled.span`
 const Etat = styled.span`
   ${cssContent}
 `
+
+const Cout = styled.span`
+  ${cssContent}
+`
+
 const Material = styled.span`
   /* text-transform: capitalize; */
   ${cssContent}
   font-weight: 500;
 `
 
-const ProjetMaterialIcon = ({
+const NewDatabaseItem = ({
   setVisible,
   visible,
   forNewBdd,
@@ -103,28 +99,21 @@ const ProjetMaterialIcon = ({
       noScreening
       forNewBdd={forNewBdd}
     >
-      <Title>
-        {getTitle(projet)}{" "}
-        {/* Number.isNaN(getYear(projet)) ? "" : getYear(projet) */}
-      </Title>
-      {Boolean(getCollab(projet)) && (
-        <Collab>Cotraitance avec {getCollab(projet)}</Collab>
+      {getDescriptionBdd(projet) && (
+        <Description>
+          {getTitle(projet)} - {getDescriptionBdd(projet)}
+        </Description>
       )}
-      {getDescription(projet) && (
-        <Description>{getDescription(projet)}</Description>
-      )}
+      {getClient(projet) && <Client>{getClient(projet)}</Client>}
       {getLocation(projet) && <Location>{getLocation(projet)}</Location>}
-      {getSurface(projet) && (
-        <Surface>
-          Surface: {getSurface(projet)} m<sup>2</sup>
-        </Surface>
+      {getMissionLong(projet) && <Mission>{getMissionLong(projet)}</Mission>}
+      {getCollab(projet) && <Collab>{getCollab(projet)}</Collab>}
+      {getMaterialLong(projet) && (
+        <Material>{getMaterialLong(projet)}</Material>
       )}
-      {Boolean(getMOE(projet)) && <MOE>MOE: {getMOE(projet)}</MOE>}
-      <Etat>État: {getEtat(projet) || "-"}</Etat>
-      {getMaterial(projet) && (
-        <Material>Matière: {getMaterial(projet)}</Material>
-      )}
-      {getMission(projet) && <Mission>{getMission(projet)}</Mission>}
+      {getSurface(projet) && <Surface>{getSurface(projet)} m2</Surface>}
+      {getPrix(projet) && <Cout>{getPrix(projet)}</Cout>}
+      {getEtat(projet) && <Etat>{getEtat(projet)}</Etat>}
     </Item>
     <TitleMobile>
       {getTitle(projet)}{" "}
@@ -133,4 +122,4 @@ const ProjetMaterialIcon = ({
   </>
 )
 
-export default ProjetMaterialIcon
+export default NewDatabaseItem
