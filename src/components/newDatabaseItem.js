@@ -34,8 +34,9 @@ const TitleMobile = styled.span`
 `
 
 const cssContent = css`
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.65rem;
+  line-height: 1em;
 `
 const Collab = styled.span`
   ${cssContent}
@@ -75,7 +76,7 @@ const Cout = styled.span`
 const Material = styled.span`
   /* text-transform: capitalize; */
   ${cssContent}
-  font-weight: 500;
+  font-weight: 600;
 `
 
 const NewDatabaseItem = ({

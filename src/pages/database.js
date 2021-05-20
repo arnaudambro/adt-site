@@ -17,7 +17,7 @@ const Projets = ({ noTitle }) => {
       <SEO title={noTitle ? null : "Projets"} />
       {projets
         .filter(getInNewDB)
-        .sort((p1, p2) => getInNewDB(p1) > getInNewDB(p2))
+        .sort((p1, p2) => (getInNewDB(p1) > getInNewDB(p2) ? 1 : -1))
         .map(projet => (
           <NewDatabaseItem
             key={projet.id}
