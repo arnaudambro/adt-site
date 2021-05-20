@@ -2,6 +2,7 @@ import React from "react"
 import {
   getProjetMaterialImageForProjetsPage,
   getInProjects,
+  getClassementPageProjets,
   getMaterialHeightPageProjets,
 } from "../helpers/selectors"
 import Layout from "../components/layout"
@@ -17,16 +18,28 @@ const Projets = ({ noTitle }) => {
   return (
     <Layout arrowWidth={theme.width.desktop.material}>
       <SEO title={noTitle ? null : "Projets"} />
-      {projets.filter(getInProjects).map(projet => (
-        <ProjetMaterialIcon
-          key={projet.id}
-          getHeight={getMaterialHeightPageProjets}
-          images={[getProjetMaterialImageForProjetsPage(images, projet)]}
-          setVisible={setVisibleProjet}
-          visible={visibleProjet === projet.id}
-          {...projet}
-        />
-      ))}
+      {projets
+        .filter(getInProjects)
+        .sort((p1, p2) =>
+          Number(getClassementPageProjets(p1)) >
+          Number(getClassementPageProjets(p2))
+            ? -1
+            : 1
+        )
+        .map(p1 => {
+          console.log(p1)
+          return p1
+        })
+        .map(projet => (
+          <ProjetMaterialIcon
+            key={projet.id}
+            getHeight={getMaterialHeightPageProjets}
+            images={[getProjetMaterialImageForProjetsPage(images, projet)]}
+            setVisible={setVisibleProjet}
+            visible={visibleProjet === projet.id}
+            {...projet}
+          />
+        ))}
     </Layout>
   )
 }

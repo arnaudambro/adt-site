@@ -12,6 +12,7 @@ const useProjetsDataAndImages = () => {
             classement_page_bdd
             code_projet
             collab
+            collab_bdd
             client
             MOE
             departement_code

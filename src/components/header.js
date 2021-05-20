@@ -177,14 +177,14 @@ const Page = styled.li`
     transform: unset;
     position: relative;
     left: unset;
-    font-size: 0.75em;
+    font-size: 0.60em;
     height: ${({
       theme: {
         height: {
           desktop: { menuItem },
         },
       },
-    }) => menuItem}px;
+    }) => menuItem * 0.8}px;
   `}
 `
 

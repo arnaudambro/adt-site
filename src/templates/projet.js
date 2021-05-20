@@ -28,6 +28,7 @@ const Title = styled.h2`
   font-size: 1.6rem;
   font-weight: 700;
   letter-spacing: 1px;
+  margin-left: 1px;
   max-width: calc(100% - ${({ theme }) => theme.width.arrows}px - 10px);
 `
 
@@ -47,6 +48,7 @@ const Description = styled.span`
   ${cssContent}
   font-weight: 400;
   margin-top: 25px;
+  max-width: ${({ theme }) => theme.width.desktop.material}px;
 `
 const Location = styled.span`
   text-transform: capitalize;

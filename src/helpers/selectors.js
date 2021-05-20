@@ -14,6 +14,7 @@ const getInProjects = ({ in_projects }) => in_projects === "true"
 const getInDB = ({ in_db }) => in_db === "true"
 const getInNewDB = ({ classement_page_bdd }) => classement_page_bdd
 const getCollab = ({ collab }) => collab
+const getCollabBdd = ({ collab_bdd }) => collab_bdd
 const getMOE = ({ MOE }) => MOE
 const getMaterial = ({ matiere }) => matiere
 const getMaterialLong = ({ matiere_long }) => matiere_long
@@ -199,6 +200,7 @@ export {
   getInDB,
   getInNewDB,
   getCollab,
+  getCollabBdd,
   getMOE,
   getMaterial,
   getMaterialLong,

@@ -4,8 +4,7 @@ import styled, { css } from "styled-components"
 import {
   getCode,
   getTitle,
-  getCollab,
-  getMOE,
+  getCollabBdd,
   getDescriptionBdd,
   getEtat,
   getLocation,
@@ -108,7 +107,7 @@ const NewDatabaseItem = ({
       {getClient(projet) && <Client>{getClient(projet)}</Client>}
       {getLocation(projet) && <Location>{getLocation(projet)}</Location>}
       {getMissionLong(projet) && <Mission>{getMissionLong(projet)}</Mission>}
-      {getCollab(projet) && <Collab>{getCollab(projet)}</Collab>}
+      {getCollabBdd(projet) && <Collab>{getCollabBdd(projet)}</Collab>}
       {getMaterialLong(projet) && (
         <Material>{getMaterialLong(projet)}</Material>
       )}

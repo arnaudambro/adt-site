@@ -16,7 +16,7 @@ const ArrowsContainer = styled.div`
   top: 0;
   ${({ theme }) => media.desktop`
     top: ${theme.padding.Y.desktop.main}px;
-    right: 203px;
+    right: 283px;
   `}
   ${displayFlex({
     justifyContent: "space-between",

@@ -12,7 +12,7 @@ const ImgStyled = styled(Img)`
 
 const ContentStyled = styled.div`
   font-size: 14px;
-  margin-right: ${({ theme }) => theme.margin.X.min.app}px;
+  /* margin-right: ${({ theme }) => theme.margin.X.min.app}px; */
   /* max-width: ${({ theme }) => theme.width.max.content}px; */
   max-width: ${({ theme }) => theme.width.desktop.material}px;
   min-width: ${({ theme }) =>
