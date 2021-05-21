@@ -16,7 +16,7 @@ USER="atelierdhn"
 PASS=`security find-internet-password -s "ftp.cluster020.hosting.ovh.net" -a "atelierdhn" -w`
 FTPURL="sftp://$USER:$PASS@$HOST"
 LCD="./public"
-RCD="adt"
+RCD="www"
 
 echo -e "\n\n\033[1;33mStarting to upload to FTP\n\n\033[0;39m"
 lftp -c "set cmd:fail-exit yes ftp:list-options -a;
