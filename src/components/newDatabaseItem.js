@@ -53,10 +53,7 @@ const Location = styled.span`
   text-transform: capitalize;
   ${cssContent}
 `
-const MOE = styled.span`
-  text-transform: capitalize;
-  ${cssContent}
-`
+
 const Surface = styled.span`
   ${cssContent}
 `
